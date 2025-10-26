@@ -1,0 +1,67 @@
+﻿/* Waiver Print CSS Document */
+
+
+body {
+      background-color: #ffffff;
+      font-family: Tahoma, sans-serif;
+      font-size: 13px;
+      color: #162440;
+
+      }
+      a, a:link, a:visited {
+      color: #009fe9;
+      font-weight: bold;
+      font-weight: 700;
+
+      }
+      th{ text-align:left; }
+      td{ font-size: 12px;  font-family: Tahoma, sans-serif;
+      
+      color: #162440; }
+      td h3{ margin-top:0; padding-top:0 }
+      td small{ font-size:11px; color: #808080;}
+      .structuretable, .datatable{ border-collapse:collapse;}
+      .structuretable > tr > td{ padding:0 5px; }
+      .datatable td{ border-top:1px solid #eaeaea; }
+
+      .datatable td.no-top-border{ border-top: 1px solid transparent;}
+
+      .agreementcell, .signaturecell{ padding-top: 15px; padding-bottom:15px; font-size:11px;}
+      .signaturewrap{ height: 280px;  width:100%;  max-width:1113px; }
+#initialpreview, .initialtyped {
+    font-family: 'Marck Script';
+    font-size: 27px;
+    padding: 10px;
+    color: #333;
+}
+
+a:link span.initialtyped {
+    color: #333;
+}
+
+a:hover span.initialtyped, a:active span.initialtyped {
+    color: #333;
+    text-decoration: none;
+}
+
+a:link span.sigtyped {
+    color: #333;
+}
+
+a:hover span.sigtyped, a:active span.sigtyped {
+    color: #333;
+    text-decoration: none;
+}
+
+#signpreview, .sigtyped {
+    font-family: 'Marck Script', cursive;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.signature {
+    border: 2px solid #ccc;
+    height: 284px;
+    margin: 0;
+    padding: 0;
+}

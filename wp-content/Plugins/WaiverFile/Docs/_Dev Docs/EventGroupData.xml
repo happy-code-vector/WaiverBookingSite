@@ -1,0 +1,321 @@
+﻿<ArrayOfWaiverEventGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WaiverEventGroup>
+    <Heading>Sat, Jul 16</Heading>
+    <Items>
+      <WaiverEvent>
+        <WaiverEventID>61b130a9-82ec-4c27-b48d-9223903acbe0</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>overlap during</Name>
+        <DateStart>2016-07-17T00:00:00</DateStart>
+        <DateEnd>2016-07-19T00:00:00</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>14</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/17/16 12:00 AM - 7/19/16 12:00 AM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+    </Items>
+    <Date>2016-07-16T00:00:00</Date>
+  </WaiverEventGroup>
+  <WaiverEventGroup>
+    <Heading>Sun, Jul 17</Heading>
+    <Items>
+      <WaiverEvent>
+        <WaiverEventID>ad1939e3-5121-4f41-b879-de331707c353</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Mike Test123</Name>
+        <DateStart>2016-07-18T00:00:00</DateStart>
+        <DateEnd>2016-07-18T00:00:00</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>14</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 12:00 AM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+    </Items>
+    <Date>2016-07-17T00:00:00</Date>
+  </WaiverEventGroup>
+  <WaiverEventGroup>
+    <Heading>Mon, Jul 18</Heading>
+    <Items>
+      <WaiverEvent>
+        <WaiverEventID>f5fcec6c-d0b7-4f57-a361-e14ad1c0f36b</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Florrie's Birthday</Name>
+        <DateStart>2016-07-18T10:54:37.253</DateStart>
+        <DateEnd>2016-07-18T10:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 10:54 AM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>ceca5dfc-b35f-4384-ae57-0473812a4159</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Santo's Birthday</Name>
+        <DateStart>2016-07-18T11:54:37.253</DateStart>
+        <DateEnd>2016-07-18T11:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 11:54 AM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>d9074b98-94a5-418d-92c0-4055679f43f8</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Willena's Birthday</Name>
+        <DateStart>2016-07-18T12:54:37.253</DateStart>
+        <DateEnd>2016-07-18T12:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 12:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>caae1d28-1c9e-4517-9152-0a8ef55f34f8</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Dionna's Birthday</Name>
+        <DateStart>2016-07-18T13:54:37.253</DateStart>
+        <DateEnd>2016-07-18T13:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 1:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>c2616c96-0c7b-4d00-8c4f-22c467d011e3</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Annabel's Birthday</Name>
+        <DateStart>2016-07-18T14:54:37.253</DateStart>
+        <DateEnd>2016-07-18T14:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 2:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>1637824a-3a87-40e0-8708-2aac82e3fbc7</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Birgit's Birthday</Name>
+        <DateStart>2016-07-18T15:54:37.253</DateStart>
+        <DateEnd>2016-07-18T15:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 3:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>d3bdf5c3-fd5f-4168-86cc-c35bed610409</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Larita's Birthday</Name>
+        <DateStart>2016-07-18T16:54:37.253</DateStart>
+        <DateEnd>2016-07-18T16:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 4:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>0e0eb294-a63e-474f-ace6-0514e22cdf37</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Leota's Birthday</Name>
+        <DateStart>2016-07-18T17:54:37.253</DateStart>
+        <DateEnd>2016-07-18T17:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 5:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>38eaad48-030a-4940-90e1-ea5d9a31294f</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Annabel's Birthday</Name>
+        <DateStart>2016-07-18T18:54:37.253</DateStart>
+        <DateEnd>2016-07-18T18:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 6:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>fff46369-61cb-46af-baa5-0dc64e05cba8</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Mana's Birthday</Name>
+        <DateStart>2016-07-18T19:54:37.253</DateStart>
+        <DateEnd>2016-07-18T19:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 7:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>7c40c147-3bdb-4b8d-ac13-25560e169447</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Lowell's Birthday</Name>
+        <DateStart>2016-07-18T20:54:37.253</DateStart>
+        <DateEnd>2016-07-18T20:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 8:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>08988468-b3ae-4e1c-83cd-365706176e1d</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Larita's Birthday</Name>
+        <DateStart>2016-07-18T21:54:37.253</DateStart>
+        <DateEnd>2016-07-18T21:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 9:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>44591b06-428e-4d33-8995-0dde7d1bc6da</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Corene's Birthday</Name>
+        <DateStart>2016-07-18T22:54:37.253</DateStart>
+        <DateEnd>2016-07-18T22:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 10:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>2eadd88a-d1b0-4f2b-a157-07be53dda847</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Tambra's Birthday</Name>
+        <DateStart>2016-07-18T23:54:37.253</DateStart>
+        <DateEnd>2016-07-18T23:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/18/16 11:54 PM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>8ec74dcd-4e20-4c65-b304-5e5a3f4df5f0</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Florrie's Birthday</Name>
+        <DateStart>2016-07-19T00:54:37.253</DateStart>
+        <DateEnd>2016-07-19T00:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/19/16 12:54 AM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>74f4b928-425e-4454-85ca-22d915158ffe</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Micha's Birthday</Name>
+        <DateStart>2016-07-19T01:54:37.253</DateStart>
+        <DateEnd>2016-07-19T01:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/19/16 1:54 AM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>8727dc17-71d3-4377-8429-23793828a23a</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Tambra's Birthday</Name>
+        <DateStart>2016-07-19T02:54:37.253</DateStart>
+        <DateEnd>2016-07-19T02:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/19/16 2:54 AM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+      <WaiverEvent>
+        <WaiverEventID>5f415a99-0698-4ac1-af52-3d561dbd9205</WaiverEventID>
+        <SiteID>00cdc0df-1609-43e0-ae2f-721ff391ff35</SiteID>
+        <Name>Micha's Birthday</Name>
+        <DateStart>2016-07-19T03:54:37.253</DateStart>
+        <DateEnd>2016-07-19T03:54:37.253</DateEnd>
+        <IsDeleted>false</IsDeleted>
+        <NumWaiverForms>0</NumWaiverForms>
+        <WPObjectStatus>Current</WPObjectStatus>
+        <TimeLabel>7/19/16 3:54 AM</TimeLabel>
+        <Waivers></Waivers>
+        <WaiverForms></WaiverForms>
+        <ManagerIDs></ManagerIDs>
+        <NumSignedWaivers>0</NumSignedWaivers>
+      </WaiverEvent>
+    </Items>
+    <Date>2016-07-18T00:00:00</Date>
+  </WaiverEventGroup>
+</ArrayOfWaiverEventGroup>
+<div class="row"></div>

@@ -1,0 +1,12 @@
+﻿/* marck-script-regular - latin */
+@font-face {
+    font-family: 'Marck Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url('marck-script-v10-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Marck Script'), local('MarckScript-Regular'), url('marck-script-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('marck-script-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('marck-script-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('marck-script-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('marck-script-v10-latin-regular.svg#MarckScript') format('svg'); /* Legacy iOS */
+}

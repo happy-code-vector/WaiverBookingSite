@@ -1,0 +1,222 @@
+<root>
+  
+ 
+
+	<tools name="InsertToolbar" enabled="true" >
+		<!--<tool name="AjaxSpellCheck"/>-->
+		<!--<tool name="ImageManager" shortcut="CTRL+M" Text="Add Image From Images Folder"/>-->
+    <tool name="WaiverFileImage" Text="Add an image"/>
+    <!--<tool name="ImageMapDialog"/>-->
+    <!--<tool name="WaypointFile" Text="Add a file from a file library"/>-->
+    <!--<tool separator="true"/>
+		<tool name="FlashManager" />
+		<tool name="MediaManager" />
+		<tool separator="true"/>
+		<tool name="DocumentManager" />
+		<tool separator="true"/>-->
+		<tool name="InsertTable" />
+		<tool name="InsertRowAbove" />
+		<tool name="InsertRowBelow" />
+		<tool name="DeleteRow" />
+		<tool name="InsertColumnLeft" />
+		<tool name="InsertColumnRight" />
+		<tool name="DeleteColumn" />
+		<tool separator="true"/>
+		<tool name="MergeColumns" />
+		<tool name="MergeRows" />
+		<tool separator="true"/>
+		<tool name="SplitCell" />
+		<tool name="DeleteCell" />
+		<tool name="SetCellProperties" />
+		<tool name="SetTableProperties" />
+    <!--<tool separator="true"/>
+    <tool name="Help" />-->
+	</tools>
+  <tools name="MainToolbar" enabled="true">
+    <tool name="InsertSymbol" />
+    <tool name="FormatStripper" />
+  </tools>
+	<tools enabled="true">		
+		<tool name="Undo" />
+		<tool name="Redo" />
+		<tool separator="true"/>
+		<tool name="Cut" />
+		<tool name="Copy" />
+		<tool name="Paste" shortcut="CTRL+!"/>
+		<tool separator="true"/>
+		<tool name="PasteFromWord" />
+		<tool name="PasteFromWordNoFontsNoSizes" />
+		<tool name="PastePlainText" />		
+		<tool name="PasteAsHtml"  />
+		<tool separator="true"/>
+    <!--<tool name="Print" />-->
+		<tool name="FindAndReplace" />
+		<tool name="SelectAll" />
+		<tool separator="true"/>
+    <!--<tool name="InsertGroupbox" />-->
+		<tool name="InsertParagraph" />
+		<tool name="InsertHorizontalRule" />
+		<tool separator="true"/>
+    <!--<tool name="InsertDate" />
+		<tool name="InsertTime" />-->
+
+		
+	</tools>
+
+	<tools enabled="true" dockable="true">
+		<tool name="Bold" />
+		<tool name="Italic" />
+		<tool name="Underline" />
+		<tool name="StrikeThrough" />
+		<tool separator="true"/>
+		<tool name="JustifyLeft" />
+		<tool name="JustifyCenter" />
+		<tool name="JustifyRight" />
+		<tool name="JustifyFull" />
+		<tool name="JustifyNone" />
+
+		<tool separator="true"/>
+		<tool name="Superscript" />
+		<tool name="Subscript" />
+
+		<tool separator="true"/>
+		<tool name="ConvertToLower" />
+		<tool name="ConvertToUpper" />
+		
+		<tool name="Indent" />
+		<tool name="Outdent" />
+		<tool name="InsertOrderedList" />
+		<tool name="InsertUnorderedList"/>
+
+    <!--<tool name="AbsolutePosition" />-->
+		<tool name="LinkManager" />
+		<tool name="Unlink" />
+    <tool name="ToggleTableBorder" />
+    <tool name="ToggleScreenMode" />
+	</tools>
+
+	<tools name="DropdownToolbar" dockable="true" >
+		<tool name="ForeColor" />
+		<tool name="BackColor"/>
+		<tool separator="true"/>
+		<tool name="FontName"/>
+		<tool name="FontSize"/>
+		<tool name="RealFontSize"/>
+		<!--<tool name="ApplyClass"/>
+		<tool name="InsertCustomLink"/>-->
+		<tool name="FormatBlock"/>
+    <tool name="Zoom" />
+
+    <tool name="CODES" text="Waiver Tools"  type="dropdown">
+      <item name="Add Initial Box" value="{{INITIAL}}" />
+      <item name="Add Initial Box (Optional)" value="{{INITIAL_OPTIONAL}}" />
+      <item name="Add Initial Box (No adopting)" value="{{INITIAL_NOADOPT}}" />
+      <item name="Add Signature Box" value="{{SIGNATURE}}" />
+      <item name="Add Signature Box (Optional)" value="{{SIGNATURE_OPTIONAL}}" />
+      <item name="Add Signature Box (No adopting)" value="{{SIGNATURE_NOADOPT}}" />
+      <item name="Add Checkbox, Required" value="{{CHECKBOX_REQUIRED}}" />
+      <item name="Add Checkbox, Optional" value="{{CHECKBOX_OPTIONAL}}" />
+      <item name="Add First Name (Signee)" value="{{FIRST_NAME}}" />
+      <item name="Add Last Name (Signee)" value="{{LAST_NAME}}" />
+      <item name="Add Email Address" value="{{EMAIL}}" />
+      <item name="Add Date, short format" value="{{DATE}}" />
+      <item name="Add Date, long format" value="{{DATE_LONG}}" />
+      <item name="Add Address" value="{{ADDRESS}}" />
+      <item name="Add Phone" value="{{PHONE}}" />
+      <item name="Add Event Name" value="{{EVENT_NAME}}" />
+      <item name="Add Event Date" value="{{EVENT_DATE}}" />
+      <item name="Add Participant Names" value="{{PARTICIPANT_NAMES}}" />
+      <item name="Add Participant 1 First Name" value="{{PART_1_FIRST}}" />
+      <item name="Add Participant 1 Last Name" value="{{PART_1_LAST}}" />
+      <item name="Add Participant 2 First Name" value="{{PART_2_FIRST}}" />
+      <item name="Add Participant 2 Last Name" value="{{PART_2_LAST}}" />
+      <item name="Add Participant 3 First Name" value="{{PART_3_FIRST}}" />
+      <item name="Add Participant 3 Last Name" value="{{PART_3_LAST}}" />
+      <item name="Add Participant 4 First Name" value="{{PART_4_FIRST}}" />
+      <item name="Add Participant 4 Last Name" value="{{PART_4_LAST}}" />
+      <item name="Add Participant 5 First Name" value="{{PART_5_FIRST}}" />
+      <item name="Add Participant 5 Last Name" value="{{PART_5_LAST}}" />
+
+
+
+    </tool>
+	</tools>
+
+  
+<!--
+	<links>
+		<link name="telerik" href="http://www.telerik.com">
+			<link name="Products" href="http://www.telerik.com/products">
+				<link name="RadEditor" href="http://www.telerik.com/radeditor" />
+			</link>
+			<link name="Purchase" href="http://www.telerik.com/purchase" />
+			<link name="Support" href="http://www.telerik.com/support" />
+			<link name="Client.Net" href="http://www.telerik.com/clientnet" />
+		</link>
+		<link name="Microsoft">
+			<link name="Main Site" href="http://www.microsoft.com" />
+			<link name="MSDN Online" href="http://msdn.microsoft.com" />
+			<link name="Windows Update" href="http://windowsupdate.microsoft.com" />
+		</link>
+		<link name="Search Engines">
+			<link name="Google" href="http://www.google.com" />
+			<link name="Yahoo" href="http://www.yahoo.com" />
+			<link name="AltaVista" href="http://www.altavista.com" />
+		</link>
+	</links>-->
+	<snippets>
+		<snippet name="Order Confirmation">
+			<![CDATA[
+					<div style="width:300px;border:2px outset #D8D2BD;padding:34px;font-family:Arial, Verdana; font-size:11px;background-color:#F1EFE6;">
+					Dear ____________________,<br />
+					Thank you for inquiring about ____________. Your request will be processed in 48 hours and shipped at the address you have provided. 
+					<br /><br />
+						<b>Please, contact us if you have any problems.</b>
+					</div>
+				]]>
+		</snippet>
+		<snippet name="Email Signature">
+			<![CDATA[
+					<div style="margin-top:30px;width:80%;border-top:1px dotted gray;padding-top:4px;font-family:Arial, Verdana; font-size:11px;">
+					<b>John Wigham</b><br />
+					Senior Web Developer<br />
+						<a href="#">john@mysite.com</a>
+						<br />
+							<br />
+								<i>Disclaimer: The contents of this e-mail are privileged and confidential and intended for the addressees at the specified e-mail addresses only.</i>
+					</div>
+				]]>
+		</snippet>
+		<snippet name="Problem Report Feedback">
+			<![CDATA[
+					<div style="width:300px;border:2px outset #D8D2BD;padding:34px;font-family:Arial, Verdana; font-size:11px;background-color:#F1EFE6;">
+					Hi ____________________,<br />
+					Thank you for reporting this issue. We have verified the problem and it is logged in our system. We will notify you once we have a solution. 
+					<br /><br />
+						<b>Please, contact us if you have any problems.</b>
+					</div>
+				]]>
+		</snippet>
+	</snippets>
+
+	<symbols>
+
+	</symbols>
+	<fontNames>
+	</fontNames>
+	<fontSizes>
+	</fontSizes>
+
+	<colors>
+	</colors>
+	<classes>
+	</classes>
+
+	<paragraphs>
+	</paragraphs>
+
+	<dialogParameters>
+	</dialogParameters>
+	<languages>
+	</languages>
+</root>

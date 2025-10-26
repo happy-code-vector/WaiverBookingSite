@@ -1,0 +1,523 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="WaiverFile.MasterPages.AdminMasterPage" %>
+<%@ Register TagPrefix="uc1" TagName="NavbarAdmin" Src="~/Controls/NavbarAdmin.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="LiveChat" Src="~/Controls/LiveChat.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="SubscriptionAdminDisabler" Src="~/Controls/SubscriptionAdminDisabler.ascx" %>
+<%@ Register Src="~/Controls/GTMPixel.ascx" TagPrefix="uc1" TagName="GTMPixel" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+
+   
+
+    <title></title>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="/site/fonts/Roboto.css" rel="stylesheet" type="text/css"/>
+    <link href="/site/fonts/marck-script.css" rel="stylesheet" type="text/css"/>
+    <link href="/site/css/styles-admin-area.css?v=2.2" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet"  href="/site/css/bootstrap-select.min.css" type="text/css" />
+   <meta name="robots" content="noindex" />
+
+</head>
+<body runat="server" id="Body1">
+    
+  <!-- Documentation extras
+   ================================================== -->
+  <!--[if lt IE 8]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <div class="alert alert-danger" id="ie-alert">
+      <div class="container">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      </div>
+    </div>
+  <![endif]-->
+
+
+    <form id="Form1" runat="server">
+        <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
+        <div>
+            
+          
+
+ <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<%=WaiverSite.RootSigningPageUrl %>"><img src="/wp-content/images/waiverfile-logo-xsm.gif" alt="WaiverFile Admin" /></a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <asp:PlaceHolder ID="phOtherSubAccounts" runat="server"></asp:PlaceHolder>
+                <!-- /.dropdown -->
+                
+                <% if(BookingSiteSetupTasksOn && BookingSiteSetupTaskCount>0){ %>
+                <li>
+                    <a href="<%=WaiverSite.BasePathRelative %>/admin/CMS/SetupBooking3.aspx" title="Complete Setup">
+                       Complete Setup
+                      <% if (BookingSiteSetupTaskCount > 0) { %>
+                        <span class="badge" style="background-color: red; margin-left:5px;"><%=BookingSiteSetupTaskCount %></span>
+                      <% } %>
+                    </a>
+                </li>
+                <%} %>
+
+             <%if(!string.IsNullOrEmpty(PublicWebsiteUrl) || WaiverSite.IsCustomDomainMode){ %>
+ <li>
+      <a href="<%=WaiverSite.IsCustomDomainMode ? "/" : WaiverSite.BasePathRelativeBooking %>" title="Back to the Public Website" target="_blank"><em class="fa fa-globe"></em> View Site</a>
+  </li>
+ <%} %>
+  <li>
+      <a href="<%=WaiverSite.BasePathRelative %>" title="Back to the Public Signature Area" target="_blank"><em class="fa fa-file-text"></em> Signature Area</a>
+  </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> My Account <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+
+                         <% if(((Waypoint.Core.WPPageLite)Page).AuthenticatedUser!=null){ %>
+                        
+                       <% if (WaiverFile.Core.WaiverSite.CheckPermission(Page, WaiverFile.Core.WaiverSiteUser.SiteUserRoleEnum.Owner))
+                            { %><li><a href="<%=WaiverSite.BasePathRelative %>/admin/Settings/Subscription.aspx"><i class="fa fa-refresh fa-fw"></i> Subscription</a></li>
+                        <li><a href="<%=WaiverSite.BasePathRelative %>/admin/OrderHistory.aspx"><i class="fa fa-history fa-fw"></i> Payment History</a></li><% } %>
+                        <li><a href="<%=WaiverSite.BasePathRelative %>/admin/MyAccount.aspx"><i class="fa fa-user fa-fw"></i> Account Details</a></li>
+                        <li><a href="<%=WaiverSite.BasePathRelative %>/admin/ChangePassword.aspx"><i class="fa fa-key fa-fw"></i> Change Password</a></li>
+                        
+                        
+                        <li class="divider"></li>
+                         <li><a href="<%=WaiverSite.BasePathRelative %>/Login.aspx?action=logout&logout_redir=<%= WaiverSite.RootSigningPageUrl %>"><i class="fa fa-sign-out fa-fw"></i> Log Out</a></li>
+                        <%} %>
+
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <li>
+            
+                     <a class="dropdown-toggle fa-stack has-badge empty" data-toggle="dropdown" href="#"  data-count="0" id="btnBell">
+                          <i class="fa fa-bell-o"></i>
+                    </a>
+                    <ul class="dropdown-menu" id="notifList">
+                        <li id="noNotif"><a href="#">No Notifications</a></li>
+                        </ul>
+
+
+
+
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+             <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                  <uc1:NavbarAdmin runat="server"></uc1:NavbarAdmin>
+                     <asp:ContentPlaceHolder ID="ph1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                  
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+      
+
+        <div id="page-wrapper">
+           
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="main-content-area">
+                     <asp:ContentPlaceHolder ID="ph0" runat="server">
+            </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+
+            </div>
+
+             <uc1:GTMPixel runat="server" ID="GTMPixel" PixelChoice="Login" />
+
+      <script src="/site/includes/bootstrap.min.js?v=2"></script>
+
+            
+
+        <!-- Metis Menu Plugin JavaScript -->
+    <script src="/wp-content/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/wp-content/bower_components/raphael/raphael-min.js"></script>
+    
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/wp-content/Scripts/sb-admin-2.js"></script>
+    
+            <!-- time utilities -->
+    <script src="/site/includes/moment.min.js"></script>
+            
+
+<script type="text/javascript">
+
+    var notificationList = [];
+    var notifyInterval; 
+    var lastCheck = '';
+ var unmuteShown = false;
+    function ViewNotification() {
+
+    }
+    function playSound(url) {
+        if (url == '') {
+            return;
+        }
+        var audio = new Audio('/wp-content/plugins/waiverfile/docs/audio/' + url);
+        var playPromise = audio.play();
+        if (playPromise !== undefined) {
+            playPromise.then(function () {
+                // Automatic playback started!
+            }).catch(function (error) {
+                if (error.name == 'NotAllowedError') {
+                    if (unmuteShown == false) {
+                        $('#soundDisabledModal').modal('show');
+                        unmuteShown = true;//only do this once
+                    }
+                }
+            });
+        }
+
+    }
+   
+   
+    function playSoundNewNotification() {
+        playSound('<%=DASH_AUDIO_NEW_NOTIFICATION%>');
+    }
+    function CalculateUnread() {
+        //IsUnread
+        var total = 0;
+        for (var i = 0; i < notificationList.length; i++)
+        {
+            if (notificationList[i]["IsUnread"] == true) {
+                total++;
+            }
+        }
+        $('#btnBell').attr('data-count', total);
+        if (total == 0) {
+            $('#btnBell').addClass('empty');
+            
+        } else {
+            $('#btnBell').removeClass('empty');
+            
+        }
+        
+    }
+    function CheckNotifications() {
+        var params = { siteid: '<%=WaiverSite.ID%>' };
+        if (lastCheck != '') {
+            params = { siteid: '<%=WaiverSite.ID%>', cutoff: lastCheck};
+        }
+            
+        $.ajax({
+            type: "POST",
+            url: "/Controls/NotificationCheck.ashx",
+            //cutoff
+            //top
+            data: params,
+             success: function (data) {
+                 lastCheck = data["LastFetch"];
+                 if (data["Data"] != null && data["Data"] != '' && data["Data"]!='undefined' && data["Data"].length != 0) {
+                     var innerCode = '';
+                     for (id in data["Data"]) {
+
+                         var alreadyFound = false;
+                         for (var i = 0; i < notificationList.length; i++) {
+                             if (notificationList[i]["ID"] == data["Data"][id]["ID"]) {
+                                 alreadyFound = true;
+                                 break;
+                             }
+                         }
+
+                         innerCode = '';
+                         if (alreadyFound != true) {
+                             playSoundNewNotification();
+                             notificationList.push(data["Data"][id]);
+                             //ADD THE CODE AT THE BEGINNING TOO. 
+                             var faclass = 'fa-info-circle';
+                             switch (data["Data"][id]["NotificationType"]) {
+                                 case 0: //GeneralAccount
+                                     break;
+                                 case 1: //IncomingSMS
+                                     faclass = 'fa-commenting-o';
+                                     break;
+                                 case 2://SystemUpdate
+                                     faclass = 'fa-star';
+                                     break;
+                                 case 3://Promo
+                                     faclass = 'fa-bolt';
+                                     break;
+                                 case 4://ArchiveReady
+                                     faclass = 'fa-download';
+                                     break;
+                                 case 5://QuotaClose
+                                     faclass = 'fa-battery-full';
+                                     break;
+                                 case 6://QuotaReached
+                                     faclass = 'fa-battery-full';
+                                     break;
+                                 default:
+                                     faclass = 'fa-info-circle';
+                                     break;
+                             }
+                             var aClass = 'viewnotif';
+                             if (data["Data"][id]["IsUnread"] == true) {
+                                 aClass += ' new';
+                             }
+                             innerCode += '<li>'
+                                 + '<a href="javascript:void(0);" id="btnViewNotif_' + replaceAll(data["Data"][id]["ID"], '-', '_') + '" class="' + aClass + '" data-id="' + data["Data"][id]["ID"] + '"><i class="fa ' + faclass + '"></i>'
+                                 +  data["Data"][id]["Title"] 
+                                 + '</a></li>';
+                                 
+
+                             //innerCode += '<li>';
+                             //innerCode += '<a href="javascript:void(0);" id="btnViewNotif_' + replaceAll(data["Data"][id]["ID"],'-','_') + '" class="viewnotif" data-id="' + data["Data"][id]["ID"] + '">' + data["Data"][id]['Title'] + '</a>';
+                             //innerCode += '</li>';
+
+                             $('#notifList').prepend(innerCode);
+
+                             $('#noNotif').hide(); //IF WE HAVE NOTIFICATIONS, HIDE IT. 
+
+                             $('#btnViewNotif_' + replaceAll(data["Data"][id]["ID"], '-', '_')).click(function () {
+                                 $(this).removeClass('new');
+                                 var myID = $(this).data('id');
+                                 //find my object
+                                 var obj;
+                                 for (var i = 0; i < notificationList.length; i++) {
+                                     if (notificationList[i]["ID"] == myID) {
+                                         obj = notificationList[i];
+                                         notificationList[i]["IsUnread"] = false;
+                                         break;
+                                     }
+                                 }
+                                
+                                 showNotification(obj);
+                                 CalculateUnread();
+                             });
+                             
+                         }
+
+                     }
+                     CalculateUnread();
+                 } 
+
+             }
+         });
+    }
+    function MarkAsRead(id) {
+        
+            //MARK ALL ITEMS AS READ. 
+            var params = { siteid: '<%=WaiverSite.ID%>', action: 'VIEWALL', lastCheck: lastCheck, idList: id };
+        $.ajax({
+            type: "POST",
+            url: "/Controls/NotificationCheck.ashx",
+            data: params,
+            success: function (data) {
+                if (data == "OK") { //DECREASE BY ONE
+
+
+                    var newTotal = 0;
+                    for (var i = 0; i < notificationList.length; i++) {
+                        if (notificationList[i]["ID"] == id) {
+                            notificationList[i]["IsUnread"] = false;
+                            return;
+                        }
+                        if (notificationList[i]["IsUnread"] == true) {
+                            newTotal++;
+                        }
+                    }
+                    $('#btnBell').attr('data-count', newTotal);
+                    if (newTotal == 0) {
+                        $('#btnBell').addClass('empty');
+                    } else {
+                        $('#btnBell').removeClass('empty');
+                    }
+                }
+            }
+        });
+
+    }
+    function showNotification(obj) {
+        /* this did auto redirect
+        if (obj["URL"] != '') {
+            MarkAsRead(obj["ID"]);
+            window.location.href = obj["URL"];
+            return;
+        }*/
+        MarkAsRead(obj["ID"]);
+
+
+        //some icons maybe? 
+        switch (obj["NotificationType"]) {
+            case 0: //GeneralAccount
+                break;
+            case 1: //IncomingSMS
+                break;
+            case 2://SystemUpdate
+                break;
+            case 3://Promo
+                break;
+            case 4://ArchiveReady
+                break;
+            case 5://QuotaClose
+                break;
+            case 6://QuotaReached
+                break;
+            default:
+
+                break;
+        }
+        var hrefTemp = '#';
+        if (obj["URL"] != '') {
+            hrefTemp = obj["URL"];
+            $('#btnNotifView').show();
+        } else {
+            $('#btnNotifView').hide();
+        }
+        $('#lblNotif_head').html(obj["Title"]);
+        $('#divNotifBody').html(obj["Details"]);
+        $('#btnNotifView').attr('href', hrefTemp);
+        $('#viewNotificationModal').modal('show');
+
+    }
+    function replaceAll(string, search, replace) {
+        return string.split(search).join(replace);
+    }
+    $(document).ready(function () {
+
+
+
+        $('[data-toggle="tooltip"]').tooltip();
+        //window.clearInterval(reloadInterval);
+        notifyInterval = window.setInterval(function () {
+            CheckNotifications();
+            CalculateUnread();
+        }, 60000);
+
+        //LOAD NOTIFICATION STUFF
+        CheckNotifications();
+        CalculateUnread();
+
+
+        $('#btnUnmute').click(function () {
+            $('#soundDisabledModal').modal('hide');
+        })
+
+        $('#btnNotifClose').click(function () {
+            $('#viewNotificationModal').modal('hide');
+        });
+
+
+
+    });
+</script>
+
+            
+<!-- Modal -->
+<div class="modal fade" id="soundDisabledModal" tabindex="-1" role="dialog" aria-labelledby="notifLabel2">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="notifLabel2">Sound couldn't play</h4>
+      </div>
+      <div class="modal-body">
+
+        <a href="javascript:void(0);" class="btn btn-primary" id="btnUnmute">Fix</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Modal -->
+<div class="modal fade" id="viewNotificationModal" tabindex="-1" role="dialog" aria-labelledby="notifLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="notifLabel"><span id="lblNotif_head"></span></h4>
+      </div>
+      <div class="modal-body">
+        <div id="divNotifBody"></div>
+      </div>
+      <div class="modal-footer">
+           
+           <a href="#" class="btn btn-primary" id="btnNotifView">View Details</a>
+          <a href="javascript:void(0);" class="btn btn-primary" id="btnNotifClose">Close</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="alertSessionWarning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Session expiring soon</h4>
+      </div>
+      <div class="modal-body">
+        <div id="txtSessionExpiring"></div>
+      </div>
+      <div class="modal-footer">
+
+           <a href="javascript:void(0);" class="btn btn-default" id="btnLogOut">Log Out</a>
+           <a href="javascript:void(0);" class="btn btn-primary" id="btnKeepWorking">Keep Working</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="alertSessionRedirecting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Session expired</h4>
+      </div>
+      <div class="modal-body">
+       Your session has expired. You are being redirected to the login screen. 
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary" id="btnContinueToLogin">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/wp-content/Plugins/WaiverFile/Docs/SessionWarn.js"></script>
+                    
+    <script src="/site/includes/bootstrap-select.min.js"></script>
+        
+            </div>
+
+          <uc1:LiveChat runat="server"></uc1:LiveChat>
+        
+    </form>
+</body>
+</html>

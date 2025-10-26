@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SignupNarrow.master.cs" Inherits="WaiverFile.MasterPages.SignupNarrow" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <title>WaiverFile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- standard styles -->
+
+     <link href="/wp-content/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+     <link href="/wp-content/bower_components/morrisjs/morris.css" rel="stylesheet" type="text/css" />
+     <link href="/wp-content/styles/includes/sb-admin-2.css" rel="stylesheet" type="text/css" />
+     <link href="/wp-content/styles/includes/timeline.css" rel="stylesheet" type="text/css" />
+     <link href="/wp-content/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet" type="text/css" />
+     <link href="/site/includes/bootstrap.custom.min.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- Fonts & Styles -->
+    <link href="/site/fonts/Roboto.css" rel="stylesheet" type="text/css" />
+    <link href="/site/fonts/marck-script.css" rel="stylesheet" type="text/css" />
+    <link href="/site/css/styles-admin-area.css?v=2.2" rel="stylesheet" type="text/css" />
+    <link href="/site/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <meta name="robots" content="noindex" />
+     <script src="/wp-content/Common/Scripts/jquery-1.9.1.min.js"></script>
+  
+
+    
+    <!-- styles to match public site more -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700" as="style">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700"></noscript>
+
+
+    <style type="text/css">
+        body{ color: #575e68; font-family: "Open Sans",sans-serif; }
+    </style>
+
+      <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #efefef;">
+    <form id="form1" runat="server">
+        <div class="container" style="max-width: 400px; margin: 60px auto;">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:30px;">
+                <a href="https://www.waiverfile.com" target="_blank">
+                    <img src="/wp-content/images/waiverfile-logo-lg.png" alt="WaiverFile" style="opacity: 0.6; width:150px;" />
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Scripts -->
+   
+    <script src="/site/includes/bootstrap.min.js?v=2"></script>
+    <script src="/site/includes/moment.min.js"></script>
+    <script src="/site/includes/bootstrap-select.min.js"></script>
+</body>
+</html>

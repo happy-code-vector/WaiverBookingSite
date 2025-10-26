@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RichTextEditor.ascx.cs" Inherits="WaiverFile.Controls.CMSEndUserControls.RichTextEditor" %>
+<asp:PlaceHolder runat="server" ID="phContent"></asp:PlaceHolder>

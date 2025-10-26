@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+body{
+background-color: #FFFFFF;
+font-size:14px; /*some pages do use 16 but most pages we are editing use 14 so this makes for easier editing in the rad editor*/
+}

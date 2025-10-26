@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Plugin>
+  <ID>875429b2-29da-45c3-984b-6a8275f31237</ID>
+  <Name>WaiverFile</Name>
+  <Description>Plugin to provide the WaiverFile featureset.</Description>
+  <Author>Twin Harbor Web Solutions, Inc.</Author>
+  <DetailURL>http://www.twinharbor.com</DetailURL>
+  <Version>1.0.0.0</Version>
+  <AutomatorAssemblyName>WaiverFile</AutomatorAssemblyName>
+  <AutomatorTypeName>WaiverFile.WaiverFileAutomator</AutomatorTypeName>
+  <ConnectorAssemblyName>WaiverFile</ConnectorAssemblyName>
+  <ConnectorTypeName>WaiverFile.WaiverFilePluginCommunicator</ConnectorTypeName>
+</Plugin>

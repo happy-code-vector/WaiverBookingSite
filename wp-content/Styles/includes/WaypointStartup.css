@@ -1,0 +1,153 @@
+body, html, form 
+{
+    font-family: Arial, Sans-Serif;
+    font-size: 12px;
+    color: #212121;
+    margin:0;
+    padding:0;
+    width:100%; height:100%;  background-color:#d0d0d0; 
+    } 
+    
+    /*raddock fix*/
+.RadDock .rdTable{ height:auto; }
+
+a:link, a:visited{ font-weight: bold; text-decoration:none; color:#000000; }
+a:hover, a:active{ font-weight: bold; text-decoration:underline; color:#000000;}
+.right{ float:right}
+.headermargin{ margin: 25px 15px 0 0; }
+
+h1{ font-family: 'Yanone Kaffeesatz', arial, serif; font-size: 22px; color: #00284d; margin:5px 0 10px 0px; }
+h2{ font-family: 'Yanone Kaffeesatz', arial, serif; font-size: 18px; color: #00284d; margin:5px 0 7px 0px;}
+h3{ font-family: 'Yanone Kaffeesatz', arial, serif; font-size: 16px; color: #00284d; margin:5px 0 5px 0px; }
+h4{ font-family: arial, sans-serif; font-weight:bold; font-size: 15px; color: #00284d; margin:5px 0 5px 0px; }
+h5{ font-family: arial, sans-serif; font-weight:bold; font-style:italic; font-size: 16px; color: #00284d; margin:5px 0 3px 0px; }
+h6{ font-family: arial, sans-serif;   font-style:italic;font-size: 16px; color: #00284d;margin:5px 0 3px 0px; }
+
+
+#wrap{ width:1006px; height:100%; min-height:100%; background-color:#ffffff; background-image:url(/wp-content/Templates/WaypointStartupImages/bg-main.gif); background-repeat: repeat-y; margin: 0 auto;  }
+#main{ width:954px; border-left: 1px solid #00284e; margin:0 25px 0 25px; min-height:100%; }
+#header{ background: #00284e url(/wp-content/Templates/WaypointStartupImages/bg-header.gif) repeat-x top; width:100%; height: 69px;}
+#header h1{ font-family: 'Yanone Kaffeesatz', arial, serif; font-size: 32px; color: #ffffff;float:left; margin:15px; }
+#header a:link, #header a:visited{ color: #ffffff; font-weight:bold; text-decoration: none; }
+#header a:hover, #header a:active{ color: #ffffff; font-weight:bold; text-decoration: underline; }
+
+#nav{ height:41px; background-color:#d0dce8; width:100%; }
+
+
+
+/* NAV */
+#nav ul li.sep{ width:1px; background-image:url(/images/nav-sep.gif); background-repeat:no-repeat; } 
+
+#nav{ height: 41px; width: 100%; z-index: 1001; position:relative;float:left; margin:0; padding:0; }
+#nav ul { 
+	list-style: none;
+	margin: 0;
+	padding: 0; 
+	height:41px;
+}
+#nav li {
+  float: left;
+  position: relative;
+	z-index: 3000;
+	height:41px;
+}
+#nav li a{ float:left;  }
+
+#nav li a, #nav li a:link, #nav li a:active, #nav li a:visited {
+font-family: 'Yanone Kaffeesatz', arial, serif; font-size: 16px; color: #00284e;
+  display: block;
+  text-decoration: none;
+  height: 31px;
+  padding: 10px 15px 0 15px;
+}
+#nav li a:hover{ color:#ffffff; }
+#nav li ul li a, #nav li ul li a:link, #nav li ul li a:active, #nav li ul li a:visited {
+  height: 40px;
+  line-height: 20px;
+  padding-top:0px;
+}
+
+#nav ul li:hover, 
+#nav ul li.sfHover {
+
+}
+
+#nav ul li:hover a, 
+#nav ul li.sfHover a {
+  background-color:#7994ad;
+
+
+}
+#nav ul li:hover ul a, 
+#nav ul li.sfHover ul a {
+	background-image:none;
+  background-color:#d0dce8;
+display:block;
+width:175px;
+height:22px;
+  	border:1px solid #08205e;
+	margin: -1px 0 0 0;
+	padding: 1px 0 0 25px;
+}
+#nav ul li:hover ul a:hover, 
+#nav ul li.sfHover ul a:hover {
+    background-color:#7994ad;
+}
+
+#nav ul li ul {
+left:0px;
+  list-style: none;
+  margin: -5px 0 0 0;
+  position: absolute;
+  top: -999em;
+  width: 175px;
+  padding:0;
+}
+#nav ul li ul li{
+display:inline;
+float:none;
+   
+   height: 40px;
+   padding: 0;
+   margin: 0;
+/*   margin: -1px 0 0 0; /*border collapse*/
+	 width: 175px;
+	 background-color:#CBCFD4;
+}
+#nav ul li:hover ul,
+#nav ul li.sfHover ul {
+  top: 47px;  
+}
+#nav  ul li ul a {
+ 
+  width: 111px;
+  
+}
+#nav  ul li ul a:hover {
+  
+}
+
+#content 
+{
+    clear:both;
+}
+#c2left{ width: 230px; float:left; padding: 10px; }
+#c2right{ width:680px; float:right; padding: 10px; }
+
+
+#footer{
+background-color:#e9e9e9;
+clear:both;
+color:#717171;
+display:block;
+font-family:Arial,serif;
+font-size:11px;
+height:53px;
+margin:-63px auto 0;
+padding:5px;
+position:relative;
+text-align:center;
+width: 944px;
+}
+#footer a:link, #footer a:visited{ color: #717171; font-weight:bold; text-decoration: none; }
+#footer a:hover, #footer a:active{ color: #717171; font-weight:bold; text-decoration: underline; }

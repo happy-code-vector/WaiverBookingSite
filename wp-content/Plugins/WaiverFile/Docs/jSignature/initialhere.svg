@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg2" inkscape:version="0.48.0 r9654" sodipodi:docname="initialhere.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="180px" height="80px"
+	 viewBox="0 0 180 80" enable-background="new 0 0 180 80" xml:space="preserve">
+<sodipodi:namedview  id="base" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:document-units="px" inkscape:current-layer="layer1" inkscape:window-width="1680" fit-margin-bottom="0" fit-margin-right="0" inkscape:window-height="975" inkscape:window-maximized="1" inkscape:window-y="221" inkscape:window-x="-9" showgrid="false" fit-margin-left="0" fit-margin-top="0" inkscape:cy="14.025007" borderlayer="true" pagecolor="#ffffff" inkscape:cx="134.72188" bordercolor="#666666" inkscape:zoom="1" borderopacity="1.0">
+	</sodipodi:namedview>
+<g id="layer2" transform="translate(0,-100)" inkscape:groupmode="layer" sodipodi:insensitive="true" inkscape:label="back" display="none">
+	<path id="rect3785" display="inline" fill="#42DB3A" stroke="#FFFFFF" stroke-width="4.3284" d="M8.554-15.053h156.891
+		c13.701,0,24.811,11.107,24.811,24.809V178.77c0,13.703-11.107,24.812-24.811,24.812H8.554c-13.702,0-24.81-11.108-24.81-24.812
+		V9.756C-16.256-3.945-5.148-15.053,8.554-15.053z"/>
+</g>
+<g id="layer1" transform="translate(-86.373116,-496.07017)" inkscape:groupmode="layer" inkscape:label="Layer 1">
+	<path fill="#EA7502" stroke="#000000" stroke-width="1.93" d="M255.315,554.7l-37.523,16.704L95.087,545.862
+		c-3.245-0.677-5.327-3.854-4.651-7.097l6.997-33.613c0.675-3.245,3.853-5.327,7.097-4.651l122.703,25.542L255.315,554.7z"/>
+	<g>
+		<path d="M107.431,516.709l-3.397,16.148l-2.085-0.439l3.397-16.148L107.431,516.709z"/>
+		<path d="M107.674,533.623l3.397-16.149l2.276,0.479l3.457,9.259c0.799,2.144,1.376,4.042,1.795,5.856l0.054-0.015
+			c0.261-2.196,0.627-4.171,1.156-6.686l1.421-6.757l1.964,0.414l-3.397,16.148l-2.109-0.444l-3.402-9.272
+			c-0.748-2.034-1.438-4.106-1.885-6.026l-0.078,0.008c-0.307,2.062-0.668,4.013-1.232,6.696l-1.452,6.9L107.674,533.623z"/>
+		<path d="M128.916,521.229l-3.397,16.149l-2.084-0.439l3.397-16.148L128.916,521.229z"/>
+		<path d="M135.25,524.412l-4.912-1.033l0.373-1.773l11.956,2.515l-0.373,1.773l-4.935-1.038l-3.024,14.375l-2.109-0.442
+			L135.25,524.412z"/>
+		<path d="M146.547,524.937l-3.397,16.148l-2.085-0.438l3.397-16.149L146.547,524.937z"/>
+		<path d="M150.469,537.322l-2.746,4.727l-2.157-0.454l8.884-14.994l2.515,0.529l2.113,17.308l-2.228-0.469l-0.656-5.442
+			L150.469,537.322z M156.106,536.807l-0.603-4.981c-0.138-1.129-0.177-2.139-0.22-3.124l-0.047-0.01
+			c-0.442,0.908-0.912,1.835-1.429,2.752l-2.564,4.339L156.106,536.807z"/>
+		<path d="M164.845,528.787l2.086,0.438l-3.029,14.4l6.899,1.451l-0.368,1.75l-8.984-1.891L164.845,528.787z"/>
+		<path d="M183.314,532.673l-1.421,6.757l7.811,1.644l1.422-6.757l2.107,0.444l-3.396,16.148l-2.108-0.443l1.593-7.571l-7.812-1.644
+			l-1.593,7.571l-2.084-0.438l3.397-16.148L183.314,532.673z"/>
+		<path d="M203.404,545.857l-6.276-1.321l-1.225,5.822l6.994,1.472l-0.367,1.749l-9.081-1.911l3.397-16.148l8.722,1.834
+			l-0.368,1.749l-6.636-1.396l-1.073,5.103l6.276,1.321L203.404,545.857z"/>
+		<path d="M208.585,538.215c1.101,0.006,2.636,0.204,4.073,0.506c2.228,0.469,3.58,1.18,4.394,2.301
+			c0.664,0.891,0.887,2.088,0.625,3.335c-0.449,2.132-2.088,3.264-3.909,3.48l-0.015,0.071c1.154,0.693,1.655,1.999,1.686,3.758
+			c0.053,2.362,0.108,4.001,0.313,4.694l-2.156-0.453c-0.168-0.511-0.234-1.976-0.267-4.085c-0.01-2.329-0.697-3.349-2.575-3.819
+			l-1.963-0.413l-1.473,6.996l-2.085-0.438L208.585,538.215z M209.123,546.009l2.132,0.448c2.229,0.469,3.898-0.455,4.287-2.3
+			c0.438-2.085-0.879-3.313-3.078-3.801c-1.006-0.212-1.746-0.267-2.1-0.241L209.123,546.009z"/>
+		<path d="M228.076,551.048l-6.277-1.321l-1.224,5.822l6.995,1.471l-0.369,1.75l-9.08-1.911l3.397-16.148l8.721,1.835l-0.368,1.749
+			l-6.635-1.396l-1.073,5.104l6.276,1.321L228.076,551.048z"/>
+	</g>
+</g>
+</svg>

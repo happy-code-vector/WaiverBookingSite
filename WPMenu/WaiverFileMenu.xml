@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application>
+  <Menu>
+    <Category Name="Client Management" ID="WaypointMain">
+
+      <MenuItem ID="Waivers" Name="WaiverFile" IconClass="fa fa-file-text-o" ContextRef="WFCRM_LEAD_TRACKER"  Order="1">
+        <MenuItem ID="WFCRM_LEAD_TRACKER" Name="Lead Tracker" ContextRef="WFCRM_LEAD_TRACKER"  IconClass="fa fa-filter" />
+        <MenuItem ID="WF_LIST_WAIVER_SITES" Name="Waiver Sites" ContextRef="WF_LIST_WAIVER_SITES"  IconClass="fa fa-list" />
+        <MenuItem ID="WF_NEWACCOUNT" Name="Create New Site" ContextRef="WF_NEWACCOUNT"  IconClass="fa fa-plus-circle" />
+        
+        <MenuItem ID="WF_SUBS_OVERAGE_REPORT" Name="Quota Overage Report" ContextRef="WF_SUBS_OVERAGE_REPORT"  IconClass="fa fa-table" />
+        
+        <MenuItem ID="WF_SUBS_SUSPENDED" Name="Suspension Report" ContextRef="WF_SUBS_SUSPENDED"  IconClass="fa fa-exclamation-triangle" />
+        
+        <MenuItem ID="WF_SUBS_LIST_PLANS" Name="Plans" ContextRef="WF_SUBS_LIST_PLANS"  IconClass="fa fa-columns" />
+        
+        <MenuItem ID="WF_ADDON_SUBS" Name="AddOn Service Usage" ContextRef="WF_ADDON_SUBS" IconClass="fa fa-plus-circle" />
+
+        <MenuItem ID="WF_REVENUE_REPORT" Name="Revenue Report" ContextRef="WF_REVENUE_REPORT" IconClass="fa fa-money" />
+
+
+        <MenuItem ID="WF_PAST_DUE" Name="Past Due Report" ContextRef="WF_PAST_DUE" IconClass="fa fa-money" />
+        
+
+      </MenuItem>
+
+      <MenuItem ID="WFSMS" Name="WaiverFile - SMS" IconClass="fa fa-mobile" ContextRef="WF_SUBS_LIST_PLANS_SMS"  Order="1">
+        <MenuItem ID="WF_SMSDEMOREPORT" Name="Demo Report" ContextRef="WF_SMSDEMOREPORT"  IconClass="fa fa-table" />
+        <MenuItem ID="WF_LIST_SMS_PROFILE" Name="Review Profiles" ContextRef="WF_LIST_SMS_PROFILE"  IconClass="fa fa-users" />
+        <MenuItem ID="WF_SUBS_LIST_PLANS" Name="Plans" ContextRef="WF_SUBS_LIST_PLANS_SMS"  IconClass="fa fa-columns" />
+        
+        
+      </MenuItem>
+      
+      <MenuItem ID="WaiversSystem" Name="WaiverFile - System" IconClass="fa fa-cog" ContextRef="WF_LIST_SITELINK_CODE_TEMPLATES"  Order="1">
+        <MenuItem ID="WF_SEND_GLOBAL_NOTIFICATION" Name="Send Global Notification" ContextRef="WF_SEND_GLOBAL_NOTIFICATION"  IconClass="fa fa-paper-plane" />
+        <MenuItem ID="WF_LIST_SITELINK_CODE_TEMPLATES" Name="Site Link Code Templates" ContextRef="WF_LIST_SITELINK_CODE_TEMPLATES"  IconClass="fa fa-code" />
+        <MenuItem ID="WF_LIST_IMAGE_LOCATIONS" Name="Image Locations" ContextRef="WF_LIST_IMAGE_LOCATIONS"  IconClass="fa fa-picture-o" />
+        <MenuItem ID="WF_SETUP_LIST_PACKS" Name="Account Setup Packs" ContextRef="WF_SETUP_LIST_PACKS"  IconClass="fa fa-archive" />
+		  <MenuItem ID="WF_INSTALL_PACK" Name="Install a Pack to Site" ContextRef="WF_INSTALL_PACK"  IconClass="fa fa-cloud-upload" />
+        <MenuItem ID="WFAPI_LISTKEYS_ALL" Name="API Keys" ContextRef="WFAPI_LISTKEYS_ALL"  IconClass="fa fa-key" />
+        <MenuItem ID="WF_MANAGE_SMS_NUMBERS" Name="Manage SMS Numbers" ContextRef="WF_MANAGE_SMS_NUMBERS"  IconClass="fa fa-comments" />
+        <MenuItem ID="WF_IMPORT_OLD_DATA" Name="Import Customer Waivers" ContextRef="WF_IMPORT_OLD_DATA"  IconClass="fa fa-cloud-upload" />
+        <MenuItem ID="WF_LIST_DB_DUMPS" Name="Data Dumps" ContextRef="WF_LIST_DB_DUMPS"  IconClass="fa fa-database" />
+        <MenuItem ID="WF_LIST_API_CLIENT_BLOCKS" Name="Client IP Blocks" ContextRef="WF_LIST_API_CLIENT_BLOCKS"  IconClass="fa fa-lock" />
+        <MenuItem ID="WF_DELETED_SITES" Name="Deleted Sites" ContextRef="WF_DELETED_SITES"  IconClass="fa fa-trash" />
+        <MenuItem ID="WF_RECENT_IMAGE_REVIEW" Name="Malicious Account Search" ContextRef="WF_RECENT_IMAGE_REVIEW"  IconClass="fa fa-image" />
+        <MenuItem ID="WF_LIST_WFSYSTEMINSTANCES" Name="System Instances" ContextRef="WF_LIST_WFSYSTEMINSTANCES"  IconClass="fa fa-server" />
+
+        <MenuItem ID="WF_MAILING_TESTER" Name="Mailing Tester" ContextRef="WF_MAILING_TESTER"  IconClass="fa fa-envelope" />
+
+        
+        <MenuItem ID="WF_SAML_GET_METADATAXML" Name="SAML: Get Metadata.xml" ContextRef="WF_SAML_GET_METADATAXML"  IconClass="fa fa-envelope" />
+
+        
+
+      </MenuItem>
+
+      
+
+  <MenuItem ID="WaiverFileCMS" Name="WaiverFile - CMS" IconClass="fa fa-pagelines" ContextRef="WFCMS_LIST_THEMES"  Order="1">
+
+    <MenuItem ID="WFCMS_LIST_THEMES" Name="Themes" ContextRef="WFCMS_LIST_THEMES"  IconClass="fa fa-paint-brush" />
+    
+
+  </MenuItem>
+      <MenuItem ID="WaiverFileCRM" Name="WaiverFile - CRM" IconClass="fa fa-users" ContextRef="WFCRM_LIST_AFFILIATES"  Order="1">
+
+        <MenuItem ID="WFCRM_LIST_AFFILIATES" Name="Affiliates" ContextRef="WFCRM_LIST_AFFILIATES"  IconClass="fa fa-users" />
+        <MenuItem ID="WFCRM_LIST_ROLES" Name="Manage CRM Roles" ContextRef="WFCRM_LIST_ROLES"  IconClass="fa fa-columns" />
+        <MenuItem ID="WFCRM_LIST_GROUPS" Name="Manage CRM Groups" ContextRef="WFCRM_LIST_GROUPS"  IconClass="fa fa-object-group" />
+        <MenuItem ID="WFCRM_LIST_LEAD_STATUSES" Name="Manage Lead Statuses" ContextRef="WFCRM_LIST_LEAD_STATUSES"  IconClass="fa fa-line-chart" />
+        <!--<MenuItem ID="WFCRM_LIST_STATUSES" Name="Manage CRM Statuses" ContextRef="WFCRM_LIST_STATUSES"  IconClass="fa fa-line-chart" />-->
+        <MenuItem ID="WFCRM_LIST_SOURCES" Name="Manage CRM Sources" ContextRef="WFCRM_LIST_SOURCES"  IconClass="fa fa-tree" />
+        <MenuItem ID="WFCRM_LIST_PROMOMESSAGES" Name="Manage Promo Messages" ContextRef="WFCRM_LIST_PROMOMESSAGES"  IconClass="fa fa-envelope" />
+
+        <MenuItem ID="WFCRM_MONTHLY_REPORT" Name="Monthly Report" ContextRef="WFCRM_MONTHLY_REPORT"  IconClass="fa fa-line-chart" />
+
+        <MenuItem ID="WFCRM_LIST_CANCELREASONS" Name="Cancellation Reasons" ContextRef="WFCRM_LIST_CANCELREASONS"  IconClass="fa fa-window-close-o" />
+
+
+      </MenuItem>
+
+      <MenuItem ID="WaiversMisc" Name="WaiverFile - Misc" IconClass="fa fa-file-text-o" ContextRef="WF_SUBS_LIST_OFFERS"  Order="1">
+        
+        <MenuItem ID="WFCRM_FIND_USER_ACCESS" Name="Check User Access" ContextRef="WFCRM_FIND_USER_ACCESS"  IconClass="fa fa-users" />
+        <MenuItem ID="WF_SENDGRID_BLOCK_CHECKER" Name="SendGrid Block Checker" ContextRef="WF_SENDGRID_BLOCK_CHECKER"  IconClass="fa fa-envelope" />
+        <MenuItem ID="WF_SUBS_LIST_OFFERS2" Name="Special Offers (v2)" ContextRef="WF_SUBS_LIST_OFFERS2"  IconClass="fa fa-tag" />
+        <MenuItem ID="WF_SUBS_LIST_OFFERS" Name="Special Offers" ContextRef="WF_SUBS_LIST_OFFERS"  IconClass="fa fa-tag" />
+        <!--    new version of this -see WF_NEWACCOUNT    <MenuItem ID="WF_CREATE_TRIAL" Name="Create Trial Site" ContextRef="WF_CREATE_TRIAL"  IconClass="fa fa-plus-circle" />-->
+        <MenuItem ID="WF_ONE_OFF_STUFF" Name="One-Off Code Area" ContextRef="WF_ONE_OFF_STUFF"  IconClass="fa fa-code" />
+      </MenuItem>
+      
+
+        <!-- HERE ARE SOME SAMPLES 
+      <MenuItem ID="WPAds" Name="Ads" Icon="/wp-content/plugins/WPAds/images/btnAds.png" ContextRef="LISTWPADS"  Order="121">
+        <MenuItem ID="LISTWPADS" Name="Manage Ads" ContextRef="LISTWPADS" />
+        <MenuItem ID="LISTWPADREGIONS" Name="Manage Ad Regions" ContextRef="LISTWPADREGIONS" />
+      </MenuItem>
+      -->
+
+    </Category>
+
+  </Menu>
+  <Contexts>
+
+    <Context ID="DASHBOARD">
+      <Control ID="DashBoxTotals" Path="~/Controls/SysAdmin/DashBoxTotals.ascx" PlaceHolder="ph2"/>
+      <Control Path="~/Controls/SysAdmin/TrialSiteReport2.ascx" PlaceHolder="ph1" IsDashboardView="true"/>
+      <Control Path="~/Controls/WFSubscriptions/ListWFSubChangeLogSystemWide.ascx" PlaceHolder="ph0" />
+      
+      
+    </Context>
+
+
+
+
+    <!-- CMS PAGE MANAGEMENT STUFF -->
+<!--
+changing these to just run off an xml file that gets loaded with the project - no more db needed
+    <Context ID="WFCMS_LIST_THEMES" Name="Themes" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CMSControls/ListWFThemes.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WFCMS_EDIT_THEME" Name="Edit Theme" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CMSControls/FormWFTheme.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WFCMS_LIST_TEMPLATES" Name="Page Templates for Theme" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CMSControls/ListWFPageTemplates.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WFCMS_EDIT_TEMPLATE" Name="Page Template" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CMSControls/FormWFPageTemplate.ascx" PlaceHolder="ph0"/>
+    </Context>
+    -->
+
+    <Context ID="WFCRM_MONTHLY_REPORT" Name="Monthly Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+    <Control Path="~/Controls/CRM/MonthlySourceBreakdown.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE SYSTEM ADMIN ROLE-->
+        <Role>a441db96-bffd-41ed-8283-69da619874db</Role>
+      </RequiredRoles>
+
+  </Context>
+
+    <Context ID="WFCRM_SOURCE_REPORT" Name="CRMSource Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CRM/CRMSourceReport.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+    <Context ID="WF_SENDGRID_BLOCK_CHECKER" Name="SendGrid Block Checker" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/SendgridBlockChecker.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+
+
+    
+
+
+    <Context ID="WFCRM_LIST_PROMOMESSAGES" Name="Promo Messages" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CRM/ListPromoMessages.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+    <Context ID="WFCRM_EDIT_PROMOMESSAGE" Name="Promo Message" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CRM/FormPromoMessage.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+
+
+    <Context ID="WFCRM_LIST_CANCELREASONS" Name="Cancellation Reasons" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CRM/ListCancelReasons.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WFCRM_EDIT_CANCELREASON" Name="Cancellation Reason" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CRM/FormCancelReason.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WFCRM_EDIT_SUB_CANCELREASON" Name="Edit/Add Cancellation Reason" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/CRM/FormWFSubCancelReason.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+
+    <Context ID="WF_NEWACCOUNT" Name="Create New WaiverFile Site/Account" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/SysAdminNewAccount.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+    
+
+    <Context ID="WFCRM_FIND_USER_ACCESS" Name="Check User Access" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/FindUserAccess.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+
+
+    <Context ID="WF_EDIT_XSLTEMPLATE" Name="Edit XSL Template" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/FormWFXMLTemplate.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+
+
+    <Context ID="WF_LIST_XSLTEMPLATES" Name="WaiverFile Site XSL Templates" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListWFXMLTemplatesForSite.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+    
+    
+    <Context ID="WF_LIST_WFSYSTEMINSTANCES" Name="WaiverFile System Instances" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListWFSystemInstances.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE SYSTEM ADMIN ROLE-->
+        <Role>a441db96-bffd-41ed-8283-69da619874db</Role>
+      </RequiredRoles>
+    </Context>
+    <Context ID="WF_MAILING_TESTER" Name="WaiverFile Mailing Tester" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/MailingTester.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE SYSTEM ADMIN ROLE-->
+        <Role>a441db96-bffd-41ed-8283-69da619874db</Role>
+      </RequiredRoles>
+    </Context>
+
+
+    <Context ID="WF_EDIT_WFSYSTEMINSTANCE" Name="WaiverFile System Instance" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/FormWFSystemInstance.ascx" PlaceHolder="ph0"/>
+    
+    </Context>
+   <Context ID="WF_SEND_GLOBAL_NOTIFICATION" Name="Send Global Notification" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/PushGlobalNotification.ascx" PlaceHolder="ph0"/>
+    
+    </Context>
+    
+
+
+    <Context ID="WF_VIEW_ADDON_SVC_DETAILS" Name="Add-on Service Details" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ViewWFAddonSvcDetails.ascx" PlaceHolder="ph0"/>
+
+    </Context>
+
+    <Context ID="WFCRM_ACCOUNT_CHANGE_LOG" Name="Account Change Log" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ListWFSubChangeLogSystemWideFull.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>4d8751fd-76f7-40f5-a1ee-bf62dd9e0eb0</Role>
+      </RequiredRoles>
+    </Context>
+    
+    
+    <Context ID="WF_LIST_API_CLIENT_BLOCKS" Name="API Client Blocks" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListAPIClientBlocks.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>4d8751fd-76f7-40f5-a1ee-bf62dd9e0eb0</Role>
+      </RequiredRoles>
+    </Context>
+
+
+    <Context ID="WF_LIST_DB_DUMPS" Name="WaiverFile Data Dumps" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control ID="DashBoxTotals" Path="~/Controls/SysAdmin/ListDBDumps.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE SYSTEM ADMIN ROLE-->
+        <Role>a441db96-bffd-41ed-8283-69da619874db</Role>
+      </RequiredRoles>
+    </Context>
+    
+    <Context ID="WF_REVENUE_REPORT" Name="WaiverFile Revenue Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control ID="DashBoxTotals" Path="~/Controls/SysAdmin/RevenueReport.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE SYSTEM ADMIN ROLE-->
+        <Role>a441db96-bffd-41ed-8283-69da619874db</Role>
+      </RequiredRoles>
+    </Context>
+
+    <Context ID="WF_IMPORT_OLD_DATA" Name="WaiverFile Import Customer Waivers" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/OldDataImport.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE SYSTEM ADMIN ROLE-->
+        <Role>a441db96-bffd-41ed-8283-69da619874db</Role>
+      </RequiredRoles>
+    </Context>
+
+    <Context ID="WF_MANAGE_SMS_NUMBERS" Name="Manage SMS Numbers" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSMSControls/ListAvailableSMSNumbers.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WF_ASSIGN_SMS_NUMBER" Name="Assign an SMS Number" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSMSControls/AssignNumberToSite.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+
+    <Context ID="WF_SMSDEMOREPORT" Name="SMS Demo Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSMSControls/SMSDemoReport.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="WF_REVIEW_SMS_PROFILE" Name="Review SMS Profile" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSMSControls/ReviewSMSProfile.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WF_CONFIGURE_SMS_PLAN" Name="Configure SMS Plan" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSMSControls/ConfigureSMSPlanAfterApproval.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+
+    <Context ID="WF_LIST_SMS_PROFILE" Name="List SMS Profile" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSMSControls/ListSMSProfiles.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+
+
+    <!-- override wpcommerce customer to direct to new lead view if it exists - it has everything we need -->
+    <Context ID="EDITCUSTOMER">
+      <Control Path="~/Controls/CRM/LeadCustomerTakeover.ascx" PlaceHolder="ph0" />
+      <Control Path="~/Controls/SysAdmin/CustomerLinkToWF.ascx" PlaceHolder="ph0" />
+    </Context>
+
+
+    <Context ID="WF_DELETE_WAIVER_SITE" Name="Deleted Sites" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/DeleteSite.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    
+    <Context ID="WF_RECENT_IMAGE_REVIEW" Name="Recent Image Review" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+    <Control Path="~/Controls/SysAdmin/RecentImageReview.ascx" PlaceHolder="ph0" />
+  </Context>
+
+
+  <Context ID="WF_DELETED_SITES" Name="Deleted Sites" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListSitesPendingDelete.ascx" PlaceHolder="ph0" />
+   
+      <Control Path="~/Controls/SysAdmin/ListDeletedSites.ascx" PlaceHolder="ph0" />
+    </Context>
+
+   
+
+
+    <Context ID="WFCRM_VIEW_CUSTOMER_CHANGE_LOG" Name="Account History" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/WFSubscriptions/ListWFSubChangeLog.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WFCRM_LEAD_TRACKER" Name="Lead Tracker" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/LeadTracker.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WFCRM_LIST_LEAD_STATUSES" Name="Lead Statuses" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/ListLeadStatuses.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WFCRM_EDIT_LEAD_STATUS" Name="Edit Lead Status" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/FormLeadStatus.ascx" PlaceHolder="ph0" />
+    </Context>
+    
+    
+    
+    <Context ID="WFCRM_LIST_SOURCES" Name="CRM Sources" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/ListSources.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WFCRM_EDIT_SOURCES" Name="Edit CRM Source" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/FormSource.ascx" PlaceHolder="ph0" />
+    </Context>
+    
+
+    <Context ID="WFCRM_LIST_STATUSES" Name="CRM Statuses" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/ListStatuses.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WFCRM_EDIT_STATUS" Name="Edit CRM Status" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/FormStatus.ascx" PlaceHolder="ph0" />
+    </Context>
+    
+
+    <Context ID="WFCRM_LIST_GROUPS" Name="CRM Groups" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/ListGroups.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WFCRM_EDIT_GROUPS" Name="Edit CRM Group" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/FormGroup.ascx" PlaceHolder="ph0" />
+    </Context>
+    
+    
+    <Context ID="WFCRM_LIST_ROLES" Name="CRM Roles" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/ListRoles.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WFCRM_EDIT_ROLE" Name="Edit Role" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+
+      <Control Path="~/Controls/CRM/FormRole.ascx" PlaceHolder="ph0" />
+    </Context>
+
+
+
+
+   
+    
+    
+    <Context ID="WF_EDITCUSTOMER" Name="WaiverFile Customer" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+
+      <Control Path="~/Controls/SysAdmin/ManageWaiverFileCustomer.ascx" PlaceHolder="ph0" />
+      <Control Path="~/Controls/SysAdmin/ListWFAPIKeysForCustomer.ascx" PlaceHolder="ph0"/>
+      
+      <!-- redirect to the lead-based view if a lead is there -->
+      <Control Path="~/Controls/CRM/LeadCustomerTakeover.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+
+    <Context ID="WF_MARK_LEAD_AS_SPAM" Name="WaiverFile Lead :  Mark as SPAM" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/MarkLeadAsSpam.ascx" PlaceHolder="ph0" />
+      <Control Path="~/Controls/CRM/ViewLead.ascx" PlaceHolder="ph0" />
+
+    </Context>
+    
+    <Context ID="WF_VIEW_LEAD" Name="WaiverFile Lead" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/ViewLead.ascx" PlaceHolder="ph0" />
+   
+    </Context>
+    <Context ID="WF_EDIT_LEAD" Name="Edit WaiverFile Lead" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/FormLead.ascx" PlaceHolder="ph0" />
+
+    </Context>
+    <Context ID="WF_NEW_LEAD" Name="New WaiverFile Lead" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+      <Control Path="~/Controls/CRM/NewLead.ascx" PlaceHolder="ph0" />
+
+    </Context>
+
+    <Context ID="WFCRM_LIST_AFFILIATE_CLIENT_ACCESS" Name="Affiliate Client Access" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+
+      <Control Path="~/Controls/CRM/ListAffiliateClientAccess.ascx" PlaceHolder="ph0" />
+    </Context>
+    
+    <Context ID="WFCRM_LIST_AFFILIATES" Name="Affiliates" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+    <RequiredRoles RequireAll="true">
+      <!-- REQUIRE CRM AGENT ROLE-->
+      <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+    </RequiredRoles>
+
+    <Control Path="~/Controls/CRM/ListAffiliates.ascx" PlaceHolder="ph0" />
+  </Context>
+    <Context ID="WFCRM_EDIT_AFFILIATE" Name="Edit Affiliate" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+
+      <Control Path="~/Controls/CRM/FormAffiliate.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WFCRM_EDIT_CUSTOMER" Name="Edit Customer CRM Details" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE CRM AGENT ROLE-->
+        <Role>71b5e2e8-ef3c-4493-861e-041feed47ba4</Role>
+      </RequiredRoles>
+
+      <Control Path="~/Controls/CRM/CustomerCRMScreen.ascx" PlaceHolder="ph0" />
+    </Context>
+    
+    <!-- WAIVERFILE SETUP PACKS -->
+
+    <Context ID="WF_SETUP_LIST_PACKS" Name="WaiverFile Account Setup Packages" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListWFAccountSetupPacks.ascx" PlaceHolder="ph0" />
+    </Context>
+	  <Context ID="WF_INSTALL_PACK" Name="Install a Package to a Site" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+		  <Control Path="~/Controls/SysAdmin/InstallSetupPackToExistingSite.ascx" PlaceHolder="ph0" />
+	  </Context>
+	  
+	  <Context ID="WF_SETUP_CREATE_PACK" Name="Add Account Setup Packages" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/CreateWFAccountSetupPack.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WF_SETUP_EDIT_PACK" Name="Edit Account Setup Packages" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/FormWFACcountSetupPack.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <!-- image management -->
+    <Context ID="WF_LIST_IMAGE_LOCATIONS" Name="Image Locations" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListWFImageLocations.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_EDIT_IMAGE_LOCATIONS" Name="Image Locations" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/FormWFImageLocation.ascx" PlaceHolder="ph0" />
+    </Context>
+
+
+   
+    <Context ID="WF_SUBS_EDIT_SUBSCRIPTION" Name="Edit Subscription" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFSubscription.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_CHANGE_OWNER" Name="Change Owner" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFSubscriptionChangeOwner.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    
+    <Context ID="WF_SUBS_SET_SUSPEND" Name="Manage Subscription Suspension" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+    <Control Path="~/Controls/WFSubscriptions/ManageSuspension.ascx" PlaceHolder="ph0" />
+  </Context>
+
+    
+  <Context ID="WF_SUBS_MANAGE_CUSTOMER_PLAN_ACCESS" Name="Customer Plan Access" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ManageCustomerPlanAccess.ascx" PlaceHolder="ph0" />
+    </Context>
+    
+    <Context ID="WF_SUBS_LIST_PLAN_GROUPS" Name="WaiverFile Plan Groups" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ListWFPlanGroups.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_EDIT_PLAN_GROUP" Name="Edit Plan Group" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFPlanGroup.ascx" PlaceHolder="ph0" />
+    </Context>
+
+  
+    <Context ID="WF_SUBS_LIST_PLANS_SMS" Name="SMS Plans" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ListWFPlans2.ascx" Service="SMS" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_LIST_PLANS" Name="WaiverFile Plans" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ListWFPlansAll.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_ADD_PLAN" Name="Add Plan" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFPlan.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_EDIT_PLAN" Name="Edit Plan" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFPlan.ascx" PlaceHolder="ph0" />
+    <Control Path="~/Controls/WFSubscriptions/ListWFPlanPrices.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WF_SUBS_EDIT_PLAN_PRICE" Name="Edit Plan Price" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFPlanPrice.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_VIEW_SUB_USAGE_COMPLETE" Name="View Complete Usage History" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ViewCompleteUsageHistory.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_EDIT_OFFER" Name="Edit WaiverFile Offer" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFOffer.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WF_SUBS_LIST_OFFERS" Name="WaiverFile Offers" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ListWFOffers.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WF_SUBS_EDIT_OFFER2" Name="Edit WaiverFile Offer" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFOffer2.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WF_SUBS_LIST_OFFERS2" Name="WaiverFile Offers (v2)" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ListWFOffers2.ascx" PlaceHolder="ph0" />
+    </Context>
+
+   
+
+    <Context ID="WF_SUBS_EDIT_CUST_OFFER" Name="Edit Offer" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWFOffer2Customer.ascx" PlaceHolder="ph0" />
+    </Context>
+    
+    
+    <Context ID="WF_SUBS_MANAGEPERIOD" Name="Manage Subscription Period" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/ManagePeriod.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_ADD_WAIVERPACK" Name="Add Waiver Pack" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/AddWaiverPack.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_EDIT_WAIVERPACK" Name="Edit Waiver Pack" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormWaiverPack.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_EDIT_PERIOD" Name="Edit Subscription Period" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormPeriod.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_SUBS_EDIT_ROLLOVER" Name="Edit Subscription Rollover" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/FormRollover.ascx" PlaceHolder="ph0" />
+    </Context>
+
+    <Context ID="WF_ONE_OFF_STUFF" Name="WaiverFile One-Off Code Area" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/OneOffCodeArea.ascx" PlaceHolder="ph0" />
+      <!-- REQUIRE SYSTEM ADMIN ROLE-->
+      <!-- <RequiredRoles RequireAll="true">
+        <Role>a441db96-bffd-41ed-8283-69da619874db</Role>
+      </RequiredRoles>
+      -->
+    </Context>
+
+
+    <Context ID="WF_LIST_SITELINK_CODE_TEMPLATES" Name="Waiver Site Link Code Templates" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListWaiverSiteLinkCodeTemplates.ascx" PlaceHolder="ph0" />
+    </Context>
+    <Context ID="WF_EDIT_SITELINK_CODE_TEMPLATES" Name="Edit Code Template" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/FormWaiverSiteLinkCodeTemplate.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+    <Context ID="WF_TRIAL_REPORT" Name="WaiverFile Trial Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/TrialSiteReport2.ascx" PlaceHolder="ph0" IsDashboardView="false"/>
+    </Context>
+
+    <!-- some new reports -->
+
+    <Context ID="WF_SUBS_CANCELLATION_REPORT" Name="Cancellation Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/CancellationReport.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+    <Context ID="WF_PAST_DUE" Name="WaiverFile Past Due Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/PastDueReport.ascx" PlaceHolder="ph0" IsDashboardView="false"/>
+    </Context>
+
+
+    <!-- WAIVERFILE SUBSCRIPTIONS -->
+    <!--<Context ID="WF_SUBS_OVERAGE_REPORT" Name="Quota/Expiration Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/CloseToQuota.ascx" PlaceHolder="ph0" />
+      <Control Path="~/Controls/WFSubscriptions/OverageReport.ascx" PlaceHolder="ph0" />
+      <Control Path="~/Controls/WFSubscriptions/ExpiredSites.ascx" PlaceHolder="ph0" />
+    </Context>-->
+    
+    <Context ID="WF_SUBS_CLOSE_TO_QUOTA" Name="Close to Quota Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/CloseToQuota.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WF_SUBS_OVERAGE_REPORT" Name="Overage Report" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/OverageReport.ascx" PlaceHolder="ph0" />
+      <Control Path="~/Controls/WFSubscriptions/CloseToQuota.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WF_SUBS_SUSPENDED" Name="Suspended Accounts" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WFSubscriptions/SuspensionReport.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    
+
+    <Context ID="WF_CREATE_TRIAL" Name="Create a Trial Site" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/SignupAdmin.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="WF_VIEW_WAIVERSITE" Name="WaiverFile Site Details" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ViewWaiverSiteDetails.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+    <Context ID="WF_USAGE" Name="WaiverFile Site Usage (REPORT REMOVED, IT WAS SLOW)" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+
+
+      <!--<Control Path="~/Controls/SysAdmin/UsageReport.ascx" PlaceHolder="ph0"/>-->
+    </Context>
+
+    <Context ID="WF_ADDON_SUBS" Name="WaiverFile AddOn Usage" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+
+      <!--<Control Path="~/Controls/SysAdmin/UpdateSite.ascx" PlaceHolder="ph0"/>  -->
+      <Control Path="~/Controls/WFSubscriptions/ListWFSubscriptionAddons.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+    
+    <Context ID="WFSETTINGS" Name="General Waiver Settings" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/FormWFSettingsMain.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+    <Context ID="WFTEXTSETTINGS" Name="Waiver Text Settings" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/FormWFTextSettings.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="WFEMAILSETTINGS" Name="Waiver Email Settings" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/FormOWFSettings.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+
+    <Context ID="EXPORTWAIVERS" Name="Export Waivers" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/ExportWaivers.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+
+    <Context ID="WAIVERNAMEREPORTS" Name="Waiver Name Reports" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/WaiverNameReport.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="LISTWAIVEREVENTS" Name="Waiver Events" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/ListWaiverEvents.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="EDITWAIVEREVENT" Name="Edit Waiver Event" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/FormWaiverEvent.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="EDITWAIVERTEXT" Name="Edit Waiver Text" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SetWaiverText.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="LISTWAIVERS" Name="Waivers" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/ListWaivers.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="VIEWWAIVER" Name="View Waiver" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/ViewWaiver.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+
+
+    <Context ID="WF_LIST_WAIVER_SITES" Name="Waiver Sites" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/ListWaiverSites.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    
+    <Context ID="WF_EDIT_WAIVER_SITE_SECURITY_MODE" Name="Change Security Mode" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/EditWaiverSiteSecurityMode.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+    <Context ID="WF_EDIT_WAIVER_SITE" Name="Edit Waiver Site" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+    <Control Path="~/Controls/FormWaiverSite.ascx" PlaceHolder="ph0"/>
+
+  <Control Path="~/Controls/Connectors/ManageConnectorsForSite.ascx" PlaceHolder="ph0"/>
+  </Context>
+    <Context ID="WF_ADD_WAIVER_SITE" Name="Add Waiver Site" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/AddWaiverSite.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="WF_SITE_PERMISSIONS" Name="Waiver Site Permissions" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/ .ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WF_SITE_QUESTIONS" Name="Waiver Site Questions" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/ .ascx" PlaceHolder="ph0"/>
+    </Context>
+
+
+    <Context ID="WFAPI_LISTKEYS_FOR_CUSTOMER" Name="API Keys for Customer" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListWFAPIKeysForCustomer.ascx" PlaceHolder="ph0"/>
+    </Context>
+    <Context ID="WFAPI_LISTKEYS_ALL" Name="API Keys" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/ListWFAPIKeysAll.ascx" PlaceHolder="ph0"/>
+      <RequiredRoles RequireAll="true">
+        <!-- REQUIRE SYSTEM ADMIN ROLE-->
+        <Role>a441db96-bffd-41ed-8283-69da619874db</Role>
+      </RequiredRoles>
+    </Context>
+    <Context ID="WFAPI_FORM_KEY" Name="Edit API Key" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="~/Controls/SysAdmin/FormWFAPIKey.ascx" PlaceHolder="ph0"/>
+    </Context>
+    
+    
+    <!-- HERE ARE SOME SAMPLE CONTEXTS YOU CAN USE TO FILL THIS IN
+    <Context ID="LISTWPADS" Name="List Ads" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="/wp-content/Plugins/WPAds/Controls/ListWPAds.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="LISTWPADREGIONS" Name="List Ad Regions" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="/wp-content/Plugins/WPAds/Controls/ListWPAdRegions.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="EDITWPAD" Name="Edit Ad" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="/wp-content/Plugins/WPAds/Controls/FormWPAd.ascx" PlaceHolder="ph0"/>
+    </Context>
+
+    <Context ID="EDITWPADREGION" Name="Edit Ad Region" LoaderXsl="/wp-admin/WPMenu/LoaderLayouts/FullWidth.xslt">
+      <Control Path="/wp-content/Plugins/WPAds/Controls/FormWPAdRegion.ascx" PlaceHolder="ph0"/>
+    </Context>
+    -->
+
+
+  </Contexts>
+</Application>

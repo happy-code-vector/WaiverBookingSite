@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BookingEditMode.master.cs" Inherits="WaiverFile.MasterPages.BookingEditMode" %>
+<%@ Register Src="~/Controls/CMSControls/EditBar.ascx" TagPrefix="uc1" TagName="EditBar" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="Body1" runat="server">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <uc1:EditBar runat="server" id="EditBar1" />
+              <telerik:RadDockLayout ID="RadDockLayout1" runat="server">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+              </telerik:RadDockLayout>
+        </div>
+    </form>
+</body>
+</html>

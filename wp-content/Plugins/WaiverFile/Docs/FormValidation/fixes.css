@@ -1,0 +1,4 @@
+﻿/* small form validation fixes */
+
+/* hide icons on select forms due to overlap issue. border color and message are enough. */
+.has-feedback.no-validation-icon .form-control-feedback{ display:none; }

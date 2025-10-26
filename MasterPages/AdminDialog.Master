@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminDialog.Master.cs" Inherits="WaiverFile.MasterPages.AdminDialog" %>
+<%@ Register TagPrefix="uc1" TagName="NavbarAdmin" Src="~/Controls/NavbarAdmin.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="SubscriptionAdminDisabler" Src="~/Controls/SubscriptionAdminDisabler.ascx" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+
+    
+
+    <title></title>
+    
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="/site/fonts/Roboto.css" rel="stylesheet" type="text/css"/>
+    <link href="/site/fonts/marck-script.css" rel="stylesheet" type="text/css"/>
+    <link href="/site/css/styles-admin-area.css?v=2.0" rel="stylesheet" type="text/css"/>
+   
+       <meta name="robots" content="noindex" />
+
+</head>
+<body runat="server" id="Body1">
+    
+  <!-- Documentation extras
+   ================================================== -->
+  <!--[if lt IE 8]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <div class="alert alert-danger" id="ie-alert">
+      <div class="container">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      </div>
+    </div>
+  <![endif]-->
+
+
+    <form id="Form1" runat="server">
+        <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
+        <div>
+            
+
+            <div id="main-dialog-area">
+            <asp:ContentPlaceHolder ID="ph0" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+           
+
+
+
+   <script src="/site/includes/bootstrap.min.js?v=2"></script>
+             <script type="text/javascript" src="/wp-content/Plugins/WaiverFile/Docs/SessionWarn.js"></script>
+
+    
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+            
+
+            </div>
+
+           
+    
+    </form>
+</body>
+</html>

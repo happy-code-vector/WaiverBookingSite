@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TestArea.ascx.cs" Inherits="WaiverFile.Controls.SysAdmin.TestArea" %>
+<%@ Register Assembly="Telerik.Web.UI, Version=2014.2.724.0, Culture=neutral, PublicKeyToken=29ac1a93ec063d92" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<telerik:RadDateInput ID="RadDateInput1" runat="server" Culture="en-US" DateFormat="M/d/yy" DisplayDateFormat="M/d/yy" LabelWidth="64px" MaxDate="1990-01-09" MinDate="1990-01-01" Width="160px"></telerik:RadDateInput>

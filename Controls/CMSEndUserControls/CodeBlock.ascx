@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CodeBlock.ascx.cs" Inherits="WaiverFile.Controls.CMSEndUserControls.CodeBlock" %>
+<asp:PlaceHolder runat="server" ID="phContent"></asp:PlaceHolder>

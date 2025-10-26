@@ -1,0 +1,119 @@
+﻿<root>
+
+
+
+  <tools name="InsertToolbar" enabled="true" >
+	  <!--<tool name="AjaxSpellCheck"/>-->
+    <!--<tool name="ImageManager" shortcut="CTRL+M" Text="Add Image From Images Folder"/>-->
+    <tool name="WaiverFileImage" Text="Add an image"/>
+
+
+
+
+    <tool name="Undo" />
+    <tool name="Redo" />
+    <tool separator="true"/>
+    <tool name="Cut" />
+    <tool name="Copy" />
+    <tool name="Paste" shortcut="CTRL+!"/>
+    <tool name="PasteFromWordNoFontsNoSizes" />
+    <tool separator="true"/>
+    <tool name="Bold" />
+    <tool name="Italic" />
+    <tool name="Underline" />
+    <tool name="JustifyLeft" />
+    <tool name="JustifyCenter" />
+    <tool separator="true"/>
+
+    <tool name="Indent" />
+    <tool name="Outdent" />
+    <tool name="InsertOrderedList" />
+    <tool name="InsertUnorderedList"/>
+    <tool separator="true"/>
+    <tool name="LinkManager" />
+    <tool name="Unlink" />
+    <tool separator="true"/>
+    <tool name="ForeColor" />
+    <tool name="FontSize"/>
+	  <tool name="FormatBlock" />
+
+	  <tool name="InsertCustomLink"/>
+  </tools>
+
+  <!--
+	<links>
+		<link name="telerik" href="http://www.telerik.com">
+			<link name="Products" href="http://www.telerik.com/products">
+				<link name="RadEditor" href="http://www.telerik.com/radeditor" />
+			</link>
+			<link name="Purchase" href="http://www.telerik.com/purchase" />
+			<link name="Support" href="http://www.telerik.com/support" />
+			<link name="Client.Net" href="http://www.telerik.com/clientnet" />
+		</link>
+		<link name="Microsoft">
+			<link name="Main Site" href="http://www.microsoft.com" />
+			<link name="MSDN Online" href="http://msdn.microsoft.com" />
+			<link name="Windows Update" href="http://windowsupdate.microsoft.com" />
+		</link>
+		<link name="Search Engines">
+			<link name="Google" href="http://www.google.com" />
+			<link name="Yahoo" href="http://www.yahoo.com" />
+			<link name="AltaVista" href="http://www.altavista.com" />
+		</link>
+	</links>-->
+  <snippets>
+    <snippet name="Order Confirmation">
+      <![CDATA[
+					<div style="width:300px;border:2px outset #D8D2BD;padding:34px;font-family:Arial, Verdana; font-size:11px;background-color:#F1EFE6;">
+					Dear ____________________,<br />
+					Thank you for inquiring about ____________. Your request will be processed in 48 hours and shipped at the address you have provided. 
+					<br /><br />
+						<b>Please, contact us if you have any problems.</b>
+					</div>
+				]]>
+    </snippet>
+    <snippet name="Email Signature">
+      <![CDATA[
+					<div style="margin-top:30px;width:80%;border-top:1px dotted gray;padding-top:4px;font-family:Arial, Verdana; font-size:11px;">
+					<b>John Wigham</b><br />
+					Senior Web Developer<br />
+						<a href="#">john@mysite.com</a>
+						<br />
+							<br />
+								<i>Disclaimer: The contents of this e-mail are privileged and confidential and intended for the addressees at the specified e-mail addresses only.</i>
+					</div>
+				]]>
+    </snippet>
+    <snippet name="Problem Report Feedback">
+      <![CDATA[
+					<div style="width:300px;border:2px outset #D8D2BD;padding:34px;font-family:Arial, Verdana; font-size:11px;background-color:#F1EFE6;">
+					Hi ____________________,<br />
+					Thank you for reporting this issue. We have verified the problem and it is logged in our system. We will notify you once we have a solution. 
+					<br /><br />
+						<b>Please, contact us if you have any problems.</b>
+					</div>
+				]]>
+    </snippet>
+  </snippets>
+
+  <symbols>
+
+  </symbols>
+  <fontNames>
+  </fontNames>
+  <fontSizes>
+  </fontSizes>
+
+  <colors>
+  </colors>
+  <classes>
+  </classes>
+
+  <paragraphs>
+  </paragraphs>
+
+  <dialogParameters>
+  </dialogParameters>
+  <languages>
+  </languages>
+</root>

@@ -1,0 +1,218 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SignupWide.master.cs" Inherits="WaiverFile.MasterPages.SignupWide" %>
+
+<%@ Register TagPrefix="uc1" TagName="CRMSourceCapture" Src="/CRM/Controls/CRMSourceCapture.ascx" %>
+<uc1:CRMSourceCapture runat="server" />  
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <title>WaiverFile</title>
+   
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="/wp-content/styles/style.css" rel="stylesheet">
+ <!-- Fonts -->
+<link href="/wp-content/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700" rel="stylesheet">
+   <!-- Documentation extras
+   ================================================== -->
+  <!--[if lt IE 8]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <div class="alert alert-danger" id="ie-alert">
+      <div class="container">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      </div>
+    </div>
+  <![endif]-->
+
+
+ <script runat="server"> 
+     protected override void OnInit(EventArgs e)
+     {
+
+         HtmlLink cssBootstrap = new HtmlLink();
+         cssBootstrap.Href = "/wp-content/Styles/includes/bootstrap.min.css";
+         cssBootstrap.Attributes.Add("rel", "stylesheet");
+         cssBootstrap.Attributes.Add("type", "text/css");
+         Page.Header.Controls.AddAt(0, cssBootstrap); //ADD THIS CSS AT THE BEGINNING SO CUSTOM STYLES CAN OVERRIDE IT.
+
+
+        LiteralControl favIco = new LiteralControl("<link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/apple-icon-57x57.png\">"
+         + "<link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/apple-icon-60x60.png\">"
+         + "<link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/apple-icon-72x72.png\">"
+         + "<link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/apple-icon-76x76.png\">"
+         + "<link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/apple-icon-114x114.png\">"
+         + "<link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/apple-icon-120x120.png\">"
+         + "<link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/apple-icon-144x144.png\">"
+         + "<link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/apple-icon-152x152.png\">"
+         + "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-icon-180x180.png\">"
+         + "<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"/android-icon-192x192.png\">"
+         + "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">"
+         + "<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"/favicon-96x96.png\">"
+         + "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">"
+         + "<link rel=\"manifest\" href=\"/manifest.json\">"
+         + "<meta name=\"msapplication-TileColor\" content=\"#ffffff\">"
+         + "<meta name=\"msapplication-TileImage\" content=\"/ms-icon-144x144.png\">"
+         + "<meta name=\"theme-color\" content=\"#ffffff\">");
+         Page.Header.Controls.Add(favIco);
+
+         ((Waypoint.Core.WPPageLite)Page).EnsureJQuery();
+
+         string fbPixel = "  <!-- Facebook Pixel Code --> "
+               + " <script> "
+               + " !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? "
+               + " n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n; "
+               + " n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0; "
+               + " t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, "
+               + " document,'script','https://connect.facebook.net/en_US/fbevents.js'); "
+               + " fbq('init', '699848953473159'); // Insert your pixel ID here. "
+               + " fbq('track', 'PageView'); "
+               + " <" + "/script>"
+               + " <noscript><img height=\"1\" width=\"1\" style=\"display:none\" "
+               + " src=\"https://www.facebook.com/tr?id=699848953473159&ev=PageView&noscript=1\" "
+               + " /></noscript> "
+               + " <!-- DO NOT MODIFY --> "
+               + " <!-- End Facebook Pixel Code --> ";
+
+         ((Waypoint.Core.WPPageLite)Page).Header.Controls.Add(new LiteralControl(fbPixel));
+
+
+     }
+</script> 
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+          <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
+
+        <nav id="navmain" class="navbar navbar-default navbar-fixed-top " role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          <a class="navbar-brand" href="https://www.waiverfile.com">
+                    <img src="/wp-content/images/waiverfile-logo-color.png" alt="WaiverFile - Electronic Waiver Form Management" class="logo-color">
+                </a>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <div class="navbar-right">
+                    <% if (((Waypoint.Core.WPPageLite)Page).AuthenticatedUser == null){  %>
+                      <a href="https://app.waiverfile.com/FreeTrial.aspx" class="btn btn-primary btn-sm" style="background-color: #ea7400; border-color: #ea7400;">Free Trial</a>
+                        <a href="/MyAccount/" class="btn btn-default btn-sm">Log In</a>
+                     <%} else {  %>
+                      <a href="/Login.aspx?action=logout" class="btn btn-default btn-sm">Log Out</a>
+                     <% } %>
+                       
+                    
+                    </div>
+
+             
+               </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        <!-- /.container -->
+    </nav>
+
+
+
+        <div class="content-section-a">
+        <div class="container" >
+           
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <asp:ContentPlaceHolder ID="ContentFullWidth" runat="server" />
+                </div>
+            </div>
+
+            
+
+        </div></div>
+
+        <asp:Panel runat="server" ID="pnlGreyBG">
+        <section class="section section-greybg">
+            <div class="container">
+                 <asp:ContentPlaceHolder ID="ContentFullWidthGreyBG" runat="server" />
+            </div>
+        </section>
+            </asp:Panel>
+        
+        <footer>
+
+        <div class="container">
+      
+        
+        <div class="row">
+            <div class="col-sm-7">
+                Copyright &copy; WaiverFile. 2004-<%=DateTime.Now.Year %>. All rights reserved. P.O. Box 35, Bayville, NY 11709. 
+                <br>View our <a href="https://www.waiverfile.com/Policies.aspx">Policies</a>. Send us a note at <a href="mailto:info@waiverfile.com">info@waiverfile.com</a> or give us a call at <a href="tel:18777919984">+1 (877) 791-9984</a>.
+            </div>
+            <div class="col-sm-5 text-right">
+                <ul class="list-unstyled list-inline">
+                    <li><a href="https://www.facebook.com/waiverfile" target="_blank" class="social social-facebook" title="Find us on Facebook"><i class="fa fa-facebook"></i></a></li>
+ <li><a href="https://www.linkedin.com/company/waiverfile/" target="_blank" class="social social-linkedin" title="Find us on Linked In"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCsCH9fZXJs4ZMtMrW0prqLQ" target="_blank" class="social social-youtube" title="YouTube Channel"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.waiverfile.com/wp-content/Plugins/WPCommerceArticles/Controls/ArticleRSS.ashx" target="_blank" class="social social-rss" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+    </form>
+
+    <!-- Scripts -->
+
+
+<script src="/wp-content/Scripts/bootstrap.min.js"></script>
+
+ <script src="/wp-content/Scripts/smoothscroll.js"></script>
+    <script src="/wp-content/Scripts/jquery.waypoints.min.js"></script>
+    <script src="/wp-content/Scripts/theme_clean.js"></script>
+
+
+
+<% if(Request.Url.Host.ToUpper() != "HELP.WAIVERFILE.COM" && (((Waypoint.Core.WPPageLite)Page).AuthenticatedUser== null || !((Waypoint.Core.WPPageLite)Page).AuthenticatedUser.Roles.Contains( Waypoint.Core.WPPageCore.siteAdminRoleID))){  %>
+
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 9006775;
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/9006775/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
+
+<% } %>
+
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWSLDL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+</body>
+</html>

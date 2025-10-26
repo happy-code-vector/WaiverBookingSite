@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminBlank.master.cs" Inherits="WaiverFile.MasterPages.AdminBlank" %>
+<%@ Register TagPrefix="uc1" TagName="NavbarAdmin" Src="~/Controls/NavbarAdmin.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="SubscriptionAdminDisabler" Src="~/Controls/SubscriptionAdminDisabler.ascx" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+
+    
+
+    <title></title>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="/site/fonts/Roboto.css" rel="stylesheet" type="text/css"/>
+    <link href="/site/fonts/marck-script.css" rel="stylesheet" type="text/css"/>
+    <link href="/site/css/styles-admin-area.css?v=2.0" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet"  href="/site/css/bootstrap-select.min.css" type="text/css" />
+   <meta name="robots" content="noindex" />
+
+</head>
+<body runat="server" id="Body1">
+    
+  <!-- Documentation extras
+   ================================================== -->
+  <!--[if lt IE 8]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <div class="alert alert-danger" id="ie-alert">
+      <div class="container">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      </div>
+    </div>
+  <![endif]-->
+
+
+    <form id="Form1" runat="server">
+        <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
+        <div>
+            
+   
+   <asp:ContentPlaceHolder ID="ph0" runat="server">
+            </asp:ContentPlaceHolder>
+       
+             <asp:ContentPlaceHolder ID="ph1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+      <script src="/site/includes/bootstrap.min.js?v=2"></script>
+
+            
+
+        <!-- Metis Menu Plugin JavaScript -->
+    <script src="/wp-content/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/wp-content/bower_components/raphael/raphael-min.js"></script>
+    
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/wp-content/Scripts/sb-admin-2.js"></script>
+    
+            <!-- time utilities -->
+    <script src="/site/includes/moment.min.js"></script>
+            
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        //window.clearInterval(reloadInterval);
+        
+    });
+</script>
+
+ <!-- Modal -->
+<div class="modal fade" id="viewNotificationModal" tabindex="-1" role="dialog" aria-labelledby="notifLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="notifLabel"><span id="lblNotif_head"></span></h4>
+      </div>
+      <div class="modal-body">
+        <div id="divNotifBody"></div>
+      </div>
+      <div class="modal-footer">
+           
+           <a href="#" class="btn btn-primary" id="btnNotifView">View Details</a>
+          <a href="javascript:void(0);" class="btn btn-primary" id="btnNotifClose">Close</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="alertSessionWarning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Session expiring soon</h4>
+      </div>
+      <div class="modal-body">
+        <div id="txtSessionExpiring"></div>
+      </div>
+      <div class="modal-footer">
+
+           <a href="javascript:void(0);" class="btn btn-default" id="btnLogOut">Log Out</a>
+           <a href="javascript:void(0);" class="btn btn-primary" id="btnKeepWorking">Keep Working</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="alertSessionRedirecting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Session expired</h4>
+      </div>
+      <div class="modal-body">
+       Your session has expired. You are being redirected to the login screen. 
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary" id="btnContinueToLogin">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/wp-content/Plugins/WaiverFile/Docs/SessionWarn.js"></script>
+                    
+    <script src="/site/includes/bootstrap-select.min.js"></script>
+        
+            </div>
+
+           
+        
+    </form>
+</body>
+</html>

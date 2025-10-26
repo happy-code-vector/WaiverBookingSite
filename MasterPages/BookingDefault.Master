@@ -1,0 +1,462 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BookingDefault.master.cs" Inherits="WaiverFile.MasterPages.BookingDefault" %>
+
+<%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    
+     <!-- SEO Meta Tags -->
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="WaiverFile">
+
+     <!-- Preloaded local web font (Inter) -->
+ <link rel="preload" href="/sitebooking/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+     <!-- Font icons -->
+ <link rel="preload" href="/sitebooking/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="stylesheet" href="/sitebooking/icons/cartzilla-icons.min.css">
+
+
+     <!-- Bootstrap + Theme styles -->
+ <link rel="preload" href="/sitebooking/css/theme.min.css" as="style">
+ <link rel="preload" href="/sitebooking/css/theme.rtl.min.css" as="style">
+ <link rel="stylesheet" href="/sitebooking/css/theme.min.css" id="themestyles">
+
+    <link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
+    
+        <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <telerik:RadDockLayout ID="RadDockLayout1" runat="server">
+
+        <div>
+
+             <!-- Search offcanvas -->
+ <div class="offcanvas offcanvas-top" id="searchBox" data-bs-backdrop="static" tabindex="-1">
+   <div class="offcanvas-header border-bottom p-0 py-lg-1">
+     <div class="container d-flex align-items-center">
+         <asp:TextBox runat="server" ID="txtSearch" TextMode="Search" CssClass="form-control form-control-lg fs-lg border-0 rounded-0 py-3 ps-0" placeholder="Search the products" data-autofocus="offcanvas"></asp:TextBox>
+
+       <button type="reset" class="btn-close fs-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+     </div>
+   </div>
+   <div class="offcanvas-body px-0">
+     <div class="container text-center">
+       <svg class="text-body-tertiary opacity-60 mb-4" xmlns="http://www.w3.org/2000/svg" width="60" viewBox="0 0 512 512" fill="currentColor"><path d="M340.115,361.412l-16.98-16.98c-34.237,29.36-78.733,47.098-127.371,47.098C87.647,391.529,0,303.883,0,195.765S87.647,0,195.765,0s195.765,87.647,195.765,195.765c0,48.638-17.738,93.134-47.097,127.371l16.98,16.98l11.94-11.94c5.881-5.881,15.415-5.881,21.296,0l112.941,112.941c5.881,5.881,5.881,15.416,0,21.296l-45.176,45.176c-5.881,5.881-15.415,5.881-21.296,0L328.176,394.648c-5.881-5.881-5.881-15.416,0-21.296L340.115,361.412z M195.765,361.412c91.484,0,165.647-74.163,165.647-165.647S287.249,30.118,195.765,30.118S30.118,104.28,30.118,195.765S104.28,361.412,195.765,361.412z M360.12,384l91.645,91.645l23.88-23.88L384,360.12L360.12,384z M233.034,233.033c5.881-5.881,15.415-5.881,21.296,0c5.881,5.881,5.881,15.416,0,21.296c-32.345,32.345-84.786,32.345-117.131,0c-5.881-5.881-5.881-15.415,0-21.296c5.881-5.881,15.416-5.881,21.296,0C179.079,253.616,212.45,253.616,233.034,233.033zM135.529,180.706c-12.475,0-22.588-10.113-22.588-22.588c0-12.475,10.113-22.588,22.588-22.588c12.475,0,22.588,10.113,22.588,22.588C158.118,170.593,148.005,180.706,135.529,180.706z M256,180.706c-12.475,0-22.588-10.113-22.588-22.588c0-12.475,10.113-22.588,22.588-22.588s22.588,10.113,22.588,22.588C278.588,170.593,268.475,180.706,256,180.706z"/></svg>
+       <h6 class="mb-2">Your search results will appear here</h6>
+       <p class="fs-sm mb-0">Start typing in the search field above to see instant search results.</p>
+     </div>
+   </div>
+ </div>
+
+            
+    <!-- Shopping cart offcanvas -->
+    <div class="offcanvas offcanvas-end pb-sm-2 px-sm-2" id="shoppingCart" tabindex="-1" aria-labelledby="shoppingCartLabel" style="width: 500px">
+
+      <!-- Header -->
+      <div class="offcanvas-header flex-column align-items-start py-3 pt-lg-4">
+        <div class="d-flex align-items-center justify-content-between w-100">
+          <h4 class="offcanvas-title" id="shoppingCartLabel">Cart (3)</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+      </div>
+
+      <!-- Items -->
+      <div class="offcanvas-body d-flex flex-column gap-4 pt-2">
+
+        <!-- Item -->
+        <div class="d-flex align-items-center">
+          <a class="flex-sm-shrink-0" href="shop-product-marketplace.html" style="width: 142px">
+            <div class="ratio bg-body-tertiary rounded overflow-hidden" style="--cz-aspect-ratio: calc(110 / 142 * 100%)">
+              <img src="assets/img/home/marketplace/cart/01.jpg" alt="Thumbnail">
+            </div>
+          </a>
+          <div class="w-100 min-w-0 ps-3">
+            <h5 class="d-flex animate-underline mb-2">
+              <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-marketplace.html">Multi device mockup PSD</a>
+            </h5>
+            <div class="h6 pb-1 mb-2">$27</div>
+            <div class="d-flex align-items-center justify-content-between gap-1">
+              <div class="w-100" style="max-width: 185px">
+                <select class="form-select form-select-sm rounded-pill" data-select='{
+                  "classNames": {
+                    "containerInner": ["form-select", "form-select-sm", "rounded-pill"]
+                  },
+                  "removeItemButton": false
+                }' aria-label="Small pill select">
+                  <option value="standard">Standard license</option>
+                  <option value="extended">Extended license</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-icon btn-sm flex-shrink-0 fs-sm" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-sm" data-bs-title="Remove" aria-label="Remove from cart">
+                <i class="ci-trash fs-base"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="d-flex align-items-center">
+          <a class="flex-sm-shrink-0" href="shop-product-marketplace.html" style="width: 142px">
+            <div class="ratio bg-body-tertiary rounded overflow-hidden" style="--cz-aspect-ratio: calc(110 / 142 * 100%)">
+              <img src="assets/img/home/marketplace/cart/02.jpg" alt="Thumbnail">
+            </div>
+          </a>
+          <div class="w-100 min-w-0 ps-3">
+            <h5 class="d-flex animate-underline mb-2">
+              <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-marketplace.html">Isometric device mockups</a>
+            </h5>
+            <div class="h6 pb-1 mb-2">$12</div>
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <div class="w-100" style="max-width: 185px">
+                <select class="form-select form-select-sm rounded-pill" data-select='{
+                  "classNames": {
+                    "containerInner": ["form-select", "form-select-sm", "rounded-pill"]
+                  },
+                  "removeItemButton": false
+                }' aria-label="Small pill select">
+                  <option value="standard">Standard license</option>
+                  <option value="extended">Extended license</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-icon btn-sm flex-shrink-0 fs-sm" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-sm" data-bs-title="Remove" aria-label="Remove from cart">
+                <i class="ci-trash fs-base"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="d-flex align-items-center">
+          <a class="flex-sm-shrink-0" href="shop-product-marketplace.html" style="width: 142px">
+            <div class="ratio bg-body-tertiary rounded overflow-hidden" style="--cz-aspect-ratio: calc(110 / 142 * 100%)">
+              <img src="assets/img/home/marketplace/cart/03.jpg" alt="Thumbnail">
+            </div>
+          </a>
+          <div class="w-100 min-w-0 ps-3">
+            <h5 class="d-flex animate-underline mb-2">
+              <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-marketplace.html">Modern poster with abstract shapes</a>
+            </h5>
+            <div class="h6 pb-1 mb-2">$8</div>
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <div class="w-100" style="max-width: 185px">
+                <select class="form-select form-select-sm rounded-pill" data-select='{
+                  "classNames": {
+                    "containerInner": ["form-select", "form-select-sm", "rounded-pill"]
+                  },
+                  "removeItemButton": false
+                }' aria-label="Small pill select">
+                  <option value="standard">Standard license</option>
+                  <option value="extended">Extended license</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-icon btn-sm flex-shrink-0 fs-sm" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-sm" data-bs-title="Remove" aria-label="Remove from cart">
+                <i class="ci-trash fs-base"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="offcanvas-header flex-column align-items-start">
+        <div class="d-flex align-items-center justify-content-between w-100 mb-3 mb-md-4">
+          <span class="text-light-emphasis">Subtotal:</span>
+          <span class="h6 mb-0">$47</span>
+        </div>
+        <a class="btn btn-lg btn-dark w-100 rounded-pill" href="checkout-marketplace.html">Checkout</a>
+      </div>
+    </div>
+
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar navbar-expand-lg navbar-sticky z-fixed px-0" data-sticky-navbar='{"offset": 800}'>
+      <div class="container flex-nowrap">
+
+        <!-- Mobile offcanvas menu toggler (Hamburger) -->
+        <button type="button" class="navbar-toggler me-4 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar brand (Logo) -->
+        <a class="navbar-brand py-1 py-md-2 py-xl-1" href="/">
+          <span class="d-none d-sm-flex flex-shrink-0 text-primary me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><path d="M36 18.01c0 8.097-5.355 14.949-12.705 17.2a18.12 18.12 0 0 1-5.315.79C9.622 36 2.608 30.313.573 22.611.257 21.407.059 20.162 0 18.879v-1.758c.02-.395.059-.79.099-1.185.099-.908.277-1.817.514-2.686C2.687 5.628 9.682 0 18 0c5.572 0 10.551 2.528 13.871 6.517 1.502 1.797 2.648 3.91 3.359 6.201.494 1.659.771 3.436.771 5.292z" fill="currentColor"/><g fill="#fff"><path d="M17.466 21.624c-.514 0-.988-.316-1.146-.829-.198-.632.138-1.303.771-1.501l7.666-2.469-1.205-8.254-13.317 4.621a1.19 1.19 0 0 1-1.521-.75 1.19 1.19 0 0 1 .751-1.521l13.89-4.818c.553-.197 1.166-.138 1.64.158a1.82 1.82 0 0 1 .85 1.284l1.344 9.183c.138.987-.494 1.994-1.482 2.33l-7.864 2.528-.375.04zm7.31.138c-.178-.632-.85-1.007-1.482-.81l-5.177 1.58c-2.331.79-3.28.02-3.418-.099l-6.56-8.412a4.25 4.25 0 0 0-4.406-1.758l-3.122.987c-.237.889-.415 1.777-.514 2.686l4.228-1.363a1.84 1.84 0 0 1 1.857.81l6.659 8.551c.751.948 2.015 1.323 3.359 1.323.909 0 1.857-.178 2.687-.474l5.078-1.54c.632-.178 1.008-.829.81-1.481z"/><use href="#czlogo"/><use href="#czlogo" x="8.516" y="-2.172"/></g><defs><path id="czlogo" d="M18.689 28.654a1.94 1.94 0 0 1-1.936 1.935 1.94 1.94 0 0 1-1.936-1.935 1.94 1.94 0 0 1 1.936-1.935 1.94 1.94 0 0 1 1.936 1.935z"/></defs></svg>
+          </span>
+         waiverSite.name
+          
+        </a>
+
+        <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
+    <uc1:NavbarBooking runat="server" id="NavbarBooking" />
+
+        <!-- Button group -->
+        <div class="d-flex align-items-center">
+
+          <!-- Theme switcher (light/dark/auto) -->
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-lg btn-outline-secondary fs-lg border-0 rounded-circle animate-scale" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target">
+                <i class="ci-sun"></i>
+              </span>
+            </button>
+            <ul class="dropdown-menu" style="--cz-dropdown-min-width: 9rem">
+              <li>
+                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-sun"></i>
+                  </span>
+                  <span class="theme-label">Light</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-moon"></i>
+                  </span>
+                  <span class="theme-label">Dark</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-auto"></i>
+                  </span>
+                  <span class="theme-label">Auto</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Search toggle button -->
+          <button type="button" class="btn btn-icon btn-lg fs-xl btn-outline-secondary border-0 rounded-circle animate-shake" data-bs-toggle="offcanvas" data-bs-target="#searchBox" aria-controls="searchBox" aria-label="Toggle search bar">
+            <i class="ci-search animate-target"></i>
+          </button>
+
+          <!-- Account button visible on screens > 768px wide (md breakpoint) -->
+          <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="account-signin.html">
+            <i class="ci-user animate-target"></i>
+            <span class="visually-hidden">Account</span>
+          </a>
+
+          <!-- Cart button -->
+            
+
+          <button type="button" class="btn btn-icon btn-lg fs-xl btn-outline-secondary position-relative border-0 rounded-circle animate-scale" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
+            <span class="position-absolute top-0 start-100 badge fs-xs text-bg-primary rounded-pill mt-1 ms-n4 z-2" style="--cz-badge-padding-y: .25em; --cz-badge-padding-x: .42em">3</span>
+            <i class="ci-shopping-bag animate-target me-1"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+
+            
+    <!-- Page content -->
+    <main class="content-wrapper">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        ph0:<br />
+        <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+        <br /><br />
+        ph1:<br />
+<asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+
+        </main>
+
+
+            
+    <!-- Page footer -->
+    <footer class="footer bg-dark pb-4" data-bs-theme="dark">
+      <div class="container pb-md-3">
+
+        <!-- Features -->
+        <div class="border-bottom py-5">
+          <div class="row row-cols-2 row-cols-md-4 g-4 gx-sm-5 py-sm-1 py-md-2 py-lg-3 mb-n2 mb-md-0">
+            <div class="col mb-2 mb-md-0">
+              <i class="ci-layers-2 fs-xl text-dark-emphasis mb-3"></i>
+              <h6 class="pb-2 mb-1">Regularly updated content</h6>
+              <p class="fs-sm text-body mb-0">Stay ahead of trends, always having fresh and modern assets.</p>
+            </div>
+            <div class="col mb-2 mb-md-0">
+              <i class="ci-click fs-xl text-dark-emphasis mb-3"></i>
+              <h6 class="pb-2 mb-1">Subscription-based access</h6>
+              <p class="fs-sm text-body mb-0">Find everything you need in one place, saving time and effort.</p>
+            </div>
+            <div class="col mb-2 mb-md-0">
+              <i class="ci-grid-2 fs-xl text-dark-emphasis mb-3"></i>
+              <h6 class="pb-2 mb-1">Exclusive collections</h6>
+              <p class="fs-sm text-body mb-0">Partner with renowned designers and artists to create exclusive collections.</p>
+            </div>
+            <div class="col mb-2 mb-md-0">
+              <i class="ci-check-search fs-xl text-dark-emphasis mb-3"></i>
+              <h6 class="pb-2 mb-1">User-friendly search </h6>
+              <p class="fs-sm text-body mb-0">Spend less time searching and more time creating.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subscription + Links -->
+        <div class="py-5">
+          <div class="row py-sm-1 py-md-2 py-lg-3">
+
+            <!-- Subscription + Social buttons -->
+            <div class="col-lg-5 mb-4 mb-sm-5 mb-lg-0">
+              <h6 class="mb-4">Join our newsletter, get discounts 🔥</h6>
+              <div class="d-flex gap-2 pb-sm-2 pb-lg-0 mb-4 mb-lg-5">
+                  <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control form-control-lg w-100 rounded-pill"  placeholder="Your email" style="max-width: 340px"></asp:TextBox>
+                <asp:Button runat="server" ID="btnSubmitEmail" Text="Subscribe" CssClass="btn btn-lg btn-primary rounded-pill" />
+                
+              </div>
+              <div class="d-flex gap-3">
+                <a class="btn btn-icon btn-secondary rounded-circle" href="#!" aria-label="Instagram">
+                  <i class="ci-instagram fs-base"></i>
+                </a>
+                <a class="btn btn-icon btn-secondary rounded-circle" href="#!" aria-label="Facebook">
+                  <i class="ci-facebook fs-base"></i>
+                </a>
+                <a class="btn btn-icon btn-secondary rounded-circle" href="#!" aria-label="YouTube">
+                  <i class="ci-youtube fs-base"></i>
+                </a>
+                <a class="btn btn-icon btn-secondary rounded-circle" href="#!" aria-label="Telegram">
+                  <i class="ci-telegram fs-base"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Columns with links that are turned into accordion on screens < 500px wide (sm breakpoint) -->
+            <div class="col-lg-7">
+              <div class="accordion ps-lg-4" id="footerLinks">
+                <div class="row">
+                  <div class="accordion-item col-sm-4 border-0">
+                    <h6 class="accordion-header" id="categoriesHeading">
+                      <span class="text-dark-emphasis d-none d-sm-block">Categories</span>
+                      <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#categoriesLinks" aria-expanded="false" aria-controls="categoriesLinks">Categories</button>
+                    </h6>
+                    <div class="accordion-collapse collapse d-sm-block" id="categoriesLinks" aria-labelledby="categoriesHeading" data-bs-parent="#footerLinks">
+                      <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Vectors</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Photos</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">3D illustrations</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">AI images</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Templates</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Mockups</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <hr class="d-sm-none my-0">
+                  </div>
+                  <div class="accordion-item col-sm-4 border-0">
+                    <h6 class="accordion-header" id="membersHeading">
+                      <span class="text-dark-emphasis d-none d-sm-block">For members</span>
+                      <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#membersLinks" aria-expanded="false" aria-controls="membersLinks">For members</button>
+                    </h6>
+                    <div class="accordion-collapse collapse d-sm-block" id="membersLinks" aria-labelledby="membersHeading" data-bs-parent="#footerLinks">
+                      <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Licenses</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Return policy</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Payment methods</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Become a vendor</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <hr class="d-sm-none my-0">
+                  </div>
+                  <div class="accordion-item col-sm-4 border-0">
+                    <h6 class="accordion-header" id="supportHeading">
+                      <span class="text-dark-emphasis d-none d-sm-block">Support</span>
+                      <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#supportLinks" aria-expanded="false" aria-controls="supportLinks">Support</button>
+                    </h6>
+                    <div class="accordion-collapse collapse d-sm-block" id="supportLinks" aria-labelledby="supportHeading" data-bs-parent="#footerLinks">
+                      <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">FAQs</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Search guide</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <hr class="d-sm-none my-0">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <p class="fs-xs text-body text-center text-lg-start mb-0">
+          &copy; All rights reserved. Made with <i class="ci-heart-filled align-middle"></i> by <span class="animate-underline"><a class="animate-target text-white text-decoration-none" href="https://createx.studio/" target="_blank" rel="noreferrer">Createx Studio</a></span>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="ci-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+    </div>
+
+
+
+            </div>
+
+            </telerik:RadDockLayout>
+        
+    <!-- Bootstrap + Theme scripts -->
+    <script src="/sitebooking/js/theme.min.js"></script>
+        
+
+
+    </form>
+</body>
+</html>

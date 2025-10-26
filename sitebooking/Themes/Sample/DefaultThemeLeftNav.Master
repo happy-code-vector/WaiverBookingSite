@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="WaiverFile.MasterPages.WFBookingMasterPageBase" %>
+<%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
+<%@ Register Src="includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            default theme left nav MASTER<br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+ </asp:ContentPlaceHolder>
+
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+ </asp:ContentPlaceHolder>
+
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+ </asp:ContentPlaceHolder>
+
+
+        </div>
+    </form>
+</body>
+</html>

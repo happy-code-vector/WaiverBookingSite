@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SliderView.ascx.cs" Inherits="WaiverFile.Controls.CMSEndUserControls.SliderView" %>
+<asp:PlaceHolder runat="server" ID="phMain"></asp:PlaceHolder>

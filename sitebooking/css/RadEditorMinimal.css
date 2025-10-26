@@ -1,0 +1,22 @@
+﻿/* minimal styles for editor */
+body, form, html {
+   min-height:100% !important; height: 100% !important;
+    display: block !important;
+}
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    color: #212529;
+    padding: 1rem;
+    background-color: #fff;
+    display:block !important;
+}
+
+h1, h2, h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}

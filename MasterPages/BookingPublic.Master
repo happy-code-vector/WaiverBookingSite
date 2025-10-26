@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BookingPublic.master.cs" Inherits="WaiverFile.MasterPages.BookingPublic" %>
+<%@ Register Src="~/Controls/CMSControls/EditBar.ascx" TagPrefix="uc1" TagName="EditBar" %>
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="Body1" runat="server">
+    <form id="form1" runat="server">
+        <div>
+              <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+              <uc1:EditBar runat="server" id="EditBar1" />
+
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+
+             
+        </div>
+    </form>
+</body>
+</html>
