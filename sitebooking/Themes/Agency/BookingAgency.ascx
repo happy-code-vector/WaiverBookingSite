@@ -32,7 +32,6 @@
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
 </asp:Panel>
 
-                  
 <uc1:Header runat="server" id="Header1" />
 
 <!-- Page content -->
