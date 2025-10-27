@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AgencyHero.ascx.cs" Inherits="WaiverFile.Controls.ContentControls.AgencyHero" %>
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="WaiverFile.Core.Booking.WFCustomContentControl" %>
 <%@ Register assembly="WaiverFile" namespace="WaiverFile.Core.Booking" tagprefix="cc1" %>
 
 <!-- Agency Hero/Masthead Section -->

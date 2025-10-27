@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AgencyServiceItem.ascx.cs" Inherits="WaiverFile.Controls.ContentControls.AgencyServiceItem" %>
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="WaiverFile.Core.Booking.WFCustomContentControl" %>
 <%@ Register assembly="WaiverFile" namespace="WaiverFile.Core.Booking" tagprefix="cc1" %>
 
 <!-- Service Item - Agency Style -->
