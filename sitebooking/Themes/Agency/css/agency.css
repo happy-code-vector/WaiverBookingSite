@@ -1,4 +1,8 @@
+/* ===================================
+   Agency Theme Styles
+   =================================== */
 
+/* Header/Navigation */
 header {
 	background-color: #212529;
 }
@@ -15,4 +19,176 @@ header .btn-icon {
 }
 header .btn-icon:hover {
 	color:#ccc;
+}
+
+/* Hero Section */
+.hero-section {
+	min-height: 600px;
+	background-color: #0066cc;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-bg-image {
+	object-fit: cover;
+}
+
+.hero-subtitle {
+	letter-spacing: 0.15em;
+	opacity: 0.9;
+}
+
+.hero-title {
+	line-height: 1.2;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Services Section */
+.services-section {
+	background-color: #fff;
+}
+
+.service-item {
+	transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+	transform: translateY(-10px);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+	background-color: #f8f9fa;
+}
+
+.portfolio-item {
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+	transform: scale(1.05);
+}
+
+.portfolio-overlay {
+	background: rgba(254, 209, 54, 0.9);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+	opacity: 1;
+}
+
+/* Team Section */
+.team-section {
+	background-color: #fff;
+}
+
+.team-member img {
+	border: 7px solid #f8f9fa;
+	transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+	transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+	background-color: #212529;
+}
+
+/* Utility Classes */
+.letter-spacing-2 {
+	letter-spacing: 0.15em;
+}
+
+/* Button Overrides for Agency Style */
+.btn-primary {
+	background-color: #ffc800;
+	border-color: #ffc800;
+	color: #000;
+	font-weight: 700;
+}
+
+.btn-primary:hover {
+	background-color: #e6b400;
+	border-color: #e6b400;
+	color: #000;
+}
+
+/* Section Spacing */
+.section {
+	padding: 80px 0;
+}
+
+/* Widget Styles */
+.service-item {
+	padding: 2rem 1rem;
+}
+
+.portfolio-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.5rem;
+}
+
+.portfolio-item img {
+	transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+	transform: scale(1.1);
+}
+
+.team-member {
+	padding: 1rem;
+}
+
+.team-member img {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover img {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Feature Section */
+.feature-section img {
+	box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* Section Headers */
+.section-header {
+	margin-bottom: 3rem;
+}
+
+/* Smooth Scrolling for Anchor Links */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+	min-height: 60vh;
+}
+
+@media (max-width: 768px) {
+	.hero-section {
+		min-height: 400px;
+	}
+	
+	.hero-title {
+		font-size: 2.5rem;
+	}
+	
+	.section {
+		padding: 60px 0;
+	}
+	
+	.service-item {
+		padding: 1.5rem 0.5rem;
+	}
 }

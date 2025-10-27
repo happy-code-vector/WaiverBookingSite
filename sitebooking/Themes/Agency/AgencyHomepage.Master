@@ -1,5 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeLeftNav.master.cs" Inherits="WaiverFile.sitebooking.Themes.Default.DefaultThemeLeftNav" %>
-<%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AgencyHomepage.master.cs" Inherits="WaiverFile.sitebooking.Themes.Default.AgencyHomepage" %>
 <%@ Register Src="~/sitebooking/themes/Agency/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
 <%@ Register Src="~/sitebooking/themes/Agency/includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 
@@ -35,11 +34,12 @@
     <link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
     
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
-    <script src="/sitebooking/vendor/formvalidation/popular.min.js"></script>
-    <script src="/sitebooking/vendor/formvalidation/plugin-bootstrap5.min.js"></script>
 
     <!-- Custom Agency Theme Styles -->
     <link rel="stylesheet" href="/sitebooking/Themes/Agency/css/agency.css">
+
+    <script src="/sitebooking/vendor/formvalidation/popular.min.js"></script>
+    <script src="/sitebooking/vendor/formvalidation/plugin-bootstrap5.min.js"></script>
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
@@ -50,38 +50,45 @@
         <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
         
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-            </asp:ContentPlaceHolder>
-    
+            <!-- Header/Navigation -->
             <uc1:Header runat="server" id="Header" />
 
             <!-- Page content -->
             <main class="content-wrapper">
-                <section class="container pt-3 pt-sm-4 pt-lg-5 mt-lg-2 mt-xl-4 mt-xxl-5">
-                    <div class="row">
-                        <!-- Left Navigation Sidebar -->
-                        <aside class="col-lg-3 mb-4 mb-lg-0">
-                            <div class="sticky-top" style="top: 80px;">
-                                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                                </asp:ContentPlaceHolder>
-                            </div>
-                        </aside>
+                
+                <!-- Hero Section (Full Width, No Container) -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                
+                <!-- Services/Features Section -->
+                <section class="container py-5 my-md-4 my-lg-5" id="services">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
 
-                        <!-- Main Content Area -->
-                        <div class="col-lg-9">
-                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                            </asp:ContentPlaceHolder>
-                            
-                            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
-                            </asp:ContentPlaceHolder>
-                        </div>
+                <!-- Portfolio/Gallery Section -->
+                <section class="portfolio-section py-5 my-md-4 my-lg-5" id="portfolio">
+                    <div class="container">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
                     </div>
                 </section>
+
+                <!-- Team/About Section -->
+                <section class="team-section py-5 my-md-4 my-lg-5" id="team">
+                    <div class="container">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </section>
+
             </main>
 
+            <!-- Footer -->
             <uc1:Footer runat="server" id="Footer" />
+
         </div>
-          
+
         <!-- Bootstrap + Theme scripts -->
         <script src="/sitebooking/Themes/Agency/js/theme.min.js"></script>
 
