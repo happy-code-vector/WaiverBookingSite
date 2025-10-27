@@ -1,9 +1,9 @@
-<%@ Control Language="C#" AutoEventWireup="true" Inherits="WaiverFile.Core.Booking.WFCustomContentControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AgencyTeamMember.ascx.cs" Inherits="WaiverFile.Controls.ContentControls.AgencyTeamMember" %>
 <%@ Register assembly="WaiverFile" namespace="WaiverFile.Core.Booking" tagprefix="cc1" %>
 
-<!-- Team Member -->
-<div class="col-lg-4 col-md-6 mb-4">
-    <div class="team-member text-center">
+<!-- Team Member - Agency Style -->
+<div class="col-lg-4">
+    <div class="team-member">
         
         <!-- Member Photo -->
         <cc1:CmsImage 
@@ -11,30 +11,31 @@
             runat="server" 
             data-editable="true" 
             data-name="Member Photo" 
-            data-defaultval="/sitebooking/Themes/Agency/images/team-placeholder.jpg"
-            CssClass="rounded-circle img-fluid mb-4" 
-            style="max-width: 225px;" />
+            data-defaultval="/sitebooking/Themes/Agency/images/team/1.jpg"
+            CssClass="mx-auto rounded-circle" />
         
         <!-- Member Name -->
-        <cc1:CmsLiteral 
-            ID="MemberName" 
-            runat="server" 
-            data-editable="true" 
-            data-name="Member Name" 
-            data-defaultval="Kay Garland"
-            CssClass="h4 fw-bold mb-1 d-block" />
+        <h4>
+            <cc1:CmsLiteral 
+                ID="MemberName" 
+                runat="server" 
+                data-editable="true" 
+                data-name="Member Name" 
+                data-defaultval="Kay Garland" />
+        </h4>
         
         <!-- Member Position -->
-        <cc1:CmsLiteral 
-            ID="MemberPosition" 
-            runat="server" 
-            data-editable="true" 
-            data-name="Position" 
-            data-defaultval="Lead Designer"
-            CssClass="text-body-secondary mb-3 d-block" />
+        <p class="text-muted">
+            <cc1:CmsLiteral 
+                ID="MemberPosition" 
+                runat="server" 
+                data-editable="true" 
+                data-name="Position" 
+                data-defaultval="Lead Designer" />
+        </p>
         
-        <!-- Social Links (Optional) -->
-        <div class="d-flex justify-content-center gap-2">
+        <!-- Social Links -->
+        <div class="d-flex justify-content-center gap-2 mt-3">
             <asp:HyperLink 
                 ID="TwitterLink" 
                 runat="server" 
@@ -43,7 +44,7 @@
                 data-defaultval="#" 
                 data-defaulttext="<i class='ci-twitter'></i>" 
                 data-defaulttarget="_blank"
-                CssClass="btn btn-icon btn-sm btn-outline-secondary rounded-circle" />
+                CssClass="btn btn-dark btn-social mx-2" />
             
             <asp:HyperLink 
                 ID="FacebookLink" 
@@ -53,7 +54,7 @@
                 data-defaultval="#" 
                 data-defaulttext="<i class='ci-facebook'></i>" 
                 data-defaulttarget="_blank"
-                CssClass="btn btn-icon btn-sm btn-outline-secondary rounded-circle" />
+                CssClass="btn btn-dark btn-social mx-2" />
             
             <asp:HyperLink 
                 ID="LinkedInLink" 
@@ -63,7 +64,7 @@
                 data-defaultval="#" 
                 data-defaulttext="<i class='ci-linkedin'></i>" 
                 data-defaulttarget="_blank"
-                CssClass="btn btn-icon btn-sm btn-outline-secondary rounded-circle" />
+                CssClass="btn btn-dark btn-social mx-2" />
         </div>
         
     </div>
