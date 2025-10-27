@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WPData>
+	<Controls>
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>11bdbab1-a024-49fe-9375-d3bea3cbdfc8</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Rich Text</Name>
+			<Description>Rich Text Editor</Description>
+			<Path>/Controls/CMSEndUserControls/</Path>
+			<Filename>RichTextEditor.ascx</Filename>
+			<Category>Frequently Used</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>7acdccc9-88a8-4569-8cef-bd69c46e6115</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Code Block</Name>
+			<Description>Add HTML code directly to a page</Description>
+			<Path>/Controls/CMSEndUserControls/</Path>
+			<Filename>CodeBlock.ascx</Filename>
+			<Category>Specialty</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>934e41d7-2f36-4ef7-a36c-c7f67c2f1a9e</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>List Admission Items</Name>
+			<Description>Display search results.</Description>
+			<Path>/Controls/CMSEndUserControls/</Path>
+			<Filename>ListAdmissionItems.ascx</Filename>
+			<Category>Frequently Used</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>759b7cee-d329-4324-b475-a8de1c0404ec</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Slider</Name>
+			<Description>Display a content slider that rotates through items.</Description>
+			<Path>/Controls/CMSEndUserControls/</Path>
+			<Filename>SliderView.ascx</Filename>
+			<Category>Media</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>105b6a85-9c7e-4c3f-902d-059b9bc6533d</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Email Contact Form</Name>
+			<Description></Description>
+			<Path>/Controls/CMSEndUserControls/</Path>
+			<Filename>ContactForm.ascx</Filename>
+			<Category>Frequently Used</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>a5c20c2f-51cb-4130-82a6-377043a739ac</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Feature columns block</Name>
+			<Description>Displays links with icons in several columns</Description>
+			<Path>/Controls/ContentControls/</Path>
+			<Filename>FeatureColumnsBlock.ascx</Filename>
+			<Category>Content Blocks</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>3b9c0cbc-94b4-445c-b96c-6e3b3b32dfa6</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Two Column Block - Image left</Name>
+			<Description>Displays a section of content with an image on the left</Description>
+			<Path>/Controls/ContentControls/</Path>
+			<Filename>TwoColBlockWithImage.ascx</Filename>
+			<Category>Content Blocks</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>e088fbad-2f78-4ab8-8b0f-0f8646d3142e</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Two Column Block - Image right</Name>
+			<Description>Displays a section of content with an image on the right</Description>
+			<Path>/Controls/ContentControls/</Path>
+			<Filename>TwoColBlockWithImageRight.ascx</Filename>
+			<Category>Content Blocks</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>4a9a920b-25ed-4209-bb0f-99b81547b085</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Title Banner</Name>
+			<Description>Displays a horizontal banner with an image and a title</Description>
+			<Path>/Controls/ContentControls/</Path>
+			<Filename>TitleBanner.ascx</Filename>
+			<Category>Content Blocks</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+
+
+	</Controls>
+</WPData>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WPData>
+  <Sites>
+    <WPSite xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Title>WaiverFile.com</Title>
+      <Owner>00000000-0000-0000-0000-000000000000</Owner>
+      <Company_ID>00000000-0000-0000-0000-000000000000</Company_ID>
+      <SecurityLastModified>2024-02-07T14:10:21.7997177-05:00</SecurityLastModified>
+      <AutoApproveUsers>false</AutoApproveUsers>
+      <HasSSL>false</HasSSL>
+      <AllowPersistentLogins>true</AllowPersistentLogins>
+      <DefaultDocType>6f72c2b3-fd46-4ddb-ab56-0b1249be001b</DefaultDocType>
+      <UseVersions>false</UseVersions>
+      <DateCreated>2011-02-08T14:46:38.5927734-05:00</DateCreated>
+      <SiteDefaultTimeZone>Eastern Standard Time</SiteDefaultTimeZone>
+      <DomainNames />
+      <ID>389cf36e-e6d0-4d1f-8300-bcb012a42041</ID>
+      <WPObjectStatus>Current</WPObjectStatus>
+    </WPSite>
+  </Sites>
+</WPData>

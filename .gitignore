@@ -100,7 +100,6 @@ appsettings.*.json
 
 # WaiverFile-specific runtime/data folders
 /BulkUpload/
-/WPData/
 /FavIcons/
 
 # Third-party vendor libraries (can be restored via package managers)

@@ -1,0 +1,1143 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WPData>
+  <Controls>
+
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>99d1648a-e9ae-4071-a4e2-6109365df8b3</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List Active WaiverFile Sites - Public</Name>
+      <Description>Display a list of all active WaiverFile sites in the current database. Use for clients with a standalone instance that will have more than one site.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListWaiverSitesPublic.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>7bcb51d3-769a-4dae-9871-10fd448cea00</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Create Sub-Account - End User</Name>
+      <Description>Allows users to create their own subaccounts. </Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>CreateSubaccountEndUser.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>2a9404b9-4325-45c1-a92e-c332804078e3</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Conversion Tracking Scripts</Name>
+      <Description>Place on the SignupThanks.aspx page</Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>ConversionTrackingScripts.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>cee71c4d-1abe-4040-8c73-8bd7a6b8a406</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Affiliate: Welcome</Name>
+      <Description>Overview info for affiliate account</Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>Aff_Welcome.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>a9430b99-d3eb-4882-8bcb-9cd23bde9e5c</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Affiliate: View Waiver</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>Aff_ViewWaiver.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>e49e0dbb-ae41-4ba8-8932-63a69582f15a</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Affiliate: List Referred Clients</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>Aff_ListReferredClients.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>00337927-c630-4b25-a384-3c18bd61c4f4</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Affiliate: Search for Waiver</Name>
+        <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>Aff_SearchForWaiver.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>8a84a181-707a-4238-9c50-806e726d0bd8</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Affiliate: Usage Report</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>Aff_UsageReport.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>43dab93e-9a81-4c60-985c-71ffbea80de7</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Affiliate: View Client</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>Aff_ViewClient.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>22e76e35-3448-4eca-beba-577879b77f28</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Affiliate: View Waiver</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>Aff_ViewWaiver.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>69693ca8-9805-410f-a849-ac755fcae6ab</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Login Custom V2</Name>
+      <Description>A custom version of the login widget.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>LoginFormWFV2.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>9c5c9a9f-2698-4e09-82a1-86798321b990</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Login</Name>
+      <Description>A custom version of the login widget without the remember me option</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>LoginFormWF.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>50faa8ab-de15-49ce-98ba-d444aa05fd2e</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Affiliate: Login</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/CRM/</Path>
+      <Filename>AffiliateLogin.ascx</Filename>
+      <Category>WaiverFile: Affiliates</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>1ca274ba-d2af-4735-b90a-c6f2184b17a3</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Signup Custom: West Bend - Welcome</Name>
+      <Description>Displays welcome information after a new account signup.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SignupCustom_WestBend_Welcome.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ID>9f47fb9d-dc2b-4624-8034-1faf924e6f97</ID>
+    <WPObjectStatus>New</WPObjectStatus>
+    <Name>Signup Custom: West Bend</Name>
+    <Description>Custom signup for West Bend Customers.</Description>
+    <Path>/Plugins/WaiverFile/Controls/</Path>
+    <Filename>SignupCustom_WestBend.ascx</Filename>
+    <Category>WaiverFile</Category>
+    <Cacheable>false</Cacheable>
+    <Active>true</Active>
+  </Control>
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>3b8d44d5-5f35-4ec2-b7e5-71b8acd147af</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>DB Check</Name>
+      <Description>Check that the database connection is working</Description>
+      <Path>/Plugins/WaiverFile/Controls/SysAdmin/</Path>
+      <Filename>DBCheck.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>aa5e9412-2c63-4bfa-935e-90112029fa08</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Email Contact Form with CRM</Name>
+      <Description>Created a lead record for new contacts</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EmailFormEnsureLead.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>9534d842-91e4-4e04-9b80-96aa058bd184</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Signup Custom 1</Name>
+      <Description>Custom signup from a package version 1.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SignupCustom1.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>e91ad327-2d10-467b-bc0b-9f6e4fc61b82</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Signup Custom 2</Name>
+      <Description>Simpler setup. Just swaps {{COMPANY}} CODE</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SignupCustom2.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>de743be0-d015-4514-a1f8-34ba804cb434</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Signup Custom 3 - One-Step HIPAA</Name>
+      <Description>Simpler setup. Just swaps {{COMPANY}} CODE. One Step. Alwyas uses HIPAA mode. </Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SignupCustom3.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>03e122be-d61e-4093-afc5-d18a31a1dad5</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Signup Custom 4 - Industry Packs</Name>
+      <Description>Includes setup packs for industry waiver forms</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SignupCustom4.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>7aeafb3c-bedc-455a-90af-557991bc189a</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List WaiverFile Plans by Group</Name>
+      <Description>List of plans within a group</Description>
+      <Path>/Plugins/WaiverFile/Controls/WFSubscriptions/</Path>
+      <Filename>ListWFPlansPublic.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>07f19ba2-fb2d-47c5-81ae-88f261ae4881</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List WaiverFile Plans - Grouped</Name>
+      <Description>Select multiple groups and display them as grouped plans</Description>
+      <Path>/Plugins/WaiverFile/Controls/WFSubscriptions/</Path>
+      <Filename>ListWFPlansPublicGrouped.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>971e55e0-27e5-4f8b-9441-3ee48d9365b6</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Form: Edit Site Custom CSS</Name>
+      <Description>Edits the site's custom CSS code.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormSiteCSS.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>5853b57b-6bbe-4e99-b399-6c2dc8302a47</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>WaiverFile API Connectors: TEST AREA (DEV ONLY)</Name>
+      <Description>For use on the dev site only.</Description>
+      <Path>/Plugins/WaiverFile/Controls/Connectors/</Path>
+      <Filename>TestHarnessWFConnector.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>2cd6817f-9d67-461e-8c1c-2750072ef64f</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List My API Keys</Name>
+      <Description>Lists API Keys for the current customer. SysAdmin only.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListAPIKeys.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ID>c5c45d7d-3b1e-4206-811e-83799363ca7f</ID>
+    <WPObjectStatus>New</WPObjectStatus>
+    <Name>View Historic Usage Data</Name>
+    <Description>Displays the historic usage for a site or subscription.</Description>
+    <Path>/Plugins/WaiverFile/Controls/</Path>
+    <Filename>ViewWaiverSiteHistoricUsage.ascx</Filename>
+    <Category>WaiverFile</Category>
+    <Cacheable>false</Cacheable>
+    <Active>true</Active>
+  </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>24d96d34-ae73-48e2-b3ae-d853d943af4a</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Enter Email to Download File</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EnterEmailToDownloadFile.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>74cf14c3-8e10-4251-bd41-311a4c69c37c</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Form</Name>
+      <Description>Allows website visitors to sign the form online.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SignWaiver.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>b67eea46-39d8-433c-baaa-9df29e017d89</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Print View Selection for Event</Name>
+      <Description>Choose a view for printing waivers for an event.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>PrintEvent.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>14222c74-7e02-4d0f-ab1c-04edef653451</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Feedback Form</Name>
+      <Description>Collect customer feedback and ask if we can use their logo</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverFileFeedbackForm.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>3177b662-8ce5-4f60-9fab-31eae3954906</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>WaiverFile API Connectors: List</Name>
+      <Description>View a list of WaiverFile API Connectors.</Description>
+      <Path>/Plugins/WaiverFile/Controls/Connectors/</Path>
+      <Filename>ListWFConnectors.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>93030239-9576-4b17-ada6-d2617100eec4</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>WaiverFile API Connectors: Edit Form (loader)</Name>
+      <Description>The edit screen for the API connectors.</Description>
+      <Path>/Plugins/WaiverFile/Controls/Connectors/</Path>
+      <Filename>EditWFConnectorLoader.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>fc051f59-48b8-47f2-93f6-cef6edd68654</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Share Buttons: List</Name>
+      <Description>View a list of available share buttons.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListShareButtons.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>201d308a-77d9-4f55-b997-9595ef8eb95c</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Share Buttons: View</Name>
+      <Description>View a specific share button details and code</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ViewShareButton.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>722ab758-3d43-4bae-aad1-c13c62e9eaf7</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Site Users: Add</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>AddSiteUser.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>e2db955a-9304-42b2-aeb5-cd301dfa9dd9</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Site Users: Edit</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EditSiteUser.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>6d4788e3-def9-4fe2-b561-50d2fdf7b96d</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Site Users: List</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListSiteUsers.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    
+    
+
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>472cb6e9-0637-4e0e-8d11-35730fd4124e</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Party Selection (old)</Name>
+      <Description>Use Event Selection going forward</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>IPAPartySelect.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>0a74381f-bb78-40a2-a2db-259741c9deb7</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Event Selection</Name>
+      <Description>Select an event screen of the waiver site.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EventSelect.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>01b5e890-a1a5-4a97-a4ec-949e386bc037</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Form</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>IPAWaiverForm.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>4856f2da-d20a-473e-a749-84bbfb2444a0</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Form (new)</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverFormEntry.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>01a4c173-ab01-4ef6-ace4-8269ffa15a2d</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Login</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>IPALogin.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>cfd3d932-101a-4d82-a897-0342175efa58</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Login Form - Admin</Name>
+      <Description>Includes 'keep me logged in' option</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>IPALoginAdmin.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>e5d37c0c-892c-451e-ae15-cf8a16f059ad</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Auto Log-Out</Name>
+      <Description>Place this on any page that should not retain the login. Automatically logs out user upon loading the page.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>IPAAutoLogOut.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>1ca10815-ce8f-483a-81af-645a7d09b5de</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Monitor 1</Name>
+      <Description>Admin Use Only</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverMonitor.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>742bcd22-5310-4306-bc50-d4800a1e2887</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Monitor 2</Name>
+      <Description>Admin Use Only</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverMonitor2.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>86ef9801-f26d-491c-b43d-5c516bd361fc</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Monitor With Checkin</Name>
+      <Description>Admin Use Only</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverMonitorWithCheckin.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>ac7f343e-555e-4b7f-97f2-a322dddba404</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>View Waiver</Name>
+      <Description>Admin Use Only</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ViewWaiver.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>7ce29425-cd0d-41a8-ac18-b6aaa5dda1c9</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Generate QR Code</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>GenerateQRDialog.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>17821b1e-09d0-4187-9d9c-6e2d77fd89b7</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Sign Up</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SignUp.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>a3c4019d-4376-40bf-b1e1-ef05ba36c472</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Super Easy Sign Up V2</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EasySignUpv2.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>490a090b-2a91-4787-9b04-cccb09ccae0a</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Super Easy Sign Up V3</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EasySignUpv3.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>b87018bb-2411-43d0-9739-10da86b08468</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Super Easy Sign Up</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EasySignUp.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>289c524d-0b88-4c7f-9357-d526e4351e4d</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Super Easy Sign Up - With URL</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EasySignUpWithUrl.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>fc8b1396-b140-405d-a20a-07b5f983f4c3</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Sandbox Signup</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SandboxSignup.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>cf7acf60-660a-415e-bf66-672579c5da0c</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Form Designer</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormDesigner.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>08d2550a-17a7-41e1-ac92-53c8fd8ac335</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List My Waiver File Sites</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListMyWaiverFileSites.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>eff17f86-2add-4144-9dc9-c9652600e4ed</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List My Waiver File Sites</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListMyWaiverFileSitesV2.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>13cd8b72-9a1e-4737-a6e1-ede983d21a0c</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Search Advanced</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SearchAdvanced.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>c1c1935c-f6a5-4ba5-ac7b-513da65d03bd</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Search Results</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverSearchResults.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>3c62731b-9b49-4a15-9b12-3391f8561b49</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Search Results V2</Name>
+      <Description>Replaces the older version of this widget. Making a separate widget incase we need to roll it back.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverSearchResults2.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>6077fa36-6b69-404b-95af-340948020769</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>User Search Results</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>UserSearchResults.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>4cfa10f9-dc31-48de-ab9c-19901041149e</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List Waiver Events</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListWaiverEvents.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>ab5cdcb1-41ad-4c2a-988f-af6a954bd525</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Event Form</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormWaiverEvent.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>f41b810a-3f0f-4d7d-b387-674c9dcb46b2</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List Waivers</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListWaivers.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>86c3059a-c091-4ba3-a614-8ce766e36d55</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Set Waiver Text</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SetWaiverText.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>a44699ee-703a-4527-9aed-b59622297a74</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Site General Settings Form</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormWaiverSiteEndUser.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>79d8f03f-7b44-4f2d-8e27-9bb7ccd997be</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Export Waivers</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ExportWaivers.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>39b59aba-a287-4b42-9c2f-5b40c9ce0dd7</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Waiver Report (old)</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverNameReport.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+   
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>0462ed8f-a064-4e12-b777-bfd115b4f4f3</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Website Code</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WebsiteCode.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>9377af70-aef7-443e-8a50-6f5b2dc0c159</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Welcome Screen</Name>
+      <Description/>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WelcomeScreen.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>612fe246-318c-48e9-8dc3-0ff4cf646b82</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Subscription and Usage Check</Name>
+      <Description>Displays warning message or modal dialog depending on account status.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SubscriptionAndUsageCheck.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>9775441d-df4d-4cc2-a6f8-d91e0fac6023</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Usage</Name>
+      <Description>Displays current billing period usage.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>Usage.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>29abe18c-a414-489d-8f10-6781b4fab467</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Super Easy Sign Up: Welcome Screen</Name>
+      <Description>Displays welcome information after a new trial signup.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EasySignupWelcome.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>22261751-528a-4bd9-a555-a8e39e5bba99</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Signup Custom 1: Welcome screen</Name>
+      <Description>Displays welcome information after a new trial signup.</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SignupCustomWelcome.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>b448f01c-cef9-45a1-b4f5-be73c16c65d8</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Edit Waiver Form: General</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormWaiverFormGeneral.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>77879ac7-014b-474e-ba40-5003cf983bc7</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Edit Waiver Form: Fields</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormDesigner.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>4ad82ac4-e4c4-43d7-ab66-dbc84c660df6</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Edit Waiver Form: Participant Fields</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormDesignerPart.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>1b0de8bc-f37c-4af2-85d2-18ab522043ed</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Edit Waiver Form: Waiver Text</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>SetWaiverText.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>5e696aa7-2640-459c-b5df-df16889bc5f4</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List Waiver Forms</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListWaiverForms.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+ <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>91de6a2e-67e6-4392-a6cc-759dfd1bbd60</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List Waiver Forms V2</Name>
+      <Description>Lists waiver forms as tiles</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListWaiverForms2.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>0e014319-ba31-42b0-b167-25d50ed79ef4</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Choose a Waiver</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ChooseWaiver.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>3609963a-6eb7-470f-979c-6afb58051bc7</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Manage Labels</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ManageLabels.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>96c9678f-b194-446c-aa9e-a12ccdf3e0f2</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Dashboard Layout Form</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormDashboardLayout.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>49378ed2-39a0-4a67-a73f-8b9255583cd9</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Dashboard Layout Form (v3)</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>FormDashboardLayoutV3.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>55e317c3-404a-41a3-9a80-534d619918d6</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Event Manager - List</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EventManagerList.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>e5ce2ab2-fd63-4373-8565-b81ad5c300f6</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Event Manager - View</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>EventManagerView.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>cf9ccf67-357a-46dd-904d-f2de51ef8abc</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Dashboard Loader - Sidebar</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>DashLoaderSidebar.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>531c996f-4493-413e-a4d4-4224bc7817a6</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Dashboard V3 Sidebar</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>DashboardV3Sidebar.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>a14432e4-cdd2-4e92-abed-de5579ece5dc</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Dashboard Loader - Main Area</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>DashLoader.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>57cb2664-74d5-4d2f-92f3-614c1a5a314e</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Dashboard V3</Name>
+      <Description>Version 3 of the dashboard</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>DashboardV3.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>99b845b4-f929-4925-9acd-f95252ffb16e</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Thank You</Name>
+      <Description>Displays Thank-You Message and redirects to first page after a few seconds</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ThankYou.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>5aab66a3-aa17-4d45-8654-31adcfac63f7</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>WaiverSite Inquiry Form</Name>
+      <Description>Displays link to WaiverFile only on non-device mode. Displays contact form regardless. </Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>WaiverSiteInquiryForm.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>4cc143ff-9940-4236-89f1-25f176b7e667</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Renew / Change Plan (WaiverFile)</Name>
+      <Description>WaiverFile version of the renew/change plan form. </Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>RenewChangePlan.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>7da02a22-9efc-4cc1-80f7-234ff3181e36</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Renew / Change Plan (WaiverFile V2)</Name>
+      <Description>WaiverFile version of the renew/change plan form. Version 2, works with new management system</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>RenewChangePlan2.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>9fb96fb8-8c5b-4efb-b115-e9638698406a</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List Orders For Current Site</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>ListOrdersForCurrentSite.ascx</Filename>
+      <Category>WaiverFile - Waiver Site</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+     <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>6773a44b-5760-4da9-8fb3-8c91311f126f</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>List WaiverFile Plans</Name>
+      <Description></Description>
+      <Path>/Plugins/WaiverFile/Controls/WFSubscriptions/</Path>
+      <Filename>ListWFPlanPricesPublic.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+
+
+    <Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>ae6ee06a-3989-47d9-8537-67b5a1edbac9</ID>
+        <WPObjectStatus>New</WPObjectStatus>
+      <Name>WaiverFile SAML Capture</Name>
+      <Description>Place on /login.aspx to capture SAML authentication response</Description>
+      <Path>/Plugins/WaiverFile/Controls/</Path>
+      <Filename>LoginSAMLCapture.ascx</Filename>
+      <Category>WaiverFile</Category>
+      <Cacheable>false</Cacheable>
+      <Active>true</Active>
+    </Control>
+    
+  </Controls>
+</WPData>

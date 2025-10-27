@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WPData>
+  <Companies>
+    <Company xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ID>00000000-0000-0000-0000-000000000000</ID>
+      <WPObjectStatus>Current</WPObjectStatus>
+      <Company_ID>202501ff-b8ba-48d2-8eab-2bfe094251cf</Company_ID>
+      <Name>WaiverFile.com</Name>
+      <AuthenticationMethod>Email_Address</AuthenticationMethod>
+    </Company>
+  </Companies>
+</WPData>

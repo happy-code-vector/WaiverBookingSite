@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WPData>
+  <Roles>
+    <Role xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ID>6f48aa35-b191-4826-9995-989259c3ce4c</ID>
+      <WPObjectStatus>Current</WPObjectStatus>
+      <Name>Page Administrator</Name>
+      <Description>Full control over all pages.</Description>
+      <Active>false</Active>
+    </Role>
+    <Role xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ID>f05030d4-7fa7-4875-8247-4e965680797d</ID>
+      <WPObjectStatus>Current</WPObjectStatus>
+      <Name>Page Editor</Name>
+      <Description>Control to manage content of pages but not permissions.</Description>
+      <Active>false</Active>
+    </Role>
+    <Role xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ID>3161c840-2245-4c96-9331-f23ad2bbe322</ID>
+      <WPObjectStatus>Current</WPObjectStatus>
+      <Name>Page Viewer</Name>
+      <Description>Ability to view pages.</Description>
+      <Active>false</Active>
+    </Role>
+    <Role xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ID>4d8751fd-76f7-40f5-a1ee-bf62dd9e0eb0</ID>
+      <WPObjectStatus>Current</WPObjectStatus>
+      <Name>Site Administrator</Name>
+      <Description>Full control over entire website.</Description>
+      <Active>false</Active>
+    </Role>
+    <Role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>1b19c51b-ed96-48a3-ac2f-183b0b414442</ID>
+      <WPObjectStatus>Current</WPObjectStatus>
+      <Name>WPCommerce Manager</Name>
+      <Description>Limited control over the Waypoint Commerce System.</Description>
+      <Active>true</Active>
+    </Role>
+    <Role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>08617221-9cb6-4221-be3b-c106cea8e519</ID>
+      <WPObjectStatus>Current</WPObjectStatus>
+      <Name>WPCommerce Administrator</Name>
+      <Description>Full control over all aspects of the Waypoint Commerce System.</Description>
+      <Active>true</Active>
+    </Role>
+    <Role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>2b608d57-3166-482b-818b-2b7075cc92b8</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Board Member</Name>
+      <Description />
+      <Active>true</Active>
+    </Role>
+    <Role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ID>cd91e6f2-319a-49ba-b94a-d21e38b8acf3</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>Association Member</Name>
+      <Description>Tied to the subscription</Description>
+      <Active>true</Active>
+    </Role>
+    <Role xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ID>71b5e2e8-ef3c-4493-861e-041feed47ba4</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>CRM Agent</Name>
+      <Description>Grants access to CRM functionality.</Description>
+      <Active>true</Active>
+    </Role>
+    <Role xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ID>a441db96-bffd-41ed-8283-69da619874db</ID>
+      <WPObjectStatus>New</WPObjectStatus>
+      <Name>System Administrator</Name>
+      <Description>Full control over entire system.</Description>
+      <Active>false</Active>
+    </Role>
+  </Roles>
+</WPData>
