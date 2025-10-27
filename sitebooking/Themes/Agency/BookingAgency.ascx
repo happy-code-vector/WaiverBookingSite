@@ -35,9 +35,6 @@
                   
 <uc1:Header runat="server" id="Header1" />
 
-
-
-          
 <!-- Page content -->
 <main class="content-wrapper">
   <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
@@ -63,11 +60,8 @@
     <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
   </section>
 </main>
-
-
           
 <uc1:Footer runat="server" id="Fotoer1" />
-
 
 <!-- Bootstrap + Theme scripts -->
 <script src="/sitebooking/Themes/Agency/js/theme.min.js"></script>
