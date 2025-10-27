@@ -1,191 +1,299 @@
 /* ===================================
    Agency Theme Styles
+   Based on StartBootstrap Agency Template
    =================================== */
 
-/* Header/Navigation */
-header {
-	background-color: #212529;
+/* Masthead/Hero Section */
+.masthead {
+	padding-top: 10.5rem;
+	padding-bottom: 6rem;
+	text-align: center;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
+}
+
+.masthead .masthead-subheading {
+	font-size: 1.5rem;
+	font-style: italic;
+	line-height: 1.5rem;
+	margin-bottom: 25px;
+}
+
+.masthead .masthead-heading {
+	font-size: 3.25rem;
+	font-weight: 700;
+	line-height: 3.25rem;
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.masthead {
+		padding-top: 17rem;
+		padding-bottom: 12.5rem;
+	}
+	
+	.masthead .masthead-subheading {
+		font-size: 2.25rem;
+		line-height: 2.25rem;
+		margin-bottom: 2rem;
+	}
+	
+	.masthead .masthead-heading {
+		font-size: 4.5rem;
+		line-height: 4.5rem;
+		margin-bottom: 4rem;
+	}
+}
+
+/* Navigation */
+.navbar {
+	background-color: #212529 !important;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.navbar-brand {
+	color: #ffc800 !important;
+	font-size: 1.5rem;
+	font-weight: 700;
 }
 
 .nav-link {
-	color: #fff;
-}
-.nav-link:hover {
-	color:#ccc;
-}
-
-header .btn-icon {
-	color:#fff;
-}
-header .btn-icon:hover {
-	color:#ccc;
+	color: #fff !important;
+	font-size: 0.95rem;
+	font-weight: 400;
+	letter-spacing: 0.0625em;
+	text-transform: uppercase;
 }
 
-/* Hero Section */
-.hero-section {
-	min-height: 600px;
-	background-color: #0066cc;
-	position: relative;
-	overflow: hidden;
+.nav-link:hover,
+.nav-link:focus {
+	color: #ffc800 !important;
 }
 
-.hero-bg-image {
-	object-fit: cover;
+.navbar .btn-icon {
+	color: #fff !important;
 }
 
-.hero-subtitle {
-	letter-spacing: 0.15em;
-	opacity: 0.9;
+.navbar .btn-icon:hover {
+	color: #ffc800 !important;
 }
 
-.hero-title {
-	line-height: 1.2;
-	text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+/* Buttons */
+.btn-primary {
+	background-color: #ffc800 !important;
+	border-color: #ffc800 !important;
+	color: #fff !important;
+	font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+	background-color: #ffc107 !important;
+	border-color: #ffc107 !important;
+	color: #fff !important;
+}
+
+.btn-xl {
+	padding: 1.25rem 2.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 0.5rem;
+}
+
+/* Section Headers */
+section h2.text-uppercase {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+section h3.section-subheading {
+	font-size: 1rem;
+	font-weight: 400;
+	font-style: italic;
+	margin-bottom: 4rem;
+	color: #6c757d;
 }
 
 /* Services Section */
-.services-section {
-	background-color: #fff;
-}
-
 .service-item {
-	transition: transform 0.3s ease;
+	text-align: center;
+	padding: 2rem 1rem;
 }
 
-.service-item:hover {
-	transform: translateY(-10px);
+.service-item span[class*="ci-"],
+.service-item i {
+	font-size: 4rem;
+	color: #ffc800;
+	margin-bottom: 1rem;
+	display: block;
+}
+
+.service-item h4 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+.service-item p {
+	color: #6c757d;
 }
 
 /* Portfolio Section */
 .portfolio-section {
+	padding: 6rem 0;
 	background-color: #f8f9fa;
 }
 
 .portfolio-item {
-	cursor: pointer;
-	transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-	transform: scale(1.05);
-}
-
-.portfolio-overlay {
-	background: rgba(254, 209, 54, 0.9);
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-	opacity: 1;
-}
-
-/* Team Section */
-.team-section {
-	background-color: #fff;
-}
-
-.team-member img {
-	border: 7px solid #f8f9fa;
-	transition: transform 0.3s ease;
-}
-
-.team-member:hover img {
-	transform: scale(1.05);
-}
-
-/* Contact Section */
-.contact-section {
-	background-color: #212529;
-}
-
-/* Utility Classes */
-.letter-spacing-2 {
-	letter-spacing: 0.15em;
-}
-
-/* Button Overrides for Agency Style */
-.btn-primary {
-	background-color: #ffc800;
-	border-color: #ffc800;
-	color: #000;
-	font-weight: 700;
-}
-
-.btn-primary:hover {
-	background-color: #e6b400;
-	border-color: #e6b400;
-	color: #000;
-}
-
-/* Section Spacing */
-.section {
-	padding: 80px 0;
-}
-
-/* Widget Styles */
-.service-item {
-	padding: 2rem 1rem;
-}
-
-.portfolio-item {
 	position: relative;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
 	overflow: hidden;
-	border-radius: 0.5rem;
 }
 
 .portfolio-item img {
-	transition: transform 0.3s ease;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
 }
 
 .portfolio-item:hover img {
 	transform: scale(1.1);
 }
 
+.portfolio-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 200, 0, 0.9);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+	opacity: 1;
+}
+
+.portfolio-overlay h4,
+.portfolio-overlay p {
+	color: #fff;
+	margin: 0;
+}
+
+.portfolio-overlay h4 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.portfolio-overlay p {
+	font-style: italic;
+}
+
+/* Team Section */
+.team-section {
+	padding: 6rem 0;
+}
+
 .team-member {
-	padding: 1rem;
-}
-
-.team-member img {
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-member:hover img {
-	transform: translateY(-5px);
-	box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* Feature Section */
-.feature-section img {
-	box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-}
-
-/* Section Headers */
-.section-header {
+	text-align: center;
 	margin-bottom: 3rem;
 }
 
-/* Smooth Scrolling for Anchor Links */
+.team-member img {
+	width: 14rem;
+	height: 14rem;
+	border: 0.5rem solid rgba(0, 0, 0, 0.1);
+	margin: 0 auto 1rem;
+}
+
+.team-member h4 {
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+	font-weight: 700;
+}
+
+.team-member p {
+	margin-top: 0.5rem;
+	color: #6c757d;
+	font-style: italic;
+}
+
+/* Social Buttons */
+.btn-social {
+	height: 2.5rem;
+	width: 2.5rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	border-radius: 100%;
+}
+
+.btn-dark {
+	background-color: #212529 !important;
+	border-color: #212529 !important;
+}
+
+.btn-dark:hover {
+	background-color: #ffc800 !important;
+	border-color: #ffc800 !important;
+}
+
+/* Footer */
+footer,
+.footer,
+.site-footer {
+	padding: 2rem 0;
+	background-color: #212529;
+	color: #fff;
+	text-align: center;
+}
+
+footer a,
+.footer a,
+.site-footer a {
+	color: #ffc800;
+}
+
+footer a:hover,
+.footer a:hover,
+.site-footer a:hover {
+	color: #ffc107;
+}
+
+/* Section Spacing */
+section {
+	padding: 6rem 0;
+}
+
+/* Smooth Scrolling */
 html {
 	scroll-behavior: smooth;
 }
 
-/* Content Wrapper */
-.content-wrapper {
-	min-height: 60vh;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-	.hero-section {
-		min-height: 400px;
+	.masthead {
+		padding-top: 8rem;
+		padding-bottom: 4rem;
 	}
 	
-	.hero-title {
-		font-size: 2.5rem;
-	}
-	
-	.section {
-		padding: 60px 0;
+	section {
+		padding: 4rem 0;
 	}
 	
 	.service-item {

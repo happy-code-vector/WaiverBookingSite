@@ -24,7 +24,7 @@
     style="display:none;" />
 
 <!-- Agency Hero/Masthead Section -->
-<asp:Panel ID="mastheadPanel" runat="server" CssClass="masthead" style="background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative;">
+<asp:Panel ID="mastheadPanel" runat="server" CssClass="masthead">
     
     <!-- Hero Content -->
     <div class="container">
