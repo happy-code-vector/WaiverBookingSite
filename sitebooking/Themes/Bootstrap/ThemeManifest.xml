@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-16"?>
+<WPData>
+	<Themes>
+		<Theme xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<ID>c37c8e97-8af4-4da5-b651-93bdd32e9ed9</ID>
+			<Name>Bootstrap</Name>
+			<Description>Clean Bootstrap 5 Theme</Description>
+			<PreviewImageUrl>/sitebooking/Themes/Bootstrap/images/preview.jpg</PreviewImageUrl>
+			<Status>Public</Status>
+			<FolderName>Bootstrap</FolderName>
+			<MasterPageFullWidth>DefaultThemeFullWidth.Master</MasterPageFullWidth>
+			<MasterPageLeftNav>DefaultThemeFullWidth.Master</MasterPageLeftNav>
+			<MasterPageRightSidebar>DefaultThemeFullWidth.Master</MasterPageRightSidebar>
+			<MasterPageThreeColumn>DefaultThemeFullWidth.Master</MasterPageThreeColumn>
+			<PreviewUrl></PreviewUrl>
+			<WPObjectStatus>Current</WPObjectStatus>
+			<PageTemplates>
+				<PageTemplate>
+					<ID>345a6fb7-acf5-4f12-ae25-6455ac0fa280</ID>
+					<Name>Full Width</Name>
+					<UserControlPath>BookingBootstrap.ascx</UserControlPath>
+					<Description>Full width layout with Bootstrap 5</Description>
+					<PreviewImageUrl />
+					<Status>Public</Status>
+					<PageLayout>FullWidth</PageLayout>
+					<IsDefault>false</IsDefault>
+				</PageTemplate>
+			</PageTemplates>
+		</Theme>
+	</Themes>
+</WPData>
