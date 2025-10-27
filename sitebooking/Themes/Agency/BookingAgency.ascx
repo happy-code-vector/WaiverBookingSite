@@ -22,11 +22,11 @@
 
 	<!-- Bootstrap + Theme styles -->
 	<link rel="preload" href="/sitebooking/Themes/Agency/css/theme.min.css" as="style">
-	<link rel="preload" href="/sitebooking/Themes/Agency/css/theme.rtl.min.css" as="style">
+  <link rel="preload" href="/sitebooking/Themes/Agency/css/theme.rtl.min.css" as="style">
 	<link rel="stylesheet" href="/sitebooking/Themes/Agency/css/theme.min.css" id="themestyles">
 	<link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
 
-	<!-- Custom Theme Styles -->
+	<!-- Custom Agency Theme Styles -->
 	<link rel="stylesheet" href="/sitebooking/Themes/Agency/css/agency.css">
     
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
@@ -36,31 +36,54 @@
 
 <!-- Page content -->
 <main class="content-wrapper">
-  <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
-  
-  <section class="container pt-3 pt-sm-4 pt-lg-5 mt-lg-2 mt-xl-4 mt-xxl-5" id="mission" style="scroll-margin-top: 60px">
+    
+    <!-- Hero Section (Full Width) - Add AgencyHero widget here -->
     <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
-  </section>
+    
+    <!-- Services Section -->
+    <section class="container py-5 my-4" id="services">
+        <!-- Add AgencySectionHeader + 3x AgencyServiceItem widgets here -->
+        <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+    </section>
 
-  <% if (ph2.Controls.Count>0 || ph3.Controls.Count>0){ %>
-    <div class="container py-5 mb-2 mb-sm-3 mb-md-4 mb-lg-5 mt-lg-3 mt-xl-4">
-      <section class="row row-cols-1 row-cols-md-2 g-0 overflow-hidden rounded-5">
-        <div class="col bg-body-tertiary py-5 px-4 px-xl-5">
-          <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+    <!-- Portfolio Section -->
+    <section class="portfolio-section py-5" id="portfolio">
+        <div class="container">
+            <!-- Add AgencySectionHeader widget here -->
+            <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+            
+            <!-- Portfolio Items Grid - Add 6x AgencyPortfolioItem widgets here -->
+            <div class="row">
+                <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
+            </div>
         </div>
-        <div class="col position-relative"> 
-          <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
-        </div>
-      </section>
-    </div>
-  <% } %>
+    </section>
 
-  <section class="container pt-5 pb-5 mt-md-4 mt-xl-5 mb-xxl-3">
-    <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
-  </section>
+    <!-- About Section (Optional) -->
+    <% if (ph4.Controls.Count > 0) { %>
+    <section class="container py-5 my-4" id="about">
+        <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
+    </section>
+    <% } %>
+
+    <!-- Team Section -->
+    <section class="team-section py-5" id="team">
+        <div class="container">
+            <!-- Add AgencySectionHeader + 3x AgencyTeamMember widgets here -->
+            <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
+        </div>
+    </section>
+
+    <!-- Contact Section (Optional) -->
+    <% if (ph6.Controls.Count > 0) { %>
+    <section class="container py-5 my-4" id="contact">
+        <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+    </section>
+    <% } %>
+
 </main>
           
-<uc1:Footer runat="server" id="Fotoer1" />
+<uc1:Footer runat="server" id="Footer1" />
 
 <!-- Bootstrap + Theme scripts -->
 <script src="/sitebooking/Themes/Agency/js/theme.min.js"></script>
