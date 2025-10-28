@@ -42,9 +42,11 @@
     
     <!-- Services Section -->
     <section class="container py-5 my-4" id="services">
-        <!-- Add AgencySectionHeader + 3x AgencyServiceItem widgets here -->
+        <!-- Add AgencySectionHeader widget here -->
         <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
-        <div class="row">
+        
+        <!-- Services Grid - Add 3x AgencyServiceItem widgets here -->
+        <div class="row text-center">
             <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
         </div>
     </section>
@@ -62,23 +64,21 @@
         </div>
     </section>
 
-    <!-- About Section (Optional) -->
-    <% if (ph4.Controls.Count > 0) { %>
-    <section class="container py-5 my-4" id="about">
-        <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
-    </section>
-    <% } %>
-
     <!-- Team Section -->
     <section class="team-section py-5" id="team">
         <div class="container">
-            <!-- Add AgencySectionHeader + 3x AgencyTeamMember widgets here -->
-            <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+            <!-- Add AgencySectionHeader widget here -->
+            <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
+            
+            <!-- Team Members Grid - Add 3x AgencyTeamMember widgets here -->
+            <div class="row">
+                <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section (Optional) -->
-    <% if (ph6.Controls.Count > 0) { %>
+    <!-- Contact/About Section (Optional) -->
+    <% if (ph7.Controls.Count > 0) { %>
     <section class="container py-5 my-4" id="contact">
         <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
     </section>

@@ -127,22 +127,26 @@ section h3.section-subheading {
 	padding: 2rem 1rem;
 }
 
-.service-item span[class*="ci-"],
-.service-item i {
-	font-size: 4rem;
-	color: #ffc800;
+.service-item [class*="ci-"],
+.service-item i,
+.service-item span {
+	font-size: 4rem !important;
+	color: #ffc800 !important;
 	margin-bottom: 1rem;
-	display: block;
+	display: inline-block;
 }
 
 .service-item h4 {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	font-weight: 700;
+	font-size: 1.5rem;
 }
 
 .service-item p {
 	color: #6c757d;
+	font-size: 1rem;
+	line-height: 1.6;
 }
 
 /* Portfolio Section */
