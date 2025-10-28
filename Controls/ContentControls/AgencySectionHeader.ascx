@@ -2,7 +2,7 @@
 <%@ Register assembly="WaiverFile" namespace="WaiverFile.Core.Booking" tagprefix="cc1" %>
 
 <!-- Section Header - Agency Style -->
-<div class="text-center mb-5">
+<div class="text-center">
     
     <!-- Section Title -->
     <h2 class="text-uppercase">
