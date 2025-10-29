@@ -34,55 +34,62 @@
 
 <uc1:Header runat="server" id="Header1" />
 
+<!-- Hero Section (Full Width) - Add AgencyHero widget here -->
+<asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
+
 <!-- Page content -->
-<main class="content-wrapper">
+<main class="main-content">
+
+    <!-- Hero Section / Top Content -->
+    <section class="hero-section bg-light py-5">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+        </div>
+    </section>
     
-    <!-- Hero Section (Full Width) - Add AgencyHero widget here -->
-    <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+    <!-- Main Content Area -->
+    <section class="content-section py-5">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+        </div>
+    </section>
+    
+    <!-- Two Column Section (Conditional) -->
+    <% if (ph2.Controls.Count > 0 || ph3.Controls.Count > 0) { %>
+    <section class="two-column-section py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+                </div>
+                <div class="col-lg-6">
+                    <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
+                </div>
+            </div>
+        </div>
+    </section>
+    <% } %>
+    
+    <!-- Bottom Section -->
+    <% if (ph4.Controls.Count > 0) { %>
+    <section class="bottom-section py-5">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
+        </div>
+    </section>
+    <% } %>
+    
     
     <!-- Services Section -->
     <section class="container py-5 my-4" id="services">
         <!-- Add AgencySectionHeader widget here -->
-        <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+        <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
         
         <!-- Services Grid - Add 3x AgencyServiceItem widgets here -->
         <div class="row text-center">
-            <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+            <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
         </div>
     </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio-section py-5" id="portfolio">
-        <div class="container">
-            <!-- Add AgencySectionHeader widget here -->
-            <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
-            
-            <!-- Portfolio Items Grid - Add 6x AgencyPortfolioItem widgets here -->
-            <div class="row">
-                <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section py-5" id="team">
-        <div class="container">
-            <!-- Add AgencySectionHeader widget here -->
-            <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
-            
-            <!-- Team Members Grid - Add 3x AgencyTeamMember widgets here -->
-            <div class="row">
-                <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact/About Section (Optional) -->
-    <% if (ph7.Controls.Count > 0) { %>
-    <section class="container py-5 my-4" id="contact">
-        <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
-    </section>
-    <% } %>
 
 </main>
           
