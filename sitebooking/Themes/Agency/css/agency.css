@@ -34,13 +34,13 @@
 		padding-top: 17rem;
 		padding-bottom: 12.5rem;
 	}
-	
+
 	.masthead .masthead-subheading {
 		font-size: 2.25rem;
 		line-height: 2.25rem;
 		margin-bottom: 2rem;
 	}
-	
+
 	.masthead .masthead-heading {
 		font-size: 4.5rem;
 		line-height: 4.5rem;
@@ -294,11 +294,11 @@ html {
 		padding-top: 8rem;
 		padding-bottom: 4rem;
 	}
-	
+
 	section {
 		padding: 4rem 0;
 	}
-	
+
 	.service-item {
 		padding: 1.5rem 0.5rem;
 	}
@@ -407,14 +407,14 @@ html {
 	.timeline:before {
 		left: 85px;
 	}
-	
+
 	.timeline-image {
 		left: 85px;
 		width: 150px;
 		height: 150px;
 		margin-left: -75px;
 	}
-	
+
 	.timeline-panel {
 		width: 100%;
 		float: right !important;
@@ -427,18 +427,18 @@ html {
 	.timeline:before {
 		left: 60px;
 	}
-	
+
 	.timeline-image {
 		left: 60px;
 		width: 100px;
 		height: 100px;
 		margin-left: -50px;
 	}
-	
+
 	.timeline-panel {
 		padding: 0 20px 0 90px !important;
 	}
-	
+
 	.timeline-panel h4.subheading {
 		font-size: 1.25rem;
 	}
@@ -463,21 +463,28 @@ html {
 /* Social button icons using CSS */
 .social-twitter::before {
 	font-family: cartzilla-icons !important;
-	content: "\f257"; /* ci-x icon */
+	content: "\f257";
+	/* ci-x icon */
 	font-style: normal;
 	font-weight: 400 !important;
 }
 
 .social-facebook::before {
 	font-family: cartzilla-icons !important;
-	content: "\f17b"; /* ci-facebook icon */
+	content: "\f17b";
+	/* ci-facebook icon */
 	font-style: normal;
 	font-weight: 400 !important;
 }
 
 .social-linkedin::before {
 	font-family: cartzilla-icons !important;
-	content: "\f1b0"; /* ci-linkedin icon */
+	content: "\f1b0";
+	/* ci-linkedin icon */
 	font-style: normal;
 	font-weight: 400 !important;
+}
+
+.bg-gray {
+	background-color: ghostwhite;
 }

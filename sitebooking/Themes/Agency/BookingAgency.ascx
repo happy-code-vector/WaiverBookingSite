@@ -82,23 +82,12 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="content-section py-5">
+    <section class="content-section py-5 bg-gray">
         <div class="container">
             <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
             
             <div class="row text-center">
                 <asp:PlaceHolder runat="server" ID="ph9"></asp:PlaceHolder>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team members Section -->
-    <section class="content-section py-5">
-        <div class="container">
-            <asp:PlaceHolder runat="server" ID="ph10"></asp:PlaceHolder>
-            
-            <div class="row text-center">
-                <asp:PlaceHolder runat="server" ID="ph11"></asp:PlaceHolder>
             </div>
         </div>
     </section>
@@ -110,6 +99,17 @@
             
             <div class="row text-center timeline">
                 <asp:PlaceHolder runat="server" ID="ph13"></asp:PlaceHolder>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team members Section -->
+    <section class="content-section py-5 bg-gray">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph10"></asp:PlaceHolder>
+            
+            <div class="row text-center">
+                <asp:PlaceHolder runat="server" ID="ph11"></asp:PlaceHolder>
             </div>
         </div>
     </section>
