@@ -103,6 +103,17 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="content-section py-5">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph12"></asp:PlaceHolder>
+            
+            <div class="row text-center">
+                <asp:PlaceHolder runat="server" ID="ph13"></asp:PlaceHolder>
+            </div>
+        </div>
+    </section>
+
     <!-- Bottom Section -->
     <% if (ph4.Controls.Count > 0) { %>
     <section class="bottom-section py-5">
