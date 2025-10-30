@@ -13,33 +13,29 @@
             CssClass="rounded-circle img-fluid" />
     </div>
     <div class="timeline-panel">
-        <div class="timeline-heading">
-            <h4>
-                <cc1:CmsLiteral 
-                    ID="TimelineYear" 
-                    runat="server" 
-                    data-editable="true" 
-                    data-name="Year/Date" 
-                    data-defaultval="2009-2011" />
-            </h4>
-            <h4 class="subheading">
-                <cc1:CmsLiteral 
-                    ID="TimelineTitle" 
-                    runat="server" 
-                    data-editable="true" 
-                    data-name="Title" 
-                    data-defaultval="Our Humble Beginnings" />
-            </h4>
-        </div>
-        <div class="timeline-body">
-            <p class="text-muted">
-                <cc1:CmsLiteral 
-                    ID="TimelineDescription" 
-                    runat="server" 
-                    data-editable="true" 
-                    data-name="Description" 
-                    data-defaultval="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!" />
-            </p>
-        </div>
+        <h4 class="fw-bold">
+            <cc1:CmsLiteral 
+                ID="TimelineYear" 
+                runat="server" 
+                data-editable="true" 
+                data-name="Year/Date" 
+                data-defaultval="2009-2011" />
+        </h4>
+        <h4 class="subheading">
+            <cc1:CmsLiteral 
+                ID="TimelineTitle" 
+                runat="server" 
+                data-editable="true" 
+                data-name="Title" 
+                data-defaultval="Our Humble Beginnings" />
+        </h4>
+        <p class="text-muted">
+            <cc1:CmsLiteral 
+                ID="TimelineDescription" 
+                runat="server" 
+                data-editable="true" 
+                data-name="Description" 
+                data-defaultval="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!" />
+        </p>
     </div>
 </li>

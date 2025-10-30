@@ -108,7 +108,7 @@
         <div class="container">
             <asp:PlaceHolder runat="server" ID="ph12"></asp:PlaceHolder>
             
-            <div class="row text-center">
+            <div class="row text-center timeline">
                 <asp:PlaceHolder runat="server" ID="ph13"></asp:PlaceHolder>
             </div>
         </div>
