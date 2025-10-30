@@ -69,7 +69,40 @@
         </div>
     </section>
     <% } %>
-    
+
+    <!-- Service Section -->
+    <section class="content-section py-5">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+            
+            <div class="row text-center">
+                <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="content-section py-5">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
+            
+            <div class="row text-center">
+                <asp:PlaceHolder runat="server" ID="ph9"></asp:PlaceHolder>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team members Section -->
+    <section class="content-section py-5">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph10"></asp:PlaceHolder>
+            
+            <div class="row text-center">
+                <asp:PlaceHolder runat="server" ID="ph11"></asp:PlaceHolder>
+            </div>
+        </div>
+    </section>
+
     <!-- Bottom Section -->
     <% if (ph4.Controls.Count > 0) { %>
     <section class="bottom-section py-5">
