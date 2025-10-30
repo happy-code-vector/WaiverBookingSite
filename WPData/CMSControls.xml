@@ -163,6 +163,18 @@
 			<Active>true</Active>
 		</Control>
 
+		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>f6a7b8c9-d0e1-4f5a-9b8c-6d7e8f9a0b1c</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>About Timeline Item</Name>
+			<Description>Timeline item with image, year, title, and description for about section</Description>
+			<Path>/Controls/ContentControls/</Path>
+			<Filename>AgencyAboutItem.ascx</Filename>
+			<Category>Content Blocks</Category>
+			<Cacheable>false</Cacheable>
+			<Active>true</Active>
+		</Control>
+
 
 	</Controls>
 </WPData>
