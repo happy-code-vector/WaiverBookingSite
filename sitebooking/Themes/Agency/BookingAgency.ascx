@@ -79,18 +79,6 @@
     </section>
     <% } %>
     
-    
-    <!-- Services Section -->
-    <section class="container py-5 my-4" id="services">
-        <!-- Add AgencySectionHeader widget here -->
-        <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
-        
-        <!-- Services Grid - Add 3x AgencyServiceItem widgets here -->
-        <div class="row text-center">
-            <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
-        </div>
-    </section>
-
 </main>
           
 <uc1:Footer runat="server" id="Footer1" />

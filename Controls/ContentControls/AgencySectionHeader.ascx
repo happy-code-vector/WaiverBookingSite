@@ -25,3 +25,7 @@
     </h3>
     
 </div>
+
+<div class="row text-center">
+    <asp:PlaceHolder runat="server" ID="ph100"></asp:PlaceHolder>
+</div>
