@@ -42,10 +42,9 @@
                 data-editable="true" 
                 data-name="Twitter Link" 
                 data-defaultval="https://twitter.com/" 
-                data-defaulttext="Twitter" 
                 data-defaulttarget="_blank"
-                CssClass="btn btn-dark btn-social mx-2">
-                <i class="ci-twitter"></i>
+                CssClass="btn btn-dark btn-social mx-2 social-twitter"
+                ToolTip="Twitter">
             </asp:HyperLink>
             
             <asp:HyperLink 
@@ -54,10 +53,9 @@
                 data-editable="true" 
                 data-name="Facebook Link" 
                 data-defaultval="https://facebook.com/" 
-                data-defaulttext="Facebook" 
                 data-defaulttarget="_blank"
-                CssClass="btn btn-dark btn-social mx-2">
-                <i class="ci-facebook"></i>
+                CssClass="btn btn-dark btn-social mx-2 social-facebook"
+                ToolTip="Facebook">
             </asp:HyperLink>
             
             <asp:HyperLink 
@@ -66,10 +64,9 @@
                 data-editable="true" 
                 data-name="LinkedIn Link" 
                 data-defaultval="https://linkedin.com/" 
-                data-defaulttext="LinkedIn" 
                 data-defaulttarget="_blank"
-                CssClass="btn btn-dark btn-social mx-2">
-                <i class="ci-linkedin"></i>
+                CssClass="btn btn-dark btn-social mx-2 social-linkedin"
+                ToolTip="LinkedIn">
             </asp:HyperLink>
         </div>
         

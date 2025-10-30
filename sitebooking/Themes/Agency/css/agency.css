@@ -459,3 +459,25 @@ html {
 	padding: 1rem;
 	font-size: 1.25rem;
 }
+
+/* Social button icons using CSS */
+.social-twitter::before {
+	font-family: cartzilla-icons !important;
+	content: "\f257"; /* ci-x icon */
+	font-style: normal;
+	font-weight: 400 !important;
+}
+
+.social-facebook::before {
+	font-family: cartzilla-icons !important;
+	content: "\f17b"; /* ci-facebook icon */
+	font-style: normal;
+	font-weight: 400 !important;
+}
+
+.social-linkedin::before {
+	font-family: cartzilla-icons !important;
+	content: "\f1b0"; /* ci-linkedin icon */
+	font-style: normal;
+	font-weight: 400 !important;
+}
