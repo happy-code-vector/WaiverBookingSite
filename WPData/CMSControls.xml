@@ -115,62 +115,51 @@
 			<Active>true</Active>
 		</Control>
 
+		<!-- Section Blocks -->
 		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-			<ID>b2c3d4e5-f6a7-4b5c-9d8e-2f3a4b5c6d7e</ID>
+			<ID>a7b8c9d0-e1f2-4a5b-9c8d-7e8f9a0b1c2d</ID>
 			<WPObjectStatus>New</WPObjectStatus>
-			<Name>Section Header</Name>
-			<Description>Section header with title and subtitle</Description>
+			<Name>Services Section</Name>
+			<Description>Complete services section with header and 3 service items</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencySectionHeader.ascx</Filename>
-			<Category>Content Blocks</Category>
+			<Filename>AgencyServicesSection.ascx</Filename>
+			<Category>Agency Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
 		</Control>
 
 		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-			<ID>c3d4e5f6-a7b8-4c5d-9e8f-3a4b5c6d7e8f</ID>
+			<ID>b8c9d0e1-f2a3-4b5c-9d8e-8f9a0b1c2d3e</ID>
 			<WPObjectStatus>New</WPObjectStatus>
-			<Name>Service Item</Name>
-			<Description>Service item with icon, title, and description</Description>
+			<Name>Portfolio Section</Name>
+			<Description>Complete portfolio section with header and 6 portfolio items</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyServiceItem.ascx</Filename>
-			<Category>Content Blocks</Category>
+			<Filename>AgencyPortfolioSection.ascx</Filename>
+			<Category>Agency Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
 		</Control>
 
 		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-			<ID>d4e5f6a7-b8c9-4d5e-9f8a-4b5c6d7e8f9a</ID>
+			<ID>c9d0e1f2-a3b4-4c5d-9e8f-9a0b1c2d3e4f</ID>
 			<WPObjectStatus>New</WPObjectStatus>
-			<Name>Portfolio Item</Name>
-			<Description>Portfolio item with image, title, and category overlay</Description>
+			<Name>Team Section</Name>
+			<Description>Complete team section with header and 3 team members with social links</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyPortfolioItem.ascx</Filename>
-			<Category>Content Blocks</Category>
+			<Filename>AgencyTeamSection.ascx</Filename>
+			<Category>Agency Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
 		</Control>
 
 		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-			<ID>e5f6a7b8-c9d0-4e5f-9a8b-5c6d7e8f9a0b</ID>
+			<ID>d0e1f2a3-b4c5-4d5e-9f8a-0b1c2d3e4f5a</ID>
 			<WPObjectStatus>New</WPObjectStatus>
-			<Name>Team Member</Name>
-			<Description>Team member profile with photo, name, position, and social links</Description>
+			<Name>Timeline Section</Name>
+			<Description>Complete timeline/about section with header and 5 timeline items</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyTeamMember.ascx</Filename>
-			<Category>Content Blocks</Category>
-			<Cacheable>false</Cacheable>
-			<Active>true</Active>
-		</Control>
-
-		<Control xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-			<ID>f6a7b8c9-d0e1-4f5a-9b8c-6d7e8f9a0b1c</ID>
-			<WPObjectStatus>New</WPObjectStatus>
-			<Name>About Timeline Item</Name>
-			<Description>Timeline item with image, year, title, and description for about section</Description>
-			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyAboutItem.ascx</Filename>
-			<Category>Content Blocks</Category>
+			<Filename>AgencyTimelineSection.ascx</Filename>
+			<Category>Agency Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
 		</Control>
