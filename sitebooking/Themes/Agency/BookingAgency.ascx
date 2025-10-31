@@ -34,23 +34,17 @@
 
 <uc1:Header runat="server" id="Header1" />
 
-<!-- Hero Section (Full Width) - Add AgencyHero widget here -->
-<asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
 
 <!-- Page content -->
 <main class="main-content">
 
     <!-- Hero Section / Top Content -->
+    <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+    
+    <!-- Main Content Area -->
     <section class="hero-section bg-light py-5">
         <div class="container">
             <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
-        </div>
-    </section>
-    
-    <!-- Main Content Area -->
-    <section class="content-section py-5">
-        <div class="container">
-            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
         </div>
     </section>
     
