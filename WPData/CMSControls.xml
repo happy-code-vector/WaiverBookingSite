@@ -123,7 +123,7 @@
 			<Description>Complete services section with header and 3 service items</Description>
 			<Path>/Controls/ContentControls/</Path>
 			<Filename>AgencyServicesSection.ascx</Filename>
-			<Category>Agency Sections</Category>
+			<Category>Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
 		</Control>
@@ -135,7 +135,7 @@
 			<Description>Complete portfolio section with header and 6 portfolio items</Description>
 			<Path>/Controls/ContentControls/</Path>
 			<Filename>AgencyPortfolioSection.ascx</Filename>
-			<Category>Agency Sections</Category>
+			<Category>Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
 		</Control>
@@ -147,7 +147,7 @@
 			<Description>Complete team section with header and 3 team members with social links</Description>
 			<Path>/Controls/ContentControls/</Path>
 			<Filename>AgencyTeamSection.ascx</Filename>
-			<Category>Agency Sections</Category>
+			<Category>Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
 		</Control>
@@ -159,7 +159,7 @@
 			<Description>Complete timeline/about section with header and 5 timeline items</Description>
 			<Path>/Controls/ContentControls/</Path>
 			<Filename>AgencyTimelineSection.ascx</Filename>
-			<Category>Agency Sections</Category>
+			<Category>Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
 		</Control>
