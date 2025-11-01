@@ -27,115 +27,169 @@
     </style>
     
     <telerik:RadAjaxPanel runat="server" ID="pnlAdmissionItem" LoadingPanelID="RadAjaxLoadingPanel1">
-      <div class="container mt-5">
-        <div class="row">
+      <div class="container my-5">
+        <div class="row g-4">
 
           <!-- Left: Image Gallery -->
-          <div class="col-md-6">
-            <xsl:variable name="mainImage" select="Images/ItemImage[1]/SourceUrl"/>
-            <img id="mainImage" src="{$mainImage}" class="img-fluid rounded shadow mb-3" alt="{Name}" />
+          <div class="col-lg-6">
+            <div class="sticky-top" style="top: 20px;">
+              <xsl:variable name="mainImage" select="Images/ItemImage[1]/SourceUrl"/>
+              <div class="position-relative mb-3 overflow-hidden rounded shadow-lg">
+                <img id="mainImage" src="{$mainImage}" class="img-fluid w-100" alt="{Name}" style="max-height: 500px; object-fit: cover;" />
+              </div>
 
-            <div class="d-flex flex-wrap gap-2">
-              <xsl:for-each select="Images/ItemImage">
-                <img src="{SourceThumbUrl}" data-full="{SourceUrl}" class="img-thumbnail thumb-swap" style="width: 80px;" />
-              </xsl:for-each>
+              <!-- Thumbnail Gallery -->
+              <div class="d-flex flex-wrap gap-2">
+                <xsl:for-each select="Images/ItemImage">
+                  <div class="thumb-swap-container position-relative" style="cursor: pointer;">
+                    <img src="{SourceThumbUrl}" data-full="{SourceUrl}" class="img-thumbnail thumb-swap hover-zoom" style="width: 100px; height: 100px; object-fit: cover; transition: all 0.3s ease;" />
+                  </div>
+                </xsl:for-each>
+              </div>
             </div>
           </div>
 
           <!-- Right: Info & Booking -->
-          <div class="col-md-6">
-            <h2>
-              <xsl:value-of select="Name"/>
-            </h2>
+          <div class="col-lg-6">
+            <!-- Product Header -->
+            <div class="mb-4">
+              <h1 class="display-5 fw-bold mb-3">
+                <xsl:value-of select="Name"/>
+              </h1>
 
-            <p class="text-muted">
-              <xsl:choose>
-                <xsl:when test="normalize-space(Description) != ''">
-                  <xsl:value-of select="Description" disable-output-escaping="yes"/>
-                </xsl:when>
-                <xsl:otherwise>No description available.</xsl:otherwise>
-              </xsl:choose>
-            </p>
+              <div class="lead text-muted">
+                <xsl:choose>
+                  <xsl:when test="normalize-space(Description) != ''">
+                    <xsl:value-of select="Description" disable-output-escaping="yes"/>
+                  </xsl:when>
+                  <xsl:otherwise>No description available.</xsl:otherwise>
+                </xsl:choose>
+              </div>
+            </div>
 
             <!-- Pricing Breakdown -->
-            <h4 class="mt-4">Pricing</h4>
-            <xsl:for-each select="PricingGridRef/TimeRules/PricingGridTimeRule">
-              <xsl:variable name="timeRuleId" select="ID"/>
-              <div class="mb-3 border rounded p-2">
-                <h5 class="text-primary mb-2">
-                  <xsl:value-of select="Name"/>
+            <div class="card shadow-sm mb-4">
+              <div class="card-header bg-light">
+                <h5 class="mb-0">
+                  <i class="ci-dollar-sign me-2"></i>Pricing Options
                 </h5>
-                <ul class="list-unstyled mb-0">
-                  <xsl:for-each select="../../PersonTypes/PricingGridPersonType">
-                    <xsl:variable name="ptId" select="ID"/>
-                    <xsl:variable name="price"
+              </div>
+              <div class="card-body">
+                <xsl:for-each select="PricingGridRef/TimeRules/PricingGridTimeRule">
+                  <xsl:variable name="timeRuleId" select="ID"/>
+                  <div class="mb-3 p-3 bg-light rounded">
+                    <h6 class="text-primary fw-bold mb-3">
+                      <i class="ci-clock me-2"></i>
+                      <xsl:value-of select="Name"/>
+                    </h6>
+                    <div class="row g-2">
+                      <xsl:for-each select="../../PersonTypes/PricingGridPersonType">
+                        <xsl:variable name="ptId" select="ID"/>
+                        <xsl:variable name="price"
 select="/AdmissionItem/CurrentPrices/AdmissionItemPrice[PersonTypeID = $ptId and TimeRuleID = $timeRuleId]/Price"/>
 
-                    <li>
-                      <strong>
-                        <xsl:value-of select="Name"/>:
-                      </strong>
-                      <xsl:choose>
-                        <xsl:when test="$price">
-                          $<xsl:value-of select="$price"/>
-                        </xsl:when>
-                        <xsl:otherwise>Not available</xsl:otherwise>
-                      </xsl:choose>
-                    </li>
-                  </xsl:for-each>
-                </ul>
+                        <div class="col-6">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted">
+                              <i class="ci-user me-1"></i>
+                              <xsl:value-of select="Name"/>
+                            </span>
+                            <span class="fw-bold text-primary">
+                              <xsl:choose>
+                                <xsl:when test="$price">
+                                  $<xsl:value-of select="format-number($price, '#,##0.00')"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                  <span class="text-muted small">N/A</span>
+                                </xsl:otherwise>
+                              </xsl:choose>
+                            </span>
+                          </div>
+                        </div>
+                      </xsl:for-each>
+                    </div>
+                  </div>
+                </xsl:for-each>
               </div>
-            </xsl:for-each>
+            </div>
 
             <!-- Booking Section -->
-            <h4 class="mt-4">Book Your Visit</h4>
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label class="form-label fw-bold">Date</label>
-                <br/>
-                <telerik:RadDatePicker ID="rdpCheckIn" runat="server" skin="Bootstrap"  AutoPostBack="true"  />
-				 
+            <div class="card shadow-lg border-0">
+              <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                  <i class="ci-calendar me-2"></i>Book Your Visit
+                </h5>
               </div>
-				
-             
-            </div>
-            <div class="row mb-3">
-              <div class="col-12">
-                <asp:PlaceHolder id="phSlots" runat="server"></asp:PlaceHolder>
+              <div class="card-body p-4">
                 
-              </div>
-            </div>  
-            <xsl:for-each select="PricingGridRef/PersonTypes/PricingGridPersonType">
-              <div class="mb-3 row align-items-center">
-                <div class="col-6">
-                  <label class="form-label fw-bold">
-                    <xsl:value-of select="Name"/>
+                <!-- Date Selection -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold d-flex align-items-center">
+                    <i class="ci-calendar text-primary me-2"></i>
+                    Select Date
                   </label>
+                  <telerik:RadDatePicker ID="rdpCheckIn" runat="server" skin="Bootstrap" AutoPostBack="true" CssClass="form-control-lg" />
                 </div>
-                <div class="col-6">
-                  <asp:TextBox runat="server" CssClass="form-control" min="0" data-pid="{ID}" style="width:60px;"></asp:TextBox>
-                </div>
-              </div>
-            </xsl:for-each>
 
-            <!-- Add to Cart -->
-            <div class="mt-4">
-				<asp:PlaceHolder id="phAddToCartErr" runat="server"></asp:PlaceHolder>
-              <asp:Button ID="btnAddToCart" runat="server" CssClass="btn btn-primary w-100"
-                          Text="Add to Cart" CommandArgument="{ID}" />
+                <!-- Time Slots -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold d-flex align-items-center">
+                    <i class="ci-clock text-primary me-2"></i>
+                    Available Time Slots
+                  </label>
+                  <asp:PlaceHolder id="phSlots" runat="server"></asp:PlaceHolder>
+                </div>
+
+                <!-- Quantity Selection -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold d-flex align-items-center mb-3">
+                    <i class="ci-user text-primary me-2"></i>
+                    Number of Guests
+                  </label>
+                  <xsl:for-each select="PricingGridRef/PersonTypes/PricingGridPersonType">
+                    <div class="mb-3">
+                      <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded">
+                        <div>
+                          <label class="form-label mb-0 fw-semibold">
+                            <xsl:value-of select="Name"/>
+                          </label>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                          <asp:TextBox runat="server" CssClass="form-control form-control-lg text-center" min="0" data-pid="{ID}" style="width: 80px;" Text="0" type="number"></asp:TextBox>
+                        </div>
+                      </div>
+                    </div>
+                  </xsl:for-each>
+                </div>
+
+                <!-- Error Messages -->
+                <asp:PlaceHolder id="phAddToCartErr" runat="server"></asp:PlaceHolder>
+
+                <!-- Add to Cart Button -->
+                <asp:Button ID="btnAddToCart" runat="server" CssClass="btn btn-primary btn-lg w-100 py-3 shadow" CommandArgument="{ID}" Text="Add to Cart"></asp:Button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </telerik:RadAjaxPanel>
 
-    <!-- jQuery script for thumbnail image swap -->
+    <!-- jQuery script for thumbnail image swap with animation -->
     <script type="text/javascript">
       $(document).ready(function () {
-      $('.thumb-swap').on('click', function () {
-      var newSrc = $(this).attr('data-full');
-      $('#mainImage').attr('src', newSrc);
-      });
+        $('.thumb-swap').on('click', function () {
+          var newSrc = $(this).attr('data-full');
+          $('#mainImage').fadeOut(200, function() {
+            $(this).attr('src', newSrc).fadeIn(200);
+          });
+          
+          // Highlight selected thumbnail
+          $('.thumb-swap').removeClass('border-primary').css('border-width', '1px');
+          $(this).addClass('border-primary').css('border-width', '3px');
+        });
+        
+        // Highlight first thumbnail by default
+        $('.thumb-swap').first().addClass('border-primary').css('border-width', '3px');
       });
     </script>
   </xsl:template>
