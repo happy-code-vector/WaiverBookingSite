@@ -25,35 +25,46 @@
 
   <xsl:template match="/">
 
+    <div class="container my-4">
+      <h4 class="mb-4">
+        <i class="ci-clock me-2"></i>Select a Time Slot
+      </h4>
+      
+      <div class="row g-3">
+        <xsl:for-each select="//AvailabilitySlot">
 
+          <xsl:variable name="slotId" select="ID" />
+          <xsl:variable name="uid" select="concat('slot_', position())" />
+          <xsl:variable name="start" select="substring-after(substring-before(StartTime, 'H'), 'PT')" />
+          <xsl:variable name="end" select="substring-after(substring-before(EndTime, 'H'), 'PT')" />
 
-    <div class="d-flex flex-wrap">
-      <xsl:for-each select="//AvailabilitySlot">
+          <div class="col-6 col-md-4 col-lg-3">
+            <input class="btn-check"
+                   type="radio"
+                   id="{$uid}"
+                   name="TimeSlots"
+                   value="{$slotId}" />
 
-        <xsl:variable name="slotId" select="ID" />
-        <xsl:variable name="uid" select="concat('slot_', position())" />
-        <xsl:variable name="start" select="substring-after(substring-before(StartTime, 'H'), 'PT')" />
-        <xsl:variable name="end" select="substring-after(substring-before(EndTime, 'H'), 'PT')" />
+            <label class="btn btn-outline-primary w-100 py-3 d-flex flex-column align-items-center time-slot-btn" for="{$uid}">
+              <i class="ci-clock fs-4 mb-2"></i>
+              <div class="fw-bold">
+                <xsl:call-template name="formatTime">
+                  <xsl:with-param name="hour" select="$start" />
+                </xsl:call-template>
+              </div>
+              <xsl:if test="$start != $end">
+                <div class="small text-muted">to</div>
+                <div class="fw-bold">
+                  <xsl:call-template name="formatTime">
+                    <xsl:with-param name="hour" select="$end" />
+                  </xsl:call-template>
+                </div>
+              </xsl:if>
+            </label>
+          </div>
 
-        <input class="btn-check"
-               type="radio"
-               id="{$uid}"
-               name="TimeSlots"
-               value="{$slotId}" />
-
-        <label class="btn btn-outline-primary m-1" for="{$uid}">
-          <xsl:call-template name="formatTime">
-            <xsl:with-param name="hour" select="$start" />
-          </xsl:call-template>
-          <xsl:if test="$start != $end">
-            <xsl:text> - </xsl:text>
-            <xsl:call-template name="formatTime">
-              <xsl:with-param name="hour" select="$end" />
-            </xsl:call-template>
-          </xsl:if>
-        </label>
-
-      </xsl:for-each>
+        </xsl:for-each>
+      </div>
     </div>
 
   </xsl:template>

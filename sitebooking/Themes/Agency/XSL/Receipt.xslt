@@ -8,13 +8,32 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 	
 
 	<xsl:template match="/">
-		
-					<div class="mb-4 border-bottom pb-3">
-						<h2 class="mb-0">Order Receipt</h2>
-						<small class="text-muted">
-							Order #: <xsl:value-of select="/Order/OrderNumber"/> |
-							Status: <xsl:value-of select="/Order/CurrentStatus/Status"/> |
-							Date: 
+		<div class="container my-5">
+			<div class="card shadow-sm">
+				<div class="card-header bg-primary text-white">
+					<div class="d-flex justify-content-between align-items-center">
+						<div>
+							<h2 class="mb-1">
+								<i class="ci-file-text me-2"></i>Order Receipt
+							</h2>
+							<small class="opacity-75">
+								Order #: <xsl:value-of select="/Order/OrderNumber"/>
+							</small>
+						</div>
+						<div class="text-end">
+							<xsl:variable name="statusClass">
+								<xsl:choose>
+									<xsl:when test="/Order/CurrentStatus/Status='Completed'">success</xsl:when>
+									<xsl:when test="/Order/CurrentStatus/Status='Pending'">warning</xsl:when>
+									<xsl:when test="/Order/CurrentStatus/Status='Cancelled'">danger</xsl:when>
+									<xsl:otherwise>info</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							<span class="badge bg-{$statusClass} fs-6">
+								<xsl:value-of select="/Order/CurrentStatus/Status"/>
+							</span>
+							<div class="small opacity-75 mt-1">
+								Date: 
 
 							<xsl:choose>
 								<xsl:when test="$DateFormat=''">
@@ -24,30 +43,56 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 									<xsl:value-of select="dt:format-date(/Order/DateCreated,$DateFormat)"/>
 								</xsl:otherwise>
 							</xsl:choose>
-							
-						
-						</small>
+							</div>
+						</div>
 					</div>
+				</div>
 
+				<div class="card-body p-4">
+					<!-- Customer Details -->
 					<div class="mb-4">
-						<h5>Customer Details</h5>
-						<p class="mb-1">
-							<strong>Name:</strong>
-							<xsl:value-of select="/Order/FullName"/>
-						</p>
-						<p class="mb-1">
-							<strong>Email:</strong>
-							<xsl:value-of select="/Order/Email"/>
-						</p>
-						<p class="mb-1">
-							<strong>Phone:</strong>
-							<xsl:value-of select="/Order/Phone"/>
-						</p>
+						<h5 class="mb-3">
+							<i class="ci-user me-2"></i>Customer Details
+						</h5>
+						<div class="row g-3">
+							<div class="col-md-4">
+								<div class="d-flex align-items-center">
+									<i class="ci-user-check text-muted me-2"></i>
+									<div>
+										<small class="text-muted d-block">Name</small>
+										<strong><xsl:value-of select="/Order/FullName"/></strong>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="d-flex align-items-center">
+									<i class="ci-mail text-muted me-2"></i>
+									<div>
+										<small class="text-muted d-block">Email</small>
+										<strong><xsl:value-of select="/Order/Email"/></strong>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="d-flex align-items-center">
+									<i class="ci-phone text-muted me-2"></i>
+									<div>
+										<small class="text-muted d-block">Phone</small>
+										<strong><xsl:value-of select="/Order/Phone"/></strong>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 
-					<div class="table-responsive mb-4">
-						<table class="table table-bordered align-middle">
-							<thead class="table-light">
+					<!-- Order Items -->
+					<div class="mb-4">
+						<h5 class="mb-3">
+							<i class="ci-shopping-bag me-2"></i>Order Items
+						</h5>
+						<div class="table-responsive">
+							<table class="table table-hover align-middle">
+								<thead class="table-light">
 								<tr>
 									<th>Item</th>
 									<th class="">Details</th>
@@ -109,9 +154,11 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 						</table>
 					</div>
 
-					<!-- 🕓 Status History Section -->
+					<!-- Status History -->
 					<div class="mb-4">
-						<h5>Status History</h5>
+						<h5 class="mb-3">
+							<i class="ci-clock me-2"></i>Status History
+						</h5>
 						<div class="table-responsive">
 							<table class="table table-sm table-striped">
 								<thead class="table-light">
@@ -155,12 +202,16 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 						</div>
 					</div>
 
-					<div class="text-muted small">
-						<p class="mb-0">
-							Payment Info: <xsl:value-of select="/Order/CurrentStatus/Comments"/>
-						</p>
-						<p class="mb-0">
-							This receipt was generated on 
+					<!-- Footer Info -->
+					<div class="border-top pt-3 mt-4">
+						<div class="row g-3 text-muted small">
+							<div class="col-md-6">
+								<i class="ci-credit-card me-1"></i>
+								<strong>Payment Info:</strong> <xsl:value-of select="/Order/CurrentStatus/Comments"/>
+							</div>
+							<div class="col-md-6 text-md-end">
+								<i class="ci-calendar me-1"></i>
+								<strong>Generated:</strong> 
 							<xsl:choose>
 							<xsl:when test="$DateFormat=''">
 								<xsl:value-of select="DateCreated"/>
@@ -168,11 +219,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 							<xsl:otherwise>
 								<xsl:value-of select="dt:format-date(DateCreated,$DateFormat)"/>
 							</xsl:otherwise>
-						</xsl:choose>.
-							
-						</p>
+						</xsl:choose>
+							</div>
+						</div>
 					</div>
-				
+				</div>
+			</div>
+		</div>
 	</xsl:template>
 
 </xsl:stylesheet>
