@@ -6,13 +6,12 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 	<xsl:param name="BasePathRelative"></xsl:param>
 
 	<xsl:template match="/">
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
+		<nav aria-label="breadcrumb" class="my-3">
+			<ol class="breadcrumb bg-light p-3 rounded shadow-sm">
 				<li class="breadcrumb-item">
-					<a href="{$BasePathRelative}" title="Home">
-						<i class="fa fa-home">
-							<xsl:text> </xsl:text>
-						</i>
+					<a href="{$BasePathRelative}" title="Home" class="text-decoration-none">
+						<i class="ci-home me-1"></i>
+						<span>Home</span>
 					</a>
 				</li>
 
@@ -28,10 +27,12 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 						<xsl:choose>
 							<!-- Active breadcrumb shouldn't be a link -->
 							<xsl:when test="position()=count(/Main/ArrayOfWorkflowStep/WorkflowStep)">
-								<xsl:value-of select="ButtonText"/>
+								<span class="fw-bold text-primary">
+									<xsl:value-of select="ButtonText"/>
+								</span>
 							</xsl:when>
 							<xsl:otherwise>
-								<a href="{$BasePathRelative}/Workflow.aspx?stepid={ID}">
+								<a href="{$BasePathRelative}/Workflow.aspx?stepid={ID}" class="text-decoration-none">
 									<xsl:if test="DescriptionText!=''">
 										<xsl:attribute name="title">
 											<xsl:value-of select="DescriptionText"/>

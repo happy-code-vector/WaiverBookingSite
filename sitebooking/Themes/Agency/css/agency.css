@@ -570,3 +570,23 @@ html {
 .btn-check:checked + .time-slot-btn i {
 	color: #fff !important;
 }
+
+/* Breadcrumb Enhancements */
+.breadcrumb {
+	margin-bottom: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+	content: "\f13f";
+	font-family: cartzilla-icons;
+	color: #6c757d;
+	opacity: 0.5;
+}
+
+.breadcrumb-item a:hover {
+	color: #ffc800 !important;
+}
+
+.breadcrumb-item.active {
+	color: #212529;
+}

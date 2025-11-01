@@ -20,9 +20,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 		<xsl:choose>
 			<xsl:when test="count(/Main/Steps/ArrayOfWFButton/WFButton) + count(/Main/Forms/ArrayOfWFButton/WFButton) &gt; 10">
 
-				<!-- Bootstrap 5 select -->
-				<select class="form-select" id="linkselect">
-					<option value="">Select...</option>
+				<!-- Dropdown for many options -->
+				<div class="my-4">
+					<label class="form-label fw-bold">
+						<i class="ci-menu me-2"></i>Select an option:
+					</label>
+					<select class="form-select form-select-lg" id="linkselect">
+						<option value="">Choose...</option>
 
 					<xsl:for-each select="/Main/Steps/ArrayOfWFButton/WFButton">
 						<option value="{Url}">
@@ -45,38 +49,43 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 							<xsl:value-of select="Text"/>
 						</option>
 					</xsl:for-each>
-				</select>
+					</select>
+				</div>
 
 			</xsl:when>
 			<xsl:otherwise>
 
-				<xsl:for-each select="/Main/Steps/ArrayOfWFButton/WFButton">
-					<a href="{Url}" class="btn btn-lg btn-light me-2 mb-2">
-						<xsl:if test="Title!=''">
-							<xsl:attribute name="title">
-								<xsl:value-of select="Title"/>
-							</xsl:attribute>
-						</xsl:if>
-						<xsl:value-of select="Text"/>
-						<xsl:if test="Title!=''">
-							<br/>
-							<small class="text-muted">
-								<xsl:value-of select="Title"/>
-							</small>
-						</xsl:if>
-					</a>
-				</xsl:for-each>
+				<div class="d-flex flex-wrap gap-2 justify-content-center my-4">
+					<xsl:for-each select="/Main/Steps/ArrayOfWFButton/WFButton">
+						<a href="{Url}" class="btn btn-lg btn-primary px-4 py-3 shadow-sm hover-lift">
+							<xsl:if test="Title!=''">
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"/>
+								</xsl:attribute>
+							</xsl:if>
+							<i class="ci-arrow-right me-2"></i>
+							<xsl:value-of select="Text"/>
+							<xsl:if test="Title!=''">
+								<br/>
+								<small class="opacity-75">
+									<xsl:value-of select="Title"/>
+								</small>
+							</xsl:if>
+						</a>
+					</xsl:for-each>
 
-				<xsl:for-each select="/Main/Forms/ArrayOfWFButton/WFButton">
-					<a href="{Url}" class="btn btn-lg btn-light me-2 mb-2">
-						<xsl:if test="Title!=''">
-							<xsl:attribute name="title">
-								<xsl:value-of select="Title"/>
-							</xsl:attribute>
-						</xsl:if>
-						<xsl:value-of select="Text"/>
-					</a>
-				</xsl:for-each>
+					<xsl:for-each select="/Main/Forms/ArrayOfWFButton/WFButton">
+						<a href="{Url}" class="btn btn-lg btn-outline-primary px-4 py-3 shadow-sm hover-lift">
+							<xsl:if test="Title!=''">
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"/>
+								</xsl:attribute>
+							</xsl:if>
+							<i class="ci-file-text me-2"></i>
+							<xsl:value-of select="Text"/>
+						</a>
+					</xsl:for-each>
+				</div>
 
 			</xsl:otherwise>
 		</xsl:choose>
