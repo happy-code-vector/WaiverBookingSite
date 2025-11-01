@@ -9,11 +9,11 @@
   <xsl:output method="html" omit-xml-declaration="yes"/>
 
   <xsl:template match="/">
-    <div class="container">
-      <div class="row">
+    <div class="container my-5">
+      <div class="row g-4">
         <xsl:for-each select="ArrayOfAdmissionItem/AdmissionItem">
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm hover-lift">
 
               <!-- Product Image (first image or placeholder) -->
               <xsl:variable name="thumb" select="Images/ItemImage[1]/SourceThumbUrl"/>
@@ -21,19 +21,21 @@
 
                 <xsl:choose>
                   <xsl:when test="$thumb != ''">
-                    <a href="{$BasePath}/ViewAdmissionItem.aspx?id={ID}">
-                      <img class="card-img-top" alt="{Name}" src="{$thumb}"/>
+                    <a href="{$BasePath}/ViewAdmissionItem.aspx?id={ID}" class="d-block overflow-hidden">
+                      <img class="card-img-top hover-zoom" alt="{Name}" src="{$thumb}" style="transition: transform 0.3s ease;"/>
                     </a>
                   </xsl:when>
                   <xsl:otherwise>
-                  <!-- could add a blank image here -->
+                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 250px;">
+                      <i class="ci-image text-muted" style="font-size: 4rem;"></i>
+                    </div>
                   </xsl:otherwise>
                 </xsl:choose>
              
               <div class="card-body d-flex flex-column">
                 <!-- Name -->
-                <h5 class="card-title">
-                  <a href="{$BasePath}/ViewAdmissionItem.aspx?id={ID}">
+                <h5 class="card-title mb-2">
+                  <a href="{$BasePath}/ViewAdmissionItem.aspx?id={ID}" class="text-decoration-none text-dark hover-primary">
                     <xsl:value-of select="Name"/>
                   </a>
                 </h5>
@@ -49,21 +51,28 @@
                 </p>
 
                 <!-- Pricing -->
-                <div class="mt-auto">
+                <div class="mt-auto pt-3 border-top">
                   <xsl:variable name="lowestPrice" select="math:min(CurrentPrices/AdmissionItemPrice/Price)"/>
                   <xsl:choose>
                     <xsl:when test="CurrentPrices/AdmissionItemPrice">
-                      <p class="text-primary fw-bold mb-2">
-                        From $<xsl:value-of select="$lowestPrice"/>
-                      </p>
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted small">Starting from</span>
+                        <h5 class="text-primary mb-0 fw-bold">
+                          $<xsl:value-of select="format-number($lowestPrice, '#,##0.00')"/>
+                        </h5>
+                      </div>
                     </xsl:when>
                     <xsl:otherwise>
-                      <p class="text-muted mb-2">Pricing unavailable</p>
+                      <p class="text-muted mb-3 text-center">
+                        <i class="ci-info-circle me-1"></i>Pricing unavailable
+                      </p>
                     </xsl:otherwise>
                   </xsl:choose>
 
                   <!-- View Button -->
-                  <a href="{$BasePath}/ViewAdmissionItem.aspx?id={ID}" class="btn btn-outline-primary w-100">View Details</a>
+                  <a href="{$BasePath}/ViewAdmissionItem.aspx?id={ID}" class="btn btn-primary w-100">
+                    <i class="ci-eye me-2"></i>View Details
+                  </a>
                 </div>
 
               </div>

@@ -29,19 +29,19 @@
 				<div class="swiper-wrapper" id="swiper-wrapper-slider" aria-live="off" style="transition-duration: 400ms;">
 					<xsl:for-each select="Slider/Slides/SliderSlide[Hidden='false']">
 						<div class="swiper-slide" role="group" data-swiper-slide-index="{OrderNum}">
-							<div class="position-absolute d-flex align-items-center w-100 h-100 z-2">
-								<div class="container mt-lg-n4">
-									<div class="row">
-										<div class="col-12 col-sm-10 col-md-7 col-lg-6">
+							<div class="position-absolute d-flex align-items-center justify-content-center w-100 h-100 z-2">
+								<div class="container">
+									<div class="row justify-content-center">
+										<div class="col-12 col-md-10 col-lg-8 text-center">
 
 										
 											<!-- Heading -->
-											<h2 class="display-4 pb-2 pb-md-3 pb-lg-4">
+											<h2 class="display-3 fw-bold text-white pb-2 pb-md-3 pb-lg-4">
 												<xsl:value-of select="Settings/Title"/>
 											</h2>
 											<!-- Optional subtitle -->
 											<xsl:if test="string-length(Settings/RichTextMain) &gt; 0">
-												<p class="fs-sm text-white mb-lg-4">
+												<p class="fs-5 text-white mb-4 mb-lg-5">
 													<xsl:value-of select="Settings/RichTextMain" disable-output-escaping="yes"/>
 												</p>
 											</xsl:if>
@@ -49,7 +49,7 @@
 
 											<!-- Optional Button -->
 											<xsl:if test="string-length(Settings/ButtonText) &gt; 0 and string-length(Settings/ButtonUrl) &gt; 0">
-												<a class="btn btn-lg btn-outline-light rounded-pill">
+												<a class="btn btn-lg btn-primary rounded-pill px-5 py-3">
 													<xsl:attribute name="href">
 														<xsl:value-of select="Settings/ButtonUrl"/>
 													</xsl:attribute>
