@@ -6574,6 +6574,11 @@
     if (!navbar) return;
     const navbarHeight = navbar.clientHeight;
 
+    // Get admin bar height
+    const adminBar = document.querySelector('.editing-bar');
+    const adminBarHeight = adminBar ? adminBar.clientHeight : 0;
+    console.log('admin bar height = ' + adminBarHeight);
+    
     /// Function to add classes to the header and referenced elements
     const handleStickyNavbar = () => {
       const {
@@ -6584,10 +6589,12 @@
         // Add padding-top to the body to compensate for the height of navbar-stuck
         document.body.style.paddingTop = `${navbarHeight}px`;
         navbar.classList.add('fixed-top', 'navbar-stuck');
+        if (adminBarHeight > 0) navbar.style.setProperty('top', `${adminBarHeight}px`, 'important');
       } else if (window.scrollY < offsetValue && navbar.classList.contains('navbar-stuck')) {
         // Remove padding-top from the body when navbar is no longer stuck
-        document.body.style.paddingTop = '0';
+        document.body.style.paddingTop = `${adminBarHeight}px`;
         navbar.classList.remove('fixed-top', 'navbar-stuck');
+        navbar.style.removeProperty('top');
       }
     };
 

@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeFullWidth.master.cs" Inherits="WaiverFile.sitebooking.Themes.Default.DefaultThemeFullWidth" %>
 <%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
-<%@ Register Src="~/sitebooking/themes/default/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
-<%@ Register Src="~/sitebooking/themes/default/includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/sitebooking/themes/Agency/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="~/sitebooking/themes/Agency/includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 
 
 
@@ -12,8 +12,8 @@
 <head runat="server">
     <title></title>
 
-            <!-- Viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     
      <!-- SEO Meta Tags -->
@@ -21,39 +21,32 @@
     <meta name="keywords" content="">
     <meta name="author" content="WaiverFile">
 
-     <!-- Preloaded local web font (Inter) -->
- <link rel="preload" href="/sitebooking/Themes/Default/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="/sitebooking/Themes/Agency/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-     <!-- Font icons -->
- <link rel="preload" href="/sitebooking/Themes/Default/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
- <link rel="stylesheet" href="/sitebooking/Themes/Default/icons/cartzilla-icons.min.css">
-
-
-
-<script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>    
-
-<link rel="stylesheet" href="/sitebooking/vendor/formvalidation/index.min.css" />
+    <!-- Font icons -->
+    <link rel="preload" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.min.css">
 
 
+
+    <script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>    
+    <link rel="stylesheet" href="/sitebooking/vendor/formvalidation/index.min.css" />
 
      <!-- Bootstrap + Theme styles -->
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
- <link rel="preload" href="/sitebooking/Themes/Default/css/theme.min.css" as="style">
- <link rel="preload" href="/sitebooking/Themes/Default/css/theme.rtl.min.css" as="style">
- <link rel="stylesheet" href="/sitebooking/Themes/Default/css/theme.min.css" id="themestyles">
-
+    <link rel="preload" href="/sitebooking/Themes/Agency/css/theme.min.css" as="style">
+    <link rel="preload" href="/sitebooking/Themes/Agency/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="/sitebooking/Themes/Agency/css/theme.min.css" id="themestyles">
     <link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
-    
-        <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
-
-
+    <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="/sitebooking/vendor/formvalidation/popular.min.js"></script>
-<script src="/sitebooking/vendor/formvalidation/plugin-bootstrap5.min.js"></script>
+    <script src="/sitebooking/vendor/formvalidation/plugin-bootstrap5.min.js"></script>
 
-
+    <!-- Custom Agency Theme Styles -->
+	<link rel="stylesheet" href="/sitebooking/Themes/Agency/css/agency.css">
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -66,7 +59,7 @@
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
 </asp:ContentPlaceHolder>
     
-            <uc1:Header runat="server" id="Header" />
+            <uc1:Header runat="server" id="Header1" />
 
             
     <!-- Page content -->
@@ -91,7 +84,7 @@
         </main>
 
             
-            <uc1:Footer runat="server" id="Footer" />
+            <uc1:Footer runat="server" id="Footer1" />
 
 
             </div>
@@ -99,7 +92,7 @@
            
           
     <!-- Bootstrap + Theme scripts -->
-    <script src="/sitebooking/Themes/Default/js/theme.min.js"></script>
+    <script src="/sitebooking/Themes/Agency/js/theme.js"></script>
 
     </form>
 </body>

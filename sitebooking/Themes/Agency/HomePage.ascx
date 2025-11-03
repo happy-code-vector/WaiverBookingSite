@@ -100,4 +100,4 @@
 <uc1:Footer runat="server" id="Footer1" />
 
 <!-- Bootstrap + Theme scripts -->
-<script src="/sitebooking/Themes/Agency/js/theme.min.js"></script>
+<script src="/sitebooking/Themes/Agency/js/theme.js"></script>
