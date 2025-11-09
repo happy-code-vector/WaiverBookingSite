@@ -23,6 +23,16 @@
 					<PageLayout>FullWidth</PageLayout>
 					<IsDefault>true</IsDefault>
 				</PageTemplate>
+				<PageTemplate>
+					<ID>4faca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
+					<Name>HomePage</Name>
+					<UserControlPath>HomePage.ascx</UserControlPath>
+					<Description>Standard homepage layout with sections for hero, about, services, portfolio, CTA, and contact</Description>
+					<PreviewImageUrl />
+					<Status>Public</Status>
+					<PageLayout>FullWidth</PageLayout>
+					<IsDefault>false</IsDefault>
+				</PageTemplate>
 			</PageTemplates>
 		</Theme>
 	</Themes>
