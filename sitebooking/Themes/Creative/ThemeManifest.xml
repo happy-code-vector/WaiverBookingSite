@@ -12,7 +12,18 @@
 			<MasterPageFullWidth>CreativeHomepage.Master</MasterPageFullWidth>
 			<MasterPageLeftNav>DefaultThemeFullWidth.Master</MasterPageLeftNav>
 			<MasterPageRightSidebar>DefaultThemeFullWidth.Master</MasterPageRightSidebar>
-			<DefaultPageTemplate>BookingCreative.ascx</DefaultPageTemplate>
+			<PageTemplates>
+				<PageTemplate>
+					<ID>3faca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
+					<Name>Creative Homepage</Name>
+					<UserControlPath>BookingCreative.ascx</UserControlPath>
+					<Description>One-page creative portfolio template with masthead, services, portfolio, and contact sections</Description>
+					<PreviewImageUrl />
+					<Status>Public</Status>
+					<PageLayout>FullWidth</PageLayout>
+					<IsDefault>true</IsDefault>
+				</PageTemplate>
+			</PageTemplates>
 		</Theme>
 	</Themes>
 </WPData>
