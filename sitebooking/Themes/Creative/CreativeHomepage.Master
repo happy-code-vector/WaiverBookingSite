@@ -17,13 +17,13 @@
     <meta name="author" content="WaiverFile">
 
     <!-- Font icons -->
-    <link rel="stylesheet" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.min.css">
+    <link rel="stylesheet" href="/sitebooking/Themes/Creative/icons/cartzilla-icons.min.css">
 
     <script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>    
     <link rel="stylesheet" href="/sitebooking/vendor/formvalidation/index.min.css" />
 
     <!-- Bootstrap + Theme styles -->
-    <link rel="stylesheet" href="/sitebooking/Themes/Agency/css/theme.min.css" id="themestyles">
+    <link rel="stylesheet" href="/sitebooking/Themes/Creative/css/theme.min.css" id="themestyles">
     <link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
 
     <!-- Custom Creative Theme Styles -->
@@ -61,7 +61,7 @@
         </div>
           
         <!-- Bootstrap + Theme scripts -->
-        <script src="/sitebooking/Themes/Agency/js/theme.min.js"></script>
+        <script src="/sitebooking/Themes/Creative/js/theme.min.js"></script>
     </form>
 </body>
 </html>

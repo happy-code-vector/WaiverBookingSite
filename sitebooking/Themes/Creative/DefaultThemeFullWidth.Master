@@ -8,9 +8,9 @@
 <head runat="server">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.min.css">
+    <link rel="stylesheet" href="/sitebooking/Themes/Creative/icons/cartzilla-icons.min.css">
     <script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>    
-    <link rel="stylesheet" href="/sitebooking/Themes/Agency/css/theme.min.css">
+    <link rel="stylesheet" href="/sitebooking/Themes/Creative/css/theme.min.css">
     <link rel="stylesheet" href="/sitebooking/Themes/Creative/css/creative.css">
     <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
 </head>
@@ -26,7 +26,7 @@
             </main>
             <uc1:Footer runat="server" id="Footer" />
         </div>
-        <script src="/sitebooking/Themes/Agency/js/theme.min.js"></script>
+        <script src="/sitebooking/Themes/Creative/js/theme.min.js"></script>
     </form>
 </body>
 </html>
