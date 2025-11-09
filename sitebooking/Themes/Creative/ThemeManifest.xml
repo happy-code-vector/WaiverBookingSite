@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<WPData>
+	<Themes>
+		<Theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<ID>8c9d0e1f-2a3b-4c5d-6e7f-8a9b0c1d2e3f</ID>
+			<WPObjectStatus>New</WPObjectStatus>
+			<Name>Creative</Name>
+			<Description>Creative Bootstrap theme for creative agencies and portfolios</Description>
+			<PreviewImageUrl>/sitebooking/Themes/Agency/images/creative-theme.png</PreviewImageUrl>
+			<Status>Public</Status>
+			<FolderName>Creative</FolderName>
+			<MasterPageFullWidth>CreativeHomepage.Master</MasterPageFullWidth>
+			<MasterPageLeftNav>DefaultThemeFullWidth.Master</MasterPageLeftNav>
+			<MasterPageRightSidebar>DefaultThemeFullWidth.Master</MasterPageRightSidebar>
+			<DefaultPageTemplate>BookingCreative.ascx</DefaultPageTemplate>
+		</Theme>
+	</Themes>
+</WPData>

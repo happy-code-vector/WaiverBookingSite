@@ -109,7 +109,7 @@
 			<Name>Hero Banner</Name>
 			<Description>Full-viewport hero section with background image, title, subtitle, and call-to-action button</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyHero.ascx</Filename>
+			<Filename>Hero.ascx</Filename>
 			<Category>Content Blocks</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -122,7 +122,7 @@
 			<Name>Section Header</Name>
 			<Description>Section header with title and subtitle</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencySectionHeader.ascx</Filename>
+			<Filename>SectionHeader.ascx</Filename>
 			<Category>Section Items</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -134,7 +134,7 @@
 			<Name>Service Item</Name>
 			<Description>Service item with icon, title, and description</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyServiceItem.ascx</Filename>
+			<Filename>ServiceItem.ascx</Filename>
 			<Category>Section Items</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -146,7 +146,7 @@
 			<Name>Portfolio Item</Name>
 			<Description>Portfolio item with image, title, and category overlay</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyPortfolioItem.ascx</Filename>
+			<Filename>PortfolioItem.ascx</Filename>
 			<Category>Section Items</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -158,7 +158,7 @@
 			<Name>Team Member</Name>
 			<Description>Team member profile with photo, name, position, and social links</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyTeamMember.ascx</Filename>
+			<Filename>TeamMember.ascx</Filename>
 			<Category>Section Items</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -170,7 +170,7 @@
 			<Name>About Timeline Item</Name>
 			<Description>Timeline item with image, year, title, and description for about section</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyAboutItem.ascx</Filename>
+			<Filename>AboutItem.ascx</Filename>
 			<Category>Section Items</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -183,7 +183,7 @@
 			<Name>Services Section</Name>
 			<Description>Complete services section with header and 3 service items</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyServicesSection.ascx</Filename>
+			<Filename>ServicesSection.ascx</Filename>
 			<Category>Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -195,7 +195,7 @@
 			<Name>Portfolio Section</Name>
 			<Description>Complete portfolio section with header and 6 portfolio items</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyPortfolioSection.ascx</Filename>
+			<Filename>PortfolioSection.ascx</Filename>
 			<Category>Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -207,7 +207,7 @@
 			<Name>Team Section</Name>
 			<Description>Complete team section with header and 3 team members with social links</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyTeamSection.ascx</Filename>
+			<Filename>TeamSection.ascx</Filename>
 			<Category>Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>
@@ -219,7 +219,7 @@
 			<Name>Timeline Section</Name>
 			<Description>Complete timeline/about section with header and 5 timeline items</Description>
 			<Path>/Controls/ContentControls/</Path>
-			<Filename>AgencyTimelineSection.ascx</Filename>
+			<Filename>TimelineSection.ascx</Filename>
 			<Category>Sections</Category>
 			<Cacheable>false</Cacheable>
 			<Active>true</Active>

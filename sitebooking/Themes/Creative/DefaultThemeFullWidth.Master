@@ -1,0 +1,32 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeFullWidth.Master.cs" Inherits="WaiverFile.sitebooking.Themes.Creative.DefaultThemeFullWidth" %>
+<%@ Register Src="~/sitebooking/themes/Creative/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="~/sitebooking/themes/Creative/includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.min.css">
+    <script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>    
+    <link rel="stylesheet" href="/sitebooking/Themes/Agency/css/theme.min.css">
+    <link rel="stylesheet" href="/sitebooking/Themes/Creative/css/creative.css">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
+        <div>
+            <uc1:Header runat="server" id="Header" />
+            <main class="content-wrapper">
+                <section class="container pt-5 mt-5">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </section>
+            </main>
+            <uc1:Footer runat="server" id="Footer" />
+        </div>
+        <script src="/sitebooking/Themes/Agency/js/theme.min.js"></script>
+    </form>
+</body>
+</html>
