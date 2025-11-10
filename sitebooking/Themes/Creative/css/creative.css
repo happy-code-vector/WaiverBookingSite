@@ -923,3 +923,54 @@ button:focus,
 		display: none;
 	}
 }
+
+
+/* Content Control Wrapper Adjustments */
+.masthead-content .container > div,
+.masthead-content .container > * {
+	color: inherit;
+}
+
+/* Ensure portfolio items work in grid */
+.portfolio-grid > * {
+	width: 100%;
+	height: 100%;
+}
+
+/* Service items in row */
+.services-section .row > div {
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.services-section .row > div {
+		margin-bottom: 0;
+	}
+}
+
+/* Team section background */
+.team-section {
+	background-color: var(--creative-light);
+}
+
+/* Portfolio section header spacing */
+.portfolio-section .text-center {
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+}
+
+/* About section spacing */
+#about {
+	padding: 6rem 0;
+}
+
+/* Contact section form styling */
+.contact-section .form-label {
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	color: var(--creative-dark);
+}
+
+.contact-section .btn-primary {
+	margin-top: 1rem;
+}

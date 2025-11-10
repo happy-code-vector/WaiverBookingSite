@@ -37,26 +37,34 @@
 <!-- Page content -->
 <main class="content-wrapper">
     
-    <!-- Hero Section (Full Width) - Add Hero widget here -->
-    <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+    <!-- Hero Section (Full Width Full Height) -->
+    <header class="masthead" id="home">
+        <div class="masthead-content">
+            <div class="container px-4 px-lg-5 h-100">
+                <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+            </div>
+        </div>
+    </header>
     
-    <!-- Services Section -->
-    <section class="container py-5 my-4" id="services">
-        <!-- Add SectionHeader + ServiceItem widgets here -->
-        <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
-        <div class="row">
-            <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+    <!-- Services Section (Orange Background) -->
+    <section class="services-section" id="services">
+        <div class="container px-4 px-lg-5">
+            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+            <div class="row gx-4 gx-lg-5">
+                <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+            </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio-section py-5" id="portfolio">
-        <div class="container">
-            <!-- Add SectionHeader widget here -->
-            <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
+    <!-- Portfolio Section (Full Width Grid) -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container-fluid p-0">
+            <div class="text-center mb-5 pt-5">
+                <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
+            </div>
             
-            <!-- Portfolio Items Grid - Add 6x PortfolioItem widgets here -->
-            <div class="row">
+            <!-- Portfolio Items Grid - No gaps -->
+            <div class="portfolio-grid">
                 <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
             </div>
         </div>
@@ -65,10 +73,8 @@
     <!-- About Section (Optional) -->
     <section class="container py-5" id="about">
         <div class="container">
-            <!-- Add SectionHeader widget here -->
             <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
             
-            <!-- Portfolio Items Grid - Add 6x PortfolioItem widgets here -->
             <ul class="row timeline">
                 <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
             </ul>
@@ -76,12 +82,10 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team-section py-5" id="portfolio">
+    <section class="team-section py-5" id="team">
         <div class="container">
-            <!-- Add SectionHeader widget here -->
             <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
             
-            <!-- Portfolio Items Grid - Add 6x PortfolioItem widgets here -->
             <div class="row">
                 <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
             </div>
@@ -90,8 +94,10 @@
 
     <!-- Contact Section (Optional) -->
     <% if (ph9.Controls.Count > 0) { %>
-    <section class="container py-5 my-4" id="contact">
-        <asp:PlaceHolder runat="server" ID="ph9"></asp:PlaceHolder>
+    <section class="contact-section py-5" id="contact">
+        <div class="container px-4 px-lg-5">
+            <asp:PlaceHolder runat="server" ID="ph9"></asp:PlaceHolder>
+        </div>
     </section>
     <% } %>
 
@@ -101,3 +107,4 @@
 
 <!-- Bootstrap + Theme scripts -->
 <script src="/sitebooking/Themes/Creative/js/theme.js"></script>
+<script src="/sitebooking/Themes/Creative/js/creative.js"></script>
