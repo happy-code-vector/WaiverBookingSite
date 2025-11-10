@@ -5,39 +5,6 @@
 (function() {
     'use strict';
 
-    // Navbar scroll effect - transparent to white
-    function navbarScrollEffect() {
-        const navbar = document.querySelector('#mainNavbar');
-        if (!navbar) return;
-
-        function updateNavbar() {
-            if (window.scrollY > 100) {
-                // Scrolled down - white background, dark text
-                navbar.classList.remove('navbar-transparent');
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                // At top - transparent background, white text
-                navbar.classList.add('navbar-transparent');
-                navbar.classList.remove('navbar-scrolled');
-            }
-        }
-
-        // Initial check
-        updateNavbar();
-
-        // Update on scroll with throttle for performance
-        let ticking = false;
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                window.requestAnimationFrame(function() {
-                    updateNavbar();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-    }
-
     // Smooth scroll for anchor links
     function smoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

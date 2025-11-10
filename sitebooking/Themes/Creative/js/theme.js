@@ -6582,19 +6582,25 @@
     /// Function to add classes to the header and referenced elements
     const handleStickyNavbar = () => {
       const {
-        offset = 200
+        offset = 10
       } = JSON.parse(navbar.dataset.stickyNavbar || '{}');
       const offsetValue = parseInt(offset, 10);
-      if (window.scrollY >= offsetValue && !navbar.classList.contains('navbar-stuck')) {
+      if (window.scrollY >= 10 && !navbar.classList.contains('navbar-stuck')) {
         // Add padding-top to the body to compensate for the height of navbar-stuck
         document.body.style.paddingTop = `${navbarHeight}px`;
         navbar.classList.add('fixed-top', 'navbar-stuck');
         if (adminBarHeight > 0) navbar.style.setProperty('top', `${adminBarHeight}px`, 'important');
-      } else if (window.scrollY < offsetValue && navbar.classList.contains('navbar-stuck')) {
+
+        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('navbar-scrolled');
+      } else if (window.scrollY < 10 && navbar.classList.contains('navbar-stuck')) {
         // Remove padding-top from the body when navbar is no longer stuck
         document.body.style.paddingTop = `${adminBarHeight}px`;
         navbar.classList.remove('fixed-top', 'navbar-stuck');
         navbar.style.removeProperty('top');
+
+        navbar.classList.add('navbar-transparent');
+        navbar.classList.remove('navbar-scrolled');
       }
     };
 

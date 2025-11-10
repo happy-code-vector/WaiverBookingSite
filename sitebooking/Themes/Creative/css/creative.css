@@ -1128,20 +1128,10 @@ html {
 
 
 /* Navbar Background States */
-.navbar-transparent {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%) !important;
-}
 
 .navbar-scrolled {
 	background: #fff !important;
 }
-
-/* Ensure navbar is always visible */
-#mainNavbar {
-	display: block !important;
-	min-height: 70px;
-}
-
 
 /* Force transparent backgrounds for all navbar interactive elements */
 .navbar-transparent a:not(.dropdown-item),
