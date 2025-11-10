@@ -6573,6 +6573,8 @@
     const navbar = document.querySelector('[data-sticky-navbar]');
     if (!navbar) return;
 
+    const hero = document.querySelector('.masthead-heading');
+
     // Get admin bar height
     const adminBar = document.querySelector('.editing-bar');
     const adminBarHeight = adminBar ? adminBar.clientHeight : 0;
@@ -6582,14 +6584,19 @@
     /// Function to add classes to the header and referenced elements
     const handleStickyNavbar = () => {
       if (window.scrollY >= 10 && !navbar.classList.contains('navbar-stuck')) {
-        navbar.classList.add('fixed-top', 'navbar-stuck');
-        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('navbar-stuck');
+        if(hero) navbar.classList.remove('navbar-transparent');
+        if(!hero) navbar.classList.add('fixed-top');
         navbar.classList.add('navbar-scrolled');
       } else if (window.scrollY < 10) {
         if(navbar.classList.contains('navbar-stuck')){
-          navbar.classList.remove('fixed-top', 'navbar-stuck');
+          navbar.classList.remove('navbar-stuck');
           navbar.classList.add('navbar-transparent');
           navbar.classList.remove('navbar-scrolled');
+        }
+        if(!hero){
+          navbar.classList.remove('navbar-transparent');
+          navbar.classList.remove('fixed-top');
         }
       }
     };

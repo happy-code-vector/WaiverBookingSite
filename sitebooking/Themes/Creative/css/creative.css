@@ -110,15 +110,10 @@
 
 /* Navigation - Transparent by default */
 .navbar {
-	position: fixed !important;
-	top: 0;
-	left: 0;
-	right: 0;
 	width: 100%;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	transition: all 0.3s ease;
-	z-index: 1050 !important;
 }
 
 .navbar .container {
@@ -1378,4 +1373,16 @@ html {
 
 .navbar-scrolled .navbar-nav .nav-link.active {
 	color: var(--creative-primary) !important;
+}
+
+.fixed-top {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar-sticky {
+	position: sticky;
 }
