@@ -1,6 +1,6 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeFullWidth.Master.cs" Inherits="WaiverFile.sitebooking.Themes.Creative.DefaultThemeFullWidth" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeFullWidth.master.cs" Inherits="WaiverFile.sitebooking.Themes.Default.DefaultThemeFullWidth" %>
 <%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
-<%@ Register Src="~/sitebooking/themes/Creative/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" 
+<%@ Register Src="~/sitebooking/themes/Creative/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
 <%@ Register Src="~/sitebooking/themes/Creative/includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 
 
