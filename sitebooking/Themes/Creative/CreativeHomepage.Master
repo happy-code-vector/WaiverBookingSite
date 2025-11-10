@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CreativeHomepage.Master.cs" Inherits="WaiverFile.sitebooking.Themes.Creative.CreativeHomepage" %>
+
 <%@ Register Src="~/sitebooking/themes/Creative/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
 <%@ Register Src="~/sitebooking/themes/Creative/includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 

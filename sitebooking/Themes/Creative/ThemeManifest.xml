@@ -15,13 +15,13 @@
 			<PageTemplates>
 				<PageTemplate>
 					<ID>3faca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
-					<Name>Creative Homepage</Name>
+					<Name>Default</Name>
 					<UserControlPath>BookingCreative.ascx</UserControlPath>
 					<Description>One-page creative portfolio template with masthead, services, portfolio, and contact sections</Description>
 					<PreviewImageUrl />
 					<Status>Public</Status>
 					<PageLayout>FullWidth</PageLayout>
-					<IsDefault>true</IsDefault>
+					<IsDefault>false</IsDefault>
 				</PageTemplate>
 				<PageTemplate>
 					<ID>4faca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
