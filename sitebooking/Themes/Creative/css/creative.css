@@ -18,11 +18,7 @@
 	padding-bottom: 6rem;
 	text-align: center;
 	color: #fff;
-	background: linear-gradient(to bottom, rgba(244, 98, 58, 0.8) 0%, rgba(244, 98, 58, 0.8) 100%), url('/sitebooking/Themes/Creative/images/hero-bg.jpg');
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: center center;
-	background-size: cover;
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -30,7 +26,41 @@
 	width: 100vw;
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
+	overflow: hidden;
+}
+
+/* Blurred background image layer */
+.masthead::before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	right: -10px;
+	bottom: -10px;
+	background-image: url('/sitebooking/Themes/Creative/images/hero-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
+	z-index: 0;
+}
+
+/* Color overlay on top of blurred image */
+.masthead::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.5) 100%);
+	z-index: 1;
+}
+
+/* Ensure content appears above blur and overlay */
+.masthead .container {
 	position: relative;
+	z-index: 2;
 }
 
 .masthead .masthead-content {
@@ -322,6 +352,7 @@ section hr {
 }
 
 @media (min-width: 768px) {
+
 	section h2.text-uppercase,
 	section h2.section-heading {
 		font-size: 3rem;
@@ -753,6 +784,7 @@ html {
 .bg-gray {
 	background-color: ghostwhite;
 }
+
 /*
  Product Card Hover Effects */
 .hover-lift {
@@ -800,13 +832,13 @@ html {
 	.workflow-step {
 		min-width: 60px;
 	}
-	
+
 	.step-circle {
 		width: 32px !important;
 		height: 32px !important;
 		font-size: 0.9rem !important;
 	}
-	
+
 	.step-label {
 		font-size: 0.7rem;
 		max-width: 80px;
@@ -824,14 +856,14 @@ html {
 	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.btn-check:checked + .time-slot-btn {
+.btn-check:checked+.time-slot-btn {
 	background-color: #ffc800 !important;
 	border-color: #ffc800 !important;
 	color: #fff !important;
 	transform: scale(1.05);
 }
 
-.btn-check:checked + .time-slot-btn i {
+.btn-check:checked+.time-slot-btn i {
 	color: #fff !important;
 }
 
@@ -840,7 +872,7 @@ html {
 	margin-bottom: 0;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
 	content: "\f13f";
 	font-family: cartzilla-icons;
 	color: #6c757d;
@@ -888,7 +920,8 @@ html {
 /* Add to Cart Button Icon */
 #btnAddToCart::before {
 	font-family: cartzilla-icons;
-	content: "\f20a"; /* ci-shopping-bag */
+	content: "\f20a";
+	/* ci-shopping-bag */
 	margin-right: 0.5rem;
 }
 
@@ -971,7 +1004,7 @@ html {
 	.masthead h1 {
 		font-size: 4.5rem;
 	}
-	
+
 	.masthead p {
 		font-size: 1.5rem;
 	}
@@ -1034,6 +1067,7 @@ button:focus,
 
 /* Print Styles */
 @media print {
+
 	.navbar,
 	.footer,
 	.btn {
@@ -1043,24 +1077,24 @@ button:focus,
 
 
 /* Content Control Wrapper Adjustments */
-.masthead-content .container > div,
-.masthead-content .container > * {
+.masthead-content .container>div,
+.masthead-content .container>* {
 	color: inherit;
 }
 
 /* Ensure portfolio items work in grid */
-.portfolio-grid > * {
+.portfolio-grid>* {
 	width: 100%;
 	height: 100%;
 }
 
 /* Service items in row */
-.services-section .row > div {
+.services-section .row>div {
 	margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-	.services-section .row > div {
+	.services-section .row>div {
 		margin-bottom: 0;
 	}
 }
