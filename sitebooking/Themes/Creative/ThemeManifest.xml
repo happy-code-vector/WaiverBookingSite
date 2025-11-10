@@ -9,9 +9,10 @@
 			<PreviewImageUrl>/sitebooking/Themes/Creative/images/creative-theme.jpg</PreviewImageUrl>
 			<Status>Public</Status>
 			<FolderName>Creative</FolderName>
-			<MasterPageFullWidth>CreativeHomepage.Master</MasterPageFullWidth>
-			<MasterPageLeftNav>DefaultThemeFullWidth.Master</MasterPageLeftNav>
+			<MasterPageFullWidth>DefaultThemeFullWidth.Master</MasterPageFullWidth>
+			<MasterPageLeftNav>DefaultThemeLeftNav.Master</MasterPageLeftNav>
 			<MasterPageRightSidebar>DefaultThemeFullWidth.Master</MasterPageRightSidebar>
+			<MasterPageThreeColumn>DefaultThemeFullWidth.Master</MasterPageThreeColumn>
 			<PageTemplates>
 				<PageTemplate>
 					<ID>3faca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
@@ -21,7 +22,7 @@
 					<PreviewImageUrl />
 					<Status>Public</Status>
 					<PageLayout>FullWidth</PageLayout>
-					<IsDefault>false</IsDefault>
+					<IsDefault>true</IsDefault>
 				</PageTemplate>
 				<PageTemplate>
 					<ID>4faca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
