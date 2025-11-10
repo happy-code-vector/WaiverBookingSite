@@ -57,9 +57,7 @@
     <!-- Portfolio Section (Full Width Grid) -->
     <section class="portfolio-section" id="portfolio">
         <div class="container-fluid p-0">
-            <div class="text-center mb-5 pt-5">
-                <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
-            </div>
+            <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
             
             <!-- Portfolio Items Grid - No gaps -->
             <div class="portfolio-grid">

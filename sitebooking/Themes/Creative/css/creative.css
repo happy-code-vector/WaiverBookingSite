@@ -1227,10 +1227,42 @@ button:focus,
 	color: inherit;
 }
 
-/* Ensure portfolio items work in grid */
-.portfolio-grid>* {
-	width: 100%;
-	height: 100%;
+/* Portfolio Grid - Full Width, No Gaps */
+.portfolio-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	gap: 0;
+}
+
+.portfolio-grid > * {
+	flex: 0 0 100%;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+@media (min-width: 576px) {
+	.portfolio-grid > * {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.portfolio-grid > * {
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.portfolio-grid > * {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
 }
 
 /* Service items in row */
