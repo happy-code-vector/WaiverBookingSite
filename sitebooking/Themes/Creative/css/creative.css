@@ -73,14 +73,20 @@
 
 /* Navigation - Transparent by default */
 .navbar {
-	position: fixed;
+	position: fixed !important;
 	top: 0;
 	left: 0;
 	right: 0;
+	width: 100%;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	transition: all 0.3s ease;
-	z-index: 1030;
+	z-index: 1050 !important;
+}
+
+.navbar .container {
+	position: relative;
+	z-index: 1051;
 }
 
 .navbar-transparent {
@@ -96,12 +102,14 @@
 
 /* Navbar Brand */
 .navbar-transparent .navbar-brand,
-.navbar-transparent .navbar-brand span {
+.navbar-transparent .navbar-brand span,
+.navbar-transparent .navbar-brand img {
 	color: #fff !important;
 	font-size: 1.5rem;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
+	filter: brightness(0) invert(1);
 }
 
 .navbar-scrolled .navbar-brand,
@@ -109,53 +117,65 @@
 	color: var(--creative-primary) !important;
 }
 
+.navbar-scrolled .navbar-brand img {
+	filter: none;
+}
+
 /* Nav Links */
 .navbar-transparent .nav-link {
-	color: rgba(255, 255, 255, 0.9) !important;
+	color: rgba(255, 255, 255, 0.85) !important;
 	font-size: 0.9rem;
 	font-weight: 600;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	padding: 0.75rem 1rem !important;
+	background-color: transparent !important;
 }
 
 .navbar-scrolled .nav-link {
 	color: var(--creative-dark) !important;
+	background-color: transparent !important;
 }
 
 .navbar-transparent .nav-link:hover,
 .navbar-transparent .nav-link:focus {
 	color: #fff !important;
+	background-color: transparent !important;
 }
 
 .navbar-scrolled .nav-link:hover,
 .navbar-scrolled .nav-link:focus {
 	color: var(--creative-primary) !important;
+	background-color: transparent !important;
 }
 
 /* Icon Buttons */
 .navbar-transparent .btn-icon,
 .navbar-transparent .btn-icon i {
-	color: rgba(255, 255, 255, 0.9) !important;
-	border-color: rgba(255, 255, 255, 0.3) !important;
+	color: rgba(255, 255, 255, 0.85) !important;
+	border-color: transparent !important;
+	background-color: transparent !important;
 }
 
 .navbar-scrolled .btn-icon,
 .navbar-scrolled .btn-icon i {
 	color: var(--creative-dark) !important;
-	border-color: rgba(0, 0, 0, 0.1) !important;
+	border-color: transparent !important;
+	background-color: transparent !important;
 }
 
 .navbar-transparent .btn-icon:hover,
 .navbar-transparent .btn-icon:hover i {
 	color: #fff !important;
-	border-color: rgba(255, 255, 255, 0.5) !important;
+	border-color: transparent !important;
+	background-color: transparent !important;
 }
 
 .navbar-scrolled .btn-icon:hover,
 .navbar-scrolled .btn-icon:hover i {
 	color: var(--creative-primary) !important;
-	border-color: var(--creative-primary) !important;
+	border-color: transparent !important;
+	background-color: transparent !important;
 }
 
 /* Cart Badge */
@@ -169,7 +189,12 @@
 
 /* Navbar Toggler (Mobile) */
 .navbar-transparent .navbar-toggler {
-	border-color: rgba(255, 255, 255, 0.5) !important;
+	border-color: transparent !important;
+	background-color: transparent !important;
+}
+
+.navbar-transparent .navbar-toggler:hover {
+	background-color: transparent !important;
 }
 
 .navbar-transparent .navbar-toggler-icon {
@@ -177,7 +202,12 @@
 }
 
 .navbar-scrolled .navbar-toggler {
-	border-color: rgba(0, 0, 0, 0.1) !important;
+	border-color: transparent !important;
+	background-color: transparent !important;
+}
+
+.navbar-scrolled .navbar-toggler:hover {
+	background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 .navbar-scrolled .navbar-toggler-icon {
@@ -187,15 +217,33 @@
 /* Dropdown Menu */
 .navbar-transparent .dropdown-menu {
 	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .navbar-transparent .dropdown-item {
 	color: var(--creative-dark);
+	background-color: transparent;
 }
 
 .navbar-transparent .dropdown-item:hover {
 	background-color: var(--creative-light);
 	color: var(--creative-primary);
+}
+
+.navbar-transparent .dropdown-toggle {
+	background-color: transparent !important;
+}
+
+.navbar-transparent .dropdown-toggle:hover {
+	background-color: transparent !important;
+}
+
+.navbar-scrolled .dropdown-toggle {
+	background-color: transparent !important;
+}
+
+.navbar-scrolled .dropdown-toggle:hover {
+	background-color: transparent !important;
 }
 
 /* Buttons */
@@ -1076,4 +1124,52 @@ html {
 
 .offcanvas-body {
 	padding: 1rem 0;
+}
+
+
+/* Navbar Background States */
+.navbar-transparent {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+}
+
+.navbar-scrolled {
+	background: #fff !important;
+}
+
+/* Ensure navbar is always visible */
+#mainNavbar {
+	display: block !important;
+	min-height: 70px;
+}
+
+
+/* Force transparent backgrounds for all navbar interactive elements */
+.navbar-transparent a:not(.dropdown-item),
+.navbar-transparent button:not(.dropdown-item) {
+	background-color: transparent !important;
+}
+
+.navbar-transparent a:not(.dropdown-item):hover,
+.navbar-transparent button:not(.dropdown-item):hover {
+	background-color: transparent !important;
+}
+
+/* Ensure white text for all navbar links when transparent */
+.navbar-transparent .navbar-nav .nav-link,
+.navbar-transparent .navbar-nav .nav-link span {
+	color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.navbar-transparent .navbar-nav .nav-link:hover,
+.navbar-transparent .navbar-nav .nav-link:hover span {
+	color: #fff !important;
+}
+
+/* Active/current page link */
+.navbar-transparent .navbar-nav .nav-link.active {
+	color: #fff !important;
+}
+
+.navbar-scrolled .navbar-nav .nav-link.active {
+	color: var(--creative-primary) !important;
 }

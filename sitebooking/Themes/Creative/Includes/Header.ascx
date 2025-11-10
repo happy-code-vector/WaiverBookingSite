@@ -49,7 +49,7 @@
 
 
     <!-- Navigation bar (Page header) - Starts transparent -->
-    <header class="navbar navbar-expand-lg navbar-transparent z-fixed px-0" id="mainNavbar">
+    <header class="navbar navbar-expand-lg navbar-transparent z-fixed px-0" id="mainNavbar"  data-sticky-navbar='{"offset": 800}'>
       <div class="container flex-nowrap">
 
         <!-- Mobile offcanvas menu toggler (Hamburger) -->
@@ -59,7 +59,7 @@
 
         <!-- Navbar brand (Logo) -->
         <a class="navbar-brand py-1 py-md-2 py-xl-1" href="<%= WaiverSiteRef.BasePathRelativeBooking %>">
-          <span class="d-none d-sm-flex flex-shrink-0 text-primary me-2">
+          <span class="d-none d-sm-flex flex-shrink-0 me-2">
               <asp:PlaceHolder runat="server" ID="phHeader"></asp:PlaceHolder>
           </span>
         </a>
