@@ -48,8 +48,8 @@
 </script>
 
 
-    <!-- Navigation bar (Page header) -->
-    <header class="navbar navbar-expand-lg navbar-sticky z-fixed px-0" data-sticky-navbar='{"offset": 800}'>
+    <!-- Navigation bar (Page header) - Starts transparent -->
+    <header class="navbar navbar-expand-lg navbar-transparent z-fixed px-0" id="mainNavbar">
       <div class="container flex-nowrap">
 
         <!-- Mobile offcanvas menu toggler (Hamburger) -->

@@ -71,22 +71,32 @@
 	}
 }
 
-/* Navigation */
+/* Navigation - Transparent by default */
 .navbar {
-	background-color: transparent !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	transition: all 0.3s ease;
+	z-index: 1030;
 }
 
-.navbar.navbar-scrolled {
+.navbar-transparent {
+	background-color: transparent !important;
+}
+
+.navbar-scrolled {
 	background-color: #fff !important;
 	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
 
-.navbar-brand {
+/* Navbar Brand */
+.navbar-transparent .navbar-brand,
+.navbar-transparent .navbar-brand span {
 	color: #fff !important;
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -94,12 +104,14 @@
 	letter-spacing: 0.05em;
 }
 
-.navbar-scrolled .navbar-brand {
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .navbar-brand span {
 	color: var(--creative-primary) !important;
 }
 
-.nav-link {
-	color: rgba(255, 255, 255, 0.8) !important;
+/* Nav Links */
+.navbar-transparent .nav-link {
+	color: rgba(255, 255, 255, 0.9) !important;
 	font-size: 0.9rem;
 	font-weight: 600;
 	letter-spacing: 0.05em;
@@ -111,8 +123,8 @@
 	color: var(--creative-dark) !important;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.navbar-transparent .nav-link:hover,
+.navbar-transparent .nav-link:focus {
 	color: #fff !important;
 }
 
@@ -121,17 +133,69 @@
 	color: var(--creative-primary) !important;
 }
 
-.navbar .btn-icon {
-	color: rgba(255, 255, 255, 0.8) !important;
+/* Icon Buttons */
+.navbar-transparent .btn-icon,
+.navbar-transparent .btn-icon i {
+	color: rgba(255, 255, 255, 0.9) !important;
+	border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-.navbar-scrolled .btn-icon {
+.navbar-scrolled .btn-icon,
+.navbar-scrolled .btn-icon i {
 	color: var(--creative-dark) !important;
+	border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-.navbar .btn-icon:hover,
-.navbar-scrolled .btn-icon:hover {
+.navbar-transparent .btn-icon:hover,
+.navbar-transparent .btn-icon:hover i {
+	color: #fff !important;
+	border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-scrolled .btn-icon:hover,
+.navbar-scrolled .btn-icon:hover i {
 	color: var(--creative-primary) !important;
+	border-color: var(--creative-primary) !important;
+}
+
+/* Cart Badge */
+.navbar-transparent .badge {
+	background-color: var(--creative-primary) !important;
+}
+
+.navbar-scrolled .badge {
+	background-color: var(--creative-primary) !important;
+}
+
+/* Navbar Toggler (Mobile) */
+.navbar-transparent .navbar-toggler {
+	border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-transparent .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-scrolled .navbar-toggler {
+	border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar-scrolled .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Dropdown Menu */
+.navbar-transparent .dropdown-menu {
+	background-color: #fff;
+}
+
+.navbar-transparent .dropdown-item {
+	color: var(--creative-dark);
+}
+
+.navbar-transparent .dropdown-item:hover {
+	background-color: var(--creative-light);
+	color: var(--creative-primary);
 }
 
 /* Buttons */
@@ -973,4 +1037,43 @@ button:focus,
 
 .contact-section .btn-primary {
 	margin-top: 1rem;
+}
+
+
+/* Body padding for fixed navbar */
+body {
+	padding-top: 0;
+}
+
+/* Ensure masthead starts at top */
+.masthead {
+	margin-top: 0;
+}
+
+/* Smooth scroll offset for anchor links */
+html {
+	scroll-padding-top: 80px;
+}
+
+/* Offcanvas menu styling for mobile */
+.offcanvas {
+	background-color: #fff;
+}
+
+.offcanvas .nav-link {
+	color: var(--creative-dark) !important;
+	padding: 0.75rem 1.5rem !important;
+}
+
+.offcanvas .nav-link:hover {
+	color: var(--creative-primary) !important;
+	background-color: var(--creative-light);
+}
+
+.offcanvas-header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas-body {
+	padding: 1rem 0;
 }
