@@ -40,9 +40,7 @@
     <!-- Hero Section (Full Width Full Height) -->
     <header class="masthead" id="home">
         <div class="masthead-content">
-            <div class="container px-4 px-lg-5 h-100">
-                <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
-            </div>
+            <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
         </div>
     </header>
     
