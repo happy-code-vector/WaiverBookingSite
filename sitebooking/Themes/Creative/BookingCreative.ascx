@@ -79,3 +79,4 @@
 
 <!-- Bootstrap + Theme scripts -->
 <script src="/sitebooking/Themes/Creative/js/theme.js"></script>
+<script src="/sitebooking/Themes/Creative/js/creative.js"></script>
