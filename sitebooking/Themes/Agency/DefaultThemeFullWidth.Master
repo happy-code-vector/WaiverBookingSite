@@ -28,8 +28,6 @@
     <link rel="preload" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.min.css">
 
-
-
     <script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>    
     <link rel="stylesheet" href="/sitebooking/vendor/formvalidation/index.min.css" />
 
@@ -50,50 +48,30 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        
-         <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
-        
-               
+    <form id="form1" runat="server">        
+        <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>           
         <div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-</asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
     
             <uc1:Header runat="server" id="Header1" />
-
-            
-    <!-- Page content -->
-    <main class="content-wrapper">
-            
-        <section class="container pt-3 pt-sm-4 pt-lg-5 mt-lg-2 mt-xl-4 mt-xxl-5" id="mission" style="scroll-margin-top: 60px">
-       
-
-     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
- </asp:ContentPlaceHolder>
+                <!-- Page content -->
+                <main class="content-wrapper">
+                    <section class="container pt-3 pt-sm-4 pt-lg-5 mt-lg-2 mt-xl-4 mt-xxl-5" id="mission" style="scroll-margin-top: 60px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
         
-         <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
- </asp:ContentPlaceHolder>
-         <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
- </asp:ContentPlaceHolder>
-
-
-            
-      </section>
-
-
-        </main>
-
-            
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </section>
+                </main>            
             <uc1:Footer runat="server" id="Footer1" />
-
-
-            </div>
-
-           
+        </div>          
           
-    <!-- Bootstrap + Theme scripts -->
-    <script src="/sitebooking/Themes/Agency/js/theme.js"></script>
-
+        <!-- Bootstrap + Theme scripts -->
+        <script src="/sitebooking/Themes/Agency/js/theme.js"></script>
     </form>
 </body>
 </html>
