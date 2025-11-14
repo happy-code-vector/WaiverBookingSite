@@ -5,6 +5,26 @@
 (function ($) {
     "use strict";
 
+    // Navbar scroll effect - same as Creative theme
+    var navbar = document.getElementById('mainNav');
+    if (navbar) {
+        var navbarScrollEffect = function() {
+            if (window.scrollY > 100) {
+                navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.add('navbar-transparent');
+                navbar.classList.remove('navbar-scrolled');
+            }
+        };
+        
+        // Initial check
+        navbarScrollEffect();
+        
+        // Listen to scroll events
+        window.addEventListener('scroll', navbarScrollEffect);
+    }
+
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
@@ -40,7 +60,7 @@
         offset: 100,
     });
 
-    // Collapse Navbar
+    // Collapse Navbar (legacy support)
     var navbarCollapse = function () {
         if ($("#mainNav").offset().top > 100) {
             $("#mainNav").addClass("navbar-shrink");

@@ -1,4 +1,4 @@
-/* Grayscale Theme Styles */
+/* Grayscale Theme Styles - Based on StartBootstrap Grayscale */
 
 :root {
   --primary-color: #64a19d;
@@ -12,6 +12,7 @@ body {
   letter-spacing: 0.0625em;
   background-color: #000;
   color: var(--text-color);
+  padding-top: 0;
 }
 
 a {
@@ -21,116 +22,233 @@ a {
 
 a:hover {
   color: #4a7c79;
+  text-decoration: none;
 }
 
-/* Navigation */
-#mainNav {
-  min-height: 56px;
-  background-color: transparent;
-  transition: background-color 0.3s ease-in-out;
+/* Navigation - Creative Theme Style (Transparent) */
+.navbar {
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  transition: all 0.3s ease;
 }
 
+.navbar .container {
+  position: relative;
+  z-index: 1051;
+}
+
+.navbar-transparent {
+  background-color: transparent !important;
+}
+
+.navbar-scrolled,
+#mainNav.navbar-shrink {
+  background-color: #000 !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Navbar Brand */
+.navbar-transparent .navbar-brand,
+.navbar-transparent .navbar-brand span,
+.navbar-transparent .navbar-brand img {
+  color: #fff !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  filter: brightness(0) invert(1);
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .navbar-brand span,
+#mainNav.navbar-shrink .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-scrolled .navbar-brand img,
+#mainNav.navbar-shrink .navbar-brand img {
+  filter: brightness(0) invert(1);
+}
+
+/* Nav Links */
+.navbar-transparent .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem !important;
+  background-color: transparent !important;
+}
+
+.navbar-scrolled .nav-link,
+#mainNav.navbar-shrink .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  background-color: transparent !important;
+}
+
+.navbar-transparent .nav-link:hover,
+.navbar-transparent .nav-link:focus {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+
+.navbar-scrolled .nav-link:hover,
+.navbar-scrolled .nav-link:focus,
+#mainNav.navbar-shrink .nav-link:hover {
+  color: var(--primary-color) !important;
+  background-color: transparent !important;
+}
+
+.navbar-transparent .nav-link.active,
+.navbar-scrolled .nav-link.active,
+#mainNav.navbar-shrink .nav-link.active {
+  color: #fff !important;
+}
+
+/* Navbar Toggler (Mobile) */
+.navbar-transparent .navbar-toggler,
 #mainNav .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  background-color: transparent !important;
   font-size: 80%;
   padding: 0.75rem;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
 }
 
-#mainNav .navbar-brand {
-  color: var(--text-color);
-  font-weight: 700;
-  padding: 0.9rem 0;
+.navbar-transparent .navbar-toggler:hover,
+#mainNav .navbar-toggler:hover {
+  background-color: transparent !important;
 }
 
-#mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
-  outline: none;
-  background-color: transparent;
+.navbar-transparent .navbar-toggler-icon,
+#mainNav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-#mainNav .navbar-nav .nav-item:active,
-#mainNav .navbar-nav .nav-item:focus {
-  outline: none;
-  background-color: transparent;
+.navbar-scrolled .navbar-toggler,
+#mainNav.navbar-shrink .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-#mainNav .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
-  padding: 1.5rem 1rem;
-  letter-spacing: 0.0625em;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
+.navbar-scrolled .navbar-toggler-icon,
+#mainNav.navbar-shrink .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-#mainNav .navbar-nav .nav-link:hover {
-  color: rgba(255, 255, 255, 0.75);
+/* Icon Buttons */
+.navbar-transparent .btn-icon,
+.navbar-transparent .btn-icon i {
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
 }
 
-#mainNav .navbar-nav .nav-link:active {
-  color: white;
+.navbar-scrolled .btn-icon,
+.navbar-scrolled .btn-icon i {
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
 }
 
-#mainNav.navbar-shrink {
-  background-color: #000;
+.navbar-transparent .btn-icon:hover,
+.navbar-transparent .btn-icon:hover i {
+  color: #fff !important;
 }
 
-#mainNav.navbar-shrink .navbar-brand {
-  color: var(--text-color);
+.navbar-scrolled .btn-icon:hover,
+.navbar-scrolled .btn-icon:hover i {
+  color: var(--primary-color) !important;
 }
 
-#mainNav.navbar-shrink .navbar-nav .nav-link {
-  color: var(--text-color);
-  padding: 1rem;
+.fixed-top {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
-#mainNav.navbar-shrink .navbar-nav .nav-link:hover {
-  color: var(--primary-color);
-}
-
-#mainNav.navbar-shrink .navbar-nav .nav-link:active {
-  color: var(--primary-color);
-}
-
-/* Masthead */
+/* Masthead/Hero Section - Grayscale Style */
 .masthead {
   position: relative;
   width: 100%;
   height: 100vh;
   min-height: 35rem;
-  padding: 15rem 0;
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), 
               url('../images/bg-masthead.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  margin-top: 0;
 }
 
-.masthead h1,
-.masthead .h1 {
+.masthead .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Masthead Heading (Main Title) */
+.masthead .masthead-heading,
+.masthead h1 {
   font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto 1rem;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-.masthead h2,
-.masthead .h2 {
+/* Masthead Subheading (Subtitle) */
+.masthead .masthead-subheading,
+.masthead p {
   max-width: 20rem;
   font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 auto 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Button in masthead */
+.masthead .btn {
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
-  .masthead h1,
-  .masthead .h1 {
+  .masthead {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .masthead .masthead-heading,
+  .masthead h1 {
     font-size: 4rem;
     line-height: 4rem;
+  }
+  
+  .masthead .masthead-subheading,
+  .masthead p {
+    font-size: 1.25rem;
   }
 }
 
@@ -139,14 +257,16 @@ a:hover {
     height: 100vh;
     padding: 0;
   }
-  .masthead h1,
-  .masthead .h1 {
+  
+  .masthead .masthead-heading,
+  .masthead h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;
     letter-spacing: 0.8rem;
   }
-  .masthead h2,
-  .masthead .h2 {
+  
+  .masthead .masthead-subheading,
+  .masthead p {
     max-width: 30rem;
     font-size: 1.25rem;
   }
@@ -161,42 +281,78 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #fff !important;
 }
 
 .btn-primary:hover {
-  background-color: #4a7c79;
+  background-color: #4a7c79 !important;
+  border-color: #4a7c79 !important;
+  transform: scale(1.05);
 }
 
 .btn-primary:focus {
-  background-color: #4a7c79;
-  color: white;
+  background-color: #4a7c79 !important;
+  color: white !important;
 }
 
 .btn-primary:active {
   background-color: #467370 !important;
 }
 
+.btn-xl {
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 /* About Section */
-.about-section {
-  padding-top: 10rem;
+.about-section,
+section#about {
+  padding: 10rem 0;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 
-.about-section p {
+.about-section p,
+section#about p {
   margin-bottom: 5rem;
 }
 
-/* Projects Section */
-.projects-section {
-  padding: 10rem 0;
+.about-section .container,
+section#about .container {
+  max-width: 48rem;
 }
 
+.about-section img,
+section#about img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Projects/Portfolio Section */
+.projects-section,
+.portfolio-section,
+section#portfolio {
+  padding: 0;
+  background-color: #000;
+}
+
+.projects-section .container,
+.portfolio-section .container,
+section#portfolio .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Featured Project */
 .projects-section .featured-text {
   padding: 2rem;
+  background-color: rgba(22, 22, 22, 0.9);
 }
 
 @media (min-width: 992px) {
@@ -206,9 +362,20 @@ a:hover {
   }
 }
 
+/* Project Row */
+.project-row {
+  margin-bottom: 0;
+  background-color: #161616;
+}
+
+.project-row:nth-child(even) {
+  background-color: #000;
+}
+
 .projects-section .project-text {
   padding: 3rem;
   font-size: 90%;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 @media (min-width: 992px) {
@@ -222,12 +389,31 @@ a:hover {
   }
 }
 
+.projects-section .project-text h3,
+.projects-section .project-text h4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.projects-section .project-text p {
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* Project Image */
 .project-img {
   position: relative;
   overflow: hidden;
+  height: 100%;
+  min-height: 300px;
 }
 
 .project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
@@ -235,8 +421,117 @@ a:hover {
   transform: scale(1.1);
 }
 
+/* Portfolio Item - Grayscale Style (Full Width Grid) */
+.portfolio-item {
+  position: relative;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #000;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+/* Portfolio Overlay - Grayscale Style */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay-content {
+  color: #fff;
+}
+
+.portfolio-overlay h4,
+.portfolio-overlay p,
+.portfolio-overlay .project-name,
+.portfolio-overlay .project-category {
+  color: #fff;
+  margin: 0;
+}
+
+.portfolio-overlay h4,
+.portfolio-overlay .project-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.portfolio-overlay p,
+.portfolio-overlay .project-category {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Portfolio Grid - No gaps between items, full width */
+.portfolio-section .row,
+.projects-section .row,
+section#portfolio .row {
+  margin: 0;
+  width: 100%;
+}
+
+.portfolio-section .row > [class*="col"],
+.projects-section .row > [class*="col"],
+section#portfolio .row > [class*="col"] {
+  padding: 0;
+  margin: 0;
+}
+
+/* Portfolio Grid Layout - 2x2 grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Signup Section */
-.signup-section {
+.signup-section,
+section#signup {
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), 
               url('../images/bg-signup.jpg');
@@ -246,7 +541,8 @@ a:hover {
   background-size: cover;
 }
 
-.signup-section .form-signup input {
+.signup-section .form-signup input,
+section#signup .form-signup input {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
   padding: 1.25rem 2rem;
   height: auto;
@@ -257,35 +553,47 @@ a:hover {
   border: 0;
 }
 
-/* Contact Section */
-.contact-section {
-  padding-top: 5rem;
+.signup-section .container,
+section#signup .container {
+  max-width: 48rem;
 }
 
-.contact-section .card {
+/* Contact Section */
+.contact-section,
+section#contact {
+  padding: 5rem 0;
+}
+
+.contact-section .card,
+section#contact .card {
   border: 0;
   border-bottom: 0.25rem solid var(--primary-color);
 }
 
 .contact-section .card h4,
-.contact-section .card .h4 {
+.contact-section .card .h4,
+section#contact .card h4,
+section#contact .card .h4 {
   font-size: 0.8rem;
   font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
 
-.contact-section .card hr {
+.contact-section .card hr,
+section#contact .card hr {
   border-color: var(--primary-color);
   border-width: 0.25rem;
   width: 3rem;
 }
 
-.contact-section .social {
+.contact-section .social,
+section#contact .social {
   margin-top: 5rem;
 }
 
-.contact-section .social a {
+.contact-section .social a,
+section#contact .social a {
   text-align: center;
   height: 3rem;
   width: 3rem;
@@ -293,13 +601,19 @@ a:hover {
   border-radius: 100%;
   line-height: 3rem;
   color: rgba(255, 255, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
 }
 
-.contact-section .social a:hover {
+.contact-section .social a:hover,
+section#contact .social a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.contact-section .social a:active {
+.contact-section .social a:active,
+section#contact .social a:active {
   color: #fff;
 }
 
@@ -314,6 +628,36 @@ footer {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   background-color: var(--secondary-color);
+}
+
+section {
+  padding: 6rem 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+section h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+section p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  section h2 {
+    font-size: 3rem;
+  }
 }
 
 /* Booking Form Styles */
@@ -355,4 +699,66 @@ footer {
 
 .text-white-50 {
   color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Responsive Images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Smooth Transitions */
+a,
+.btn,
+.nav-link,
+.portfolio-item {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Focus Styles for Accessibility */
+a:focus,
+button:focus,
+.btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Offcanvas menu styling for mobile */
+.offcanvas {
+  background-color: #000;
+}
+
+.offcanvas .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  padding: 0.75rem 1.5rem !important;
+}
+
+.offcanvas .nav-link:hover {
+  color: #fff !important;
+  background-color: rgba(100, 161, 157, 0.1);
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-body {
+  padding: 1rem 0;
 }
