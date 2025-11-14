@@ -1,0 +1,358 @@
+/* Grayscale Theme Styles */
+
+:root {
+  --primary-color: #64a19d;
+  --secondary-color: #161616;
+  --text-color: #ffffff;
+  --text-muted: #adb5bd;
+}
+
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.0625em;
+  background-color: #000;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #4a7c79;
+}
+
+/* Navigation */
+#mainNav {
+  min-height: 56px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+#mainNav .navbar-brand {
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 0.9rem 0;
+}
+
+#mainNav .navbar-nav .nav-item:hover {
+  color: fade(white, 80%);
+  outline: none;
+  background-color: transparent;
+}
+
+#mainNav .navbar-nav .nav-item:active,
+#mainNav .navbar-nav .nav-item:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+#mainNav .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem 1rem;
+  letter-spacing: 0.0625em;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+#mainNav .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#mainNav .navbar-nav .nav-link:active {
+  color: white;
+}
+
+#mainNav.navbar-shrink {
+  background-color: #000;
+}
+
+#mainNav.navbar-shrink .navbar-brand {
+  color: var(--text-color);
+}
+
+#mainNav.navbar-shrink .navbar-nav .nav-link {
+  color: var(--text-color);
+  padding: 1rem;
+}
+
+#mainNav.navbar-shrink .navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+
+#mainNav.navbar-shrink .navbar-nav .nav-link:active {
+  color: var(--primary-color);
+}
+
+/* Masthead */
+.masthead {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), 
+              url('../images/bg-masthead.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.masthead h1,
+.masthead .h1 {
+  font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.masthead h2,
+.masthead .h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masthead h1,
+  .masthead .h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+    padding: 0;
+  }
+  .masthead h1,
+  .masthead .h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+  .masthead h2,
+  .masthead .h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 2rem;
+  font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #4a7c79;
+}
+
+.btn-primary:focus {
+  background-color: #4a7c79;
+  color: white;
+}
+
+.btn-primary:active {
+  background-color: #467370 !important;
+}
+
+/* About Section */
+.about-section {
+  padding-top: 10rem;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.about-section p {
+  margin-bottom: 5rem;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 10rem 0;
+}
+
+.projects-section .featured-text {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid var(--primary-color);
+  }
+}
+
+.projects-section .project-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+
+@media (min-width: 992px) {
+  .projects-section .project-text {
+    padding: 5rem;
+  }
+  .projects-section .project-text hr {
+    border-color: var(--primary-color);
+    border-width: 0.25rem;
+    width: 30%;
+  }
+}
+
+.project-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img img {
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover img {
+  transform: scale(1.1);
+}
+
+/* Signup Section */
+.signup-section {
+  padding: 10rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), 
+              url('../images/bg-signup.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.signup-section .form-signup input {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 2rem;
+  height: auto;
+  font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+/* Contact Section */
+.contact-section {
+  padding-top: 5rem;
+}
+
+.contact-section .card {
+  border: 0;
+  border-bottom: 0.25rem solid var(--primary-color);
+}
+
+.contact-section .card h4,
+.contact-section .card .h4 {
+  font-size: 0.8rem;
+  font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.contact-section .card hr {
+  border-color: var(--primary-color);
+  border-width: 0.25rem;
+  width: 3rem;
+}
+
+.contact-section .social {
+  margin-top: 5rem;
+}
+
+.contact-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-section .social a:active {
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  padding: 5rem 0;
+  background-color: #000;
+}
+
+/* Content Sections */
+.content-section {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  background-color: var(--secondary-color);
+}
+
+/* Booking Form Styles */
+.booking-form {
+  background: rgba(22, 22, 22, 0.9);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(100, 161, 157, 0.3);
+}
+
+.booking-form .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+}
+
+.booking-form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.booking-form label {
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+}
+
+/* Utility Classes */
+.bg-black {
+  background-color: #000 !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
