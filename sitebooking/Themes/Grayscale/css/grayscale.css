@@ -174,7 +174,9 @@ a:hover {
 /* Masthead/Hero Section - Grayscale Style */
 .masthead {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   height: 100vh;
   min-height: 35rem;
   padding-top: 10rem;
@@ -184,22 +186,55 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), 
-              url('../images/bg-masthead.jpg');
-  background-position: center;
+  overflow: hidden;
+}
+
+/* Blurred background image layer */
+.masthead::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-image: url('../images/bg-masthead.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
+  background-position: center center;
   background-size: cover;
-  margin-top: 0;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: 0;
+}
+
+/* Dark overlay on top of blurred image */
+.masthead::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%);
+  z-index: 1;
 }
 
 .masthead .container {
   position: relative;
   z-index: 2;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  max-width: 100%;
+}
+
+.masthead .container > div,
+.masthead .container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Masthead Heading (Main Title) */
@@ -232,6 +267,8 @@ a:hover {
 /* Button in masthead */
 .masthead .btn {
   margin-top: 1rem;
+  width: auto;
+  display: inline-block;
 }
 
 @media (min-width: 768px) {
