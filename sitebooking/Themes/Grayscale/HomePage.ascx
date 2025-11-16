@@ -104,3 +104,4 @@
 
 <!-- Grayscale Theme JavaScript -->
 <script src="/sitebooking/Themes/Grayscale/js/grayscale.js"></script>
+<script src="/sitebooking/Themes/Grayscale/js/theme.js"></script>
