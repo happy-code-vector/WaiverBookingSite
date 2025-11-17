@@ -491,16 +491,17 @@ section#services p {
 	margin-bottom: 0;
 }
 
-/* Portfolio Section */
+/* Portfolio Section - Grayscale Projects Style */
 .portfolio-section,
 section#portfolio {
-	padding: 6rem 0;
-	background-color: #fff;
+	padding: 4rem 2rem;
+	background-color: #000;
 }
 
 .portfolio-section .text-center,
 section#portfolio .text-center {
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
+	background-color: #000;
 }
 
 .portfolio-section h2,
@@ -509,6 +510,7 @@ section#portfolio h2 {
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 1rem;
+	color: #fff;
 }
 
 .portfolio-section hr,
@@ -521,88 +523,152 @@ section#portfolio hr {
 
 .portfolio-section p,
 section#portfolio p {
-	color: #6c757d;
+	color: rgba(255, 255, 255, 0.5);
 	font-size: 1.125rem;
 }
 
-/* Portfolio Item */
-.portfolio-item {
-	position: relative;
-	display: block;
-	margin-bottom: 2rem;
-	cursor: pointer;
-	overflow: hidden;
-	border-radius: 0.5rem;
-	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-	transition: all 0.3s ease;
-}
-
-.portfolio-item:hover {
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-	transform: translateY(-5px);
-}
-
-.portfolio-item img {
-	width: 100%;
-	height: auto;
-	object-fit: cover;
-	transition: all 0.3s ease-in-out;
-	display: block;
-}
-
-.portfolio-item:hover img {
-	transform: scale(1.05);
-	opacity: 0.8;
-}
-
-/* Portfolio Overlay - Grayscale */
-.portfolio-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to bottom, rgba(100, 161, 157, 0.85), rgba(100, 161, 157, 0.85));
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
+/* Portfolio Grid Container - Centered, stacked items */
+.portfolio-grid {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 2rem;
-	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	flex-wrap: wrap;
 }
 
-.portfolio-item:hover .portfolio-overlay {
-	opacity: 1;
-}
-
-.portfolio-overlay-content {
-	color: #fff;
-}
-
-.portfolio-overlay h4,
-.portfolio-overlay p,
-.portfolio-overlay .project-name,
-.portfolio-overlay .project-category {
-	color: #fff;
+/* Remove Bootstrap grid spacing for portfolio items */
+.portfolio-grid > [class*="col"] {
+	max-width: 100%;
+	flex: 0 0 100%;
+	padding: 0;
 	margin: 0;
 }
 
-.portfolio-overlay h4,
-.portfolio-overlay .project-name {
-	font-size: 1.5rem;
-	font-weight: 700;
-	margin-bottom: 0.5rem;
-	text-transform: uppercase;
+/* Portfolio Item Wrapper - Grayscale Projects Layout */
+.portfolio-grid .portfolio-item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: 500px;
+	padding: 0;
+	margin: 0;
+	background-color: #000;
+	border-radius: 0;
+	box-shadow: none;
 }
 
-.portfolio-overlay p,
-.portfolio-overlay .project-category {
+.portfolio-grid .portfolio-item:hover {
+	transform: none;
+	box-shadow: none;
+}
+
+/* Portfolio Image Container */
+.portfolio-grid .portfolio-item > img,
+.portfolio-grid .portfolio-item > .img-fluid {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	object-fit: cover;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.portfolio-grid .portfolio-item:hover img {
+	transform: none;
+	opacity: 1;
+}
+
+/* Portfolio Overlay - Grayscale Style (Always visible, positioned right) */
+.portfolio-grid .portfolio-overlay {
+	position: relative;
+	width: 50%;
+	margin-left: 50%;
+	padding: 4rem 3rem;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 400px;
+	opacity: 1;
+}
+
+.portfolio-grid .portfolio-overlay-content {
+	max-width: 500px;
+	text-align: left;
+}
+
+.portfolio-grid .portfolio-overlay h4 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #fff;
+}
+
+.portfolio-grid .portfolio-overlay p {
 	font-size: 1rem;
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+	margin-bottom: 0;
+}
+
+.portfolio-grid .portfolio-overlay .text-muted {
+	color: var(--creative-primary) !important;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+/* Odd items - Reverse layout (image right, text left) */
+.portfolio-grid > [class*="col"]:nth-child(odd) .portfolio-item > img,
+.portfolio-grid > [class*="col"]:nth-child(odd) .portfolio-item > .img-fluid {
+	left: auto;
+	right: 0;
+}
+
+.portfolio-grid > [class*="col"]:nth-child(odd) .portfolio-overlay {
+	margin-left: 0;
+	margin-right: 50%;
+	background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.portfolio-grid > [class*="col"]:nth-child(odd) .portfolio-overlay-content {
+	text-align: right;
+}
+
+/* Responsive - Stack on mobile */
+@media (max-width: 991px) {
+	.portfolio-grid .portfolio-item {
+		flex-direction: column;
+		min-height: auto;
+	}
+	
+	.portfolio-grid .portfolio-item > img,
+	.portfolio-grid .portfolio-item > .img-fluid {
+		position: relative;
+		width: 100%;
+		height: 400px;
+		left: 0 !important;
+		right: 0 !important;
+	}
+	
+	.portfolio-grid .portfolio-overlay {
+		position: relative;
+		width: 100%;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		background: rgba(0, 0, 0, 0.9) !important;
+		padding: 3rem 2rem;
+	}
+	
+	.portfolio-grid > [class*="col"]:nth-child(odd) .portfolio-overlay-content {
+		text-align: left;
+	}
 }
 
 /* Portfolio Box (for background image style) */
@@ -1286,14 +1352,6 @@ button:focus,
 }
 
 /* Portfolio Grid - Full Width, No Gaps */
-.portfolio-grid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin: 0;
-	padding: 0;
-	gap: 0;
-}
 
 .portfolio-grid>* {
 	flex: 0 0 100%;
