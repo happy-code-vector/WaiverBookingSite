@@ -68,16 +68,16 @@
             </div>
 
             <!-- Pricing Breakdown -->
-            <div class="card shadow-sm mb-4">
-              <div class="card-header bg-light">
+            <div class="card shadow-sm mb-4 bg-dark border-secondary">
+              <div class="card-header bg-secondary text-white">
                 <h5 class="mb-0">
                   <i class="ci-dollar-sign me-2"></i>Pricing Options
                 </h5>
               </div>
-              <div class="card-body">
+              <div class="card-body bg-dark text-white">
                 <xsl:for-each select="PricingGridRef/TimeRules/PricingGridTimeRule">
                   <xsl:variable name="timeRuleId" select="ID"/>
-                  <div class="mb-3 p-3 bg-light rounded">
+                  <div class="mb-3 p-3 bg-secondary border border-secondary rounded">
                     <h6 class="text-primary fw-bold mb-3">
                       <i class="ci-clock me-2"></i>
                       <xsl:value-of select="Name"/>
@@ -114,13 +114,13 @@ select="/AdmissionItem/CurrentPrices/AdmissionItemPrice[PersonTypeID = $ptId and
             </div>
 
             <!-- Booking Section -->
-            <div class="card shadow-lg border-0">
+            <div class="card shadow-lg border-secondary bg-dark">
               <div class="card-header bg-primary text-white">
                 <h5 class="mb-0">
                   <i class="ci-calendar me-2"></i>Book Your Visit
                 </h5>
               </div>
-              <div class="card-body p-4">
+              <div class="card-body p-4 bg-dark text-white">
                 
                 <!-- Date Selection -->
                 <div class="mb-4">
@@ -148,7 +148,7 @@ select="/AdmissionItem/CurrentPrices/AdmissionItemPrice[PersonTypeID = $ptId and
                   </label>
                   <xsl:for-each select="PricingGridRef/PersonTypes/PricingGridPersonType">
                     <div class="mb-3">
-                      <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded">
+                      <div class="d-flex justify-content-between align-items-center p-3 bg-secondary border border-secondary rounded">
                         <div>
                           <label class="form-label mb-0 fw-semibold">
                             <xsl:value-of select="Name"/>

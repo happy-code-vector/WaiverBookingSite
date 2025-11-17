@@ -54,11 +54,11 @@
 		<xsl:param name="statusText"/>
 		<xsl:variable name="s" select="translate(normalize-space($statusText), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')"/>
 		<xsl:choose>
-			<xsl:when test="$s = 'paid' or $s = 'completed'">badge bg-success</xsl:when>
+			<xsl:when test="$s = 'paid' or $s = 'completed'">badge bg-success text-white</xsl:when>
 			<xsl:when test="$s = 'pending' or $s = 'processing'">badge bg-warning text-dark</xsl:when>
-			<xsl:when test="$s = 'canceled' or $s = 'cancelled'">badge bg-secondary</xsl:when>
-			<xsl:when test="$s = 'refunded' or $s = 'failed' or $s = 'declined'">badge bg-danger</xsl:when>
-			<xsl:otherwise>badge bg-light text-dark</xsl:otherwise>
+			<xsl:when test="$s = 'canceled' or $s = 'cancelled'">badge bg-secondary text-white</xsl:when>
+			<xsl:when test="$s = 'refunded' or $s = 'failed' or $s = 'declined'">badge bg-danger text-white</xsl:when>
+			<xsl:otherwise>badge bg-secondary text-white</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
 
@@ -109,11 +109,11 @@
 				<!-- MAIN (Items, Totals, Status history, Customer) -->
 				<div class="col-lg-8">
 					<!-- Items -->
-					<div class="card shadow-sm mb-3">
-						<div class="card-header bg-light">
+					<div class="card shadow-sm mb-3 bg-dark border-secondary">
+						<div class="card-header bg-secondary text-white">
 							<strong>Items</strong>
 						</div>
-						<div class="card-body p-0">
+						<div class="card-body p-0 bg-dark">
 							<xsl:choose>
 								<xsl:when test="count($order/Items/OrderItem) &gt; 0">
 									<div class="table-responsive">
@@ -199,11 +199,11 @@
 					</div>
 
 					<!-- Status History -->
-					<div class="card shadow-sm mb-3">
-						<div class="card-header bg-light">
+					<div class="card shadow-sm mb-3 bg-dark border-secondary">
+						<div class="card-header bg-secondary text-white">
 							<strong>Status History</strong>
 						</div>
-						<div class="card-body p-0">
+						<div class="card-body p-0 bg-dark">
 							<xsl:choose>
 								<xsl:when test="count($order/Statuses/OrderStatus) &gt; 0">
 									<div class="table-responsive">
@@ -295,15 +295,15 @@
 
 				<!-- SIDEBAR (Related Bookings) -->
 				<div class="col-lg-4">
-					<div class="card shadow-sm">
-						<div class="card-header bg-light d-flex justify-content-between align-items-center">
+					<div class="card shadow-sm bg-dark border-secondary">
+						<div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
 							<strong>Related Bookings</strong>
-							<span class="badge bg-secondary">
+							<span class="badge bg-primary">
 								<xsl:value-of select="count($order/Bookings/Booking)"/>
 							</span>
 						</div>
 
-						<div class="card-body p-0">
+						<div class="card-body p-0 bg-dark">
 							<xsl:choose>
 								<xsl:when test="count($order/Bookings/Booking) &gt; 0">
 									<div class="list-group list-group-flush">

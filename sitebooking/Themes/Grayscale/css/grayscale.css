@@ -204,7 +204,7 @@ a:hover {
 
 .navbar-scrolled .navbar-brand,
 .navbar-scrolled .navbar-brand span {
-	color: var(--creative-primary) !important;
+	color: var(--primary-color) !important;
 }
 
 .navbar-scrolled .navbar-brand img {
@@ -263,18 +263,18 @@ a:hover {
 
 .navbar-scrolled .btn-icon:hover,
 .navbar-scrolled .btn-icon:hover i {
-	color: var(--creative-primary) !important;
+	color: var(--primary-color) !important;
 	border-color: transparent !important;
 	background-color: transparent !important;
 }
 
 /* Cart Badge */
 .navbar-transparent .badge {
-	background-color: var(--creative-primary) !important;
+	background-color: var(--primary-color) !important;
 }
 
 .navbar-scrolled .badge {
-	background-color: var(--creative-primary) !important;
+	background-color: var(--primary-color) !important;
 }
 
 /* Navbar Toggler (Mobile) */
@@ -316,8 +316,8 @@ a:hover {
 }
 
 .navbar-transparent .dropdown-item:hover {
-	background-color: var(--creative-light);
-	color: var(--creative-primary);
+	background-color: var(--bg-dark-lighter);
+	color: var(--primary-color);
 }
 
 .navbar-transparent .dropdown-toggle {
@@ -338,8 +338,8 @@ a:hover {
 
 /* Buttons */
 .btn-primary {
-	background-color: var(--creative-primary) !important;
-	border-color: var(--creative-primary) !important;
+	background-color: var(--primary-color) !important;
+	border-color: var(--primary-color) !important;
 	color: #fff !important;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -351,8 +351,8 @@ a:hover {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-	background-color: #ee4b08 !important;
-	border-color: #ee4b08 !important;
+	background-color: #4a7c79 !important;
+	border-color: #4a7c79 !important;
 	color: #fff !important;
 	transform: scale(1.05);
 }
@@ -402,7 +402,7 @@ section h3.section-subheading {
 section hr {
 	max-width: 50px;
 	border-width: 3px;
-	border-color: var(--creative-primary);
+	border-color: var(--primary-color);
 	margin: 1.5rem auto 3rem;
 }
 
@@ -641,7 +641,7 @@ section#portfolio p {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: linear-gradient(to bottom, rgba(244, 98, 58, 0.85), rgba(244, 98, 58, 0.85));
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -681,7 +681,7 @@ section#portfolio p {
 .team-section,
 section#team {
 	padding: 6rem 0;
-	background-color: var(--creative-light);
+	background-color: var(--bg-dark-lighter);
 }
 
 .team-section h2,
@@ -697,7 +697,7 @@ section#team h2 {
 section#team hr {
 	max-width: 50px;
 	border-width: 3px;
-	border-color: var(--creative-primary);
+	border-color: var(--primary-color);
 	margin: 1.5rem auto;
 }
 
@@ -761,8 +761,8 @@ section#team p {
 }
 
 .btn-dark:hover {
-	background-color: var(--creative-primary) !important;
-	border-color: var(--creative-primary) !important;
+	background-color: var(--primary-color) !important;
+	border-color: var(--primary-color) !important;
 }
 
 /* Footer */
@@ -778,13 +778,13 @@ footer,
 footer a,
 .footer a,
 .site-footer a {
-	color: var(--creative-primary);
+	color: var(--primary-color);
 }
 
 footer a:hover,
 .footer a:hover,
 .site-footer a:hover {
-	color: #ee4b08;
+	color: #4a7c79;
 }
 
 /* Section Spacing */
@@ -955,7 +955,7 @@ html {
 
 /* Timeline inverted (for "Be Part of Our Story" ending) */
 .timeline-item.timeline-inverted .timeline-image {
-	background-color: var(--creative-primary);
+	background-color: var(--primary-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1014,7 +1014,7 @@ html {
 }
 
 .hover-primary:hover {
-	color: var(--creative-primary) !important;
+	color: var(--primary-color) !important;
 }
 
 /* Workflow Progress Bar */
@@ -1070,8 +1070,8 @@ html {
 }
 
 .btn-check:checked+.time-slot-btn {
-	background-color: var(--creative-primary) !important;
-	border-color: var(--creative-primary) !important;
+	background-color: var(--primary-color) !important;
+	border-color: var(--primary-color) !important;
 	color: #fff !important;
 	transform: scale(1.05);
 }
@@ -1093,7 +1093,7 @@ html {
 }
 
 .breadcrumb-item a:hover {
-	color: var(--creative-primary) !important;
+	color: var(--primary-color) !important;
 }
 
 .breadcrumb-item.active {
@@ -1112,7 +1112,7 @@ html {
 }
 
 .thumb-swap.border-primary {
-	border-color: var(--creative-primary) !important;
+	border-color: var(--primary-color) !important;
 }
 
 /* Sticky sidebar */
@@ -1142,7 +1142,7 @@ html {
 /* Call to Action Section */
 .cta-section {
 	padding: 6rem 0;
-	background-color: var(--creative-primary);
+	background-color: var(--primary-color);
 }
 
 .cta-section h2 {
@@ -1193,8 +1193,8 @@ html {
 
 .contact-section .form-control:focus,
 .contact-section .form-select:focus {
-	border-color: var(--creative-primary);
-	box-shadow: 0 0 0 0.2rem rgba(244, 98, 58, 0.25);
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.25);
 }
 
 /* Hero Content Styling */
@@ -1227,7 +1227,7 @@ html {
 section hr.divider {
 	max-width: 3.25rem;
 	border-width: 0.2rem;
-	border-color: var(--creative-primary);
+	border-color: var(--primary-color);
 	margin: 1.5rem auto;
 }
 
@@ -1241,11 +1241,11 @@ section hr.divider-light {
 }
 
 .text-primary {
-	color: var(--creative-primary) !important;
+	color: var(--primary-color) !important;
 }
 
 .bg-primary {
-	background-color: var(--creative-primary) !important;
+	background-color: var(--primary-color) !important;
 }
 
 /* Responsive Images */
@@ -1274,7 +1274,7 @@ a,
 a:focus,
 button:focus,
 .btn:focus {
-	outline: 2px solid var(--creative-primary);
+	outline: 2px solid var(--primary-color);
 	outline-offset: 2px;
 }
 
@@ -1346,7 +1346,7 @@ button:focus,
 
 /* Team section background */
 .team-section {
-	background-color: var(--creative-light);
+	background-color: var(--bg-dark-lighter);
 }
 
 /* Portfolio section header spacing */
@@ -1398,8 +1398,8 @@ html {
 }
 
 .offcanvas .nav-link:hover {
-	color: var(--creative-primary) !important;
-	background-color: var(--creative-light);
+	color: var(--primary-color) !important;
+	background-color: var(--bg-dark-lighter);
 }
 
 .offcanvas-header {
@@ -1445,7 +1445,7 @@ html {
 }
 
 .navbar-scrolled .navbar-nav .nav-link.active {
-	color: var(--creative-primary) !important;
+	color: var(--primary-color) !important;
 }
 
 .fixed-top {
@@ -1722,3 +1722,4 @@ section#contact h2 {
 .animate-slide-end {
 	transition: transform 0.3s ease, opacity 0.3s ease;
 }
+

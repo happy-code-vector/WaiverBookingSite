@@ -9,7 +9,7 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 
 	<xsl:template match="/">
 		<div class="container my-5">
-			<div class="card shadow-sm">
+			<div class="card shadow-sm bg-dark border-secondary">
 				<div class="card-header bg-primary text-white">
 					<div class="d-flex justify-content-between align-items-center">
 						<div>
@@ -48,7 +48,7 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 					</div>
 				</div>
 
-				<div class="card-body p-4">
+				<div class="card-body p-4 bg-dark text-white">
 					<!-- Customer Details -->
 					<div class="mb-4">
 						<h5 class="mb-3">

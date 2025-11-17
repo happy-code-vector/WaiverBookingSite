@@ -7,7 +7,7 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 
 	<xsl:template match="/">
 		<nav aria-label="breadcrumb" class="my-3">
-			<ol class="breadcrumb bg-light p-3 rounded shadow-sm">
+			<ol class="breadcrumb bg-dark border border-secondary p-3 rounded shadow-sm">
 				<li class="breadcrumb-item">
 					<a href="{$BasePathRelative}" title="Home" class="text-decoration-none">
 						<i class="ci-home me-1"></i>
