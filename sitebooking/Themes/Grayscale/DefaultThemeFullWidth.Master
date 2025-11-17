@@ -1,7 +1,10 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeFullWidth.master.cs" Inherits="WaiverFile.sitebooking.Themes.Default.DefaultThemeFullWidth" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeFullWidth.master.cs" Inherits="WaiverFile.sitebooking.Themes.Default.DefaultThemeFullWidth" %>
 <%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
 <%@ Register Src="~/sitebooking/themes/Grayscale/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
 <%@ Register Src="~/sitebooking/themes/Grayscale/includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+
+
+
 
 <!DOCTYPE html>
 
@@ -10,9 +13,10 @@
     <title></title>
 
     <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
     
-    <!-- SEO Meta Tags -->
+     <!-- SEO Meta Tags -->
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="WaiverFile">
@@ -20,66 +24,77 @@
     <!-- Preloaded local web font (Inter) -->
     <link rel="preload" href="/sitebooking/Themes/Grayscale/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Font icons (Cartzilla) -->
+    <!-- Font icons -->
     <link rel="preload" href="/sitebooking/Themes/Grayscale/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/icons/cartzilla-icons.min.css">
 
-    <!-- jQuery -->
-    <script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>
-    
-    <!-- Bootstrap + Theme styles -->
+
+
+    <script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>    
+    <link rel="stylesheet" href="/sitebooking/vendor/formvalidation/index.min.css" />
+
+     <!-- Bootstrap + Theme styles -->
+    <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
     <link rel="preload" href="/sitebooking/Themes/Grayscale/css/theme.min.css" as="style">
     <link rel="preload" href="/sitebooking/Themes/Grayscale/css/theme.rtl.min.css" as="style">
     <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/theme.min.css" id="themestyles">
-    
-    <!-- Form Validation -->
-    <link rel="stylesheet" href="/sitebooking/vendor/formvalidation/index.min.css" />
-    <script src="/sitebooking/vendor/formvalidation/popular.min.js"></script>
-    <script src="/sitebooking/vendor/formvalidation/plugin-bootstrap5.min.js"></script>
-    
-    <!-- Choices.js -->
     <link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/sitebooking/vendor/formvalidation/popular.min.js"></script>
+    <script src="/sitebooking/vendor/formvalidation/plugin-bootstrap5.min.js"></script>
 
-    <!-- Grayscale Theme Styles -->
-    <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/grayscale.css">
+    <!-- Custom Grayscale Theme Styles -->
+	<link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/grayscale.css">
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body id="page-top">
+<body>
     <form id="form1" runat="server">
         
-        <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
+         <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>
         
+               
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-            </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+</asp:ContentPlaceHolder>
     
             <uc1:Header runat="server" id="Header1" />
 
-            <!-- Page content -->
-            <main class="content-wrapper">
-                <section class="content-section" id="content">
-                    <div class="container px-4 px-lg-5">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                        </asp:ContentPlaceHolder>
-                        
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                        </asp:ContentPlaceHolder>
-                        
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
-                        </asp:ContentPlaceHolder>
-                    </div>
-                </section>
-            </main>
+            
+    <!-- Page content -->
+    <main class="content-wrapper">
+            
+        <section class="container pt-3 pt-sm-4 pt-lg-5 mt-lg-2 mt-xl-4 mt-xxl-5" id="mission" style="scroll-margin-top: 60px">
+       
 
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+ </asp:ContentPlaceHolder>
+        
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+ </asp:ContentPlaceHolder>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+ </asp:ContentPlaceHolder>
+
+
+            
+      </section>
+
+
+        </main>
+
+            
             <uc1:Footer runat="server" id="Footer1" />
-        </div>
 
-        <!-- Bootstrap + Theme scripts -->
-        <script src="/sitebooking/Themes/Grayscale/js/theme.js"></script>
-        <script src="/sitebooking/Themes/Grayscale/js/grayscale.js"></script>
+
+            </div>
+
+           
+          
+    <!-- Bootstrap + Theme scripts -->
+    <script src="/sitebooking/Themes/Grayscale/js/theme.js"></script>
+    <script src="/sitebooking/Themes/Grayscale/js/grayscale.js"></script>
+
     </form>
 </body>
 </html>
