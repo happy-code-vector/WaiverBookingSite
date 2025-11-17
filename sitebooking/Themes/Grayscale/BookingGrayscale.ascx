@@ -13,15 +13,17 @@
     <meta name="keywords" content="">
     <meta name="author" content="WaiverFile">
 
-    <!-- Font Awesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="/sitebooking/Themes/Grayscale/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font icons (Cartzilla) -->
+    <link rel="preload" href="/sitebooking/Themes/Grayscale/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/icons/cartzilla-icons.min.css">
+
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="/sitebooking/Themes/Grayscale/css/theme.min.css" as="style">
+    <link rel="preload" href="/sitebooking/Themes/Grayscale/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/theme.min.css" id="themestyles">
     
     <!-- Grayscale Theme Styles -->
     <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/grayscale.css">
@@ -83,15 +85,6 @@
 
 <uc1:Footer runat="server" id="Footer1" />
 
-<!-- Bootstrap core JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- jQuery Easing -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-<!-- Grayscale Theme JavaScript -->
-<script src="/sitebooking/Themes/Grayscale/js/grayscale.js"></script>
+<!-- Bootstrap + Theme scripts -->
 <script src="/sitebooking/Themes/Grayscale/js/theme.js"></script>
+<script src="/sitebooking/Themes/Grayscale/js/grayscale.js"></script>
