@@ -1,18 +1,40 @@
 /* ===================================
-   Creative Theme Styles
-   Based on StartBootstrap Creative Template
+   Grayscale Dark Theme Styles
+   Based on StartBootstrap Grayscale Template
    =================================== */
 
-/* Color Variables - Grayscale Theme */
+/* Color Variables - Dark Grayscale Theme */
 :root {
 	--primary-color: #64a19d;
 	--secondary-color: #161616;
-	--text-color: #212529;
-	--text-muted: #6c757d;
+	--text-color: #ffffff;
+	--text-muted: #adb5bd;
+	--bg-dark: #000000;
+	--bg-dark-alt: #161616;
+	--bg-dark-lighter: #1a1a1a;
 	--creative-primary: #64a19d;
 	--creative-secondary: #64a19d;
-	--creative-dark: #212529;
-	--creative-light: #f8f9fa;
+	--creative-dark: #000000;
+	--creative-light: #161616;
+}
+
+/* Body - Dark Background */
+body {
+	font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	letter-spacing: 0.0625em;
+	background-color: var(--bg-dark);
+	color: var(--text-color);
+	padding-top: 0;
+}
+
+a {
+	color: var(--primary-color);
+	transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+	color: #4a7c79;
+	text-decoration: none;
 }
 
 /* Masthead/Hero Section - Full Height */
@@ -132,8 +154,8 @@
 
 	.masthead .masthead-heading,
 	.masthead h1 {
-		font-size: 6.5rem;
-		line-height: 6.5rem;
+		font-size: 5.5rem;
+		line-height: 5.5rem;
 		letter-spacing: 0.8rem;
 	}
 
@@ -162,8 +184,8 @@
 }
 
 .navbar-scrolled {
-	background-color: #fff !important;
-	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+	background-color: var(--bg-dark) !important;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
@@ -201,7 +223,7 @@
 }
 
 .navbar-scrolled .nav-link {
-	color: var(--creative-dark) !important;
+	color: rgba(255, 255, 255, 0.7) !important;
 	background-color: transparent !important;
 }
 
@@ -213,7 +235,7 @@
 
 .navbar-scrolled .nav-link:hover,
 .navbar-scrolled .nav-link:focus {
-	color: var(--creative-primary) !important;
+	color: #fff !important;
 	background-color: transparent !important;
 }
 
@@ -392,17 +414,17 @@ section hr {
 	}
 }
 
-/* Services Section - Light Background (Grayscale Style) */
+/* Services Section - Dark Background */
 .services-section,
 section#services {
-	background-color: #f8f9fa;
-	color: #212529;
+	background-color: var(--bg-dark-alt);
+	color: var(--text-color);
 	padding: 6rem 0;
 }
 
 .services-section h2,
 section#services h2 {
-	color: #000;
+	color: #fff;
 	font-size: 2.5rem;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -422,7 +444,7 @@ section#services hr {
 .services-section p,
 section#services h3,
 section#services p {
-	color: #495057;
+	color: var(--text-muted);
 }
 
 .service-item {
@@ -458,23 +480,24 @@ section#services p {
 }
 
 .service-item p {
-	color: #6c757d;
+	color: var(--text-muted);
 	font-size: 1rem;
 	line-height: 1.75;
 	margin-bottom: 0;
 }
 
-/* Portfolio Section - Grayscale Projects Style */
+/* Portfolio Section - Dark Grayscale Projects Style */
 .portfolio-section,
 section#portfolio {
 	padding: 0;
-	background-color: #fff;
+	background-color: var(--bg-dark);
 }
 
 .portfolio-section .text-center,
 section#portfolio .text-center {
 	margin-bottom: 3rem;
 	padding-top: 4rem;
+	background-color: var(--bg-dark);
 }
 
 .portfolio-section h2,
@@ -483,7 +506,7 @@ section#portfolio h2 {
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 1rem;
-	color: #000;
+	color: #fff;
 }
 
 .portfolio-section hr,
@@ -496,7 +519,7 @@ section#portfolio hr {
 
 .portfolio-section p,
 section#portfolio p {
-	color: #6c757d;
+	color: var(--text-muted);
 	font-size: 1.125rem;
 }
 
@@ -516,14 +539,14 @@ section#portfolio p {
 	}
 }
 
-/* Portfolio Item - Grayscale Style */
+/* Portfolio Item - Dark Grayscale Style */
 .portfolio-item {
 	position: relative;
 	display: block;
 	margin: 0;
 	cursor: pointer;
 	overflow: hidden;
-	background-color: #f8f9fa;
+	background-color: var(--bg-dark-alt);
 	width: 100%;
 	aspect-ratio: 1 / 1;
 }
@@ -1449,4 +1472,253 @@ section#portfolio .row {
 section#portfolio .row>[class*="col"] {
 	padding: 0;
 	margin: 0;
+}
+
+/* ====
+===============================
+   DARK THEME OVERRIDES
+   =================================== */
+
+/* All sections dark background */
+section {
+	background-color: var(--bg-dark) !important;
+	color: var(--text-color);
+}
+
+section:nth-child(even) {
+	background-color: var(--bg-dark-alt) !important;
+}
+
+/* Section headings white */
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+	color: #fff !important;
+}
+
+/* Section paragraphs muted */
+section p {
+	color: var(--text-muted) !important;
+}
+
+/* Team section dark */
+.team-section,
+section#team {
+	background-color: var(--bg-dark-alt) !important;
+}
+
+.team-section h2,
+section#team h2 {
+	color: #fff !important;
+}
+
+/* About section dark */
+.about-section,
+section#about {
+	background-color: var(--bg-dark) !important;
+}
+
+.about-section h2,
+.about-section p,
+section#about h2,
+section#about p {
+	color: #fff !important;
+}
+
+/* Contact section dark */
+.contact-section,
+section#contact {
+	background-color: var(--bg-dark-alt) !important;
+}
+
+.contact-section h2,
+section#contact h2 {
+	color: #fff !important;
+}
+
+.contact-section .form-control {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+
+.contact-section .form-control:focus {
+	background-color: rgba(255, 255, 255, 0.15);
+	border-color: var(--primary-color);
+	color: #fff;
+}
+
+.contact-section .form-label {
+	color: var(--text-muted);
+}
+
+/* CTA Section dark */
+.cta-section {
+	background-color: var(--bg-dark) !important;
+}
+
+.cta-section h2,
+.cta-section p {
+	color: #fff !important;
+}
+
+/* Cards dark */
+.card {
+	background-color: var(--bg-dark-alt);
+	border-color: rgba(255, 255, 255, 0.1);
+	color: var(--text-color);
+}
+
+.card-title,
+.card-header {
+	color: #fff;
+}
+
+.card-text {
+	color: var(--text-muted);
+}
+
+/* Dropdown menus dark */
+.dropdown-menu {
+	background-color: var(--bg-dark-alt);
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item {
+	color: var(--text-color);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+	background-color: var(--bg-dark-lighter);
+	color: var(--primary-color);
+}
+
+/* Offcanvas dark */
+.offcanvas {
+	background-color: var(--bg-dark);
+}
+
+.offcanvas-header {
+	border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.btn-light {
+	background-color: var(--bg-dark-alt) !important;
+	border-color: rgba(255, 255, 255, 0.2) !important;
+	color: #fff !important;
+}
+
+.btn-light:hover {
+	background-color: var(--bg-dark-lighter) !important;
+	border-color: var(--primary-color) !important;
+	color: #fff !important;
+}
+
+/* Navbar toggler dark */
+.navbar-scrolled .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Text utilities */
+.text-muted {
+	color: var(--text-muted) !important;
+}
+
+.text-dark {
+	color: var(--text-color) !important;
+}
+
+/* Background utilities */
+.bg-light {
+	background-color: var(--bg-dark-alt) !important;
+}
+
+.bg-white {
+	background-color: var(--bg-dark) !important;
+}
+
+
+/* Back to Top Button - Dark Theme */
+.floating-buttons {
+	position: fixed;
+	z-index: 1030;
+}
+
+.btn-scroll-top {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.9) !important;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(100%);
+	background-color: rgba(22, 22, 22, 0.95) !important;
+	border: 1px solid rgba(100, 161, 157, 0.3) !important;
+	border-radius: 50rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.btn-scroll-top.show {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
+}
+
+.btn-scroll-top:hover {
+	color: #fff !important;
+	background-color: var(--primary-color) !important;
+	border-color: var(--primary-color) !important;
+	transform: translateX(-0.25rem);
+	box-shadow: 0 0.75rem 1.5rem rgba(100, 161, 157, 0.4);
+}
+
+.btn-scroll-top:visited {
+	color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.btn-scroll-top svg {
+	pointer-events: none;
+	stroke: currentColor;
+}
+
+.btn-scroll-top .animate-target {
+	transition: transform 0.3s ease;
+}
+
+.btn-scroll-top:hover .animate-target {
+	transform: translateX(0.25rem);
+}
+
+/* Progress bar on button */
+.btn-scroll-top svg rect {
+	stroke: rgba(255, 255, 255, 0.3);
+}
+
+.btn-scroll-top:hover svg rect {
+	stroke: var(--primary-color);
+}
+
+/* Z-index utilities */
+.z-sticky {
+	z-index: 1020;
+}
+
+.z-fixed {
+	z-index: 1030;
+}
+
+/* Animate slide end */
+.animate-slide-end {
+	transition: transform 0.3s ease, opacity 0.3s ease;
 }
