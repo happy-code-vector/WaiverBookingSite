@@ -27,7 +27,7 @@
 					
 					<!-- Grouped Items -->
 					<xsl:for-each select="BookingCart/ItemsGrouped/BookingCartItemGroup">
-						<div class="card shadow-sm mb-3 bg-dark border-secondary">
+						<div class="card shadow-sm mb-3">
 							<div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
 								<div>
 									<i class="ci-package me-2"></i>
@@ -38,11 +38,11 @@
 										<span class="ms-2 opacity-75">- <xsl:value-of select="GroupDescription"/></span>
 									</xsl:if>
 								</div>
-								<span class="badge bg-secondary text-white fs-6">
+								<span class="badge bg-light text-dark fs-6">
 									$<xsl:value-of select="format-number(TotalPrice, '#,##0.00')"/>
 								</span>
 							</div>
-							<div class="card-body p-0 bg-dark">
+							<div class="card-body p-0">
 								<xsl:for-each select="Items/BookingCartItem">
 									<xsl:call-template name="RenderItem">
 										<xsl:with-param name="item" select="."/>
@@ -54,8 +54,8 @@
 
 					<!-- Ungrouped Items -->
 					<xsl:if test="BookingCart/ItemsUngrouped/BookingCartItem[ItemType!='Fee' and ItemType!='Tax' and ItemType!='Shipping' and ItemType!='Handling' and ItemType!='Shipping_and_Handling']">
-						<div class="card shadow-sm bg-dark border-secondary">
-							<div class="card-body p-0 bg-dark">
+						<div class="card shadow-sm">
+							<div class="card-body p-0">
 								<xsl:for-each select="BookingCart/ItemsUngrouped/BookingCartItem[ItemType!='Fee' and ItemType!='Tax' and ItemType!='Shipping' and ItemType!='Handling' and ItemType!='Shipping_and_Handling']">
 									<xsl:call-template name="RenderItem">
 										<xsl:with-param name="item" select="."/>
@@ -68,13 +68,13 @@
 
 				<!-- Order Summary Column -->
 				<div class="col-lg-4">
-					<div class="card shadow-sm sticky-top bg-dark border-secondary" style="top: 20px;">
-						<div class="card-header bg-secondary text-white">
+					<div class="card shadow-sm sticky-top" style="top: 20px;">
+						<div class="card-header bg-light">
 							<h5 class="mb-0">
 								<i class="ci-calculator me-2"></i>Order Summary
 							</h5>
 						</div>
-						<div class="card-body bg-dark text-white">
+						<div class="card-body">
 							<!-- Tax, Fees, Shipping -->
 							<xsl:for-each select="BookingCart/ItemsUngrouped/BookingCartItem[ItemType='Tax' or ItemType='Shipping' or ItemType='Handling' or ItemType='Shipping_and_Handling' or ItemType='Fee']">
 								<xsl:if test="Price &gt; 0">

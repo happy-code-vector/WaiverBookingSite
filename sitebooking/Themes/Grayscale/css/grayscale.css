@@ -1,40 +1,14 @@
 /* ===================================
-   Grayscale Dark Theme Styles
-   Based on StartBootstrap Grayscale Template
+   Creative Theme Styles
+   Based on StartBootstrap Creative Template
    =================================== */
 
-/* Color Variables - Dark Grayscale Theme */
+/* Color Variables */
 :root {
-	--primary-color: #64a19d;
-	--secondary-color: #161616;
-	--text-color: #ffffff;
-	--text-muted: #adb5bd;
-	--bg-dark: #000000;
-	--bg-dark-alt: #161616;
-	--bg-dark-lighter: #1a1a1a;
-	--creative-primary: #64a19d;
-	--creative-secondary: #64a19d;
-	--creative-dark: #000000;
-	--creative-light: #161616;
-}
-
-/* Body - Dark Background */
-body {
-	font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	letter-spacing: 0.0625em;
-	background-color: var(--bg-dark);
-	color: var(--text-color);
-	padding-top: 0;
-}
-
-a {
-	color: var(--primary-color);
-	transition: all 0.3s ease-in-out;
-}
-
-a:hover {
-	color: #4a7c79;
-	text-decoration: none;
+	--creative-primary: #f4623a;
+	--creative-secondary: #f4623a;
+	--creative-dark: #212529;
+	--creative-light: #f8f9fa;
 }
 
 /* Masthead/Hero Section - Full Height */
@@ -81,8 +55,7 @@ a:hover {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	/* background: linear-gradient(to bottom, rgba(92, 77, 66, 0.3) 0%, rgba(92, 77, 66, 0.3) 100%); */
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%);
+	background: linear-gradient(to bottom, rgba(92, 77, 66, 0.3) 0%, rgba(92, 77, 66, 0.3) 100%);
 	z-index: 1;
 }
 
@@ -96,29 +69,21 @@ a:hover {
 	width: 100%;
 }
 
-.masthead .masthead-subheading,
-.masthead p {
-	max-width: 20rem;
-	font-size: 1rem;
-	color: rgba(255, 255, 255, 0.5);
-	margin: 0 auto 2rem;
-	font-weight: 400;
+.masthead .masthead-subheading {
+	font-size: 1.25rem;
+	font-weight: 300;
 	line-height: 1.5;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
 }
 
-.masthead .masthead-heading,
-.masthead h1 {
-	font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	font-size: 2.5rem;
-	line-height: 2.5rem;
-	letter-spacing: 0.8rem;
+.masthead .masthead-heading {
+	font-size: 3rem;
 	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 2rem;
 	text-transform: uppercase;
-	margin: 0 auto 1rem;
-	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-	background-clip: text;
 }
 
 .masthead hr {
@@ -134,45 +99,21 @@ a:hover {
 		padding-bottom: 0;
 	}
 
-	.masthead .masthead-subheading,
-	.masthead p {
-		font-size: 1.25rem;
+	.masthead .masthead-subheading {
+		font-size: 1.5rem;
 	}
 
-	.masthead .masthead-heading,
-	.masthead h1 {
-		font-size: 4rem;
-		line-height: 4rem;
+	.masthead .masthead-heading {
+		font-size: 4.5rem;
 	}
 }
 
-@media (min-width: 992px) {
-	.masthead {
-		height: 100vh;
-		padding: 0;
-	}
-
-	.masthead .masthead-heading,
-	.masthead h1 {
-		font-size: 5.5rem;
-		line-height: 5.5rem;
-		letter-spacing: 0.8rem;
-	}
-
-	.masthead .masthead-subheading,
-	.masthead p {
-		max-width: 30rem;
-		font-size: 1.25rem;
-	}
-}
-
-/* Navigation - Dark by default, transparent over hero */
+/* Navigation - Transparent by default */
 .navbar {
 	width: 100%;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	transition: all 0.3s ease;
-	background-color: var(--bg-dark) !important;
 }
 
 .navbar .container {
@@ -180,38 +121,13 @@ a:hover {
 	z-index: 1051;
 }
 
-/* Default navbar (dark theme) */
-.navbar .navbar-brand,
-.navbar .navbar-brand span {
-	color: #fff !important;
-}
-
-.navbar .nav-link {
-	color: rgba(255, 255, 255, 0.7) !important;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
-	color: #fff !important;
-}
-
-.navbar .btn-icon,
-.navbar .btn-icon i {
-	color: rgba(255, 255, 255, 0.85) !important;
-}
-
-.navbar .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-}
-
-/* Transparent navbar (only over hero sections) */
 .navbar-transparent {
 	background-color: transparent !important;
 }
 
 .navbar-scrolled {
-	background-color: var(--bg-dark) !important;
-	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+	background-color: #fff !important;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
@@ -230,7 +146,7 @@ a:hover {
 
 .navbar-scrolled .navbar-brand,
 .navbar-scrolled .navbar-brand span {
-	color: var(--primary-color) !important;
+	color: var(--creative-primary) !important;
 }
 
 .navbar-scrolled .navbar-brand img {
@@ -249,7 +165,7 @@ a:hover {
 }
 
 .navbar-scrolled .nav-link {
-	color: rgba(255, 255, 255, 0.7) !important;
+	color: var(--creative-dark) !important;
 	background-color: transparent !important;
 }
 
@@ -261,7 +177,7 @@ a:hover {
 
 .navbar-scrolled .nav-link:hover,
 .navbar-scrolled .nav-link:focus {
-	color: #fff !important;
+	color: var(--creative-primary) !important;
 	background-color: transparent !important;
 }
 
@@ -289,18 +205,18 @@ a:hover {
 
 .navbar-scrolled .btn-icon:hover,
 .navbar-scrolled .btn-icon:hover i {
-	color: var(--primary-color) !important;
+	color: var(--creative-primary) !important;
 	border-color: transparent !important;
 	background-color: transparent !important;
 }
 
 /* Cart Badge */
 .navbar-transparent .badge {
-	background-color: var(--primary-color) !important;
+	background-color: var(--creative-primary) !important;
 }
 
 .navbar-scrolled .badge {
-	background-color: var(--primary-color) !important;
+	background-color: var(--creative-primary) !important;
 }
 
 /* Navbar Toggler (Mobile) */
@@ -330,31 +246,26 @@ a:hover {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-/* Dropdown Menu - Dark Theme */
-.navbar .dropdown-menu,
+/* Dropdown Menu */
 .navbar-transparent .dropdown-menu {
-	background-color: var(--bg-dark-alt);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.navbar .dropdown-item,
 .navbar-transparent .dropdown-item {
-	color: var(--text-color);
+	color: var(--creative-dark);
 	background-color: transparent;
 }
 
-.navbar .dropdown-item:hover,
 .navbar-transparent .dropdown-item:hover {
-	background-color: var(--bg-dark-lighter);
-	color: var(--primary-color);
+	background-color: var(--creative-light);
+	color: var(--creative-primary);
 }
 
-.navbar .dropdown-toggle,
 .navbar-transparent .dropdown-toggle {
 	background-color: transparent !important;
 }
 
-.navbar .dropdown-toggle:hover,
 .navbar-transparent .dropdown-toggle:hover {
 	background-color: transparent !important;
 }
@@ -369,8 +280,8 @@ a:hover {
 
 /* Buttons */
 .btn-primary {
-	background-color: var(--primary-color) !important;
-	border-color: var(--primary-color) !important;
+	background-color: var(--creative-primary) !important;
+	border-color: var(--creative-primary) !important;
 	color: #fff !important;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -382,8 +293,8 @@ a:hover {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-	background-color: #4a7c79 !important;
-	border-color: #4a7c79 !important;
+	background-color: #ee4b08 !important;
+	border-color: #ee4b08 !important;
 	color: #fff !important;
 	transform: scale(1.05);
 }
@@ -433,7 +344,7 @@ section h3.section-subheading {
 section hr {
 	max-width: 50px;
 	border-width: 3px;
-	border-color: var(--primary-color);
+	border-color: var(--creative-primary);
 	margin: 1.5rem auto 3rem;
 }
 
@@ -445,11 +356,11 @@ section hr {
 	}
 }
 
-/* Services Section - Dark Background */
+/* Services Section - Orange Background */
 .services-section,
 section#services {
-	background-color: var(--bg-dark-alt);
-	color: var(--text-color);
+	background-color: var(--creative-primary);
+	color: #fff;
 	padding: 6rem 0;
 }
 
@@ -464,8 +375,8 @@ section#services h2 {
 
 .services-section hr,
 section#services hr {
-	color: var(--primary-color);
-	border-color: var(--primary-color);
+	color: #fff;
+	border-color: rgba(255, 255, 255, 0.5);
 	max-width: 50px;
 	border-width: 3px;
 	margin: 1.5rem auto;
@@ -475,7 +386,7 @@ section#services hr {
 .services-section p,
 section#services h3,
 section#services p {
-	color: var(--text-muted);
+	color: rgba(255, 255, 255, 0.9);
 }
 
 .service-item {
@@ -493,7 +404,7 @@ section#services p {
 .service-item [class*="ci-"],
 .service-item i {
 	font-size: 4rem !important;
-	color: var(--primary-color) !important;
+	color: #fff !important;
 	margin-bottom: 1.5rem;
 	display: inline-block;
 	opacity: 0.9;
@@ -505,30 +416,28 @@ section#services p {
 	margin-bottom: 1rem;
 	font-weight: 700;
 	font-size: 1.5rem;
-	color: #000;
+	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 }
 
 .service-item p {
-	color: var(--text-muted);
+	color: rgba(255, 255, 255, 0.85);
 	font-size: 1rem;
 	line-height: 1.75;
 	margin-bottom: 0;
 }
 
-/* Portfolio Section - Dark Grayscale Projects Style */
+/* Portfolio Section */
 .portfolio-section,
 section#portfolio {
-	padding: 0;
-	background-color: var(--bg-dark);
+	padding: 6rem 0;
+	background-color: #fff;
 }
 
 .portfolio-section .text-center,
 section#portfolio .text-center {
 	margin-bottom: 3rem;
-	padding-top: 4rem;
-	background-color: var(--bg-dark);
 }
 
 .portfolio-section h2,
@@ -537,72 +446,60 @@ section#portfolio h2 {
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 1rem;
-	color: #fff;
 }
 
 .portfolio-section hr,
 section#portfolio hr {
 	max-width: 50px;
 	border-width: 3px;
-	border-color: var(--primary-color);
+	border-color: var(--creative-primary);
 	margin: 1.5rem auto;
 }
 
 .portfolio-section p,
 section#portfolio p {
-	color: var(--text-muted);
+	color: #6c757d;
 	font-size: 1.125rem;
 }
 
-/* Portfolio Grid - No gaps, full width like Grayscale projects */
-.portfolio-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 0;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-@media (max-width: 767px) {
-	.portfolio-grid {
-		grid-template-columns: 1fr;
-	}
-}
-
-/* Portfolio Item - Dark Grayscale Style */
+/* Portfolio Item */
 .portfolio-item {
 	position: relative;
 	display: block;
-	margin: 0;
+	margin-bottom: 2rem;
 	cursor: pointer;
 	overflow: hidden;
-	background-color: var(--bg-dark-alt);
-	width: 100%;
-	aspect-ratio: 1 / 1;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+	transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	transform: translateY(-5px);
 }
 
 .portfolio-item img {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	object-fit: cover;
 	transition: all 0.3s ease-in-out;
 	display: block;
 }
 
 .portfolio-item:hover img {
-	transform: scale(1.1);
-	opacity: 0.5;
+	transform: scale(1.05);
+	opacity: 0.8;
 }
 
-/* Portfolio Overlay - Grayscale Dark Style */
+/* Portfolio Overlay - Creative Orange */
 .portfolio-overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+	background: linear-gradient(to bottom, rgba(244, 98, 58, 0.85), rgba(244, 98, 58, 0.85));
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 	display: flex;
@@ -641,7 +538,6 @@ section#portfolio p {
 .portfolio-overlay .project-category {
 	font-size: 1rem;
 	font-weight: 300;
-	color: var(--primary-color);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
@@ -672,7 +568,7 @@ section#portfolio p {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+	background: linear-gradient(to bottom, rgba(244, 98, 58, 0.85), rgba(244, 98, 58, 0.85));
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -712,7 +608,7 @@ section#portfolio p {
 .team-section,
 section#team {
 	padding: 6rem 0;
-	background-color: var(--bg-dark-lighter);
+	background-color: var(--creative-light);
 }
 
 .team-section h2,
@@ -728,7 +624,7 @@ section#team h2 {
 section#team hr {
 	max-width: 50px;
 	border-width: 3px;
-	border-color: var(--primary-color);
+	border-color: var(--creative-primary);
 	margin: 1.5rem auto;
 }
 
@@ -792,8 +688,8 @@ section#team p {
 }
 
 .btn-dark:hover {
-	background-color: var(--primary-color) !important;
-	border-color: var(--primary-color) !important;
+	background-color: var(--creative-primary) !important;
+	border-color: var(--creative-primary) !important;
 }
 
 /* Footer */
@@ -809,13 +705,13 @@ footer,
 footer a,
 .footer a,
 .site-footer a {
-	color: var(--primary-color);
+	color: var(--creative-primary);
 }
 
 footer a:hover,
 .footer a:hover,
 .site-footer a:hover {
-	color: #4a7c79;
+	color: #ee4b08;
 }
 
 /* Section Spacing */
@@ -986,7 +882,7 @@ html {
 
 /* Timeline inverted (for "Be Part of Our Story" ending) */
 .timeline-item.timeline-inverted .timeline-image {
-	background-color: var(--primary-color);
+	background-color: var(--creative-primary);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1045,7 +941,7 @@ html {
 }
 
 .hover-primary:hover {
-	color: var(--primary-color) !important;
+	color: var(--creative-primary) !important;
 }
 
 /* Workflow Progress Bar */
@@ -1101,8 +997,8 @@ html {
 }
 
 .btn-check:checked+.time-slot-btn {
-	background-color: var(--primary-color) !important;
-	border-color: var(--primary-color) !important;
+	background-color: var(--creative-primary) !important;
+	border-color: var(--creative-primary) !important;
 	color: #fff !important;
 	transform: scale(1.05);
 }
@@ -1124,7 +1020,7 @@ html {
 }
 
 .breadcrumb-item a:hover {
-	color: var(--primary-color) !important;
+	color: var(--creative-primary) !important;
 }
 
 .breadcrumb-item.active {
@@ -1143,7 +1039,7 @@ html {
 }
 
 .thumb-swap.border-primary {
-	border-color: var(--primary-color) !important;
+	border-color: var(--creative-primary) !important;
 }
 
 /* Sticky sidebar */
@@ -1173,7 +1069,7 @@ html {
 /* Call to Action Section */
 .cta-section {
 	padding: 6rem 0;
-	background-color: var(--primary-color);
+	background-color: var(--creative-primary);
 }
 
 .cta-section h2 {
@@ -1224,8 +1120,8 @@ html {
 
 .contact-section .form-control:focus,
 .contact-section .form-select:focus {
-	border-color: var(--primary-color);
-	box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.25);
+	border-color: var(--creative-primary);
+	box-shadow: 0 0 0 0.2rem rgba(244, 98, 58, 0.25);
 }
 
 /* Hero Content Styling */
@@ -1258,7 +1154,7 @@ html {
 section hr.divider {
 	max-width: 3.25rem;
 	border-width: 0.2rem;
-	border-color: var(--primary-color);
+	border-color: var(--creative-primary);
 	margin: 1.5rem auto;
 }
 
@@ -1272,11 +1168,11 @@ section hr.divider-light {
 }
 
 .text-primary {
-	color: var(--primary-color) !important;
+	color: var(--creative-primary) !important;
 }
 
 .bg-primary {
-	background-color: var(--primary-color) !important;
+	background-color: var(--creative-primary) !important;
 }
 
 /* Responsive Images */
@@ -1305,7 +1201,7 @@ a,
 a:focus,
 button:focus,
 .btn:focus {
-	outline: 2px solid var(--primary-color);
+	outline: 2px solid var(--creative-primary);
 	outline-offset: 2px;
 }
 
@@ -1336,7 +1232,7 @@ button:focus,
 	gap: 0;
 }
 
-.portfolio-grid>* {
+.portfolio-grid > * {
 	flex: 0 0 100%;
 	max-width: 100%;
 	padding: 0;
@@ -1344,21 +1240,21 @@ button:focus,
 }
 
 @media (min-width: 576px) {
-	.portfolio-grid>* {
+	.portfolio-grid > * {
 		flex: 0 0 50%;
 		max-width: 50%;
 	}
 }
 
 @media (min-width: 992px) {
-	.portfolio-grid>* {
+	.portfolio-grid > * {
 		flex: 0 0 33.333333%;
 		max-width: 33.333333%;
 	}
 }
 
 @media (min-width: 1200px) {
-	.portfolio-grid>* {
+	.portfolio-grid > * {
 		flex: 0 0 25%;
 		max-width: 25%;
 	}
@@ -1377,7 +1273,7 @@ button:focus,
 
 /* Team section background */
 .team-section {
-	background-color: var(--bg-dark-lighter);
+	background-color: var(--creative-light);
 }
 
 /* Portfolio section header spacing */
@@ -1429,8 +1325,8 @@ html {
 }
 
 .offcanvas .nav-link:hover {
-	color: var(--primary-color) !important;
-	background-color: var(--bg-dark-lighter);
+	color: var(--creative-primary) !important;
+	background-color: var(--creative-light);
 }
 
 .offcanvas-header {
@@ -1476,281 +1372,17 @@ html {
 }
 
 .navbar-scrolled .navbar-nav .nav-link.active {
-	color: var(--primary-color) !important;
+	color: var(--creative-primary) !important;
 }
 
 .fixed-top {
-	position: fixed !important;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 1030;
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 .navbar-sticky {
 	position: sticky;
 }
-
-/* P
-ortfolio Grid Layout - No gaps between items */
-.portfolio-section .row,
-section#portfolio .row {
-	margin: 0;
-	width: 100%;
-}
-
-.portfolio-section .row>[class*="col"],
-section#portfolio .row>[class*="col"] {
-	padding: 0;
-	margin: 0;
-}
-
-/* ====
-===============================
-   DARK THEME OVERRIDES
-   =================================== */
-
-/* All sections dark background */
-section {
-	background-color: var(--bg-dark) !important;
-	color: var(--text-color);
-}
-
-section:nth-child(even) {
-	background-color: var(--bg-dark-alt) !important;
-}
-
-/* Section headings white */
-section h1,
-section h2,
-section h3,
-section h4,
-section h5,
-section h6 {
-	color: #fff !important;
-}
-
-/* Section paragraphs muted */
-section p {
-	color: var(--text-muted) !important;
-}
-
-/* Team section dark */
-.team-section,
-section#team {
-	background-color: var(--bg-dark-alt) !important;
-}
-
-.team-section h2,
-section#team h2 {
-	color: #fff !important;
-}
-
-/* About section dark */
-.about-section,
-section#about {
-	background-color: var(--bg-dark) !important;
-}
-
-.about-section h2,
-.about-section p,
-section#about h2,
-section#about p {
-	color: #fff !important;
-}
-
-/* Contact section dark */
-.contact-section,
-section#contact {
-	background-color: var(--bg-dark-alt) !important;
-}
-
-.contact-section h2,
-section#contact h2 {
-	color: #fff !important;
-}
-
-.contact-section .form-control {
-	background-color: rgba(255, 255, 255, 0.1);
-	border-color: rgba(255, 255, 255, 0.2);
-	color: #fff;
-}
-
-.contact-section .form-control:focus {
-	background-color: rgba(255, 255, 255, 0.15);
-	border-color: var(--primary-color);
-	color: #fff;
-}
-
-.contact-section .form-label {
-	color: var(--text-muted);
-}
-
-/* CTA Section dark */
-.cta-section {
-	background-color: var(--bg-dark) !important;
-}
-
-.cta-section h2,
-.cta-section p {
-	color: #fff !important;
-}
-
-/* Cards dark */
-.card {
-	background-color: var(--bg-dark-alt);
-	border-color: rgba(255, 255, 255, 0.1);
-	color: var(--text-color);
-}
-
-.card-title,
-.card-header {
-	color: #fff;
-}
-
-.card-text {
-	color: var(--text-muted);
-}
-
-/* Dropdown menus dark */
-.dropdown-menu {
-	background-color: var(--bg-dark-alt);
-	border-color: rgba(255, 255, 255, 0.1);
-}
-
-.dropdown-item {
-	color: var(--text-color);
-}
-
-.dropdown-item:hover,
-.dropdown-item:focus {
-	background-color: var(--bg-dark-lighter);
-	color: var(--primary-color);
-}
-
-/* Offcanvas dark */
-.offcanvas {
-	background-color: var(--bg-dark);
-}
-
-.offcanvas-header {
-	border-bottom-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Buttons */
-.btn-light {
-	background-color: var(--bg-dark-alt) !important;
-	border-color: rgba(255, 255, 255, 0.2) !important;
-	color: #fff !important;
-}
-
-.btn-light:hover {
-	background-color: var(--bg-dark-lighter) !important;
-	border-color: var(--primary-color) !important;
-	color: #fff !important;
-}
-
-/* Navbar toggler dark */
-.navbar-scrolled .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-}
-
-/* Text utilities */
-.text-muted {
-	color: var(--text-muted) !important;
-}
-
-.text-dark {
-	color: var(--text-color) !important;
-}
-
-/* Background utilities */
-.bg-light {
-	background-color: var(--bg-dark-alt) !important;
-}
-
-.bg-white {
-	background-color: var(--bg-dark) !important;
-}
-
-
-/* Back to Top Button - Dark Theme */
-.floating-buttons {
-	position: fixed;
-	z-index: 1030;
-}
-
-.btn-scroll-top {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 600;
-	color: rgba(255, 255, 255, 0.9) !important;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	opacity: 0;
-	visibility: hidden;
-	transform: translateX(100%);
-	background-color: rgba(22, 22, 22, 0.95) !important;
-	border: 1px solid rgba(100, 161, 157, 0.3) !important;
-	border-radius: 50rem;
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-}
-
-.btn-scroll-top.show {
-	opacity: 1;
-	visibility: visible;
-	transform: translateX(0);
-}
-
-.btn-scroll-top:hover {
-	color: #fff !important;
-	background-color: var(--primary-color) !important;
-	border-color: var(--primary-color) !important;
-	transform: translateX(-0.25rem);
-	box-shadow: 0 0.75rem 1.5rem rgba(100, 161, 157, 0.4);
-}
-
-.btn-scroll-top:visited {
-	color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.btn-scroll-top svg {
-	pointer-events: none;
-	stroke: currentColor;
-}
-
-.btn-scroll-top .animate-target {
-	transition: transform 0.3s ease;
-}
-
-.btn-scroll-top:hover .animate-target {
-	transform: translateX(0.25rem);
-}
-
-/* Progress bar on button */
-.btn-scroll-top svg rect {
-	stroke: rgba(255, 255, 255, 0.3);
-}
-
-.btn-scroll-top:hover svg rect {
-	stroke: var(--primary-color);
-}
-
-/* Z-index utilities */
-.z-sticky {
-	z-index: 1020;
-}
-
-.z-fixed {
-	z-index: 1030;
-}
-
-/* Animate slide end */
-.animate-slide-end {
-	transition: transform 0.3s ease, opacity 0.3s ease;
-}
-

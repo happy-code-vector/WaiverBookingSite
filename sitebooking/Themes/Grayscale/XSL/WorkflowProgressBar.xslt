@@ -45,7 +45,7 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 											<xsl:text>bg-primary text-white</xsl:text>
 										</xsl:when>
 										<xsl:otherwise>
-											<xsl:text>bg-dark text-muted border border-secondary border-2</xsl:text>
+											<xsl:text>bg-light text-muted border border-2</xsl:text>
 										</xsl:otherwise>
 									</xsl:choose>
 								</xsl:attribute>
