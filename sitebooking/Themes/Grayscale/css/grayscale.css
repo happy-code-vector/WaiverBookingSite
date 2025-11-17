@@ -44,7 +44,7 @@ a:hover {
 
 .navbar-scrolled,
 #mainNav.navbar-shrink {
-  background-color: #000 !important;
+  background-color: rgba(255, 255, 255, 0.9) !important; background-color: rgba(22, 22, 22, 0.95) !important; border: 1px solid rgba(100, 161, 157, 0.3);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -717,7 +717,7 @@ section p {
 
 /* Utility Classes */
 .bg-black {
-  background-color: #000 !important;
+  background-color: rgba(255, 255, 255, 0.9) !important; background-color: rgba(22, 22, 22, 0.95) !important; border: 1px solid rgba(100, 161, 157, 0.3);
 }
 
 .text-primary {
@@ -788,4 +788,73 @@ button:focus,
 
 .offcanvas-body {
   padding: 1rem 0;
+}
+
+/* Back to Top Button */
+.floating-buttons {
+	position: fixed;
+	z-index: 1030;
+}
+
+.btn-scroll-top.show {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
+}
+
+.btn-scroll-top:hover {
+	color: var(--primary-color);
+	transform: translateX(-0.25rem);
+	box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-scroll-top svg {
+	pointer-events: none;
+	stroke: currentColor;
+}
+
+.btn-scroll-top .animate-target {
+	transition: transform 0.3s ease;
+}
+
+.btn-scroll-top:hover .animate-target {
+	transform: translateX(0.25rem);
+}
+
+.btn-scroll-top { position: relative; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; color: rgba(255, 255, 255, 0.9) !important; text-decoration: none; transition: all 0.3s ease; opacity: 0; visibility: hidden; transform: translateX(100%); background-color: rgba(22, 22, 22, 0.95) !important; border: 1px solid rgba(100, 161, 157, 0.3) !important; border-radius: 50rem; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); } .btn-scroll-top:visited { color: rgba(255, 255, 255, 0.9) !important; } .btn-scroll-top:hover, .btn-scroll-top:focus { color: #fff !important; background-color: var(--primary-color) !important; border-color: var(--primary-color) !important; }
+
+/* Z-index utilities */
+.z-sticky {
+	z-index: 1020;
+}
+
+.z-fixed {
+	z-index: 1030;
+}
+
+/* Animate slide end */
+.animate-slide-end {
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+/* Override for dark theme back to top button */
+.btn-scroll-top {
+	background-color: rgba(22, 22, 22, 0.95) !important;
+	border: 1px solid rgba(100, 161, 157, 0.3) !important;
+	color: rgba(255, 255, 255, 0.9) !important;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.btn-scroll-top:hover,
+.btn-scroll-top:focus {
+	background-color: var(--primary-color) !important;
+	border-color: var(--primary-color) !important;
+	color: #fff !important;
+}
+
+.btn-scroll-top:visited {
+	color: rgba(255, 255, 255, 0.9) !important;
 }

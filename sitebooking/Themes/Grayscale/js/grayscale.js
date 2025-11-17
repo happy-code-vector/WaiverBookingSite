@@ -73,3 +73,37 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery);
+
+
+// Back to top button functionality
+(function() {
+    'use strict';
+    
+    var backToTopButton = document.querySelector('.btn-scroll-top');
+    
+    if (backToTopButton) {
+        // Show/hide button based on scroll position
+        var toggleBackToTop = function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+        
+        // Check on page load
+        toggleBackToTop();
+        
+        // Check on scroll
+        window.addEventListener('scroll', toggleBackToTop);
+        
+        // Smooth scroll to top when clicked
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+})();
