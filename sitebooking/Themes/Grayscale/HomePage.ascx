@@ -1,98 +1,104 @@
-<%@ Control Language="C#" AutoEventWireup="true"  Inherits="WaiverFile.sitebooking.Templates.WFCMSPageTemplateBase" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  Inherits="WaiverFile.sitebooking.Templates.WFCMSPageTemplateBase" %>
 <%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
 <%@ Register Src="includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 <%@ Register Src="includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
 <asp:Panel runat="server" ID="pnlHead">
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
     
-    <!-- SEO Meta Tags -->
+	<!-- SEO Meta Tags -->
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="WaiverFile">
 
-    <!-- Preloaded local web font (Inter) -->
-    <link rel="preload" href="/sitebooking/Themes/Grayscale/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<!-- Preloaded local web font (Inter) -->
+	<link rel="preload" href="/sitebooking/Themes/Grayscale/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Font icons (Cartzilla) -->
-    <link rel="preload" href="/sitebooking/Themes/Grayscale/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/icons/cartzilla-icons.min.css">
+	<!-- Font icons -->
+	<link rel="preload" href="/sitebooking/Themes/Grayscale/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/sitebooking/Themes/Grayscale/icons/cartzilla-icons.min.css">
 
-    <!-- Bootstrap + Theme styles -->
-    <link rel="preload" href="/sitebooking/Themes/Grayscale/css/theme.min.css" as="style">
-    <link rel="preload" href="/sitebooking/Themes/Grayscale/css/theme.rtl.min.css" as="style">
-    <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/theme.min.css" id="themestyles">
-    
-    <!-- Grayscale Theme Styles -->
-    <link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/grayscale.css">
-    
-    <!-- Choices.js for enhanced selects -->
-    <link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
+	<!-- Bootstrap + Theme styles -->
+	<link rel="preload" href="/sitebooking/Themes/Grayscale/css/theme.min.css" as="style">
+  <link rel="preload" href="/sitebooking/Themes/Grayscale/css/theme.rtl.min.css" as="style">
+	<link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/theme.min.css" id="themestyles">
+	<link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
+
+	<!-- Custom Grayscale Theme Styles -->
+	<link rel="stylesheet" href="/sitebooking/Themes/Grayscale/css/Grayscale.css">
     
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
 </asp:Panel>
 
 <uc1:Header runat="server" id="Header1" />
 
-<!-- Masthead -->
-<header class="masthead">
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <div class="d-flex justify-content-center">
-            <div class="text-center">
-                <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+<!-- Page content -->
+<main class="content-wrapper">
+    
+    <!-- Hero Section (Full Width Full Height) -->
+    <header class="masthead" id="home">
+        <div class="masthead-content">
+            <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+        </div>
+    </header>
+    
+    <!-- Services Section (Orange Background) -->
+    <section class="services-section" id="services">
+        <div class="container px-4 px-lg-5">
+            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+            <div class="row gx-4 gx-lg-5">
+                <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
             </div>
         </div>
-    </div>
-</header>
+    </section>
 
-<!-- About Section -->
-<section class="about-section text-center" id="about">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8">
-                <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section class="projects-section bg-light" id="projects">
-    <div class="container px-4 px-lg-5">
-        <!-- Featured Project Row -->
-        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
-        </div>
-        
-        <!-- Project Rows -->
-        <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
-    </div>
-</section>
-
-<!-- Signup Section -->
-<section class="signup-section" id="signup">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-10 col-lg-8 mx-auto text-center">
+    <!-- Portfolio Section (Full Width Grid) -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container-fluid p-0">
+            <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
+            
+            <!-- Portfolio Items Grid - No gaps -->
+            <div class="portfolio-grid">
                 <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section class="contact-section bg-black" id="contact">
-    <div class="container px-4 px-lg-5">
-        <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
-        
-        <div class="social d-flex justify-content-center">
-            <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+    <!-- About Section (Optional) -->
+    <section class="container py-5" id="about">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
+            
+            <ul class="row timeline">
+                <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+            </ul>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Team Section -->
+    <section class="team-section py-5" id="team">
+        <div class="container">
+            <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
+            
+            <div class="row">
+                <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Optional) -->
+    <% if (ph9.Controls.Count > 0) { %>
+    <section class="contact-section py-5" id="contact">
+        <div class="container px-4 px-lg-5">
+            <asp:PlaceHolder runat="server" ID="ph9"></asp:PlaceHolder>
+        </div>
+    </section>
+    <% } %>
+
+</main>
+          
 <uc1:Footer runat="server" id="Footer1" />
 
 <!-- Bootstrap + Theme scripts -->
