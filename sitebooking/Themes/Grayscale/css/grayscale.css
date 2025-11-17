@@ -3,10 +3,14 @@
    Based on StartBootstrap Creative Template
    =================================== */
 
-/* Color Variables */
+/* Color Variables - Grayscale Theme */
 :root {
-	--creative-primary: #f4623a;
-	--creative-secondary: #f4623a;
+	--primary-color: #64a19d;
+	--secondary-color: #161616;
+	--text-color: #212529;
+	--text-muted: #6c757d;
+	--creative-primary: #64a19d;
+	--creative-secondary: #64a19d;
 	--creative-dark: #212529;
 	--creative-light: #f8f9fa;
 }
@@ -70,21 +74,29 @@
 	width: 100%;
 }
 
-.masthead .masthead-subheading {
-	font-size: 1.25rem;
-	font-weight: 300;
+.masthead .masthead-subheading,
+.masthead p {
+	max-width: 20rem;
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.5);
+	margin: 0 auto 2rem;
+	font-weight: 400;
 	line-height: 1.5;
-	margin-bottom: 1.5rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
 }
 
-.masthead .masthead-heading {
-	font-size: 3rem;
+.masthead .masthead-heading,
+.masthead h1 {
+	font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+	letter-spacing: 0.8rem;
 	font-weight: 700;
-	line-height: 1.2;
-	margin-bottom: 2rem;
 	text-transform: uppercase;
+	margin: 0 auto 1rem;
+	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
 }
 
 .masthead hr {
@@ -100,12 +112,35 @@
 		padding-bottom: 0;
 	}
 
-	.masthead .masthead-subheading {
-		font-size: 1.5rem;
+	.masthead .masthead-subheading,
+	.masthead p {
+		font-size: 1.25rem;
 	}
 
-	.masthead .masthead-heading {
-		font-size: 4.5rem;
+	.masthead .masthead-heading,
+	.masthead h1 {
+		font-size: 4rem;
+		line-height: 4rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.masthead {
+		height: 100vh;
+		padding: 0;
+	}
+
+	.masthead .masthead-heading,
+	.masthead h1 {
+		font-size: 6.5rem;
+		line-height: 6.5rem;
+		letter-spacing: 0.8rem;
+	}
+
+	.masthead .masthead-subheading,
+	.masthead p {
+		max-width: 30rem;
+		font-size: 1.25rem;
 	}
 }
 
@@ -357,17 +392,17 @@ section hr {
 	}
 }
 
-/* Services Section - Orange Background */
+/* Services Section - Light Background (Grayscale Style) */
 .services-section,
 section#services {
-	background-color: var(--creative-primary);
-	color: #fff;
+	background-color: #f8f9fa;
+	color: #212529;
 	padding: 6rem 0;
 }
 
 .services-section h2,
 section#services h2 {
-	color: #fff;
+	color: #000;
 	font-size: 2.5rem;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -376,8 +411,8 @@ section#services h2 {
 
 .services-section hr,
 section#services hr {
-	color: #fff;
-	border-color: rgba(255, 255, 255, 0.5);
+	color: var(--primary-color);
+	border-color: var(--primary-color);
 	max-width: 50px;
 	border-width: 3px;
 	margin: 1.5rem auto;
@@ -387,7 +422,7 @@ section#services hr {
 .services-section p,
 section#services h3,
 section#services p {
-	color: rgba(255, 255, 255, 0.9);
+	color: #495057;
 }
 
 .service-item {
@@ -405,7 +440,7 @@ section#services p {
 .service-item [class*="ci-"],
 .service-item i {
 	font-size: 4rem !important;
-	color: #fff !important;
+	color: var(--primary-color) !important;
 	margin-bottom: 1.5rem;
 	display: inline-block;
 	opacity: 0.9;
@@ -417,28 +452,29 @@ section#services p {
 	margin-bottom: 1rem;
 	font-weight: 700;
 	font-size: 1.5rem;
-	color: #fff;
+	color: #000;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 }
 
 .service-item p {
-	color: rgba(255, 255, 255, 0.85);
+	color: #6c757d;
 	font-size: 1rem;
 	line-height: 1.75;
 	margin-bottom: 0;
 }
 
-/* Portfolio Section */
+/* Portfolio Section - Grayscale Projects Style */
 .portfolio-section,
 section#portfolio {
-	padding: 6rem 0;
+	padding: 0;
 	background-color: #fff;
 }
 
 .portfolio-section .text-center,
 section#portfolio .text-center {
 	margin-bottom: 3rem;
+	padding-top: 4rem;
 }
 
 .portfolio-section h2,
@@ -447,13 +483,14 @@ section#portfolio h2 {
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 1rem;
+	color: #000;
 }
 
 .portfolio-section hr,
 section#portfolio hr {
 	max-width: 50px;
 	border-width: 3px;
-	border-color: var(--creative-primary);
+	border-color: var(--primary-color);
 	margin: 1.5rem auto;
 }
 
@@ -463,44 +500,55 @@ section#portfolio p {
 	font-size: 1.125rem;
 }
 
-/* Portfolio Item */
+/* Portfolio Grid - No gaps, full width like Grayscale projects */
+.portfolio-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+@media (max-width: 767px) {
+	.portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Portfolio Item - Grayscale Style */
 .portfolio-item {
 	position: relative;
 	display: block;
-	margin-bottom: 2rem;
+	margin: 0;
 	cursor: pointer;
 	overflow: hidden;
-	border-radius: 0.5rem;
-	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-	transition: all 0.3s ease;
-}
-
-.portfolio-item:hover {
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-	transform: translateY(-5px);
+	background-color: #f8f9fa;
+	width: 100%;
+	aspect-ratio: 1 / 1;
 }
 
 .portfolio-item img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	object-fit: cover;
 	transition: all 0.3s ease-in-out;
 	display: block;
 }
 
 .portfolio-item:hover img {
-	transform: scale(1.05);
-	opacity: 0.8;
+	transform: scale(1.1);
+	opacity: 0.5;
 }
 
-/* Portfolio Overlay - Creative Orange */
+/* Portfolio Overlay - Grayscale Dark Style */
 .portfolio-overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to bottom, rgba(244, 98, 58, 0.85), rgba(244, 98, 58, 0.85));
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 	display: flex;
@@ -539,6 +587,7 @@ section#portfolio p {
 .portfolio-overlay .project-category {
 	font-size: 1rem;
 	font-weight: 300;
+	color: var(--primary-color);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
@@ -1233,7 +1282,7 @@ button:focus,
 	gap: 0;
 }
 
-.portfolio-grid > * {
+.portfolio-grid>* {
 	flex: 0 0 100%;
 	max-width: 100%;
 	padding: 0;
@@ -1241,21 +1290,21 @@ button:focus,
 }
 
 @media (min-width: 576px) {
-	.portfolio-grid > * {
+	.portfolio-grid>* {
 		flex: 0 0 50%;
 		max-width: 50%;
 	}
 }
 
 @media (min-width: 992px) {
-	.portfolio-grid > * {
+	.portfolio-grid>* {
 		flex: 0 0 33.333333%;
 		max-width: 33.333333%;
 	}
 }
 
 @media (min-width: 1200px) {
-	.portfolio-grid > * {
+	.portfolio-grid>* {
 		flex: 0 0 25%;
 		max-width: 25%;
 	}
@@ -1377,13 +1426,27 @@ html {
 }
 
 .fixed-top {
-  position: fixed !important;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
+	position: fixed !important;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
 }
 
 .navbar-sticky {
 	position: sticky;
+}
+
+/* P
+ortfolio Grid Layout - No gaps between items */
+.portfolio-section .row,
+section#portfolio .row {
+	margin: 0;
+	width: 100%;
+}
+
+.portfolio-section .row>[class*="col"],
+section#portfolio .row>[class*="col"] {
+	padding: 0;
+	margin: 0;
 }
