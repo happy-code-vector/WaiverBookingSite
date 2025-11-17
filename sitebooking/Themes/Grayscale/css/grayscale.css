@@ -166,12 +166,13 @@ a:hover {
 	}
 }
 
-/* Navigation - Transparent by default */
+/* Navigation - Dark by default, transparent over hero */
 .navbar {
 	width: 100%;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	transition: all 0.3s ease;
+	background-color: var(--bg-dark) !important;
 }
 
 .navbar .container {
@@ -179,6 +180,31 @@ a:hover {
 	z-index: 1051;
 }
 
+/* Default navbar (dark theme) */
+.navbar .navbar-brand,
+.navbar .navbar-brand span {
+	color: #fff !important;
+}
+
+.navbar .nav-link {
+	color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+	color: #fff !important;
+}
+
+.navbar .btn-icon,
+.navbar .btn-icon i {
+	color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.navbar .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Transparent navbar (only over hero sections) */
 .navbar-transparent {
 	background-color: transparent !important;
 }
@@ -304,26 +330,31 @@ a:hover {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu - Dark Theme */
+.navbar .dropdown-menu,
 .navbar-transparent .dropdown-menu {
-	background-color: #fff;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: var(--bg-dark-alt);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.navbar .dropdown-item,
 .navbar-transparent .dropdown-item {
-	color: var(--creative-dark);
+	color: var(--text-color);
 	background-color: transparent;
 }
 
+.navbar .dropdown-item:hover,
 .navbar-transparent .dropdown-item:hover {
 	background-color: var(--bg-dark-lighter);
 	color: var(--primary-color);
 }
 
+.navbar .dropdown-toggle,
 .navbar-transparent .dropdown-toggle {
 	background-color: transparent !important;
 }
 
+.navbar .dropdown-toggle:hover,
 .navbar-transparent .dropdown-toggle:hover {
 	background-color: transparent !important;
 }
