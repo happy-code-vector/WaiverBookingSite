@@ -37,7 +37,6 @@
 	left: -10px;
 	right: -10px;
 	bottom: -10px;
-	background-image: url('/sitebooking/Themes/Creative/images/hero-bg.jpg');
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;
@@ -712,11 +711,6 @@ footer a:hover,
 .footer a:hover,
 .site-footer a:hover {
 	color: #ee4b08;
-}
-
-/* Section Spacing */
-section {
-	padding: 6rem 0;
 }
 
 /* Smooth Scrolling */
