@@ -32,49 +32,74 @@
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
 </asp:Panel>
 
-<uc1:Header runat="server" id="HeaderNewAge" />
+<uc1:Header runat="server" id="Header1" />
 
 <!-- Page content -->
 <main class="content-wrapper">
     
-    <!-- Hero Section (Full Width Gradient) - Add NewAgeHero widget here -->
-    <asp:PlaceHolder runat="server" ID="phNewAgeHero"></asp:PlaceHolder>
+    <!-- Hero Section (Full Width Full Height) -->
+    <header class="masthead" id="home">
+        <div class="masthead-content">
+            <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+        </div>
+    </header>
     
-    <!-- Features Section -->
-    <section class="container newage-section features-section" id="newage-features">
-        <!-- Add NewAgeSectionHeader + 3x NewAgeFeatureItem widgets here -->
-        <asp:PlaceHolder runat="server" ID="phNewAgeFeatures1"></asp:PlaceHolder>
-        <div class="row">
-            <asp:PlaceHolder runat="server" ID="phNewAgeFeatures2"></asp:PlaceHolder>
+    <!-- Services Section (Orange Background) -->
+    <section class="services-section" id="services">
+        <div class="container px-4 px-lg-5">
+            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+            <div class="row gx-4 gx-lg-5">
+                <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+            </div>
         </div>
     </section>
 
-    <!-- Showcase Section (Device Mockup) -->
-    <section class="newage-section bg-light" id="newage-showcase">
+    <!-- Portfolio Section (Full Width Grid) -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container-fluid p-0">
+            <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
+            
+            <!-- Portfolio Items Grid - No gaps -->
+            <div class="portfolio-grid">
+                <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Optional) -->
+    <section class="container py-5" id="about">
         <div class="container">
-            <!-- Add NewAgeShowcase widget here -->
-            <asp:PlaceHolder runat="server" ID="phNewAgeShowcase"></asp:PlaceHolder>
+            <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
+            
+            <ul class="row timeline">
+                <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+            </ul>
         </div>
     </section>
 
-    <!-- Download/CTA Section (Gradient Background) -->
-    <section class="download-section newage-section text-center text-white" id="newage-download">
+    <!-- Team Section -->
+    <section class="team-section py-5" id="team">
         <div class="container">
-            <!-- Add NewAgeDownload widget here -->
-            <asp:PlaceHolder runat="server" ID="phNewAgeDownload"></asp:PlaceHolder>
+            <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
+            
+            <div class="row">
+                <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
+            </div>
         </div>
     </section>
 
-    <!-- Additional Content Section (Optional) -->
-    <% if (phNewAgeContent.Controls.Count > 0) { %>
-    <section class="container newage-section" id="newage-content">
-        <asp:PlaceHolder runat="server" ID="phNewAgeContent"></asp:PlaceHolder>
+    <!-- Contact Section (Optional) -->
+    <% if (ph9.Controls.Count > 0) { %>
+    <section class="contact-section py-5" id="contact">
+        <div class="container px-4 px-lg-5">
+            <asp:PlaceHolder runat="server" ID="ph9"></asp:PlaceHolder>
+        </div>
     </section>
     <% } %>
 
 </main>
           
-<uc1:Footer runat="server" id="FooterNewAge" />
+<uc1:Footer runat="server" id="Footer1" />
 
 <!-- Bootstrap + Theme scripts -->
 <script src="/sitebooking/Themes/NewAge/js/theme.js"></script>
