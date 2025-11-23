@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true"  Inherits="WaiverFile.sitebooking.Templates.WFCMSPageTemplateBase" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  Inherits="WaiverFile.sitebooking.Templates.WFCMSPageTemplateBase" %>
 <%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
 <%@ Register Src="includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 <%@ Register Src="includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
@@ -14,20 +14,20 @@
     <meta name="author" content="WaiverFile">
 
 	<!-- Preloaded local web font (Inter) -->
-	<link rel="preload" href="/sitebooking/Themes/NewAge/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/sitebooking/Themes/Agency/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
 	<!-- Font icons -->
-	<link rel="preload" href="/sitebooking/Themes/NewAge/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="stylesheet" href="/sitebooking/Themes/NewAge/icons/cartzilla-icons.min.css">
+	<link rel="preload" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.min.css">
 
 	<!-- Bootstrap + Theme styles -->
-	<link rel="preload" href="/sitebooking/Themes/NewAge/css/theme.min.css" as="style">
-  <link rel="preload" href="/sitebooking/Themes/NewAge/css/theme.rtl.min.css" as="style">
-	<link rel="stylesheet" href="/sitebooking/Themes/NewAge/css/theme.min.css" id="themestyles">
+	<link rel="preload" href="/sitebooking/Themes/Agency/css/theme.min.css" as="style">
+  <link rel="preload" href="/sitebooking/Themes/Agency/css/theme.rtl.min.css" as="style">
+	<link rel="stylesheet" href="/sitebooking/Themes/Agency/css/theme.min.css" id="themestyles">
 	<link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
 
-	<!-- Custom NewAge Theme Styles -->
-	<link rel="stylesheet" href="/sitebooking/Themes/NewAge/css/newage.css">
+	<!-- Custom Agency Theme Styles -->
+	<link rel="stylesheet" href="/sitebooking/Themes/Agency/css/agency.css">
     
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
 </asp:Panel>
@@ -36,31 +36,23 @@
 
 
 <!-- Page content -->
-<main class="content-wrapper">
+<main class="main-content">
 
-    <!-- Hero Section with Gradient Background -->
-    <section class="newage-hero text-center" id="hero">
+    <!-- Hero Section / Top Content -->
+    <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+    
+    <!-- Main Content Area -->
+    <section class="hero-section bg-light py-5">
         <div class="container">
-            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+            <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
         </div>
     </section>
     
-    <!-- Main Booking Content Area -->
-    <section class="newage-section bg-light" id="booking-content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-8">
-                    <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Additional Info Section (Conditional) -->
+    <!-- Two Column Section (Conditional) -->
     <% if (ph2.Controls.Count > 0 || ph3.Controls.Count > 0) { %>
-    <section class="newage-section">
+    <section class="two-column-section py-5 bg-light">
         <div class="container">
-            <div class="row g-4 align-items-center">
+            <div class="row g-4">
                 <div class="col-lg-6">
                     <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
                 </div>
@@ -72,9 +64,9 @@
     </section>
     <% } %>
 
-    <!-- CTA Section (Conditional) -->
+    <!-- Bottom Section -->
     <% if (ph4.Controls.Count > 0) { %>
-    <section class="download-section newage-section text-center">
+    <section class="bottom-section py-5">
         <div class="container">
             <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
         </div>
@@ -86,4 +78,4 @@
 <uc1:Footer runat="server" id="Footer1" />
 
 <!-- Bootstrap + Theme scripts -->
-<script src="/sitebooking/Themes/NewAge/js/theme.js"></script>
+<script src="/sitebooking/Themes/Agency/js/theme.js"></script>
