@@ -37,61 +37,81 @@
 <!-- Page content -->
 <main class="content-wrapper">
     
-    <!-- Hero Section (Full Width Full Height) -->
-    <header class="masthead" id="home">
-        <div class="masthead-content">
+    <!-- Hero Section with Gradient Background -->
+    <section class="newage-hero text-center" id="home">
+        <div class="container">
             <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
         </div>
-    </header>
+    </section>
     
-    <!-- Services Section (Orange Background) -->
-    <section class="services-section" id="services">
-        <div class="container px-4 px-lg-5">
-            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
-            <div class="row gx-4 gx-lg-5">
+    <!-- Features Section -->
+    <section class="features-section newage-section" id="features">
+        <div class="container">
+            <div class="section-heading">
+                <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+            </div>
+            <div class="row g-4">
                 <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section (Full Width Grid) -->
-    <section class="portfolio-section" id="portfolio">
-        <div class="container-fluid p-0">
-            <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
-            
-            <!-- Portfolio Items Grid - No gaps -->
-            <div class="portfolio-grid">
-                <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
+    <!-- Device Showcase Section (Alternating Layout) -->
+    <section class="newage-section" id="showcase">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="device-mockup">
+                        <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="showcase-text">
+                        <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section (Optional) -->
-    <section class="container py-5" id="about">
+    <!-- Second Showcase Section (Reversed Layout) -->
+    <% if (ph5.Controls.Count > 0 || ph6.Controls.Count > 0) { %>
+    <section class="newage-section bg-light" id="showcase-2">
         <div class="container">
-            <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
-            
-            <ul class="row timeline">
-                <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
-            </ul>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="device-mockup">
+                        <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="showcase-text">
+                        <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <% } %>
 
-    <!-- Team Section -->
-    <section class="team-section py-5" id="team">
+    <!-- Testimonials / Additional Content Section -->
+    <% if (ph7.Controls.Count > 0) { %>
+    <section class="newage-section" id="testimonials">
         <div class="container">
-            <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
-            
-            <div class="row">
+            <div class="section-heading">
+                <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
+            </div>
+            <div class="row g-4">
                 <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
             </div>
         </div>
     </section>
+    <% } %>
 
-    <!-- Contact Section (Optional) -->
+    <!-- Download / CTA Section with Gradient -->
     <% if (ph9.Controls.Count > 0) { %>
-    <section class="contact-section py-5" id="contact">
-        <div class="container px-4 px-lg-5">
+    <section class="download-section newage-section text-center" id="download">
+        <div class="container">
             <asp:PlaceHolder runat="server" ID="ph9"></asp:PlaceHolder>
         </div>
     </section>

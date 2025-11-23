@@ -36,23 +36,31 @@
 
 
 <!-- Page content -->
-<main class="main-content">
+<main class="content-wrapper">
 
-    <!-- Hero Section / Top Content -->
-    <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
-    
-    <!-- Main Content Area -->
-    <section class="hero-section bg-light py-5">
+    <!-- Hero Section with Gradient Background -->
+    <section class="newage-hero text-center" id="hero">
         <div class="container">
-            <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
         </div>
     </section>
     
-    <!-- Two Column Section (Conditional) -->
-    <% if (ph2.Controls.Count > 0 || ph3.Controls.Count > 0) { %>
-    <section class="two-column-section py-5 bg-light">
+    <!-- Main Booking Content Area -->
+    <section class="newage-section bg-light" id="booking-content">
         <div class="container">
-            <div class="row g-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Additional Info Section (Conditional) -->
+    <% if (ph2.Controls.Count > 0 || ph3.Controls.Count > 0) { %>
+    <section class="newage-section">
+        <div class="container">
+            <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
                     <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
                 </div>
@@ -64,9 +72,9 @@
     </section>
     <% } %>
 
-    <!-- Bottom Section -->
+    <!-- CTA Section (Conditional) -->
     <% if (ph4.Controls.Count > 0) { %>
-    <section class="bottom-section py-5">
+    <section class="download-section newage-section text-center">
         <div class="container">
             <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
         </div>

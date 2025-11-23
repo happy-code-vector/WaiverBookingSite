@@ -35,7 +35,7 @@
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
     <link rel="preload" href="/sitebooking/Themes/NewAge/css/theme.min.css" as="style">
     <link rel="preload" href="/sitebooking/Themes/NewAge/css/theme.rtl.min.css" as="style">
-    <link rel="stylesheet" href="/sitebooking/Themes/NewAge/css/theme.min.css" id="themestylesLeftNav">
+    <link rel="stylesheet" href="/sitebooking/Themes/NewAge/css/theme.min.css" id="themestyles">
     <link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="/sitebooking/vendor/formvalidation/popular.min.js"></script>
@@ -54,14 +54,16 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
             </asp:ContentPlaceHolder>
     
-            <uc1:Header runat="server" id="HeaderLeftNav" />
+            <uc1:Header runat="server" id="Header1" />
                 <!-- Page content -->
                 <main class="content-wrapper">
-                    <section class="container pt-3 pt-sm-4 pt-lg-5 mt-lg-2 mt-xl-4 mt-xxl-5 newage-section" id="mission" style="scroll-margin-top: 60px">
-                        <div class="row">
+                    <section class="container pt-3 pt-sm-4 pt-lg-5 mt-lg-2 mt-xl-4 mt-xxl-5" id="mission" style="scroll-margin-top: 60px">
+                        <div class="row g-4">
                             <div class="col-lg-3">
-                                <asp:ContentPlaceHolder ID="LeftNavContent" runat="server">
-                                </asp:ContentPlaceHolder>
+                                <aside class="sidebar-newage">
+                                    <asp:ContentPlaceHolder ID="LeftNavContent" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </aside>
                             </div>
                             <div class="col-lg-9">
                                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -75,7 +77,7 @@
                         </div>
                     </section>
                 </main>            
-            <uc1:Footer runat="server" id="FooterLeftNav" />
+            <uc1:Footer runat="server" id="Footer1" />
         </div>          
           
         <!-- Bootstrap + Theme scripts -->
