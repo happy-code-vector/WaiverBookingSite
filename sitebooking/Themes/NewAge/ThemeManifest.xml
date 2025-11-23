@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-16"?>
+<WPData>
+	<Themes>
+		<Theme xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<ID>8f3c2a1d-4e5b-4c6d-8a9b-1c2d3e4f5a6b</ID>
+			<Name>NewAge</Name>
+			<Description>NewAge Theme v1.0</Description>
+			</PreviewImageUrl>
+			<Status>Public</Status>
+			<FolderName>NewAge</FolderName>
+			<MasterPageFullWidth>DefaultThemeFullWidth.Master</MasterPageFullWidth>
+			<MasterPageLeftNav>DefaultThemeLeftNav.Master</MasterPageLeftNav>
+			<MasterPageRightSidebar>DefaultThemeFullWidth.Master</MasterPageRightSidebar>
+			<MasterPageThreeColumn>DefaultThemeFullWidth.Master</MasterPageThreeColumn>
+			<PreviewUrl></PreviewUrl>
+			<WPObjectStatus>Current</WPObjectStatus>
+			<PageTemplates>
+				<PageTemplate>
+					<ID>1daca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
+					<Name>Full Width</Name>
+					<UserControlPath>BookingNewAge.ascx</UserControlPath>
+					<Description />
+					<PreviewImageUrl />
+					<Status>Public</Status>
+					<PageLayout>FullWidth</PageLayout>
+					<IsDefault>false</IsDefault>
+				</PageTemplate>
+				<PageTemplate>
+					<ID>2eaca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
+					<Name>HomePage</Name>
+					<UserControlPath>HomePage.ascx</UserControlPath>
+					<Description>Home page content with container layout</Description>
+					<PreviewImageUrl />
+					<Status>Public</Status>
+					<PageLayout>FullWidth</PageLayout>
+					<IsDefault>false</IsDefault>
+				</PageTemplate>
+			</PageTemplates>			
+			
+		</Theme>
+	</Themes>
+</WPData>
