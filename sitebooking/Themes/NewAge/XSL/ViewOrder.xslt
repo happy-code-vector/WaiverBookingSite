@@ -72,7 +72,7 @@
 			<!-- Header -->
 			<div class="mb-3 border-bottom pb-2">
 				<div class="d-flex flex-wrap align-items-center gap-2">
-					<h2 class="mb-0">
+					<h2 class="mb-0 text-gradient">
 						Order #<xsl:value-of select="$order/OrderNumber"/>
 					</h2>
 					<span>
@@ -109,8 +109,8 @@
 				<!-- MAIN (Items, Totals, Status history, Customer) -->
 				<div class="col-lg-8">
 					<!-- Items -->
-					<div class="card shadow-sm mb-3">
-						<div class="card-header bg-light">
+					<div class="card shadow-primary mb-3 hover-lift">
+						<div class="card-header bg-gradient-primary text-white">
 							<strong>Items</strong>
 						</div>
 						<div class="card-body p-0">
@@ -181,7 +181,7 @@
 											<tfoot>
 												<tr>
 													<td colspan="3" class="text-end fw-bold">Grand Total</td>
-													<td class="text-end fw-bold">
+													<td class="text-end fw-bold text-gradient">
 														<xsl:call-template name="Money">
 															<xsl:with-param name="n" select="$grandTotal"/>
 														</xsl:call-template>
@@ -199,8 +199,8 @@
 					</div>
 
 					<!-- Status History -->
-					<div class="card shadow-sm mb-3">
-						<div class="card-header bg-light">
+					<div class="card shadow-primary mb-3 hover-lift">
+						<div class="card-header bg-gradient-primary text-white">
 							<strong>Status History</strong>
 						</div>
 						<div class="card-body p-0">
@@ -259,8 +259,8 @@
 					</div>
 
 					<!-- Customer (keep visible; hide on xs if you’d like) -->
-					<div class="card shadow-sm">
-						<div class="card-header bg-light">
+					<div class="card shadow-primary hover-lift">
+						<div class="card-header bg-gradient-primary text-white">
 							<strong>Customer</strong>
 						</div>
 						<div class="card-body">
@@ -295,8 +295,8 @@
 
 				<!-- SIDEBAR (Related Bookings) -->
 				<div class="col-lg-4">
-					<div class="card shadow-sm">
-						<div class="card-header bg-light d-flex justify-content-between align-items-center">
+					<div class="card shadow-primary hover-lift">
+						<div class="card-header bg-gradient-primary text-white d-flex justify-content-between align-items-center">
 							<strong>Related Bookings</strong>
 							<span class="badge bg-secondary">
 								<xsl:value-of select="count($order/Bookings/Booking)"/>

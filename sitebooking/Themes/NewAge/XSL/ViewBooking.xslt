@@ -116,7 +116,7 @@
 			  <section class="container py-4 py-lg-5">
 				  <!-- Header -->
 				  <div class="d-flex align-items-center justify-content-between mb-3">
-					  <h1 class="h4 mb-0">
+					  <h1 class="h4 mb-0 text-gradient">
 						  <xsl:choose>
 							  <xsl:when test="normalize-space(/Booking/AdmissionItems/BookingAdmissionItem/Item/Name)">
 								  <xsl:value-of select="/Booking/AdmissionItems/BookingAdmissionItem/Item/Name"/>
@@ -211,7 +211,7 @@
 							  <!-- Participants -->
 							  <div class="bg-body-tertiary rounded-5 p-4">
 								  <div class="d-flex align-items-center justify-content-between mb-2">
-									  <h5 class="mb-0">Participants</h5>
+									  <h5 class="mb-0 text-gradient">Participants</h5>
 
 								  </div>
 

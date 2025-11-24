@@ -26,7 +26,7 @@
   <xsl:template match="/">
 
     <div class="container my-4">
-      <h4 class="mb-4">
+      <h4 class="mb-4 text-gradient">
         <i class="ci-clock me-2"></i>Select a Time Slot
       </h4>
       
