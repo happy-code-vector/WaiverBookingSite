@@ -41,11 +41,13 @@
     <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
     
     <!-- Services Section -->
-    <section class="container py-5 my-4" id="services">
-        <!-- Add AgencySectionHeader + 3x AgencyServiceItem widgets here -->
-        <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
-        <div class="row">
-            <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+    <section class="container py-5 my-4" id="services">    
+        <div class="container">
+            <!-- Add AgencySectionHeader + 3x AgencyServiceItem widgets here -->
+            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+            <div class="row">
+                <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+            </div>
         </div>
     </section>
 
