@@ -214,7 +214,7 @@ section h3.section-subheading {
 @media (min-width: 992px) {
 	#services .container {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		gap: 3rem;
 	}
 	
@@ -289,7 +289,7 @@ section h3.section-subheading {
 @media (min-width: 992px) {
 	.portfolio-section .container {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		gap: 3rem;
 	}
 	
@@ -387,7 +387,7 @@ section h3.section-subheading {
 @media (min-width: 992px) {
 	.team-section .container {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		gap: 3rem;
 	}
 	
