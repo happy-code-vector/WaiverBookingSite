@@ -37,13 +37,13 @@
 <!-- Page content -->
 <main class="content-wrapper">
     
-    <!-- Hero Section (Full Width) - Add AgencyHero widget here -->
+    <!-- Hero Section (Full Width) -->
     <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
     
     <!-- Services Section -->
     <section class="container py-5 my-4" id="services">    
         <div class="container">
-            <!-- Add AgencySectionHeader + 3x AgencyServiceItem widgets here -->
+            <!-- Section Header + Service Items -->
             <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
             <div class="row">
                 <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
@@ -54,10 +54,10 @@
     <!-- Portfolio Section -->
     <section class="portfolio-section py-5" id="portfolio">
         <div class="container">
-            <!-- Add AgencySectionHeader widget here -->
+            <!-- Section Header -->
             <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
             
-            <!-- Portfolio Items Grid - Add 6x AgencyPortfolioItem widgets here -->
+            <!-- Portfolio Items Grid -->
             <div class="row">
                 <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
             </div>
@@ -67,10 +67,10 @@
     <!-- About Section (Optional) -->
     <section class="container py-5" id="about">
         <div class="container">
-            <!-- Add AgencySectionHeader widget here -->
+            <!-- Section Header -->
             <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
             
-            <!-- Portfolio Items Grid - Add 6x AgencyPortfolioItem widgets here -->
+            <!-- Timeline Items -->
             <ul class="row timeline">
                 <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
             </ul>
@@ -80,10 +80,10 @@
     <!-- Team Section -->
     <section class="team-section py-5" id="portfolio">
         <div class="container">
-            <!-- Add AgencySectionHeader widget here -->
+            <!-- Section Header -->
             <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
             
-            <!-- Portfolio Items Grid - Add 6x AgencyPortfolioItem widgets here -->
+            <!-- Team Items Grid -->
             <div class="row">
                 <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
             </div>
