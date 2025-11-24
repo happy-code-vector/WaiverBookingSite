@@ -14,20 +14,20 @@
     <meta name="author" content="WaiverFile">
 
 	<!-- Preloaded local web font (Inter) -->
-	<link rel="preload" href="/sitebooking/Themes/Agency/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/sitebooking/Themes/NewAge/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
 	<!-- Font icons -->
-	<link rel="preload" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="stylesheet" href="/sitebooking/Themes/Agency/icons/cartzilla-icons.min.css">
+	<link rel="preload" href="/sitebooking/Themes/NewAge/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/sitebooking/Themes/NewAge/icons/cartzilla-icons.min.css">
 
 	<!-- Bootstrap + Theme styles -->
-	<link rel="preload" href="/sitebooking/Themes/Agency/css/theme.min.css" as="style">
-  <link rel="preload" href="/sitebooking/Themes/Agency/css/theme.rtl.min.css" as="style">
-	<link rel="stylesheet" href="/sitebooking/Themes/Agency/css/theme.min.css" id="themestyles">
+	<link rel="preload" href="/sitebooking/Themes/NewAge/css/theme.min.css" as="style">
+  <link rel="preload" href="/sitebooking/Themes/NewAge/css/theme.rtl.min.css" as="style">
+	<link rel="stylesheet" href="/sitebooking/Themes/NewAge/css/theme.min.css" id="themestyles">
 	<link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
 
-	<!-- Custom Agency Theme Styles -->
-	<link rel="stylesheet" href="/sitebooking/Themes/Agency/css/agency.css">
+	<!-- Custom NewAge Theme Styles -->
+	<link rel="stylesheet" href="/sitebooking/Themes/NewAge/css/newage.css">
     
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
 </asp:Panel>
@@ -100,4 +100,4 @@
 <uc1:Footer runat="server" id="Footer1" />
 
 <!-- Bootstrap + Theme scripts -->
-<script src="/sitebooking/Themes/Agency/js/theme.js"></script>
+<script src="/sitebooking/Themes/NewAge/js/theme.js"></script>
