@@ -11,51 +11,35 @@
 	<xsl:param name="CustomerIsAuthenticated"></xsl:param>
 
   <xsl:template match="/">
-
 	 
 	  <nav class="offcanvas offcanvas-start" id="navbarNavNewAge" tabindex="-1" aria-labelledby="navbarNavNewAgeLabel">
-		  <div class="offcanvas-header py-3 border-bottom">
-			  <h5 class="offcanvas-title text-gradient fw-bold" id="navbarNavNewAgeLabel">
-				  Menu
+		  <div class="offcanvas-header py-4 border-bottom">
+			  <h5 class="offcanvas-title text-gradient fw-bold fs-4" id="navbarNavNewAgeLabel">
+				  <i class="ci-menu me-2"></i>Menu
 			  </h5>
 			  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 		  </div>
 
-		  <div class="offcanvas-body pt-3 pb-4 py-lg-0 mx-lg-auto">
+		  <div class="offcanvas-body pt-4 pb-4 py-lg-0 mx-lg-auto">
 			  <ul class="navbar-nav position-relative">
 
 				  <xsl:for-each select="/ArrayOfSitePage/SitePage[NavbarMode='Show_always' or (NavbarMode='Show_if_logged_in' and $CustomerIsAuthenticated='true')]">
-					  <li class="nav-item py-lg-2">
+					  <li class="nav-item py-lg-2 mb-2">
 						  <a href="{$BasePath}{Path}{Slug}" aria-current="page">
 							  <xsl:attribute name="class">
-								  <xsl:text>nav-link</xsl:text>
+								  <xsl:text>nav-link rounded-3 px-3 py-2 </xsl:text>
 								  <xsl:if test="$CurrPath = Path + Slug">
-									  <xsl:text> active fw-bold</xsl:text>
+									  <xsl:text>active fw-bold bg-gradient-primary text-white shadow-primary</xsl:text>
 								  </xsl:if>
 							  </xsl:attribute>
 							  <xsl:value-of select="CurrentInstance/NavbarLink" />
 						  </a>
 					  </li>
 				  </xsl:for-each>
-				  <!-- Home -->
-
-
 
 			  </ul>
 		  </div>
-
-		  
-		  <!-- Account button visible on screens < 768px wide (md breakpoint) -->
-		  <!--
-		  <div class="offcanvas-header nav border-top px-0 py-3 mt-3 d-md-none">
-			  <a class="nav-link justify-content-center w-100" href="account-signin.html">
-				  <i class="ci-user fs-lg opacity-60 ms-n2 me-2"></i>
-				  Account
-			  </a>
-		  </div>-->
 	  </nav>
-
-	  
 	  
   </xsl:template>
 

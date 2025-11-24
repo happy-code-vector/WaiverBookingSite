@@ -18,8 +18,8 @@
 
         <!-- Offcanvas Cart Preview -->
         <div class="offcanvas offcanvas-end pb-sm-2 px-sm-2" id="orderPreview" tabindex="-1" aria-labelledby="orderPreviewLabel" style="width: 500px" aria-modal="true" role="dialog">
-          <div class="offcanvas-header py-3 pt-lg-4 border-bottom">
-            <h4 class="offcanvas-title text-gradient" id="orderPreviewLabel">Your order</h4>
+          <div class="offcanvas-header py-3 pt-lg-4">
+            <h4 class="offcanvas-title" id="orderPreviewLabel">Your order</h4>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body d-flex flex-column gap-3 py-2">
@@ -94,7 +94,7 @@
               <div class="p-sm-2 p-lg-0 p-xl-2">
                 <div class="border-bottom pb-4 mb-4">
                   <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h5 class="mb-0 text-gradient">Order summary</h5>
+                    <h5 class="mb-0">Order summary</h5>
                     <div class="nav">
                       <a class="nav-link text-decoration-underline p-0" href="ViewCart.aspx">Edit</a>
                     </div>
@@ -152,7 +152,7 @@
                 <div class="border-top pt-4 mt-4">
                   <div class="d-flex justify-content-between mb-3">
                     <span class="fs-sm">Estimated total:</span>
-                    <span class="h5 mb-0 text-gradient">
+                    <span class="h5 mb-0">
                       $<xsl:value-of select="BookingCart/GrandTotal"/>
                     </span>
                   </div>

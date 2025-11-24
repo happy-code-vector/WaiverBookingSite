@@ -57,7 +57,7 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 
 				<div class="d-flex flex-wrap gap-2 justify-content-center my-4">
 					<xsl:for-each select="/Main/Steps/ArrayOfWFButton/WFButton">
-						<a href="{Url}" class="btn btn-lg btn-primary px-4 py-3 shadow-primary hover-lift">
+						<a href="{Url}" class="btn btn-lg btn-primary px-4 py-3 shadow-sm hover-lift">
 							<xsl:if test="Title!=''">
 								<xsl:attribute name="title">
 									<xsl:value-of select="Title"/>
@@ -75,7 +75,7 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 					</xsl:for-each>
 
 					<xsl:for-each select="/Main/Forms/ArrayOfWFButton/WFButton">
-						<a href="{Url}" class="btn btn-lg btn-outline-primary px-4 py-3 shadow-primary hover-lift">
+						<a href="{Url}" class="btn btn-lg btn-outline-primary px-4 py-3 shadow-sm hover-lift">
 							<xsl:if test="Title!=''">
 								<xsl:attribute name="title">
 									<xsl:value-of select="Title"/>

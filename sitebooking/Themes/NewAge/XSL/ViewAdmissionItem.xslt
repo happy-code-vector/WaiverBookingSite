@@ -68,8 +68,8 @@
             </div>
 
             <!-- Pricing Breakdown -->
-            <div class="card shadow-primary mb-4 hover-lift">
-              <div class="card-header bg-gradient-primary text-white">
+            <div class="card shadow-sm mb-4">
+              <div class="card-header bg-light">
                 <h5 class="mb-0">
                   <i class="ci-dollar-sign me-2"></i>Pricing Options
                 </h5>
@@ -78,7 +78,7 @@
                 <xsl:for-each select="PricingGridRef/TimeRules/PricingGridTimeRule">
                   <xsl:variable name="timeRuleId" select="ID"/>
                   <div class="mb-3 p-3 bg-light rounded">
-                    <h6 class="text-gradient fw-bold mb-3">
+                    <h6 class="text-primary fw-bold mb-3">
                       <i class="ci-clock me-2"></i>
                       <xsl:value-of select="Name"/>
                     </h6>
@@ -94,7 +94,7 @@ select="/AdmissionItem/CurrentPrices/AdmissionItemPrice[PersonTypeID = $ptId and
                               <i class="ci-user me-1"></i>
                               <xsl:value-of select="Name"/>
                             </span>
-                            <span class="fw-bold text-gradient">
+                            <span class="fw-bold text-primary">
                               <xsl:choose>
                                 <xsl:when test="$price">
                                   $<xsl:value-of select="format-number($price, '#,##0.00')"/>
@@ -114,8 +114,8 @@ select="/AdmissionItem/CurrentPrices/AdmissionItemPrice[PersonTypeID = $ptId and
             </div>
 
             <!-- Booking Section -->
-            <div class="card shadow-primary-lg border-0 hover-lift">
-              <div class="card-header bg-gradient-primary text-white">
+            <div class="card shadow-lg border-0">
+              <div class="card-header bg-primary text-white">
                 <h5 class="mb-0">
                   <i class="ci-calendar me-2"></i>Book Your Visit
                 </h5>
@@ -125,7 +125,7 @@ select="/AdmissionItem/CurrentPrices/AdmissionItemPrice[PersonTypeID = $ptId and
                 <!-- Date Selection -->
                 <div class="mb-4">
                   <label class="form-label fw-bold d-flex align-items-center">
-                    <i class="ci-calendar text-gradient me-2"></i>
+                    <i class="ci-calendar text-primary me-2"></i>
                     Select Date
                   </label>
                   <telerik:RadDatePicker ID="rdpCheckIn" runat="server" skin="Bootstrap" AutoPostBack="true" CssClass="form-control-lg" />
@@ -134,7 +134,7 @@ select="/AdmissionItem/CurrentPrices/AdmissionItemPrice[PersonTypeID = $ptId and
                 <!-- Time Slots -->
                 <div class="mb-4">
                   <label class="form-label fw-bold d-flex align-items-center">
-                    <i class="ci-clock text-gradient me-2"></i>
+                    <i class="ci-clock text-primary me-2"></i>
                     Available Time Slots
                   </label>
                   <asp:PlaceHolder id="phSlots" runat="server"></asp:PlaceHolder>
@@ -143,7 +143,7 @@ select="/AdmissionItem/CurrentPrices/AdmissionItemPrice[PersonTypeID = $ptId and
                 <!-- Quantity Selection -->
                 <div class="mb-4">
                   <label class="form-label fw-bold d-flex align-items-center mb-3">
-                    <i class="ci-user text-gradient me-2"></i>
+                    <i class="ci-user text-primary me-2"></i>
                     Number of Guests
                   </label>
                   <xsl:for-each select="PricingGridRef/PersonTypes/PricingGridPersonType">

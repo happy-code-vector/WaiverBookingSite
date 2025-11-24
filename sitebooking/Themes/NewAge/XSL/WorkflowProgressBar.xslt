@@ -11,12 +11,12 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 			<div class="workflow-progress">
 				<!-- Progress Steps -->
 				<div class="d-flex justify-content-between align-items-start position-relative">
-					<!-- Progress Line -->
+					<!-- Progress Line with Gradient -->
 					<div class="progress-line position-absolute top-0 start-0 w-100" style="height: 4px; margin-top: 20px; z-index: 0;">
-						<div class="progress" style="height: 100%; background-color: rgba(102, 126, 234, 0.1);">
+						<div class="progress" style="height: 100%; background-color: rgba(102, 126, 234, 0.15); border-radius: 10px;">
 							<xsl:variable name="totalSteps" select="count(/Main/Forms/ArrayOfWaiverForm/WaiverForm)"/>
 							<xsl:variable name="progressPercent" select="($ProgressIndex div $totalSteps) * 100"/>
-							<div class="progress-bar bg-gradient-primary" role="progressbar" style="width: {$progressPercent}%; transition: width 0.3s ease;"></div>
+							<div class="progress-bar bg-gradient-primary" role="progressbar" style="width: {$progressPercent}%; transition: width 0.5s ease; border-radius: 10px;"></div>
 						</div>
 					</div>
 
@@ -30,27 +30,27 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 						<xsl:variable name="isActive" select="$ProgressIndex = position()-1"/>
 
 						<div class="workflow-step text-center position-relative" style="flex: 1; z-index: 1;">
-							<!-- Step Circle -->
-							<div class="step-circle mx-auto mb-2 d-flex align-items-center justify-content-center rounded-circle">
+							<!-- Step Circle with Gradient -->
+							<div class="step-circle mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle">
 								<xsl:attribute name="class">
-									<xsl:text>step-circle mx-auto mb-2 d-flex align-items-center justify-content-center rounded-circle </xsl:text>
+									<xsl:text>step-circle mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle </xsl:text>
 									<xsl:choose>
 										<xsl:when test="$isSkipped">
 											<xsl:text>bg-secondary text-white</xsl:text>
 										</xsl:when>
 										<xsl:when test="$isComplete">
-											<xsl:text>bg-gradient-primary text-white</xsl:text>
-										</xsl:when>
-										<xsl:when test="$isActive">
 											<xsl:text>bg-gradient-primary text-white shadow-primary</xsl:text>
 										</xsl:when>
+										<xsl:when test="$isActive">
+											<xsl:text>bg-gradient-primary text-white shadow-primary-lg</xsl:text>
+										</xsl:when>
 										<xsl:otherwise>
-											<xsl:text>bg-light text-muted border border-2</xsl:text>
+											<xsl:text>bg-body-tertiary text-muted border border-2</xsl:text>
 										</xsl:otherwise>
 									</xsl:choose>
 								</xsl:attribute>
 								<xsl:attribute name="style">
-									<xsl:text>width: 40px; height: 40px; font-size: 1.2rem;</xsl:text>
+									<xsl:text>width: 50px; height: 50px; font-size: 1.25rem; font-weight: 600;</xsl:text>
 								</xsl:attribute>
 								
 								<!-- Icon based on status -->
@@ -62,21 +62,21 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 										<i class="ci-check"></i>
 									</xsl:when>
 									<xsl:otherwise>
-										<span class="fw-bold"><xsl:value-of select="position()"/></span>
+										<span><xsl:value-of select="position()"/></span>
 									</xsl:otherwise>
 								</xsl:choose>
 							</div>
 							
 							<!-- Step Label -->
-							<div class="step-label small">
+							<div class="step-label small fw-medium">
 								<xsl:attribute name="class">
-									<xsl:text>step-label small </xsl:text>
+									<xsl:text>step-label small fw-medium </xsl:text>
 									<xsl:choose>
 										<xsl:when test="$isActive">
-											<xsl:text>fw-bold text-gradient</xsl:text>
+											<xsl:text>text-gradient fw-bold</xsl:text>
 										</xsl:when>
 										<xsl:when test="$isComplete">
-											<xsl:text>text-primary</xsl:text>
+											<xsl:text>text-gradient</xsl:text>
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:text>text-muted</xsl:text>
