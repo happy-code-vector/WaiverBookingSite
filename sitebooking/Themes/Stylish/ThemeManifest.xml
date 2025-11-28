@@ -1,96 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ThemeManifest>
-  <Theme>
-    <Name>Stylish Portfolio</Name>
-    <Description>Modern portfolio theme with dark sidebar navigation and full-screen sections. Based on Start Bootstrap Stylish Portfolio template.</Description>
-    <Version>1.0.0</Version>
-    <Author>WaiverFile</Author>
-    <ThemeFolder>Stylish</ThemeFolder>
-    
-    <!-- Template Files -->
-    <Templates>
-      <Template>
-        <Name>Home Page</Name>
-        <File>HomePage.ascx</File>
-        <Description>Full-width home page with hero section, services, portfolio, and callout sections</Description>
-      </Template>
-      <Template>
-        <Name>Booking Page</Name>
-        <File>BookingStylish.ascx</File>
-        <Description>Standard booking page template with sidebar navigation</Description>
-      </Template>
-    </Templates>
-    
-    <!-- Master Pages -->
-    <MasterPages>
-      <MasterPage>
-        <Name>Full Width</Name>
-        <File>DefaultThemeFullWidth.Master</File>
-        <Description>Full-width layout with sidebar navigation</Description>
-      </MasterPage>
-      <MasterPage>
-        <Name>Left Navigation</Name>
-        <File>DefaultThemeLeftNav.Master</File>
-        <Description>Layout with left sidebar and right navigation</Description>
-      </MasterPage>
-    </MasterPages>
-    
-    <!-- Theme Colors -->
-    <Colors>
-      <Primary>#1D809F</Primary>
-      <Secondary>#ECB807</Secondary>
-      <Dark>#212529</Dark>
-      <Light>#f8f9fa</Light>
-    </Colors>
-    
-    <!-- Features -->
-    <Features>
-      <Feature>Dark sidebar navigation</Feature>
-      <Feature>Full-screen hero sections</Feature>
-      <Feature>Portfolio grid with overlays</Feature>
-      <Feature>Circular service icons</Feature>
-      <Feature>Responsive mobile design</Feature>
-      <Feature>Teal and yellow color scheme</Feature>
-      <Feature>Scroll to top button</Feature>
-      <Feature>Social media integration</Feature>
-    </Features>
-    
-    <!-- Resources -->
-    <Resources>
-      <CSS>
-        <File>css/theme.min.css</File>
-        <File>css/theme.rtl.min.css</File>
-        <File>css/stylish.css</File>
-      </CSS>
-      <JavaScript>
-        <File>js/theme.js</File>
-      </JavaScript>
-      <Fonts>
-        <File>fonts/inter-variable-latin.woff2</File>
-      </Fonts>
-      <Icons>
-        <File>icons/cartzilla-icons.woff2</File>
-        <File>icons/cartzilla-icons.min.css</File>
-      </Icons>
-    </Resources>
-    
-    <!-- XSL Transformations -->
-    <XSLTransforms>
-      <Transform>ViewCart.xslt</Transform>
-      <Transform>WorkflowProgressBar.xslt</Transform>
-      <Transform>Navbar.xslt</Transform>
-      <Transform>OrderSummary.xslt</Transform>
-      <Transform>ViewAdmissionItem.xslt</Transform>
-      <Transform>ListAvailableSlots.xslt</Transform>
-      <Transform>ViewOrder.xslt</Transform>
-      <Transform>ViewBooking.xslt</Transform>
-      <Transform>OrderConfirmation.xslt</Transform>
-      <Transform>Receipt.xslt</Transform>
-      <Transform>ListCustomerBookings.xslt</Transform>
-      <Transform>ListCustomerOrders.xslt</Transform>
-      <Transform>WorkflowBreadcrumbs.xslt</Transform>
-      <Transform>WorkflowNavButtons.xslt</Transform>
-    </XSLTransforms>
-    
-  </Theme>
-</ThemeManifest>
+<?xml version="1.0" encoding="utf-16"?>
+<WPData>
+	<Themes>
+		<Theme xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<ID>9a4d3b2e-5f6c-4d7e-9b0c-2d3e4f5a6b7c</ID>
+			<Name>Stylish</Name>
+			<Description>Stylish Portfolio theme with dark sidebar navigation and full-screen sections. Based on Start Bootstrap Stylish Portfolio template.</Description>
+			<PreviewImageUrl />
+			<Status>Public</Status>
+			<FolderName>Stylish</FolderName>
+			<MasterPageFullWidth>DefaultThemeFullWidth.Master</MasterPageFullWidth>
+			<MasterPageLeftNav>DefaultThemeLeftNav.Master</MasterPageLeftNav>
+			<MasterPageRightSidebar>DefaultThemeFullWidth.Master</MasterPageRightSidebar>
+			<MasterPageThreeColumn>DefaultThemeFullWidth.Master</MasterPageThreeColumn>
+			<PreviewUrl></PreviewUrl>
+			<WPObjectStatus>Current</WPObjectStatus>			
+			<PageTemplates>
+				<PageTemplate>
+					<ID>1daca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
+					<Name>Full Width</Name>
+					<UserControlPath>BookingNewAge.ascx</UserControlPath>
+					<Description />
+					<PreviewImageUrl />
+					<Status>Public</Status>
+					<PageLayout>FullWidth</PageLayout>
+					<IsDefault>false</IsDefault>
+				</PageTemplate>
+				<PageTemplate>
+					<ID>2eaca8a4-babc-4fb5-aa9c-d3fc4a708dbc</ID>
+					<Name>HomePage</Name>
+					<UserControlPath>HomePage.ascx</UserControlPath>
+					<Description>Home page content with container layout</Description>
+					<PreviewImageUrl />
+					<Status>Public</Status>
+					<PageLayout>FullWidth</PageLayout>
+					<IsDefault>false</IsDefault>
+				</PageTemplate>
+			</PageTemplates>
+
+		</Theme>
+	</Themes>
+</WPData>
