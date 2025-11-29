@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true"  Inherits="WaiverFile.sitebooking.Templates.WFCMSPageTemplateBase" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  Inherits="WaiverFile.sitebooking.Templates.WFCMSPageTemplateBase" %>
 <%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
 <%@ Register Src="includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 <%@ Register Src="includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
@@ -22,7 +22,7 @@
 
 	<!-- Bootstrap + Theme styles -->
 	<link rel="preload" href="/sitebooking/Themes/Stylish/css/theme.min.css" as="style">
-	<link rel="preload" href="/sitebooking/Themes/Stylish/css/theme.rtl.min.css" as="style">
+  <link rel="preload" href="/sitebooking/Themes/Stylish/css/theme.rtl.min.css" as="style">
 	<link rel="stylesheet" href="/sitebooking/Themes/Stylish/css/theme.min.css" id="themestyles">
 	<link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
 
@@ -34,65 +34,72 @@
 
 <uc1:Header runat="server" id="Header1" />
 
-<!-- Masthead/Hero Section -->
-<header class="masthead-stylish" id="page-top-stylish">
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <div class="text-center">
-            <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+<!-- Page content -->
+<main class="content-wrapper">
+    
+    <!-- Hero Section (Full Width) -->
+    <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
+    
+    <!-- Services Section -->
+    <section class="container py-5 my-4" id="services">    
+        <div class="container">
+            <!-- Section Header + Service Items -->
+            <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
+            <div class="row">
+                <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+            </div>
         </div>
-    </div>
-</header>
+    </section>
 
-<!-- Services Section -->
-<section class="content-section-stylish bg-light" id="services-stylish">
-    <div class="container px-4 px-lg-5">
-        <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
-        <div class="row gx-4 gx-lg-5">
-            <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
+    <!-- Portfolio Section -->
+    <section class="portfolio-section py-5" id="portfolio">
+        <div class="container">
+            <!-- Section Header -->
+            <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
+            
+            <!-- Portfolio Items Grid -->
+            <div class="row">
+                <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Callout Section -->
-<section class="callout-stylish" id="callout-stylish">
-    <div class="container px-4 px-lg-5">
-        <asp:PlaceHolder runat="server" ID="ph3"></asp:PlaceHolder>
-    </div>
-</section>
-
-<!-- Portfolio Section -->
-<section class="content-section-stylish" id="portfolio-stylish">
-    <div class="container px-4 px-lg-5">
-        <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
-        <div class="row gx-0">
+    <!-- About Section (Optional) -->
+    <section class="container py-5" id="about">
+        <div class="container">
+            <!-- Section Header -->
             <asp:PlaceHolder runat="server" ID="ph5"></asp:PlaceHolder>
+            
+            <!-- Timeline Items -->
+            <ul class="row timeline">
+                <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
+            </ul>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- About/Timeline Section -->
-<% if (ph6.Controls.Count > 0) { %>
-<section class="content-section-stylish bg-light" id="about-stylish">
-    <div class="container px-4 px-lg-5">
-        <asp:PlaceHolder runat="server" ID="ph6"></asp:PlaceHolder>
-        <ul class="row timeline">
+    <!-- Team Section -->
+    <section class="team-section py-5" id="portfolio">
+        <div class="container">
+            <!-- Section Header -->
             <asp:PlaceHolder runat="server" ID="ph7"></asp:PlaceHolder>
-        </ul>
-    </div>
-</section>
-<% } %>
+            
+            <!-- Team Items Grid -->
+            <div class="row">
+                <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
+            </div>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<% if (ph8.Controls.Count > 0) { %>
-<section class="content-section-stylish" id="contact-stylish">
-    <div class="container px-4 px-lg-5">
-        <asp:PlaceHolder runat="server" ID="ph8"></asp:PlaceHolder>
-    </div>
-</section>
-<% } %>
+    <!-- Contact Section (Optional) -->
+    <% if (ph9.Controls.Count > 0) { %>
+    <section class="container py-5 my-4" id="contact">
+        <asp:PlaceHolder runat="server" ID="ph9"></asp:PlaceHolder>
+    </section>
+    <% } %>
 
+</main>
+          
 <uc1:Footer runat="server" id="Footer1" />
 
 <!-- Bootstrap + Theme scripts -->
 <script src="/sitebooking/Themes/Stylish/js/theme.js"></script>
-

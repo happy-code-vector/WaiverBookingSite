@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true"  Inherits="WaiverFile.sitebooking.Templates.WFCMSPageTemplateBase" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  Inherits="WaiverFile.sitebooking.Templates.WFCMSPageTemplateBase" %>
 <%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
 <%@ Register Src="includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 <%@ Register Src="includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
@@ -22,7 +22,7 @@
 
 	<!-- Bootstrap + Theme styles -->
 	<link rel="preload" href="/sitebooking/Themes/Stylish/css/theme.min.css" as="style">
-	<link rel="preload" href="/sitebooking/Themes/Stylish/css/theme.rtl.min.css" as="style">
+  <link rel="preload" href="/sitebooking/Themes/Stylish/css/theme.rtl.min.css" as="style">
 	<link rel="stylesheet" href="/sitebooking/Themes/Stylish/css/theme.min.css" id="themestyles">
 	<link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
 
@@ -34,6 +34,7 @@
 
 <uc1:Header runat="server" id="Header1" />
 
+
 <!-- Page content -->
 <main class="main-content">
 
@@ -41,16 +42,16 @@
     <asp:PlaceHolder runat="server" ID="ph1"></asp:PlaceHolder>
     
     <!-- Main Content Area -->
-    <section class="content-section-stylish bg-light py-5">
-        <div class="container px-4 px-lg-5">
+    <section class="hero-section bg-light py-5">
+        <div class="container">
             <asp:PlaceHolder runat="server" ID="ph0"></asp:PlaceHolder>
         </div>
     </section>
     
     <!-- Two Column Section (Conditional) -->
     <% if (ph2.Controls.Count > 0 || ph3.Controls.Count > 0) { %>
-    <section class="content-section-stylish py-5">
-        <div class="container px-4 px-lg-5">
+    <section class="two-column-section py-5 bg-light">
+        <div class="container">
             <div class="row g-4">
                 <div class="col-lg-6">
                     <asp:PlaceHolder runat="server" ID="ph2"></asp:PlaceHolder>
@@ -65,8 +66,8 @@
 
     <!-- Bottom Section -->
     <% if (ph4.Controls.Count > 0) { %>
-    <section class="content-section-stylish bg-light py-5">
-        <div class="container px-4 px-lg-5">
+    <section class="bottom-section py-5">
+        <div class="container">
             <asp:PlaceHolder runat="server" ID="ph4"></asp:PlaceHolder>
         </div>
     </section>
@@ -78,4 +79,3 @@
 
 <!-- Bootstrap + Theme scripts -->
 <script src="/sitebooking/Themes/Stylish/js/theme.js"></script>
-

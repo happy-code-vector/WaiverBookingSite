@@ -3,57 +3,51 @@
 <%@ Import Namespace="WaiverFile.Core.Booking" %>
 <%@ Import Namespace="WaiverFile.Core" %>
 
-        <!-- Close page content wrapper -->
-    </div>
-</div>
-
 <!-- Footer -->
-<footer class="footer-stylish">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h4 class="text-white mb-4"><%= WaiverSiteRef.Name %></h4>
-                <p class="mb-4">Modern booking and waiver management solution</p>
-                
-                <!-- Social Links -->
-                <div class="mb-4">
-                    <a class="social-link" href="#"><i class="ci-facebook"></i></a>
-                    <a class="social-link" href="#"><i class="ci-x"></i></a>
-                    <a class="social-link" href="#"><i class="ci-instagram"></i></a>
-                    <a class="social-link" href="#"><i class="ci-linkedin"></i></a>
+<footer class="footer newage-footer py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h5 class="text-white mb-3"><%= WaiverSiteRef.Name %></h5>
+                <p class="small mb-3">Modern booking and waiver management solution.</p>
+                <asp:PlaceHolder runat="server" ID="phFooterContent1"></asp:PlaceHolder>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h6 class="text-white mb-3">Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="<%= WaiverSiteRef.BasePathRelativeBooking %>" class="text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerBookings.aspx" class="text-decoration-none">My Bookings</a></li>
+                    <li class="mb-2"><a href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerOrders.aspx" class="text-decoration-none">Orders</a></li>
+                </ul>
+                <asp:PlaceHolder runat="server" ID="phFooterContent2"></asp:PlaceHolder>
+            </div>
+            <div class="col-lg-4">
+                <h6 class="text-white mb-3">Connect</h6>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-icon btn-sm btn-newage-social rounded-circle" aria-label="Facebook">
+                        <i class="ci-facebook"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-sm btn-newage-social rounded-circle" aria-label="Twitter">
+                        <i class="ci-x"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-sm btn-newage-social rounded-circle" aria-label="Instagram">
+                        <i class="ci-instagram"></i>
+                    </a>
                 </div>
-                
+                <asp:PlaceHolder runat="server" ID="phFooterContent3"></asp:PlaceHolder>
+            </div>
+        </div>
+        <hr class="my-4 border-secondary">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="small mb-0">&copy; <%= DateTime.Now.Year %> <%= WaiverSiteRef.Name %>. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
                 <p class="small mb-0">
-                    &copy; <%= DateTime.Now.Year %> <%= WaiverSiteRef.Name %>. All rights reserved.
-                </p>
-                <p class="small mt-2">
-                    <a href="#" class="me-3">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none">Terms of Service</a>
                 </p>
             </div>
         </div>
     </div>
 </footer>
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top" style="display: none;">
-    <i class="ci-arrow-up"></i>
-</a>
-
-<script>
-    // Scroll to top button
-    window.addEventListener('scroll', function() {
-        var scrollButton = document.querySelector('.scroll-to-top');
-        if (window.pageYOffset > 100) {
-            scrollButton.style.display = 'block';
-        } else {
-            scrollButton.style.display = 'none';
-        }
-    });
-    
-    // Smooth scroll
-    document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>

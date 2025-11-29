@@ -1,17 +1,25 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeFullWidth.master.cs" Inherits="WaiverFile.sitebooking.Themes.Default.DefaultThemeFullWidth" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultThemeFullWidth.master.cs" Inherits="WaiverFile.sitebooking.Themes.Default.DefaultThemeFullWidth" %>
 <%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
 <%@ Register Src="~/sitebooking/Themes/Stylish/includes/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
 <%@ Register Src="~/sitebooking/Themes/Stylish/includes/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 
 
+
+
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head runat="server">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    
+     <!-- SEO Meta Tags -->
     <meta name="description" content="">
-    <meta name="author" content="">
-    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server"></asp:ContentPlaceHolder></title>
+    <meta name="keywords" content="">
+    <meta name="author" content="WaiverFile">
 
     <!-- Preloaded local web font (Inter) -->
     <link rel="preload" href="/sitebooking/Themes/Stylish/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,6 +29,7 @@
     <link rel="stylesheet" href="/sitebooking/Themes/Stylish/icons/cartzilla-icons.min.css">
 
     <script src="/wp-content/Common/Scripts/jquery-3.7.1.min.js"></script>    
+    <link rel="stylesheet" href="/sitebooking/vendor/formvalidation/index.min.css" />
 
      <!-- Bootstrap + Theme styles -->
     <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
@@ -28,29 +37,41 @@
     <link rel="preload" href="/sitebooking/Themes/Stylish/css/theme.rtl.min.css" as="style">
     <link rel="stylesheet" href="/sitebooking/Themes/Stylish/css/theme.min.css" id="themestyles">
     <link rel="stylesheet" href="/sitebooking/vendor/choices.js/public/assets/styles/choices.min.css">
+    <script src="/sitebooking/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/sitebooking/vendor/formvalidation/popular.min.js"></script>
+    <script src="/sitebooking/vendor/formvalidation/plugin-bootstrap5.min.js"></script>
 
     <!-- Custom Stylish Theme Styles -->
-    <link rel="stylesheet" href="/sitebooking/Themes/Stylish/css/stylish.css">
+	<link rel="stylesheet" href="/sitebooking/Themes/Stylish/css/stylish.css">
 
-    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
-<body id="page-top-stylish">
-    <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-        
-        <uc1:Header runat="server" id="Header" />
-        
-        <!-- Page Content -->
-        <div class="container-fluid px-0">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
-        </div>
-        
-        <uc1:Footer runat="server" id="Footer" />
-    </form>
-
-    <!-- Bootstrap + Theme scripts -->
-    <script src="/sitebooking/Themes/Stylish/js/theme.js"></script>
+<body>
+    <form id="form1" runat="server">        
+        <asp:ScriptManager ID="WPScriptManager" runat="server"></asp:ScriptManager>           
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
     
-    <asp:ContentPlaceHolder ID="ScriptsContent" runat="server"></asp:ContentPlaceHolder>
+            <uc1:Header runat="server" id="Header1" />
+                <!-- Page content -->
+                <main class="content-wrapper">
+                    <section class="container pt-3 pt-sm-4 pt-lg-5 mt-lg-2 mt-xl-4 mt-xxl-5" id="mission" style="scroll-margin-top: 60px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+        
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </section>
+                </main>            
+            <uc1:Footer runat="server" id="Footer1" />
+        </div>          
+          
+        <!-- Bootstrap + Theme scripts -->
+        <script src="/sitebooking/Themes/Stylish/js/theme.js"></script>
+    </form>
 </body>
 </html>

@@ -4,6 +4,8 @@
 <%@ Import Namespace="WaiverFile.Core" %>
 <%@ Import Namespace="System.Data.SqlClient" %>
 
+<%@ Register Src="~/sitebooking/Controls/NavbarBooking.ascx" TagPrefix="uc1" TagName="NavbarBooking" %>
+
 <script runat="server">
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -13,11 +15,11 @@
         WFImage img = WFImage.GetWFImage(conn, WaiverSiteRef.ID, "PUBLIC_HEADER");
         if (img != null)
         {
-            phHeaderStylish.Controls.Add(new LiteralControl(string.Format("<img src=\"{1}\" alt=\"{0} Logo\" style=\"max-height: 40px;\"/>", WaiverSiteRef.Name, img.GetImageUrlDirectToSource())));
+            phHeaderNewAge.Controls.Add(new LiteralControl(string.Format("<img src=\"{1}\" alt=\"{0} Logo\"/>", WaiverSiteRef.Name, img.GetImageUrlDirectToSource())));
         }
         else
         {
-            phHeaderStylish.Controls.Add(new LiteralControl(WaiverSiteRef.Name));
+            phHeaderNewAge.Controls.Add(new LiteralControl(WaiverSiteRef.Name));
         }
 
         BookingCart cart = BookingCart.GetCart(Page, WaiverSiteRef);
@@ -35,79 +37,73 @@
                     num += curr.Quantity;
                 }
             }
-            lblCartItemCountStylish.Text = num.ToString();
+            lblCartItemCountNewAge.Text = num.ToString();
         }
     }
     
-    protected void btnCartIconStylish_Click(object sender, EventArgs e)
+    protected void btnCartIconNewAge_Click(object sender, EventArgs e)
     {
         Response.Redirect(WaiverSiteRef.BasePathRelativeBooking + "/ViewCart.aspx");
     }
 </script>
 
-<!-- Sidebar Navigation -->
-<div class="d-flex" id="wrapper-stylish">
-    
-    <!-- Sidebar -->
-    <div class="bg-stylish-dark border-end" id="sidebar-wrapper-stylish">
-        <div class="sidebar-heading border-bottom bg-stylish-dark text-white">
-            <asp:PlaceHolder runat="server" ID="phHeaderStylish"></asp:PlaceHolder>
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar navbar-expand-lg navbar-sticky navbar-newage z-fixed px-0" data-sticky-navbar='{"offset": 800}'>
+      <div class="container flex-nowrap">
+
+        <!-- Mobile offcanvas menu toggler (Hamburger) -->
+        <button type="button" class="navbar-toggler me-4 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNavNewAge" aria-controls="navbarNavNewAge" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar brand (Logo) -->
+        <a class="navbar-brand py-1 py-md-2 py-xl-1" href="<%= WaiverSiteRef.BasePathRelativeBooking %>">
+          <span class="d-none d-sm-flex flex-shrink-0 text-primary me-2">
+              <asp:PlaceHolder runat="server" ID="phHeaderNewAge"></asp:PlaceHolder>
+          </span>
+        </a>
+       
+        <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
+		<uc1:NavbarBooking runat="server" id="NavbarBookingNewAge" />
+        <asp:PlaceHolder runat="server" ID="phNavNewAge"></asp:PlaceHolder>
+
+        <!-- Button group -->
+        <div class="d-flex align-items-center">
+
+			<% if (AuthenticatedCustomer != null) { %>
+			<!-- Logged in: Show dropdown -->
+			  <div class="dropdown d-none d-md-inline-flex">
+				<a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  <i class="ci-user"></i>
+				  <span class="visually-hidden">Account</span>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-end">
+					<li><a class="dropdown-item" href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerBookings.aspx">My Bookings</a></li>
+				  <li><a class="dropdown-item" href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerOrders.aspx">Payment History</a></li>
+				  
+				  <li><hr class="dropdown-divider"></li>
+				  <li><a class="dropdown-item text-danger" href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerLogout.aspx">Log Out</a></li>
+				</ul>
+			  </div>
+
+			<% } else { %>
+			  <!-- Not logged in: Show login link -->
+			  <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle d-none d-md-inline-flex" href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerLogin.aspx">
+				<i class="ci-user"></i>
+				<span class="visually-hidden">Log in</span>
+			  </a>
+			<% } %>
+
+       
+			<!-- Cart button -->
+			<asp:LinkButton runat="server" ID="btnCartIconNewAge" OnClick="btnCartIconNewAge_Click" CssClass="btn btn-icon btn-lg fs-xl btn-outline-secondary position-relative border-0 rounded-circle animate-scale" data-bs-target="#shoppingCartNewAge" aria-controls="shoppingCartNewAge" aria-label="Shopping cart">
+				<span class="position-absolute top-0 start-100 badge fs-xs text-bg-primary rounded-pill mt-1 ms-n4 z-2" style="--cz-badge-padding-y: .25em; --cz-badge-padding-x: .42em">
+				   <asp:Label runat="server" ID="lblCartItemCountNewAge">0</asp:Label>
+				</span>
+				<i class="ci-shopping-bag animate-target me-1"></i>
+			</asp:LinkButton>
         </div>
-        <div class="list-group list-group-flush">
-            <a class="list-group-item list-group-item-action bg-stylish-dark text-white p-3" href="<%= WaiverSiteRef.BasePathRelativeBooking %>">
-                <i class="ci-home"></i> Home
-            </a>
-            
-            <% if (AuthenticatedCustomer != null) { %>
-            <a class="list-group-item list-group-item-action bg-stylish-dark text-white p-3" href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerBookings.aspx">
-                <i class="ci-calendar"></i> My Bookings
-            </a>
-            <a class="list-group-item list-group-item-action bg-stylish-dark text-white p-3" href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerOrders.aspx">
-                <i class="ci-file-text"></i> Payment History
-            </a>
-            <% } else { %>
-            <a class="list-group-item list-group-item-action bg-stylish-dark text-white p-3" href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerLogin.aspx">
-                <i class="ci-user"></i> Login
-            </a>
-            <% } %>
-            
-            <asp:LinkButton runat="server" ID="btnCartIconStylish" OnClick="btnCartIconStylish_Click" CssClass="list-group-item list-group-item-action bg-stylish-dark text-white p-3 position-relative">
-                <i class="ci-shopping-bag"></i> Cart
-                <span class="position-absolute top-50 end-0 translate-middle-y badge bg-stylish-primary rounded-pill me-3">
-                   <asp:Label runat="server" ID="lblCartItemCountStylish">0</asp:Label>
-                </span>
-            </asp:LinkButton>
-            
-            <% if (AuthenticatedCustomer != null) { %>
-            <a class="list-group-item list-group-item-action bg-stylish-dark text-white p-3 border-top" href="<%= WaiverSiteRef.BasePathRelativeBooking %>/CustomerLogout.aspx">
-                <i class="ci-log-out"></i> Log Out
-            </a>
-            <% } %>
-        </div>
-    </div>
-    
-    <!-- Page Content -->
-    <div id="page-content-wrapper-stylish">
-        
-        <!-- Mobile Menu Toggle -->
-        <div class="menu-toggle-stylish d-lg-none" onclick="toggleSidebar()">
-            <i class="ci-menu fs-4"></i>
-        </div>
-        
-        <script>
-            function toggleSidebar() {
-                document.getElementById('sidebar-wrapper-stylish').classList.toggle('active');
-            }
-            
-            // Close sidebar when clicking outside on mobile
-            document.addEventListener('click', function(event) {
-                var sidebar = document.getElementById('sidebar-wrapper-stylish');
-                var toggle = document.querySelector('.menu-toggle-stylish');
-                
-                if (window.innerWidth < 992) {
-                    if (!sidebar.contains(event.target) && !toggle.contains(event.target)) {
-                        sidebar.classList.remove('active');
-                    }
-                }
-            });
-        </script>
+		
+      </div>
+    </header>
