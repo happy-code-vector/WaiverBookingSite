@@ -208,6 +208,10 @@ section h3.section-subheading {
 /* Services Section */
 #services {
 	position: relative;
+    background: #f8f9fa;
+    padding: 0;
+    margin: 0 auto !important;
+    max-width: 100%;
 }
 
 .service-item {
