@@ -313,11 +313,12 @@ section h3.section-subheading {
 	transition: all 0.5s ease;
 	background: #fff;
 	height: 400px;
+	transform: scale(1);
 }
 
 .portfolio-item:hover {
 	box-shadow: inset 0 0 0 2px rgba(29, 128, 159, 0.3);
-	transform: none;
+	transform: scale(0.95);
 }
 
 .portfolio-item img {
@@ -328,7 +329,7 @@ section h3.section-subheading {
 }
 
 .portfolio-item:hover img {
-	transform: scale(1.1);
+	transform: scale(1.05);
 	filter: blur(3px);
 }
 
