@@ -205,69 +205,98 @@ section h3.section-subheading {
 	margin-bottom: 2rem;
 }
 
-/* Services Section */
+/* Services Section - Stylish Portfolio Style (Full Width, Dark Background) */
 #services {
 	position: relative;
-    background: #f8f9fa;
-    padding: 0;
-    margin: 0 auto !important;
-    max-width: 100%;
+	background: linear-gradient(135deg, rgba(29, 128, 159, 0.9) 0%, rgba(26, 109, 135, 0.9) 100%);
+	padding: 0;
+	margin: 0 auto !important;
+	max-width: 100%;
+	width: 100%;
+}
+
+#services .container,
+#services .container-fluid {
+	max-width: 100%;
+}
+
+#services h2,
+#services .section-heading {
+	color: #fff !important;
+	background: none;
+	-webkit-background-clip: initial;
+	-webkit-text-fill-color: #fff;
+	background-clip: initial;
+}
+
+#services h3.section-subheading,
+#services .section-subheading {
+	color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .service-item {
 	text-align: center;
-	padding: 3rem 2rem;
-	transition: all 0.4s ease;
-	border-radius: 1rem;
+	padding: 2rem 1.5rem;
+	transition: all 0.3s ease;
+	border-radius: 0;
 	height: 100%;
-	background: #fff;
-	border: 1px solid rgba(0, 0, 0, 0.05);
+	background: transparent;
+	border: none;
 }
 
 .service-item:hover {
-	transform: translateY(-10px);
-	box-shadow: 0 15px 40px rgba(29, 128, 159, 0.2);
-	border-color: rgba(29, 128, 159, 0.1);
+	transform: translateY(-5px);
 }
 
+/* Service Icon Circle - White Background with Teal Icons */
 .service-item [class*="ci-"],
 .service-item i,
 .service-item span {
-	font-size: 4rem !important;
-	background: linear-gradient(135deg, #1D809F 0%, #1a6d87 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	margin-bottom: 1.5rem;
-	display: inline-block;
-	transition: all 0.4s ease;
-	filter: drop-shadow(0 2px 4px rgba(29, 128, 159, 0.2));
+	font-size: 2.5rem !important;
+	color: #1D809F !important;
+	margin: 0 auto 1.5rem;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	width: 7rem;
+	height: 7rem;
+	background: #fff;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: initial;
+	-webkit-text-fill-color: #1D809F;
+	background-clip: initial;
+	filter: none;
+	line-height: 1;
+	text-align: center;
 }
 
 .service-item:hover [class*="ci-"],
 .service-item:hover i,
 .service-item:hover span {
-	transform: scale(1.15) rotate(5deg);
-	filter: drop-shadow(0 4px 8px rgba(29, 128, 159, 0.3));
+	transform: translateY(-5px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .service-item h4 {
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 	margin-bottom: 1rem;
 	font-weight: 700;
-	font-size: 1.35rem;
-	color: #212529;
+	font-size: 1.25rem;
+	color: #fff;
 	transition: color 0.3s ease;
 }
 
 .service-item:hover h4 {
-	color: #1D809F;
+	color: #fff;
 }
 
 .service-item p {
-	color: #6c757d;
+	color: rgba(255, 255, 255, 0.95) !important;
 	font-size: 1rem;
-	line-height: 1.8;
+	line-height: 1.75;
 	margin-bottom: 0;
 }
 
