@@ -280,10 +280,26 @@ section h3.section-subheading {
 
 .portfolio-section .row {
 	margin: 0;
+	--bs-gutter-x: 0;
+	--bs-gutter-y: 0;
+}
+
+.portfolio-section .row .mb-4 {
+	margin-bottom: 0 !important;
 }
 
 .portfolio-section [class*="col-"] {
 	padding: 0;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+
+/* Mobile: 1 item per row */
+@media (max-width: 767px) {
+	.portfolio-section [class*="col-"] {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 }
 
 .portfolio-item {
