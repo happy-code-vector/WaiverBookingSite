@@ -235,48 +235,59 @@ section h3.section-subheading {
 
 .service-item {
 	text-align: center;
-	padding: 2.5rem 1.5rem;
-	transition: all 0.3s ease;
+	padding: 3rem 2rem;
+	transition: all 0.4s ease;
 	border-radius: 1rem;
 	height: 100%;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .service-item:hover {
 	transform: translateY(-10px);
-	box-shadow: 0 10px 30px rgba(29, 128, 159, 0.15);
+	box-shadow: 0 15px 40px rgba(29, 128, 159, 0.2);
+	border-color: rgba(29, 128, 159, 0.1);
 }
 
 .service-item [class*="ci-"],
 .service-item i,
 .service-item span {
-	font-size: 3.5rem !important;
+	font-size: 4rem !important;
 	background: linear-gradient(135deg, #1D809F 0%, #1a6d87 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	margin-bottom: 1.5rem;
 	display: inline-block;
-	transition: transform 0.3s ease;
+	transition: all 0.4s ease;
+	filter: drop-shadow(0 2px 4px rgba(29, 128, 159, 0.2));
 }
 
 .service-item:hover [class*="ci-"],
 .service-item:hover i,
 .service-item:hover span {
-	transform: scale(1.1);
+	transform: scale(1.15) rotate(5deg);
+	filter: drop-shadow(0 4px 8px rgba(29, 128, 159, 0.3));
 }
 
 .service-item h4 {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	font-weight: 700;
-	font-size: 1.25rem;
+	font-size: 1.35rem;
 	color: #212529;
+	transition: color 0.3s ease;
+}
+
+.service-item:hover h4 {
+	color: #1D809F;
 }
 
 .service-item p {
 	color: #6c757d;
-	font-size: 0.95rem;
-	line-height: 1.75;
+	font-size: 1rem;
+	line-height: 1.8;
+	margin-bottom: 0;
 }
 
 /* Portfolio Section */
