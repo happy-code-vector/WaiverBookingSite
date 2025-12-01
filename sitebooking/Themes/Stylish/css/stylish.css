@@ -475,6 +475,7 @@ section h3.section-subheading {
 	margin-bottom: 3rem;
 	transition: all 0.5s ease;
 	transform: scale(1);
+	position: relative;
 }
 
 .team-member:hover {
@@ -490,6 +491,8 @@ section h3.section-subheading {
 	margin: 0 auto 1rem;
 	transition: all 0.5s ease;
 	box-shadow: 0 5px 20px rgba(29, 128, 159, 0.15);
+	border-radius: 50%;
+	object-fit: cover;
 }
 
 .team-member:hover img {
@@ -502,12 +505,28 @@ section h3.section-subheading {
 	margin-bottom: 0.5rem;
 	font-weight: 700;
 	color: #212529;
+	opacity: 0;
+	transform: translateY(10px);
+	transition: all 0.5s ease;
+}
+
+.team-member:hover h4 {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .team-member p {
 	margin-top: 0.5rem;
 	color: #6c757d;
 	font-weight: 300;
+	opacity: 0;
+	transform: translateY(10px);
+	transition: all 0.5s ease 0.1s;
+}
+
+.team-member:hover p {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* Social Buttons */
@@ -520,7 +539,7 @@ section h3.section-subheading {
 	justify-content: center;
 	padding: 0;
 	border-radius: 100%;
-	transition: all 0.3s ease;
+	transition: all 0.5s ease;
 }
 
 .btn-dark,
@@ -535,6 +554,23 @@ section h3.section-subheading {
 	background: linear-gradient(135deg, #1a6d87 0%, #1D809F 100%) !important;
 	transform: translateY(-3px);
 	box-shadow: 0 5px 15px rgba(29, 128, 159, 0.4);
+}
+
+/* Hide social buttons in team member by default */
+.team-member .btn-social,
+.team-member .btn-newage-social,
+.team-member .btn-dark {
+	opacity: 0;
+	transform: translateY(10px);
+	transition: all 0.5s ease 0.2s;
+}
+
+/* Show social buttons on team member hover */
+.team-member:hover .btn-social,
+.team-member:hover .btn-newage-social,
+.team-member:hover .btn-dark {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* Footer */
