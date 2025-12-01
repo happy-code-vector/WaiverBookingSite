@@ -473,11 +473,12 @@ section h3.section-subheading {
 .team-member {
 	text-align: center;
 	margin-bottom: 3rem;
-	transition: transform 0.3s ease;
+	transition: all 0.5s ease;
+	transform: scale(1);
 }
 
 .team-member:hover {
-	transform: translateY(-10px);
+	transform: scale(0.95);
 }
 
 .team-member img {
@@ -487,13 +488,13 @@ section h3.section-subheading {
 	background: linear-gradient(white, white) padding-box,
 		linear-gradient(135deg, #1D809F 0%, #1a6d87 100%) border-box;
 	margin: 0 auto 1rem;
-	transition: all 0.3s ease;
+	transition: all 0.5s ease;
 	box-shadow: 0 5px 20px rgba(29, 128, 159, 0.15);
 }
 
 .team-member:hover img {
 	box-shadow: 0 10px 30px rgba(29, 128, 159, 0.3);
-	transform: scale(1.05);
+	transform: scale(1.1);
 }
 
 .team-member h4 {
