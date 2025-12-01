@@ -13,7 +13,7 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/X
 				<div class="d-flex justify-content-between align-items-start position-relative">
 					<!-- Progress Line with Gradient -->
 					<div class="progress-line position-absolute top-0 start-0 w-100" style="height: 4px; margin-top: 20px; z-index: 0;">
-						<div class="progress" style="height: 100%; background-color: rgba(102, 126, 234, 0.15); border-radius: 10px;">
+						<div class="progress" style="height: 100%; background-color: rgba(29, 128, 159, 0.15); border-radius: 10px;">
 							<xsl:variable name="totalSteps" select="count(/Main/Forms/ArrayOfWaiverForm/WaiverForm)"/>
 							<xsl:variable name="progressPercent" select="($ProgressIndex div $totalSteps) * 100"/>
 							<div class="progress-bar bg-gradient-primary" role="progressbar" style="width: {$progressPercent}%; transition: width 0.5s ease; border-radius: 10px;"></div>
