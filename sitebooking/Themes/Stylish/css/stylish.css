@@ -210,29 +210,6 @@ section h3.section-subheading {
 	position: relative;
 }
 
-/* Services Section - Horizontal Layout */
-@media (min-width: 992px) {
-	#services .container {
-		display: flex;
-		align-items: center;
-		gap: 3rem;
-	}
-
-	/* Section header on left (35%) */
-	#services .container>*:first-child {
-		flex: 0 0 35%;
-		max-width: 35%;
-		position: sticky;
-		top: 100px;
-	}
-
-	/* Service items on right (65%) */
-	#services .container>.row {
-		flex: 0 0 65%;
-		max-width: 65%;
-	}
-}
-
 .service-item {
 	text-align: center;
 	padding: 3rem 2rem;
@@ -294,29 +271,6 @@ section h3.section-subheading {
 .portfolio-section {
 	padding: 6rem 0;
 	background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
-}
-
-/* Portfolio Section - Horizontal Layout */
-@media (min-width: 992px) {
-	.portfolio-section .container {
-		display: flex;
-		align-items: center;
-		gap: 3rem;
-	}
-
-	/* Section header on left (35%) */
-	.portfolio-section .container>*:first-child {
-		flex: 0 0 35%;
-		max-width: 35%;
-		position: sticky;
-		top: 100px;
-	}
-
-	/* Portfolio items on right (65%) */
-	.portfolio-section .container>.row {
-		flex: 0 0 65%;
-		max-width: 65%;
-	}
 }
 
 .portfolio-item {
@@ -431,29 +385,6 @@ section h3.section-subheading {
 .team-section {
 	padding: 6rem 0;
 	background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
-}
-
-/* Team Section - Horizontal Layout */
-@media (min-width: 992px) {
-	.team-section .container {
-		display: flex;
-		align-items: center;
-		gap: 3rem;
-	}
-
-	/* Section header on left (35%) */
-	.team-section .container>*:first-child {
-		flex: 0 0 35%;
-		max-width: 35%;
-		position: sticky;
-		top: 100px;
-	}
-
-	/* Team items on right (65%) */
-	.team-section .container>.row {
-		flex: 0 0 65%;
-		max-width: 65%;
-	}
 }
 
 .team-member {
@@ -1139,3 +1070,4 @@ a:hover {
 .shadow-primary-lg {
 	box-shadow: 0 15px 40px rgba(29, 128, 159, 0.3) !important;
 }
+
